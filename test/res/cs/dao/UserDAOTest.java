@@ -2,58 +2,60 @@ package res.cs.dao;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
-import static org.junit.Assert.assertTrue;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNot.not;
 
+import static org.junit.Assert.assertThat;
+
+import res.cs.exception.RegistrationException;
+import res.cs.model.User;
+
+
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.junit.Before;
-import org.junit.Test;
-
-@RunWith(Parameterized.class)
 public class UserDAOTest {
-	private String firstName;
-	private String lastName;
-	private String userName;
-	private String password;
-	private String gender;
-	private String address;
-	private Long phoneNumber;
-	private String email;
 	private UserDAO dude;
+	private User user;
 	
-	public UserDAOTest(String firstName, String lastName, String userName, String password, String gender,
-			String address, Long phoneNumber, String email) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.userName = userName;
-		this.password = password;
-		this.gender = gender;
-		this.address = address;
-		this.phoneNumber = phoneNumber;
-		this.email = email;
-	}
-	
-	@Before
+	@BeforeMethod
 	public void initialize() {
 		dude = new UserDAO();
+		user = new User();
 	}
 	
-	@Parameterized.Parameters
-	public static Collection<Object[]> inputData(){
+	@DataProvider(name="registration")
+	public Object[][] inputData(){
 		Object[][] data = {
-				{"Mohammed", "Rahman", "hafiz", "hafiz", "M", "6107 Wooside Ave", 3475278509L, "hafiz@restaurant.org"},
-				{"Abdur", "Rahman", "hafizur", "hafizur", "M", "6117 Wooside Ave", 6465278509L, "rahman@restaurant.org"},
-				{"Omar", "Khait", "samy", "samy", "M", "6127 Wooside Ave", 3475278519L, "samy@restaurant.org"}
+				{"Mohammed", "Rahman", "hafiz", "hafiz", "M", "6107 Wooside Ave", 3475278509L, "hafiz@restaurant.org", 1},
+				{"Abdur", "Rahman", "hafizur", "hafizur", "M", "6117 Wooside Ave", 6465278509L, "rahman@restaurant.org", 1},
+				{"Omar", "Khait", "samy", "samy", "M", "6127 Wooside Ave", 3475278519L, "samy@restaurant.org", 1}
 		};
-		return Arrays.asList(data);
+		return data;
 		
 	}
 	
-	@Test
-	public void registrationTest() {
-		System.out.println("First Name: " + this.firstName + " Last Name: " + this.lastName + " User Name: " + this.userName );
+	@Test(dataProvider="registration")
+	public void registrationTest(String firstName, String lastName, String userName, String password, String gender, String address, Long phoneNumber, String email, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		user.setFirstName(firstName);
+		user.setLastName(lastName);
+		user.setUserName(userName);
+		user.setPassword(password);
+		user.setGender(gender);
+		user.setAddress(address);
+		user.setPhoneNumber(phoneNumber);
+		user.setPhoneNumber(phoneNumber);
+		int actual = dude.createUser(user);
+		System.out.println(user);
+		assertThat(actual, equalTo(expected));
+		
 	}
 	
 
