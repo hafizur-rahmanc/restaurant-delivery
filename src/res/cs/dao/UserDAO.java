@@ -37,19 +37,20 @@ public class UserDAO {
 			stmt.setString(6, user.getAddress());
 			stmt.setLong(7, user.getPhoneNumber());
 			stmt.setString(8, user.getEmail());
+			
 			//For new user registration
-			stmt.executeUpdate();
+			userId = stmt.executeUpdate();
 			
 			//Retrieve any auto generated keys created as a result of executing this statement object
-			result = stmt.getGeneratedKeys();
-			if(result.next()) {
-				userId = result.getInt(1);
-			}
+//			result = stmt.getGeneratedKeys();
+//			if(result.next()) {
+//				userId = result.getInt(1);
+//			}
 			
 		}catch(SQLException e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			result.close();
+			//result.close();
 			stmt.close();
 			conn.close();
 		}

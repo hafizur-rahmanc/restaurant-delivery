@@ -1,14 +1,10 @@
 package res.cs.dao;
 
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsNot.not;
 
 import static org.junit.Assert.assertThat;
 
@@ -18,8 +14,6 @@ import res.cs.model.User;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.Collection;
 
 public class UserDAOTest {
 	private UserDAO dude;
@@ -51,12 +45,11 @@ public class UserDAOTest {
 		user.setGender(gender);
 		user.setAddress(address);
 		user.setPhoneNumber(phoneNumber);
-		user.setPhoneNumber(phoneNumber);
+		user.setEmail(email);
 		int actual = dude.createUser(user);
 		System.out.println(user);
 		assertThat(actual, equalTo(expected));
 		
 	}
 	
-
 }
