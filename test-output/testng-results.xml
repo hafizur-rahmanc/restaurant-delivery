@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="850" started-at="2017-12-23T02:15:47Z" finished-at="2017-12-23T02:15:47Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="850" started-at="2017-12-23T02:15:47Z" finished-at="2017-12-23T02:15:47Z">
+      <class name="res.cs.dao.UserDAOTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="initialize" is-config="true" duration-ms="4" started-at="2017-12-22T21:15:47Z" finished-at="2017-12-22T21:15:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="createUserTest" duration-ms="564" started-at="2017-12-22T21:15:47Z" data-provider="registration" finished-at="2017-12-22T21:15:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Md]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Rahman]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[hafiz11]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[hafiz11]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[6107 Wooside Ave]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[3475278509]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[hafiz@restaurant.org]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUserTest -->
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="createUserTest" duration-ms="34" started-at="2017-12-22T21:15:47Z" data-provider="registration" finished-at="2017-12-22T21:15:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abdu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Rahman]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[hafizur12]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[hafizur123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[6117 Wooside Ave]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[6465278509]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[rahman@restaurant.org]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUserTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-22T21:15:47Z" finished-at="2017-12-22T21:15:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="createUserTest" duration-ms="41" started-at="2017-12-22T21:15:47Z" data-provider="registration" finished-at="2017-12-22T21:15:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OmarSulaiman]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Khait]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[samy12]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[samy12]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[6127 Wooside Ave]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[3475278519]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[samy@restaurant.org]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUserTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-22T21:15:47Z" finished-at="2017-12-22T21:15:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="getUserTest" duration-ms="41" started-at="2017-12-22T21:15:47Z" data-provider="getuser" finished-at="2017-12-22T21:15:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hafiz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hafiz@restaurant.org]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-22T21:15:47Z" finished-at="2017-12-22T21:15:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="initialize" is-config="true" duration-ms="1" started-at="2017-12-22T21:15:47Z" finished-at="2017-12-22T21:15:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="getUserTest" duration-ms="24" started-at="2017-12-22T21:15:47Z" data-provider="getuser" finished-at="2017-12-22T21:15:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hafizur]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hafizur@restaurant.org]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserTest -->
+        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="getUserTest" duration-ms="26" started-at="2017-12-22T21:15:47Z" data-provider="getuser" finished-at="2017-12-22T21:15:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[samy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[samy@restaurant.org]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-22T21:15:47Z" finished-at="2017-12-22T21:15:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-22T21:15:47Z" finished-at="2017-12-22T21:15:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="updateUserTest" duration-ms="27" started-at="2017-12-22T21:15:47Z" data-provider="updateUser" finished-at="2017-12-22T21:15:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[56]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mohammed]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Rahman]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[hafiz]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[hafiz]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[6107 Wooside Ave Woodside]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[3475278510]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[hafiz@restaurant.org]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-22T21:15:47Z" finished-at="2017-12-22T21:15:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="updateUserTest" duration-ms="28" started-at="2017-12-22T21:15:47Z" data-provider="updateUser" finished-at="2017-12-22T21:15:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[57]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abdur]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Rahman]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[hafizur1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[hafizur123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[6117 Wooside Ave Woodside]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[6465278520]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[rahman@restaurant.org]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-22T21:15:47Z" finished-at="2017-12-22T21:15:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@5e5792a0]" name="updateUserTest" duration-ms="24" started-at="2017-12-22T21:15:47Z" data-provider="updateUser" finished-at="2017-12-22T21:15:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[58]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Omar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Khait]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[samy]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[samy]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[6127 Wooside Ave Woodside]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[3475278530]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[samy@restaurant.org]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserTest -->
+      </class> <!-- res.cs.dao.UserDAOTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
