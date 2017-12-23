@@ -145,11 +145,11 @@ public class UserDAO {
 	}
 	
 	//Update the user
-	public void updateUser(User user) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	public int updateUser(User user) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		OracleConnection oracle = new OracleConnection();
-		
+		int result = 0;
 		try {
 			conn = oracle.getConnection();
 			System.out.println("Connection Established!");
@@ -165,7 +165,7 @@ public class UserDAO {
 			stmt.setInt(9, user.getUserId());
 			
 			// execute the update statement
-			stmt.executeUpdate();
+			result = stmt.executeUpdate();
 		
 		}catch(SQLException e) {
 			throw new RegistrationException(e.getMessage());
@@ -173,6 +173,7 @@ public class UserDAO {
 			stmt.close();
 			conn.close();
 		}
+		return result;
 	}
 	
 	public static void main(String[] args) throws ClassNotFoundException, RegistrationException, SQLException, IOException {
