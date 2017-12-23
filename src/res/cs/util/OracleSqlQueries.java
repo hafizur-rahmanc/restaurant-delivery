@@ -5,6 +5,7 @@ public class OracleSqlQueries {
 	public static final String CREATE_USER = "INSERT INTO users (first_name, last_name, user_name, password, gender, address, phone_number, email) values(?, ?, ?, ?, ?, ?, ?, ?)";
 	public static final String GET_USERS = "SELECT * FROM users";
 	public static final String UPDATE_USER = "UPDATE users SET first_name = ?, last_name=?, user_name=?, password=?, gender=?, address=?, phone_number=?, email=? WHERE user_id=?";
+	public static final String REMOVE_USER = "DELETE FROM users WHERE user_id = ?";
 	public static final String CREATE_ITEM = "INSERT INTO items (item_name, item_price, item_description, image, active, category, inventory) values(?, ?, ?, ?, ?, ?, ?)";
 	public static final String GET_ITEMS = "SELECT * FROM items";
 	public static final String UPDATE_ITEM = "UPDATE items SET item_name = ?, item_price=?, item_description=?, image=?, active=?, category=?, inventory=? WHERE item_id=?";
@@ -22,5 +23,6 @@ public class OracleSqlQueries {
 	public static final String GET_ORDERS = "SELECT * FROM orders";
 	public static final String REMOVE_ORDER = "DELETE FROM orders WHERE order_id = ?";
 	public static final String CREATE_PAYMENT = "INSERT INTO payment (user_id, credit_card_number, secure_code, zipcode) values(?, ?, ?, ?)";
+
 
 }

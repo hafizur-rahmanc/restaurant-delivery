@@ -176,6 +176,27 @@ public class UserDAO {
 		return result;
 	}
 	
+	public int removeUser(int userId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		OracleConnection oracle = new OracleConnection();
+		int result = 0;
+		try {
+			conn = oracle.getConnection();
+			System.out.println("Connection Established!");
+			stmt = conn.prepareStatement(OracleSqlQueries.REMOVE_USER);
+			stmt.setInt(1, userId);
+			// execute the update statement
+			result = stmt.executeUpdate();
+		
+		}catch(SQLException e) {
+			throw new RegistrationException(e.getMessage());
+		}finally {
+			stmt.close();
+			conn.close();
+		}
+		return result;
+	}
 	public static void main(String[] args) throws ClassNotFoundException, RegistrationException, SQLException, IOException {
 		UserDAO DAO = new UserDAO();
 		User user = DAO.getUser("user");
