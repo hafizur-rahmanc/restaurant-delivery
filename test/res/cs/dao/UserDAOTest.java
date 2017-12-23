@@ -29,7 +29,7 @@ public class UserDAOTest {
 	public Object[][] inputData(){
 		Object[][] data = {
 				{"Mohammed", "Rahman", "hafiz", "hafiz", "M", "6107 Wooside Ave", 3475278509L, "hafiz@restaurant.org", 1},
-				{"Abdur", "Rahman", "hafizur", "hafizur", "M", "6117 Wooside Ave", 6465278509L, "rahman@restaurant.org", 1},
+				{"Abdur", "Rahman", "hafizur1", "hafizur123", "M", "6117 Wooside Ave", 6465278509L, "rahman@restaurant.org", 1},
 				{"Omar", "Khait", "samy", "samy", "M", "6127 Wooside Ave", 3475278519L, "samy@restaurant.org", 1}
 		};
 		return data;
@@ -37,7 +37,7 @@ public class UserDAOTest {
 	}
 	
 	@Test(dataProvider="registration")
-	public void registrationTest(String firstName, String lastName, String userName, String password, String gender, String address, Long phoneNumber, String email, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	public void createUserTest(String firstName, String lastName, String userName, String password, String gender, String address, Long phoneNumber, String email, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		user.setFirstName(firstName);
 		user.setLastName(lastName);
 		user.setUserName(userName);
@@ -49,6 +49,25 @@ public class UserDAOTest {
 		int actual = dude.createUser(user);
 		System.out.println(user);
 		assertThat(actual, equalTo(expected));
+		
+	}
+	
+	@DataProvider(name="getuser")
+	public Object[][] sampleData(){
+		Object[][] data = {
+				{"hafiz", "hafiz@restaurant.org"},
+				{"hafizur", "hafizur@restaurant.org"},
+				{"samy", "samy@restaurant.org"}
+		};
+		return data;
+		
+	}
+	
+	@Test(dataProvider="getuser")
+	public void getUserTest(String userName, String expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		User actual = dude.getUser(userName);
+		System.out.println(user);
+		assertThat(actual.getEmail(), equalTo(expected));
 		
 	}
 	
