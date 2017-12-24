@@ -98,4 +98,23 @@ public class UserDAOTest {
 		
 	}
 	
+	@DataProvider(name="removeUser")
+	public Object[][] createData(){
+		Object[][] data = {
+				{56, 1},
+				{57, 1},
+				{58, 1},
+				{60, 0} // not available case
+		};
+		return data;
+		
+	}
+	
+	@Test(dataProvider="updateUser")
+	public void voidUserTest(int userId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		int actual = dude.removeUser(userId);
+		assertThat(actual, equalTo(expected));
+		
+	}
+	
 }
