@@ -35,9 +35,9 @@ public class UserDAOTest {
 	@DataProvider(name="registration")
 	public Object[][] inputData(){
 		Object[][] data = {
-				{"Md", "Rahman", "hafiz11", "hafiz11", "M", "6107 Wooside Ave", 3475278509L, "hafiz@restaurant.org", true},
-				{"Abdu", "Rahman", "hafizur12", "hafizur123", "M", "6117 Wooside Ave", 6465278509L, "rahman@restaurant.org", true},
-				{"OmarSulaiman", "Khait", "samy12", "samy12", "M", "6127 Wooside Ave", 3475278519L, "samy@restaurant.org", true}
+				{"Md", "Rahman", "hafizrahman", "hafiz_Rahman", "M", "6107 Wooside Ave", 3475278509L, "hafiz@restaurant.org", true},
+				{"Abdu", "Rahman", "hafizur12345", "hafizur567", "M", "6117 Wooside Ave", 6465278509L, "rahman@restaurant.org", true},
+				{"OmarSulaiman", "Khait", "samy123", "samy123", "M", "6127 Wooside Ave", 3475278519L, "samy@restaurant.org", true}
 		};
 		return data;
 		
@@ -53,15 +53,14 @@ public class UserDAOTest {
 		user.setAddress(address);
 		user.setPhoneNumber(phoneNumber);
 		user.setEmail(email);
-		int result = userDAO.createUser(user);
-		userId = result;
+		userId = userDAO.createUser(user);
 		// equivalent to isCreated = (actual != 0) ? true : false
-		isCreated = (result != 0);
+		isCreated = (userId != 0);
 		assertThat(isCreated , equalTo(expected));
 		
 	}
 	
-	@DataProvider(name="getuser")
+	@DataProvider(name="getUser")
 	public Object[][] sampleData(){
 		Object[][] data = {
 				{"hafizur12", "rahman@restaurant.org"},
@@ -72,7 +71,7 @@ public class UserDAOTest {
 		
 	}
 	
-	@Test(dataProvider="getuser")
+	@Test(dataProvider="getUser")
 	public void getUserTest(String userName, String expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		User actual = userDAO.getUser(userName);
 		assertThat(actual.getEmail(), equalTo(expected));
@@ -82,7 +81,8 @@ public class UserDAOTest {
 	@DataProvider(name="updateUser")
 	public Object[][] userData(){
 		Object[][] data = {
-				{90, "Abdur", "Rahman", "hafizur1", "hafizur123", "M", "6117 Wooside Ave Woodside", 6465278520L, "rahman@restaurant.org", 1}
+				{90, "Abdur", "Rahman", "hafizur1", "hafizur1234", "M", "6117 Wooside Ave Woodside", 6465278520L, "rahman@restaurant.org", 1},
+				{126, "Hafizur", "Rahman", "hafiz_ny", "password1234", "M", "6117 Wooside Ave Woodside", 3475278509L, "hafiz@restaurant.org", 1}
 		};
 		return data;
 		
@@ -131,6 +131,7 @@ public class UserDAOTest {
 			userDAO.removeUser(userId);
 		}
 		if(isUpdated) {
+			System.out.println(user.getFirstName() + "--" + user.getLastName() + "--" + user.getUserId());
 			userDAO.updateUser(user);
 		}
 	}
