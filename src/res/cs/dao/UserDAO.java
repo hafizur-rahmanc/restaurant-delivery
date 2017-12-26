@@ -42,10 +42,10 @@ public class UserDAO {
 			userId = stmt.executeUpdate();
 			
 			//Retrieve any auto generated keys created as a result of executing this statement object
-//			result = stmt.getGeneratedKeys();
-//			if(result.next()) {
-//				userId = result.getInt(1);
-//			}
+			result = stmt.getGeneratedKeys();
+			if(result.next()) {
+				userId = result.getInt(1);
+			}
 			
 		}catch(SQLException e) {
 			throw new RegistrationException(e.getMessage());
