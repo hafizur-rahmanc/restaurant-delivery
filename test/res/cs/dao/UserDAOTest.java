@@ -15,6 +15,7 @@ import res.cs.model.User;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 public class UserDAOTest {
 	private UserDAO userDAO;
@@ -39,8 +40,7 @@ public class UserDAOTest {
 				{"Abdu", "Rahman", "hafizur12345", "hafizur567", "M", "6117 Wooside Ave", 6465278509L, "rahman@restaurant.org", true},
 				{"OmarSulaiman", "Khait", "samy123", "samy123", "M", "6127 Wooside Ave", 3475278519L, "samy@restaurant.org", true}
 		};
-		return data;
-		
+		return data;	
 	}
 	
 	@Test(dataProvider="registration")
@@ -67,8 +67,7 @@ public class UserDAOTest {
 				{"admin", "admin@retaurant.org"},
 				{"user", "user@restaurant.org"}
 		};
-		return data;
-		
+		return data;	
 	}
 	
 	@Test(dataProvider="getUser")
@@ -78,14 +77,39 @@ public class UserDAOTest {
 		
 	}
 	
+	@DataProvider(name="getAllUsers")
+	public Object[][] Data(){
+		Object[][] data = {
+				{"Hafizur", true},
+				{"Abdur", true},
+				{"OmarSulaiman", true},
+				{"Khait", false}
+		};
+		return data;	
+	}
+	
+	@Test(dataProvider="getAllUsers")
+	public void getAllUsersTest(String firstName, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		List<User> usersList = userDAO.getAllUsers();
+		boolean actual = false;
+		for(User user : usersList) {
+			if(firstName.equals(user.getFirstName())) {
+				actual = true;
+				break;
+			}
+		}
+		
+		assertThat(actual, equalTo(expected));
+		
+	}
+	
 	@DataProvider(name="updateUser")
 	public Object[][] userData(){
 		Object[][] data = {
 				{90, "Abdur", "Rahman", "hafizur1", "hafizur1234", "M", "6117 Wooside Ave Woodside", 6465278520L, "rahman@restaurant.org", 1},
 				{126, "Hafizur", "Rahman", "hafiz_ny", "password1234", "M", "6117 Wooside Ave Woodside", 3475278509L, "hafiz@restaurant.org", 1}
 		};
-		return data;
-		
+		return data;	
 	}
 	
 	@Test(dataProvider="updateUser")
@@ -114,15 +138,13 @@ public class UserDAOTest {
 				{81, 0},
 				{87, 0} // not available case
 		};
-		return data;
-		
+		return data;	
 	}
 	
 	@Test(dataProvider="removeUser")
 	public void voidUserTest(int userId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		int actual = userDAO.removeUser(userId);
-		assertThat(actual, equalTo(expected));
-		
+		assertThat(actual, equalTo(expected));	
 	}
 	
 	@AfterMethod
@@ -131,9 +153,7 @@ public class UserDAOTest {
 			userDAO.removeUser(userId);
 		}
 		if(isUpdated) {
-			System.out.println(user.getFirstName() + "--" + user.getLastName() + "--" + user.getUserId());
 			userDAO.updateUser(user);
 		}
-	}
-	
+	}	
 }

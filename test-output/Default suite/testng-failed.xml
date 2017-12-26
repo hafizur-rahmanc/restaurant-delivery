@@ -6,7 +6,7 @@
       <class name="res.cs.dao.UserDAOTest">
         <methods>
           <include name="initialize"/>
-          <include name="createUserTest" invocation-numbers="1 2"/>
+          <include name="getAllUsersTest"/>
           <include name="removeCreatedUser"/>
         </methods>
       </class> <!-- res.cs.dao.UserDAOTest -->

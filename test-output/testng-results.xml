@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" ignored="0" total="14" passed="14">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1214" started-at="2017-12-26T05:04:53Z" finished-at="2017-12-26T05:04:54Z">
+  <suite name="Default suite" duration-ms="1388" started-at="2017-12-26T19:55:48Z" finished-at="2017-12-26T19:55:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1214" started-at="2017-12-26T05:04:53Z" finished-at="2017-12-26T05:04:54Z">
+    <test name="Default test" duration-ms="1388" started-at="2017-12-26T19:55:48Z" finished-at="2017-12-26T19:55:49Z">
       <class name="res.cs.dao.UserDAOTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="4" started-at="2017-12-26T00:04:53Z" finished-at="2017-12-26T00:04:53Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="3" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="createUserTest" duration-ms="615" started-at="2017-12-26T00:04:53Z" data-provider="registration" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="createUserTest" duration-ms="573" started-at="2017-12-26T14:55:48Z" data-provider="registration" finished-at="2017-12-26T14:55:48Z">
           <params>
             <param index="0">
               <value>
@@ -62,15 +62,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="31" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="30" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeCreatedUser -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="createUserTest" duration-ms="30" started-at="2017-12-26T00:04:54Z" data-provider="registration" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="createUserTest" duration-ms="39" started-at="2017-12-26T14:55:48Z" data-provider="registration" finished-at="2017-12-26T14:55:48Z">
           <params>
             <param index="0">
               <value>
@@ -121,15 +121,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="30" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="29" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeCreatedUser -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="createUserTest" duration-ms="26" started-at="2017-12-26T00:04:54Z" data-provider="registration" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="createUserTest" duration-ms="25" started-at="2017-12-26T14:55:48Z" data-provider="registration" finished-at="2017-12-26T14:55:48Z">
           <params>
             <param index="0">
               <value>
@@ -180,15 +180,107 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="28" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="28" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeCreatedUser -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="1" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getUserTest" duration-ms="56" started-at="2017-12-26T00:04:54Z" data-provider="getUser" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getAllUsersTest" duration-ms="31" started-at="2017-12-26T14:55:48Z" data-provider="getAllUsers" finished-at="2017-12-26T14:55:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hafizur]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUsersTest -->
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeCreatedUser -->
+        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getAllUsersTest" duration-ms="25" started-at="2017-12-26T14:55:48Z" data-provider="getAllUsers" finished-at="2017-12-26T14:55:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abdur]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUsersTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeCreatedUser -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getAllUsersTest" duration-ms="24" started-at="2017-12-26T14:55:48Z" data-provider="getAllUsers" finished-at="2017-12-26T14:55:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OmarSulaiman]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUsersTest -->
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="1" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeCreatedUser -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getAllUsersTest" duration-ms="23" started-at="2017-12-26T14:55:48Z" data-provider="getAllUsers" finished-at="2017-12-26T14:55:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Khait]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUsersTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getUserTest" duration-ms="78" started-at="2017-12-26T14:55:48Z" data-provider="getUser" finished-at="2017-12-26T14:55:48Z">
           <params>
             <param index="0">
               <value>
@@ -204,11 +296,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserTest -->
-        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="0" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeCreatedUser -->
-        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getUserTest" duration-ms="33" started-at="2017-12-26T00:04:54Z" data-provider="getUser" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeCreatedUser -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="1" started-at="2017-12-26T14:55:48Z" finished-at="2017-12-26T14:55:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getUserTest" duration-ms="44" started-at="2017-12-26T14:55:48Z" data-provider="getUser" finished-at="2017-12-26T14:55:49Z">
           <params>
             <param index="0">
               <value>
@@ -224,15 +324,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:49Z" finished-at="2017-12-26T14:55:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getUserTest" duration-ms="92" started-at="2017-12-26T00:04:54Z" data-provider="getUser" finished-at="2017-12-26T00:04:54Z">
+        </test-method> <!-- removeCreatedUser -->
+        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getUserTest" duration-ms="31" started-at="2017-12-26T14:55:49Z" data-provider="getUser" finished-at="2017-12-26T14:55:49Z">
           <params>
             <param index="0">
               <value>
@@ -248,19 +344,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserTest -->
-        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="0" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- removeCreatedUser -->
-        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="0" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- removeCreatedUser -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:49Z" finished-at="2017-12-26T14:55:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="updateUserTest" duration-ms="68" started-at="2017-12-26T00:04:54Z" data-provider="updateUser" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="1" started-at="2017-12-26T14:55:49Z" finished-at="2017-12-26T14:55:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeCreatedUser -->
+        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="updateUserTest" duration-ms="115" started-at="2017-12-26T14:55:49Z" data-provider="updateUser" finished-at="2017-12-26T14:55:49Z">
           <params>
             <param index="0">
               <value>
@@ -316,11 +408,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateUserTest -->
-        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="28" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:49Z" finished-at="2017-12-26T14:55:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="39" started-at="2017-12-26T14:55:49Z" finished-at="2017-12-26T14:55:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeCreatedUser -->
-        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="updateUserTest" duration-ms="52" started-at="2017-12-26T00:04:54Z" data-provider="updateUser" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:49Z" finished-at="2017-12-26T14:55:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="updateUserTest" duration-ms="91" started-at="2017-12-26T14:55:49Z" data-provider="updateUser" finished-at="2017-12-26T14:55:49Z">
           <params>
             <param index="0">
               <value>
@@ -376,19 +476,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateUserTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="28" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="51" started-at="2017-12-26T14:55:49Z" finished-at="2017-12-26T14:55:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeCreatedUser -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="1" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:49Z" finished-at="2017-12-26T14:55:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="voidUserTest(int, int)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="voidUserTest" duration-ms="25" started-at="2017-12-26T00:04:54Z" data-provider="removeUser" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="voidUserTest(int, int)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="voidUserTest" duration-ms="32" started-at="2017-12-26T14:55:49Z" data-provider="removeUser" finished-at="2017-12-26T14:55:49Z">
           <params>
             <param index="0">
               <value>
@@ -404,15 +500,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- voidUserTest -->
-        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="0" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:49Z" finished-at="2017-12-26T14:55:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeCreatedUser -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-26T14:55:49Z" finished-at="2017-12-26T14:55:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="voidUserTest(int, int)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="voidUserTest" duration-ms="28" started-at="2017-12-26T00:04:54Z" data-provider="removeUser" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="voidUserTest(int, int)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="voidUserTest" duration-ms="33" started-at="2017-12-26T14:55:49Z" data-provider="removeUser" finished-at="2017-12-26T14:55:49Z">
           <params>
             <param index="0">
               <value>
@@ -428,7 +524,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- voidUserTest -->
-        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="1" started-at="2017-12-26T00:04:54Z" finished-at="2017-12-26T00:04:54Z">
+        <test-method status="PASS" signature="removeCreatedUser()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="removeCreatedUser" is-config="true" duration-ms="1" started-at="2017-12-26T14:55:49Z" finished-at="2017-12-26T14:55:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeCreatedUser -->
