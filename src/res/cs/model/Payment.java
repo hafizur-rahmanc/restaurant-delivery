@@ -3,22 +3,26 @@ package res.cs.model;
 public class Payment {
 	//Intance variables
 	private int paymentId;
-	private int userId;
 	private long creditCardNumber;
 	private int secureCode;
 	private int zipcode;
+	
+	//Constructor
+	public Payment() {
+		
+	}
+	public Payment(long creditCardNumber, int secureCode, int zipcode) {
+		super();
+		this.creditCardNumber = creditCardNumber;
+		this.secureCode = secureCode;
+		this.zipcode = zipcode;
+	}
 	//Getter and setter methods
 	public int getPaymentId() {
 		return paymentId;
 	}
 	public void setPaymentId(int paymentId) {
 		this.paymentId = paymentId;
-	}
-	public int getUserId() {
-		return userId;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
 	}
 	public long getCreditCardNumber() {
 		return creditCardNumber;
