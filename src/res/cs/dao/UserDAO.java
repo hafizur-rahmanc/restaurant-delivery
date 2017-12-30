@@ -18,7 +18,7 @@ public class UserDAO {
 		int userId = 0;
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		ResultSet result = null;
+		ResultSet resultSet = null;
 		
 		String[] idColumn = {"user_id"};
 		OracleConnection oracle = new OracleConnection();
@@ -42,22 +42,32 @@ public class UserDAO {
 			userId = stmt.executeUpdate();
 			
 			//Retrieve any auto generated keys created as a result of executing this statement object
-			result = stmt.getGeneratedKeys();
-			if(result.next()) {
-				userId = result.getInt(1);
+			resultSet = stmt.getGeneratedKeys();
+			if(resultSet.next()) {
+				userId = resultSet.getInt(1);
 			}
 			
 		}catch(SQLException e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			//result.close();
-			stmt.close();
-			conn.close();
+			close(resultSet, stmt, conn);
 		}
 		
 		return userId;
 	}
 	
+	private void close(ResultSet resultSet, PreparedStatement stmt, Connection conn) throws SQLException {
+		if(resultSet != null) {
+			resultSet.close();
+		}
+		if(stmt != null) {
+			stmt.close();
+		}
+		if(conn != null) {
+			conn.close();
+		}
+	}
+
 	//Get the user object by user_name
 	public User getUser(String userName) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
 		Connection conn = null;
@@ -92,13 +102,7 @@ public class UserDAO {
 		}catch(SQLException e){
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			try {
-				resultSet.close();
-				stmt.close();
-				conn.close();
-			}catch(SQLException e) {
-				System.out.println(e.getStackTrace());
-			}
+			close(resultSet, stmt, conn);
 		}
 		return user;
 	}
@@ -136,9 +140,7 @@ public class UserDAO {
 		}catch(SQLException e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			resultSet.close();
-			stmt.close();
-			conn.close();
+			close(resultSet, stmt, conn);
 		}
 		
 		return usersList;
@@ -170,8 +172,7 @@ public class UserDAO {
 		}catch(SQLException e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			stmt.close();
-			conn.close();
+			close(null, stmt, conn);
 		}
 		return result;
 	}
@@ -192,8 +193,7 @@ public class UserDAO {
 		}catch(SQLException e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			stmt.close();
-			conn.close();
+			close(null, stmt, conn);
 		}
 		return result;
 	}

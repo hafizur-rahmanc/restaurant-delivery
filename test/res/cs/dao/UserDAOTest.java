@@ -99,8 +99,7 @@ public class UserDAOTest {
 			}
 		}
 		
-		assertThat(actual, equalTo(expected));
-		
+		assertThat(actual, equalTo(expected));	
 	}
 	
 	@DataProvider(name="updateUser")
