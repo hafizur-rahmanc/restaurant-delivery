@@ -27,18 +27,18 @@ public class ReviewBO {
 		final ReviewDAO reviewDAO = new ReviewDAO();
 		List<Review> reviewsList = null;
 		try {
-			reviewsList = reviewDAO.getAllReviews(item_id);
+			reviewsList = reviewDAO.getReviewsByItem(item_id);
 		}catch(RegistrationException e) {
 			throw new RegistrationException(e.getMessage());
 		}
 		return reviewsList;
 	}
 	
-	// admin can remove a review by the review_id
-	public void removeReview(int reviewId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	// admin can delete a review by the review_id
+	public void deleteReview(int reviewId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		final ReviewDAO reviewDAO = new ReviewDAO();
 		try {
-			reviewDAO.removeReview(reviewId);
+			reviewDAO.deleteReview(reviewId);
 		}catch(RegistrationException e) {
 			throw new RegistrationException(e.getMessage());
 		}

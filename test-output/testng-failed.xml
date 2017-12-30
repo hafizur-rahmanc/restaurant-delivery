@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="res.cs.dao.UserDAOTest">
+      <class name="res.cs.dao.ReviewDAOTest">
         <methods>
+          <include name="getStoreTest" invocation-numbers="1"/>
+          <include name="finalize"/>
           <include name="initialize"/>
-          <include name="getAllUsersTest"/>
-          <include name="removeCreatedUser"/>
         </methods>
-      </class> <!-- res.cs.dao.UserDAOTest -->
+      </class> <!-- res.cs.dao.ReviewDAOTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

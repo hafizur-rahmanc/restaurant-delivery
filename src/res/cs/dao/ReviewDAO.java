@@ -44,18 +44,28 @@ public class ReviewDAO {
 		}catch(Exception e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			try {
-				stmt.close();
-				conn.close();
-			}catch(SQLException e) {
-				
-			}
+			//Close all the open connections
+			close(null, stmt, conn);
 		}
 		
 		return reviewId;
 	}
+	
+	//Close all the open connections
+	private void close(ResultSet resultSet, PreparedStatement stmt, Connection conn) throws SQLException {
+		if(resultSet != null) {
+			resultSet.close();
+		}
+		if(stmt != null) {
+			stmt.close();
+		}
+		if(conn != null) {
+			conn.close();
+		}
+	}
+	
 	//Get all the reviews for a particular item using the item_id
-	public List<Review> getAllReviews(int item_id) throws RegistrationException, SQLException, ClassNotFoundException, IOException {
+	public List<Review> getReviewsByItem(int item_id) throws RegistrationException, SQLException, ClassNotFoundException, IOException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet resultSet = null;
@@ -88,67 +98,56 @@ public class ReviewDAO {
 		}catch(Exception e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			try {
-				resultSet.close();
-				stmt.close();
-				conn.close();
-			}catch(SQLException e) {
-				
-			}
+			close(resultSet, stmt, conn);
 		}
 		return reviewsList;
 	}
 	
 	//Get all the reviews for a particular user using the user_id
-		public List<Review> getReviewsByUser(int user_id) throws RegistrationException, SQLException, ClassNotFoundException, IOException {
-			Connection conn = null;
-			PreparedStatement stmt = null;
-			ResultSet resultSet = null;
-			List<Review> reviewsList = null;
-			Review singleReview = null;
-			OracleConnection oracle = new OracleConnection();
+	public List<Review> getReviewsByUser(int user_id) throws RegistrationException, SQLException, ClassNotFoundException, IOException {
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet resultSet = null;
+		List<Review> reviewsList = null;
+		Review singleReview = null;
+		OracleConnection oracle = new OracleConnection();
+		
+		try {
+			conn = oracle.getConnection();
+			stmt = conn.prepareStatement(OracleSqlQueries.GET_REVIEWS_BY_USER);
+			//Fill out the Query string by providing the user id
+			stmt.setInt(1, user_id);
+			//Execute the Query 
+			resultSet = stmt.executeQuery();
+			reviewsList = new ArrayList<Review>();
 			
-			try {
-				conn = oracle.getConnection();
-				stmt = conn.prepareStatement(OracleSqlQueries.GET_REVIEWS_BY_USER);
-				//Fill out the Query string by providing the user id
-				stmt.setInt(1, user_id);
-				//Execute the Query 
-				resultSet = stmt.executeQuery();
-				reviewsList = new ArrayList<Review>();
+			while(resultSet.next()) {
+				singleReview = new Review();
+				singleReview.setReviewId(resultSet.getInt(1));
+				singleReview.setUserId(resultSet.getInt(2));
+				singleReview.setItemId(resultSet.getInt(3));
+				singleReview.setDescription(resultSet.getString(4));
 				
-				while(resultSet.next()) {
-					singleReview = new Review();
-					singleReview.setReviewId(resultSet.getInt(1));
-					singleReview.setUserId(resultSet.getInt(2));
-					singleReview.setItemId(resultSet.getInt(3));
-					singleReview.setDescription(resultSet.getString(4));
-					
-					//Add to the reviews list
-					reviewsList.add(singleReview);
-				}
-				
-			}catch(SQLException e) {
-				throw new RegistrationException(e.getMessage());
-			}catch(Exception e) {
-				throw new RegistrationException(e.getMessage());
-			}finally {
-				try {
-					resultSet.close();
-					stmt.close();
-					conn.close();
-				}catch(SQLException e) {
-					
-				}
+				//Add to the reviews list
+				reviewsList.add(singleReview);
 			}
-			return reviewsList;
+			
+		}catch(SQLException e) {
+			throw new RegistrationException(e.getMessage());
+		}catch(Exception e) {
+			throw new RegistrationException(e.getMessage());
+		}finally {
+			close(resultSet, stmt, conn);
 		}
+		return reviewsList;
+	}
 	
-	//Admin can remove a review by using the review_id
-	public void removeReview(int reviewId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	//Admin can delete a review by using the review_id
+	public int deleteReview(int reviewId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		OracleConnection oracle = new OracleConnection();
+		int result = 0;
 		
 		try {
 			conn = oracle.getConnection();
@@ -157,19 +156,15 @@ public class ReviewDAO {
 			// set the corresponding parameter
 			stmt.setInt(1, reviewId);
 			// execute the delete statement
-			stmt.executeUpdate();
+			result = stmt.executeUpdate();
 		}catch(SQLException e) {
 			throw new RegistrationException(e.getMessage());
 		}catch(Exception e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			try {
-				stmt.close();
-				conn.close();
-			}catch(SQLException e) {
-				
-			}
+			close(null, stmt, conn);
 		}
+		return result;
 	}
 	
 	public static void main(String[] args) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
@@ -178,10 +173,10 @@ public class ReviewDAO {
 		review.setItemId(1);
 		review.setDescription("I love it.");
 		ReviewDAO DAO = new ReviewDAO();
-		//DAO.removeReview(2);
+		//DAO.deleteReview(2);
 		int id = DAO.createReview(review);
 		System.out.println("Last created Review id is: " + id);
-		System.out.println(DAO.getAllReviews(1));
+		System.out.println(DAO.getReviewsByItem(1));
 	}
 
 }

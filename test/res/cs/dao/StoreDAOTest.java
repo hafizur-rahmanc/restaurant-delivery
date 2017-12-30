@@ -25,7 +25,7 @@ public class StoreDAOTest {
 	@BeforeMethod
 	public void initialize() {
 		storeDAO = new StoreDAO();
-		theStore = new Store();
+		theStore = null;
 		isCreated = false;
 		isUpdated = false;
 		storeId = 0;

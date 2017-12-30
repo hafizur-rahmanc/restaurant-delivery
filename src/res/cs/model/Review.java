@@ -7,6 +7,23 @@ public class Review {
 	private int itemId;
 	private String description;
 	
+	//Constructor
+	public Review() {
+		
+	}
+	public Review(int userId, int itemId, String description) {
+		super();
+		this.userId = userId;
+		this.itemId = itemId;
+		this.description = description;
+	}
+	public Review(int reviewId, int userId, int itemId, String description) {
+		super();
+		this.reviewId = reviewId;
+		this.userId = userId;
+		this.itemId = itemId;
+		this.description = description;
+	}
 	//Setter and getter methods
 	public int getReviewId() {
 		return reviewId;
