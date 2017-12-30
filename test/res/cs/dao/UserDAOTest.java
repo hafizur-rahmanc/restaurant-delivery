@@ -113,7 +113,9 @@ public class UserDAOTest {
 	
 	@Test(dataProvider="updateUser")
 	public void updateUserTest(int userId, String firstName, String lastName, String userName, String password, String gender, String address, Long phoneNumber, String email, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		// preserve the original user
 		user = userDAO.getUser(userName);
+		// create a new user
 		User newUser = new User();
 		newUser.setFirstName(firstName);
 		newUser.setLastName(lastName);
