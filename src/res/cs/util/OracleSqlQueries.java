@@ -8,7 +8,7 @@ public class OracleSqlQueries {
 	public static final String REMOVE_USER = "DELETE FROM users WHERE user_id = ?";
 	public static final String CREATE_ITEM = "INSERT INTO items (item_name, item_price, item_description, image, active, category) values(?, ?, ?, ?, ?, ?)";
 	public static final String GET_ITEMS = "SELECT * FROM items";
-	public static final String UPDATE_ITEM = "UPDATE items SET item_name = ?, item_price = ?, item_description = ?, image = ?, active = ?, category = ?, inventory = ? WHERE item_id = ?";
+	public static final String UPDATE_ITEM = "UPDATE items SET item_name = ?, item_price = ?, item_description = ?, image = ?, active = ?, category = ? WHERE item_id = ?";
 	public static final String GET_ITEM = "SELECT * FROM items WHERE item_id = ?";
 	public static final String CREATE_REVIEW = "INSERT INTO reviews (user_id, item_id, description) values(?, ?, ?)";
 	public static final String GET_REVIEWS = "SELECT * FROM reviews WHERE item_id = ?";

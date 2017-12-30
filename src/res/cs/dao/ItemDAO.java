@@ -139,10 +139,11 @@ public class ItemDAO {
 	}
 	
 	//Update an item
-	public void updateItem(Item item) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
+	public int updateItem(Item item) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		OracleConnection oracle = new OracleConnection();
+		int result = 0;
 		
 		try {
 			conn = oracle.getConnection();
@@ -156,8 +157,8 @@ public class ItemDAO {
 			stmt.setString(6, item.getCategory());
 			stmt.setInt(7, item.getItemId());
 			
-			// execute the update statement
-			stmt.executeUpdate();
+			//Execute the update statement
+			result = stmt.executeUpdate();
 		}catch(SQLException e) {
 			throw new RegistrationException(e.getMessage());
 		}catch(Exception e) {
@@ -165,6 +166,7 @@ public class ItemDAO {
 		}finally {
 			close(null, stmt, conn);
 		}
+		return result;
 	}
 	
 	

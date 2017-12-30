@@ -5,6 +5,7 @@ import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -64,6 +65,71 @@ public class ItemDAOTest {
 	public void getItemTest(int itemId, String expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		Item actual = itemDAO.getItem(itemId);
 		assertThat(actual.getItemName(), equalTo(expected));
+	}
+	
+	@DataProvider(name="getAllItems")
+	public Object[][] Data(){
+		Object[][] data = {
+				{"Salads", 12.99, true},
+				{"Simple Pie", 10.99, true},
+				{"Egg Dishes", 7.99, true},
+				{"Dominos", 12.99, false}
+		};
+		return data;	
+	}
+	
+	@Test(dataProvider="getAllItems")
+	public void getAllItemsTest(String itemName, Double itemPrice, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		List<Item> itemsList = itemDAO.getAllItems();
+		boolean actual = false;
+		for(Item theItem : itemsList) {
+			if((itemName.equals(theItem.getItemName())) && (itemPrice == theItem.getItemPrice())) {
+				actual = true;
+				break;
+			}
+		}
+		
+		assertThat(actual, equalTo(expected));	
+	}
+	
+	@DataProvider(name="updateItem")
+	public Object[][] itemData(){
+		Object[][] data = {
+				{41, "Salads", 10.99, "Salad appeals to those customers looking to eat healthier.", "salads.jpg", 1, "Salad", 1},
+				{42, "Simple Pie", 11.99, "Most of the people don’t feel like they have the time to whip up an apple pie.", "simplepie.jpg", 1, "Pie", 1},
+				{43, "Egg Dishes", 5.99, "Eggs are the cornerstone of any breakfast menu.", "eggs.jpg", 1, "Egg", 1}
+		};
+		return data;	
+	}
+	
+	@Test(dataProvider="updateItem")
+	public void updateItemTest(int itemId, String itemName, Double itemPrice, String itemDescription, String image, int active, String category, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		//Preserve the original item
+		theItem = itemDAO.getItem(itemId);
+		//Create a brand new item with the updated info
+		Item newItem = new Item(itemId, itemName, itemPrice, itemDescription, image, active, category );
+		//Update the item with new information
+		int actual = itemDAO.updateItem(newItem);
+		//Equivalent to isUpdated = (actual != 0) ? true : false
+		isUpdated = (actual != 0);
+		
+		assertThat(actual , equalTo(expected));
+		
+	}
+	
+	@DataProvider(name="deleteItem")
+	public Object[][] createData(){
+		Object[][] data = {
+				{81, 0}, // not available case
+				{87, 0} // not available case
+		};
+		return data;	
+	}
+	
+	@Test(dataProvider="deleteItem")
+	public void deleteItemTest(int itemId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		int actual = itemDAO.deleteItem(itemId);;
+		assertThat(actual, equalTo(expected));	
 	}
 	
 	@AfterMethod

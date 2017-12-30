@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="823" started-at="2017-12-30T17:54:18Z" finished-at="2017-12-30T17:54:19Z">
+  <suite name="Default suite" duration-ms="1227" started-at="2017-12-30T19:51:21Z" finished-at="2017-12-30T19:51:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="823" started-at="2017-12-30T17:54:18Z" finished-at="2017-12-30T17:54:19Z">
+    <test name="Default test" duration-ms="1227" started-at="2017-12-30T19:51:21Z" finished-at="2017-12-30T19:51:22Z">
       <class name="res.cs.dao.ItemDAOTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="4" started-at="2017-12-30T12:54:18Z" finished-at="2017-12-30T12:54:18Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="4" started-at="2017-12-30T14:51:21Z" finished-at="2017-12-30T14:51:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="createItemTest" duration-ms="564" started-at="2017-12-30T12:54:18Z" data-provider="newItem" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="createItemTest" duration-ms="565" started-at="2017-12-30T14:51:21Z" data-provider="newItem" finished-at="2017-12-30T14:51:22Z">
           <params>
             <param index="0">
               <value>
@@ -52,15 +52,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createItemTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="28" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="31" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="createItemTest" duration-ms="38" started-at="2017-12-30T12:54:19Z" data-provider="newItem" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="createItemTest" duration-ms="39" started-at="2017-12-30T14:51:22Z" data-provider="newItem" finished-at="2017-12-30T14:51:22Z">
           <params>
             <param index="0">
               <value>
@@ -101,11 +101,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createItemTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="26" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="30" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="createItemTest" duration-ms="27" started-at="2017-12-30T12:54:19Z" data-provider="newItem" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="createItemTest" duration-ms="27" started-at="2017-12-30T14:51:22Z" data-provider="newItem" finished-at="2017-12-30T14:51:22Z">
           <params>
             <param index="0">
               <value>
@@ -146,19 +150,175 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createItemTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="27" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="26" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="1" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="deleteItemTest(int, int)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="deleteItemTest" duration-ms="24" started-at="2017-12-30T14:51:22Z" data-provider="deleteItem" finished-at="2017-12-30T14:51:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[81]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteItemTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getItemTest" duration-ms="31" started-at="2017-12-30T12:54:19Z" data-provider="getItem" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="deleteItemTest(int, int)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="deleteItemTest" duration-ms="25" started-at="2017-12-30T14:51:22Z" data-provider="deleteItem" finished-at="2017-12-30T14:51:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[87]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteItemTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getAllItemsTest" duration-ms="33" started-at="2017-12-30T14:51:22Z" data-provider="getAllItems" finished-at="2017-12-30T14:51:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Salads]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12.99]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllItemsTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="1" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getAllItemsTest" duration-ms="24" started-at="2017-12-30T14:51:22Z" data-provider="getAllItems" finished-at="2017-12-30T14:51:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Simple Pie]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[10.99]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllItemsTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getAllItemsTest" duration-ms="29" started-at="2017-12-30T14:51:22Z" data-provider="getAllItems" finished-at="2017-12-30T14:51:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Egg Dishes]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7.99]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllItemsTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getAllItemsTest" duration-ms="31" started-at="2017-12-30T14:51:22Z" data-provider="getAllItems" finished-at="2017-12-30T14:51:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dominos]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12.99]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllItemsTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getItemTest" duration-ms="31" started-at="2017-12-30T14:51:22Z" data-provider="getItem" finished-at="2017-12-30T14:51:22Z">
           <params>
             <param index="0">
               <value>
@@ -174,15 +334,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getItemTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getItemTest" duration-ms="25" started-at="2017-12-30T12:54:19Z" data-provider="getItem" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getItemTest" duration-ms="24" started-at="2017-12-30T14:51:22Z" data-provider="getItem" finished-at="2017-12-30T14:51:22Z">
           <params>
             <param index="0">
               <value>
@@ -198,11 +358,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getItemTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getItemTest" duration-ms="26" started-at="2017-12-30T12:54:19Z" data-provider="getItem" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getItemTest" duration-ms="25" started-at="2017-12-30T14:51:22Z" data-provider="getItem" finished-at="2017-12-30T14:51:22Z">
           <params>
             <param index="0">
               <value>
@@ -218,11 +386,169 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getItemTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+        <test-method status="PASS" signature="updateItemTest(int, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, int)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="updateItemTest" duration-ms="51" started-at="2017-12-30T14:51:22Z" data-provider="updateItem" finished-at="2017-12-30T14:51:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[41]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Salads]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.99]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Salad appeals to those customers looking to eat healthier.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[salads.jpg]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Salad]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateItemTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="25" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="updateItemTest(int, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, int)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="updateItemTest" duration-ms="47" started-at="2017-12-30T14:51:22Z" data-provider="updateItem" finished-at="2017-12-30T14:51:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[42]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Simple Pie]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[11.99]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Most of the people don’t feel like they have the time to whip up an apple pie.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[simplepie.jpg]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Pie]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateItemTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="26" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="updateItemTest(int, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, int)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="updateItemTest" duration-ms="49" started-at="2017-12-30T14:51:22Z" data-provider="updateItem" finished-at="2017-12-30T14:51:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[43]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Egg Dishes]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[5.99]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Eggs are the cornerstone of any breakfast menu.]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[eggs.jpg]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Egg]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateItemTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="23" started-at="2017-12-30T14:51:22Z" finished-at="2017-12-30T14:51:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->

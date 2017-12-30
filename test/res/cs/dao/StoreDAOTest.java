@@ -67,15 +67,6 @@ public class StoreDAOTest {
 		assertThat(actual.getStoreName(), equalTo(expected));
 	}
 	
-	@DataProvider(name="updateStore")
-	public Object[][] storeData(){
-		Object[][] data = {
-				{21, "Pizza Hutt", "9 West 57th Ave", "New York", 30, 10029, "pizzaHutt.jpg", 1},
-				{22, "Joanne Tratoria", "70 W 68th St", "New York", 20, 10023, "joanneTratoria.jpg", 1},
-				{23, "Wasabi Point", "7618 Woodside Ave", "Elmhurst", 20, 11373, "wasabiPoint.jpg", 1}
-		};
-		return data;	
-	}
 	
 	@DataProvider(name="getAllStores")
 	public Object[][] Data(){
@@ -100,6 +91,16 @@ public class StoreDAOTest {
 		}
 		
 		assertThat(actual, equalTo(expected));	
+	}
+	
+	@DataProvider(name="updateStore")
+	public Object[][] storeData(){
+		Object[][] data = {
+				{21, "Pizza Hutt", "9 West 57th Ave", "New York", 30, 10029, "pizzaHutt.jpg", 1},
+				{22, "Joanne Tratoria", "70 W 68th St", "New York", 20, 10023, "joanneTratoria.jpg", 1},
+				{23, "Wasabi Point", "7618 Woodside Ave", "Elmhurst", 20, 11373, "wasabiPoint.jpg", 1}
+		};
+		return data;	
 	}
 	
 	@Test(dataProvider="updateStore")

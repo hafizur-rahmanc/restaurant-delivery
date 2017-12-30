@@ -5,8 +5,8 @@
     <classes>
       <class name="res.cs.dao.ItemDAOTest">
         <methods>
+          <include name="updateItemTest"/>
           <include name="finalize"/>
-          <include name="getStoreTest" invocation-numbers="0 1 2"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- res.cs.dao.ItemDAOTest -->
