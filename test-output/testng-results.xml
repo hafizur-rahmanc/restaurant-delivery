@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="807" started-at="2017-12-30T16:13:40Z" finished-at="2017-12-30T16:13:41Z">
+  <suite name="Default suite" duration-ms="823" started-at="2017-12-30T17:54:18Z" finished-at="2017-12-30T17:54:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="807" started-at="2017-12-30T16:13:40Z" finished-at="2017-12-30T16:13:41Z">
-      <class name="res.cs.dao.PaymentDAOTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="initialize" is-config="true" duration-ms="3" started-at="2017-12-30T11:13:40Z" finished-at="2017-12-30T11:13:40Z">
+    <test name="Default test" duration-ms="823" started-at="2017-12-30T17:54:18Z" finished-at="2017-12-30T17:54:19Z">
+      <class name="res.cs.dao.ItemDAOTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="4" started-at="2017-12-30T12:54:18Z" finished-at="2017-12-30T12:54:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createPaymentTest(java.lang.Long, int, int, boolean)[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="createPaymentTest" duration-ms="567" started-at="2017-12-30T11:13:40Z" data-provider="newPayment" finished-at="2017-12-30T11:13:41Z">
+        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="createItemTest" duration-ms="564" started-at="2017-12-30T12:54:18Z" data-provider="newItem" finished-at="2017-12-30T12:54:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[111111111111111111]]>
+                <![CDATA[Salads]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[769]]>
+                <![CDATA[12.99]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[10029]]>
+                <![CDATA[Salad appeals to those customers looking to eat healthier.]]>
               </value>
             </param>
             <param index="3">
+              <value>
+                <![CDATA[salads.jpg]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Salad]]>
+              </value>
+            </param>
+            <param index="6">
               <value>
                 <![CDATA[true]]>
               </value>
@@ -36,33 +51,48 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createPaymentTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="finalize" is-config="true" duration-ms="39" started-at="2017-12-30T11:13:41Z" finished-at="2017-12-30T11:13:41Z">
+        </test-method> <!-- createItemTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="28" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T11:13:41Z" finished-at="2017-12-30T11:13:41Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createPaymentTest(java.lang.Long, int, int, boolean)[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="createPaymentTest" duration-ms="40" started-at="2017-12-30T11:13:41Z" data-provider="newPayment" finished-at="2017-12-30T11:13:41Z">
+        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="createItemTest" duration-ms="38" started-at="2017-12-30T12:54:19Z" data-provider="newItem" finished-at="2017-12-30T12:54:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[222222222222222222]]>
+                <![CDATA[Simple Pie]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[456]]>
+                <![CDATA[10.99]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[10023]]>
+                <![CDATA[Most of the people don’t feel like they have the time to whip up an apple pie.]]>
               </value>
             </param>
             <param index="3">
+              <value>
+                <![CDATA[simplepie.jpg]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Pie]]>
+              </value>
+            </param>
+            <param index="6">
               <value>
                 <![CDATA[true]]>
               </value>
@@ -70,29 +100,44 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createPaymentTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="finalize" is-config="true" duration-ms="31" started-at="2017-12-30T11:13:41Z" finished-at="2017-12-30T11:13:41Z">
+        </test-method> <!-- createItemTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="26" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="createPaymentTest(java.lang.Long, int, int, boolean)[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="createPaymentTest" duration-ms="26" started-at="2017-12-30T11:13:41Z" data-provider="newPayment" finished-at="2017-12-30T11:13:41Z">
+        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="createItemTest" duration-ms="27" started-at="2017-12-30T12:54:19Z" data-provider="newItem" finished-at="2017-12-30T12:54:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[333333333333333333]]>
+                <![CDATA[Egg Dishes]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[369]]>
+                <![CDATA[7.99]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[11373]]>
+                <![CDATA[Eggs are the cornerstone of any breakfast menu.]]>
               </value>
             </param>
             <param index="3">
+              <value>
+                <![CDATA[eggs.jpg]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Egg]]>
+              </value>
+            </param>
+            <param index="6">
               <value>
                 <![CDATA[true]]>
               </value>
@@ -100,64 +145,88 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createPaymentTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T11:13:41Z" finished-at="2017-12-30T11:13:41Z">
+        </test-method> <!-- createItemTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="finalize" is-config="true" duration-ms="26" started-at="2017-12-30T11:13:41Z" finished-at="2017-12-30T11:13:41Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="27" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="deletePaymentTest(int, int)[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="deletePaymentTest" duration-ms="23" started-at="2017-12-30T11:13:41Z" data-provider="deletePayment" finished-at="2017-12-30T11:13:41Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="1" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getItemTest" duration-ms="31" started-at="2017-12-30T12:54:19Z" data-provider="getItem" finished-at="2017-12-30T12:54:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[81]]>
+                <![CDATA[41]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[Salads]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deletePaymentTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T11:13:41Z" finished-at="2017-12-30T11:13:41Z">
+        </test-method> <!-- getItemTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="deletePaymentTest(int, int)[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="deletePaymentTest" duration-ms="26" started-at="2017-12-30T11:13:41Z" data-provider="deletePayment" finished-at="2017-12-30T11:13:41Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getItemTest" duration-ms="25" started-at="2017-12-30T12:54:19Z" data-provider="getItem" finished-at="2017-12-30T12:54:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[87]]>
+                <![CDATA[42]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[Simple Pie]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deletePaymentTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T11:13:41Z" finished-at="2017-12-30T11:13:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T11:13:41Z" finished-at="2017-12-30T11:13:41Z">
+        </test-method> <!-- getItemTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T11:13:41Z" finished-at="2017-12-30T11:13:41Z">
+        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="getItemTest" duration-ms="26" started-at="2017-12-30T12:54:19Z" data-provider="getItem" finished-at="2017-12-30T12:54:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[43]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Egg Dishes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getItemTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-      </class> <!-- res.cs.dao.PaymentDAOTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-30T12:54:19Z" finished-at="2017-12-30T12:54:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+      </class> <!-- res.cs.dao.ItemDAOTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

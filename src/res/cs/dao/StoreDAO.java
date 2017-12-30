@@ -171,7 +171,7 @@ public class StoreDAO {
 			return result;
 		}
 		
-		// admin can delete a store by using the store_id
+		// Admin can delete a store by using the store_id
 		public int deleteStore(int storeId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 			Connection conn = null;
 			PreparedStatement stmt = null;
