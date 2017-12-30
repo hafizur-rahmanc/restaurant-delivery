@@ -22,8 +22,8 @@ public class ItemBO {
 		return itemId;
 	}
 	
-	//Get the item object by item id using the UserDAO
-	public Item getUser(int ID) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
+	//Get the item object by item id using the ItemDAO
+	public Item getItem(int ID) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
 		final ItemDAO itemDAO = new ItemDAO();
 		Item item = null;
 		try {
