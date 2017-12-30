@@ -11,6 +11,31 @@ public class Item {
 	private String category;
 	private int inventory;
 	
+	//Constructor
+	public Item() {
+		
+	}
+	
+	public Item(int itemId, String itemName, double itemPrice, String itemDescription, String image, int active,
+			String category) {
+		this.itemId = itemId;
+		this.itemName = itemName;
+		this.itemPrice = itemPrice;
+		this.itemDescription = itemDescription;
+		this.image = image;
+		this.active = active;
+		this.category = category;
+	}
+	
+	public Item(String itemName, double itemPrice, String itemDescription, String image, int active, String category) {
+		this.itemName = itemName;
+		this.itemPrice = itemPrice;
+		this.itemDescription = itemDescription;
+		this.image = image;
+		this.active = active;
+		this.category = category;
+	}
+
 	// setter and getter methods
 	public int getItemId() {
 		return itemId;
