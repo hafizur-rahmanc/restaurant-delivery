@@ -186,7 +186,7 @@ public class OrderDAO {
 		
 		try {
 			conn = oracle.getConnection();
-			stmt = conn.prepareStatement(OracleSqlQueries.REMOVE_ORDER);
+			stmt = conn.prepareStatement(OracleSqlQueries.DELETE_ORDER);
 			//Fill out the '?' in the SQL query string
 			stmt.setInt(1, orderId);
 			result = stmt.executeUpdate();

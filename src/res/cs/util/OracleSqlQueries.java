@@ -21,7 +21,7 @@ public class OracleSqlQueries {
 	public static final String CREATE_ORDER_ITEMS = "INSERT INTO order_items (order_id, item_id) values(?, ?)";
 	public static final String GET_ORDERS_BY_USERID = "SELECT * FROM orders WHERE user_id = ?";
 	public static final String GET_ORDERS = "SELECT * FROM orders";
-	public static final String REMOVE_ORDER = "DELETE FROM orders WHERE order_id = ?";
+	public static final String DELETE_ORDER = "DELETE FROM orders WHERE order_id = ?";
 	public static final String CREATE_PAYMENT = "INSERT INTO payments (credit_card_number, secure_code, zipcode) values(?, ?, ?)";
 	public static final String GET_STORE = "SELECT * FROM STORES WHERE store_id= ?";
 	public static final String UPDATE_STORE = "UPDATE stores SET store_name = ?, address= ?, city= ?, zipcode = ?, staff_number = ?, image = ? WHERE store_id = ?";
