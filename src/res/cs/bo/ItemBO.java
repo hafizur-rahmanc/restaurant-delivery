@@ -57,7 +57,7 @@ public class ItemBO {
 	}
 	
 	//Calculate the total price from the cart item Ids
-	public List<Double> getTotals(ArrayList<Integer> cartIds){
+	public List<Double> getTotals(List<Integer> itemIds){
 		ItemDAO itemDAO = new ItemDAO();
 		List<Double> totals = new ArrayList<Double>();
 		
@@ -67,14 +67,14 @@ public class ItemBO {
 		double totalPrice = 0.00;
 		try {
 			//Loop through all item id's in the cart
-			for(int id : cartIds) {
+			for(int id : itemIds) {
 				//Can be optimized to separate query to get the price only
 				double price = itemDAO.getItem(id).getItemPrice();
 				subtotal += price;
 			}
 			
 			//Get the tax amount and grand total
-			taxAmount = (subtotal * 8.875) / 100;
+			taxAmount = Math.round(subtotal * 8.875) / 100.0;
 			totalPrice = subtotal + taxAmount;
 			
 			//Add to the list
