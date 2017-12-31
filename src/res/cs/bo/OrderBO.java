@@ -27,22 +27,22 @@ public class OrderBO {
 	}
 	
 	//Corresponds with OrderDAO.getOrderByUserId()
-	public List<Order> getOrdersByUserId(int userId) throws RegistrationException{
+	public List<Order> getOrdersByUserId(int userId) throws RegistrationException, SQLException{
 		//Method returns all orders that user has made
 		List<Order> ordersList = orderDAO.getOrdersByUserId(userId);
 		return ordersList;
 	}
 	
 	//Corresponds with Order.getAllOrders()
-	public List<Order> getAllOrders() throws RegistrationException{
+	public List<Order> getAllOrders() throws RegistrationException, SQLException{
 		//Method returns all orders in user's history
 		List<Order> ordersList = orderDAO.getAllOrders();
 		return ordersList;
 	}
 	
 	//Corresponds with OrdeDAO.removeOrder()
-	public boolean removeOrder(int orderId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
-		boolean result = orderDAO.removeOrder(orderId);
+	public int deleteOrder(int orderId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		int result = orderDAO.deleteOrder(orderId);
 		return result;
 	}
 }

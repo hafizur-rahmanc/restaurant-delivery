@@ -18,7 +18,7 @@ public class OrderDAO {
 		int orderId = 0;
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		ResultSet result = null;
+		ResultSet resultSet = null;
 		
 		String[] columns = {"order_id"};
 		OracleConnection oracle = new OracleConnection();
@@ -37,9 +37,9 @@ public class OrderDAO {
 			//For the addition of the new item
 			stmt.executeUpdate();
 			//Retrieve any auto generated keys created as a result of executing this statement
-			result = stmt.getGeneratedKeys();
-			if(result.next()) {
-				orderId = result.getInt(1);
+			resultSet = stmt.getGeneratedKeys();
+			if(resultSet.next()) {
+				orderId = resultSet.getInt(1);
 			}
 			stmt.close();
 			stmt = conn.prepareStatement(OracleSqlQueries.CREATE_ORDER_ITEMS);
@@ -52,9 +52,7 @@ public class OrderDAO {
 		}catch(SQLException e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			stmt.close();
-			result.close();
-			conn.close();
+			close(resultSet, stmt, conn);
 		}
 		
 		return orderId;
@@ -66,7 +64,7 @@ public class OrderDAO {
 		int orderItemId = 0;
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		ResultSet result = null;
+		ResultSet resultSet = null;
 		String[] columns = {"order_item_id"};
 		OracleConnection oracle = new OracleConnection();
 		
@@ -78,23 +76,33 @@ public class OrderDAO {
 			stmt.setInt(2, itemId);
 			stmt.executeUpdate();
 			//Retrieve any auto generated keys created as a result of executing this statement
-			result = stmt.getGeneratedKeys();
-			if(result.next()) {
-				orderItemId = result.getInt(1);
+			resultSet = stmt.getGeneratedKeys();
+			if(resultSet.next()) {
+				orderItemId = resultSet.getInt(1);
 			}
 			
 		}catch(SQLException e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			result.close();
-			stmt.close();
-			conn.close();
+			close(resultSet, stmt, conn);
 		}
 		
 		return orderItemId;
 	}
 	
-	public List<Order> getOrdersByUserId(int userId) throws RegistrationException{
+	private void close(ResultSet resultSet, PreparedStatement stmt, Connection conn) throws SQLException {
+		if(resultSet != null) {
+			resultSet.close();
+		}
+		if(stmt != null) {
+			stmt.close();
+		}
+		if(conn != null) {
+			conn.close();
+		}
+	}
+
+	public List<Order> getOrdersByUserId(int userId) throws RegistrationException, SQLException{
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet resultSet = null;
@@ -126,19 +134,13 @@ public class OrderDAO {
 		}catch(Exception e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			try {
-				resultSet.close();
-				stmt.close();
-				conn.close();
-			}catch(SQLException e) {
-				
-			}
+			close(resultSet, stmt, conn);
 		}
 		
 		return ordersList;
 	}
 	
-	public List<Order> getAllOrders() throws RegistrationException{
+	public List<Order> getAllOrders() throws RegistrationException, SQLException{
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet resultSet = null;
@@ -170,23 +172,16 @@ public class OrderDAO {
 		}catch(Exception e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			try {
-				resultSet.close();
-				stmt.close();
-				conn.close();
-			}catch(SQLException e) {
-				
-			}
+			close(resultSet, stmt, conn);
 		}
 		
 		return ordersList;
 	}
 	
-	public boolean removeOrder(int orderId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
-		boolean status = false;
+	public int deleteOrder(int orderId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		
+		int result = 0;
 		OracleConnection oracle = new OracleConnection();
 		
 		try {
@@ -194,16 +189,14 @@ public class OrderDAO {
 			stmt = conn.prepareStatement(OracleSqlQueries.REMOVE_ORDER);
 			//Fill out the '?' in the SQL query string
 			stmt.setInt(1, orderId);
-			stmt.executeUpdate();
-			status = true;
+			result = stmt.executeUpdate();
 			
 		}catch(SQLException e) {
 			throw new RegistrationException(e.getMessage());
 		}finally {
-			stmt.close();
-			conn.close();
+			close(null, stmt, conn);
 		}
 		
-		return status;
+		return result;
 	}
 }

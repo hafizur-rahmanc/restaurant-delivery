@@ -12,6 +12,22 @@ public class Order {
 	private double taxAmount;
 	private double totalPrice;
 	
+	//Constructor
+	public Order() {
+		
+	}
+	
+	public Order(int userId, int itemId, int storeId, int paymentId, double subtotal, double taxAmount,
+			double totalPrice) {
+		this.userId = userId;
+		this.itemId = itemId;
+		this.storeId = storeId;
+		this.paymentId = paymentId;
+		this.subtotal = subtotal;
+		this.taxAmount = taxAmount;
+		this.totalPrice = totalPrice;
+	}
+
 	//Getter and setter methods
 	public int getOrderId() {
 		return orderId;
