@@ -130,7 +130,7 @@ public class OrderDAOTest {
 	}
 	
 	@Test(dataProvider="deleteOrder")
-	public void deletReviewTest(int orderId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	public void deletOrderTest(int orderId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		int actual = orderDAO.deleteOrder(orderId);;
 		assertThat(actual, equalTo(expected));	
 	}
