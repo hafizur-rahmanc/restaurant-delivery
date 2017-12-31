@@ -4,8 +4,6 @@ public class Order {
 	//Instance variables
 	private int orderId;
 	private int userId;
-	private int itemId;
-	private Item item;
 	private int storeId;
 	private int paymentId;
 	private double subtotal;
@@ -17,10 +15,20 @@ public class Order {
 		
 	}
 	
-	public Order(int userId, int itemId, int storeId, int paymentId, double subtotal, double taxAmount,
+	public Order(int orderId, int userId, int storeId, int paymentId, double subtotal, double taxAmount,
+			double totalPrice) {
+		this.orderId = orderId;
+		this.userId = userId;
+		this.storeId = storeId;
+		this.paymentId = paymentId;
+		this.subtotal = subtotal;
+		this.taxAmount = taxAmount;
+		this.totalPrice = totalPrice;
+	}
+
+	public Order(int userId, int storeId, int paymentId, double subtotal, double taxAmount,
 			double totalPrice) {
 		this.userId = userId;
-		this.itemId = itemId;
 		this.storeId = storeId;
 		this.paymentId = paymentId;
 		this.subtotal = subtotal;
@@ -35,18 +43,7 @@ public class Order {
 	public void setOrderId(int orderId) {
 		this.orderId = orderId;
 	}
-	public int getItemId() {
-		return itemId;
-	}
-	public void setItemId(int itemId) {
-		this.itemId = itemId;
-	}
-	public Item getItem() {
-		return item;
-	}
-	public void setItem(Item item) {
-		this.item = item;
-	}
+
 	public int getStoreId() {
 		return storeId;
 	}
