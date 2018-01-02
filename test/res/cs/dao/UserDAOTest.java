@@ -19,7 +19,7 @@ import java.util.List;
 
 public class UserDAOTest {
 	private UserDAO userDAO;
-	private User user;
+	private User theUser;
 	private boolean isCreated;
 	private boolean isUpdated;
 	private int userId;
@@ -27,7 +27,7 @@ public class UserDAOTest {
 	@BeforeMethod
 	public void initialize() {
 		userDAO = new UserDAO();
-		user = new User();
+		theUser = new User();
 		isCreated = false;
 		isUpdated = false;
 		userId = 0;
@@ -45,19 +45,36 @@ public class UserDAOTest {
 	
 	@Test(dataProvider="registration")
 	public void createUserTest(String firstName, String lastName, String userName, String password, String gender, String address, Long phoneNumber, String email, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
-		user.setFirstName(firstName);
-		user.setLastName(lastName);
-		user.setUserName(userName);
-		user.setPassword(password);
-		user.setGender(gender);
-		user.setAddress(address);
-		user.setPhoneNumber(phoneNumber);
-		user.setEmail(email);
-		userId = userDAO.createUser(user);
+		theUser.setFirstName(firstName);
+		theUser.setLastName(lastName);
+		theUser.setUserName(userName);
+		theUser.setPassword(password);
+		theUser.setGender(gender);
+		theUser.setAddress(address);
+		theUser.setPhoneNumber(phoneNumber);
+		theUser.setEmail(email);
+		userId = userDAO.createUser(theUser);
 		// equivalent to isCreated = (actual != 0) ? true : false
 		isCreated = (userId != 0);
 		assertThat(isCreated , equalTo(expected));
 		
+	}
+	
+	@DataProvider(name="loginUser")
+	public Object[][] loginUserData(){
+		Object[][] data = {
+				{"user", "user", "user@restaurant.org"},
+				{"samy12", "samy12", "samy@restaurant.org"},
+				{"hafiz_ny", "hafiz", null}
+		};
+		return data;
+	}
+	
+	@Test(dataProvider="loginUser")
+	public void loginUserTest(String userName, String password, String expected) throws ClassNotFoundException, RegistrationException, SQLException, IOException {
+		User tempUser = userDAO.loginUser(userName, password);
+		String actual = (tempUser != null) ? tempUser.getEmail() : null;
+		assertThat(actual, equalTo(expected));
 	}
 	
 	@DataProvider(name="getUser")
@@ -78,7 +95,7 @@ public class UserDAOTest {
 	}
 	
 	@DataProvider(name="getAllUsers")
-	public Object[][] Data(){
+	public Object[][] getAllUsersData(){
 		Object[][] data = {
 				{"Hafizur", true},
 				{"Abdur", true},
@@ -103,7 +120,7 @@ public class UserDAOTest {
 	}
 	
 	@DataProvider(name="updateUser")
-	public Object[][] userData(){
+	public Object[][] updateUserData(){
 		Object[][] data = {
 				{90, "Abdur", "Rahman", "hafizur1", "hafizur1234", "M", "6117 Wooside Ave Woodside", 6465278520L, "rahman@restaurant.org", 1},
 				{126, "Hafizur", "Rahman", "hafiz_ny", "password1234", "M", "6117 Wooside Ave Woodside", 3475278509L, "hafiz@restaurant.org", 1}
@@ -114,7 +131,7 @@ public class UserDAOTest {
 	@Test(dataProvider="updateUser")
 	public void updateUserTest(int userId, String firstName, String lastName, String userName, String password, String gender, String address, Long phoneNumber, String email, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		// preserve the original user
-		user = userDAO.getUser(userName);
+		theUser = userDAO.getUser(userName);
 		// create a new user
 		User newUser = new User();
 		newUser.setFirstName(firstName);
@@ -133,8 +150,8 @@ public class UserDAOTest {
 		
 	}
 	
-	@DataProvider(name="removeUser")
-	public Object[][] createData(){
+	@DataProvider(name="deleteUser")
+	public Object[][] deleteUserData(){
 		Object[][] data = {
 				{81, 0},
 				{87, 0} // not available case
@@ -142,19 +159,19 @@ public class UserDAOTest {
 		return data;	
 	}
 	
-	@Test(dataProvider="removeUser")
+	@Test(dataProvider="deleteUser")
 	public void voidUserTest(int userId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
-		int actual = userDAO.removeUser(userId);
+		int actual = userDAO.deleteUser(userId);
 		assertThat(actual, equalTo(expected));	
 	}
 	
 	@AfterMethod
-	public void removeCreatedUser() throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	public void finalize() throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		if(isCreated) {
-			userDAO.removeUser(userId);
+			userDAO.deleteUser(userId);
 		}
 		if(isUpdated) {
-			userDAO.updateUser(user);
+			userDAO.updateUser(theUser);
 		}
 	}	
 }

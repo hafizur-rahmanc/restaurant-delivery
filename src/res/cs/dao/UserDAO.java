@@ -241,6 +241,9 @@ public class UserDAO {
 		User user = DAO.getUser("user");
 		System.out.println(user.getFirstName() + "|" + user.getLastName() + "|" + user.getGender() + "|" + user.getUserName() + "|" + user.getPassword() + "|" + user.getEmail());
 		
+		User theUser = DAO.loginUser("user", "user1");
+		System.out.println(theUser);
+		
 		User newUser = new User();
 		newUser.setFirstName("Hafizur");
 		newUser.setLastName("Rahman");

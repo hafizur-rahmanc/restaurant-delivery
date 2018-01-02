@@ -1,134 +1,575 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
+<testng-results skipped="0" failed="0" ignored="0" total="17" passed="17">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1299" started-at="2017-12-31T05:36:19Z" finished-at="2017-12-31T05:36:20Z">
+  <suite name="Default suite" duration-ms="1207" started-at="2018-01-02T00:48:36Z" finished-at="2018-01-02T00:48:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1299" started-at="2017-12-31T05:36:19Z" finished-at="2017-12-31T05:36:20Z">
-      <class name="res.cs.dao.OrderDAOTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="initialize" is-config="true" duration-ms="4" started-at="2017-12-31T00:36:19Z" finished-at="2017-12-31T00:36:19Z">
+    <test name="Default test" duration-ms="1207" started-at="2018-01-02T00:48:36Z" finished-at="2018-01-02T00:48:37Z">
+      <class name="res.cs.dao.UserDAOTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="4" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createOrderTest(java.util.List, int, int, int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="createOrderTest" duration-ms="655" started-at="2017-12-31T00:36:19Z" data-provider="newOrder" finished-at="2017-12-31T00:36:20Z">
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="createUserTest" duration-ms="558" started-at="2018-01-01T19:48:36Z" data-provider="registration" finished-at="2018-01-01T19:48:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[41, 42, 43]]]>
+                <![CDATA[Md]]>
               </value>
             </param>
             <param index="1">
+              <value>
+                <![CDATA[Rahman]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[hafizrahman]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[hafiz_Rahman]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[6107 Wooside Ave]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[3475278509]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[hafiz@restaurant.org]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUserTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="29" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="createUserTest" duration-ms="40" started-at="2018-01-01T19:48:36Z" data-provider="registration" finished-at="2018-01-01T19:48:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abdu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Rahman]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[hafizur12345]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[hafizur567]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[6117 Wooside Ave]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[6465278509]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[rahman@restaurant.org]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUserTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="27" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="createUserTest" duration-ms="25" started-at="2018-01-01T19:48:36Z" data-provider="registration" finished-at="2018-01-01T19:48:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OmarSulaiman]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Khait]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[samy123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[samy123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[6127 Wooside Ave]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[3475278519]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[samy@restaurant.org]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUserTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="26" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getAllUsersTest" duration-ms="31" started-at="2018-01-01T19:48:36Z" data-provider="getAllUsers" finished-at="2018-01-01T19:48:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hafizur]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUsersTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getAllUsersTest" duration-ms="25" started-at="2018-01-01T19:48:36Z" data-provider="getAllUsers" finished-at="2018-01-01T19:48:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abdur]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUsersTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getAllUsersTest" duration-ms="24" started-at="2018-01-01T19:48:36Z" data-provider="getAllUsers" finished-at="2018-01-01T19:48:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OmarSulaiman]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUsersTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getAllUsersTest" duration-ms="26" started-at="2018-01-01T19:48:36Z" data-provider="getAllUsers" finished-at="2018-01-01T19:48:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Khait]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUsersTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getUserTest" duration-ms="26" started-at="2018-01-01T19:48:36Z" data-provider="getUser" finished-at="2018-01-01T19:48:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hafizur12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rahman@restaurant.org]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getUserTest" duration-ms="24" started-at="2018-01-01T19:48:36Z" data-provider="getUser" finished-at="2018-01-01T19:48:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@retaurant.org]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="getUserTest" duration-ms="28" started-at="2018-01-01T19:48:36Z" data-provider="getUser" finished-at="2018-01-01T19:48:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[user@restaurant.org]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="loginUserTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="loginUserTest" duration-ms="25" started-at="2018-01-01T19:48:36Z" data-provider="loginUser" finished-at="2018-01-01T19:48:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[user]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user@restaurant.org]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginUserTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="loginUserTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="loginUserTest" duration-ms="24" started-at="2018-01-01T19:48:36Z" data-provider="loginUser" finished-at="2018-01-01T19:48:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[samy12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[samy12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[samy@restaurant.org]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginUserTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-01T19:48:36Z" finished-at="2018-01-01T19:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="loginUserTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="loginUserTest" duration-ms="24" started-at="2018-01-01T19:48:36Z" data-provider="loginUser" finished-at="2018-01-01T19:48:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hafiz_ny]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hafiz]]>
+              </value>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginUserTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:37Z" finished-at="2018-01-01T19:48:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="updateUserTest" duration-ms="47" started-at="2018-01-01T19:48:37Z" data-provider="updateUser" finished-at="2018-01-01T19:48:37Z">
+          <params>
+            <param index="0">
               <value>
                 <![CDATA[90]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abdur]]>
+              </value>
+            </param>
             <param index="2">
+              <value>
+                <![CDATA[Rahman]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[hafizur1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[hafizur1234]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[6117 Wooside Ave Woodside]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[6465278520]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[rahman@restaurant.org]]>
+              </value>
+            </param>
+            <param index="9">
               <value>
                 <![CDATA[1]]>
               </value>
             </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:37Z" finished-at="2018-01-01T19:48:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="27" started-at="2018-01-01T19:48:37Z" finished-at="2018-01-01T19:48:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:37Z" finished-at="2018-01-01T19:48:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="updateUserTest" duration-ms="48" started-at="2018-01-01T19:48:37Z" data-provider="updateUser" finished-at="2018-01-01T19:48:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[126]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hafizur]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Rahman]]>
+              </value>
+            </param>
             <param index="3">
+              <value>
+                <![CDATA[hafiz_ny]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[password1234]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[6117 Wooside Ave Woodside]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[3475278509]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[hafiz@restaurant.org]]>
+              </value>
+            </param>
+            <param index="9">
               <value>
                 <![CDATA[1]]>
               </value>
             </param>
-            <param index="4">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createOrderTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="finalize" is-config="true" duration-ms="28" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
+        </test-method> <!-- updateUserTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-01T19:48:37Z" finished-at="2018-01-01T19:48:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-01T19:48:37Z" finished-at="2018-01-01T19:48:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createOrderTest(java.util.List, int, int, int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="createOrderTest" duration-ms="129" started-at="2017-12-31T00:36:20Z" data-provider="newOrder" finished-at="2017-12-31T00:36:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[1, 41, 42, 43]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[91]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[21]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOrderTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="finalize" is-config="true" duration-ms="56" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="createOrderTest(java.util.List, int, int, int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="createOrderTest" duration-ms="162" started-at="2017-12-31T00:36:20Z" data-provider="newOrder" finished-at="2017-12-31T00:36:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[21, 43]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[92]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[22]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOrderTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="finalize" is-config="true" duration-ms="24" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="deletReviewTest(int, int)[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="deletReviewTest" duration-ms="25" started-at="2017-12-31T00:36:20Z" data-provider="deleteOrder" finished-at="2017-12-31T00:36:20Z">
+        <test-method status="PASS" signature="voidUserTest(int, int)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="voidUserTest" duration-ms="23" started-at="2018-01-01T19:48:37Z" data-provider="deleteUser" finished-at="2018-01-01T19:48:37Z">
           <params>
             <param index="0">
               <value>
@@ -143,16 +584,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deletReviewTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
+        </test-method> <!-- voidUserTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="3" started-at="2018-01-01T19:48:37Z" finished-at="2018-01-01T19:48:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="deletReviewTest(int, int)[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="deletReviewTest" duration-ms="24" started-at="2017-12-31T00:36:20Z" data-provider="deleteOrder" finished-at="2017-12-31T00:36:20Z">
+        <test-method status="PASS" signature="voidUserTest(int, int)[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="voidUserTest" duration-ms="24" started-at="2018-01-01T19:48:37Z" data-provider="deleteUser" finished-at="2018-01-01T19:48:37Z">
           <params>
             <param index="0">
               <value>
@@ -167,171 +604,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deletReviewTest -->
-        <test-method status="PASS" signature="getAllOrdersTest(int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="getAllOrdersTest" duration-ms="25" started-at="2017-12-31T00:36:20Z" data-provider="getAllOrders" finished-at="2017-12-31T00:36:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[13]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAllOrdersTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
+        </test-method> <!-- voidUserTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:37Z" finished-at="2018-01-01T19:48:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-01T19:48:37Z" finished-at="2018-01-01T19:48:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getAllOrdersTest(int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="getAllOrdersTest" duration-ms="26" started-at="2017-12-31T00:36:20Z" data-provider="getAllOrders" finished-at="2017-12-31T00:36:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[14]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAllOrdersTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getAllOrdersTest(int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="getAllOrdersTest" duration-ms="28" started-at="2017-12-31T00:36:20Z" data-provider="getAllOrders" finished-at="2017-12-31T00:36:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[100]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAllOrdersTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getOrdersByUserTest(int, double, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="getOrdersByUserTest" duration-ms="27" started-at="2017-12-31T00:36:20Z" data-provider="getOrdersByUser" finished-at="2017-12-31T00:36:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[34.81]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getOrdersByUserTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getOrdersByUserTest(int, double, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="getOrdersByUserTest" duration-ms="24" started-at="2017-12-31T00:36:20Z" data-provider="getOrdersByUser" finished-at="2017-12-31T00:36:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[91]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[47.86]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getOrdersByUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="initialize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getOrdersByUserTest(int, double, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="getOrdersByUserTest" duration-ms="27" started-at="2017-12-31T00:36:20Z" data-provider="getOrdersByUser" finished-at="2017-12-31T00:36:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[20.66]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getOrdersByUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@26653222]" name="finalize" is-config="true" duration-ms="0" started-at="2017-12-31T00:36:20Z" finished-at="2017-12-31T00:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-      </class> <!-- res.cs.dao.OrderDAOTest -->
+      </class> <!-- res.cs.dao.UserDAOTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
