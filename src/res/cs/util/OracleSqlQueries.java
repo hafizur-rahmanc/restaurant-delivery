@@ -2,10 +2,11 @@ package res.cs.util;
 
 public class OracleSqlQueries {
 	public static final String GET_USER = "SELECT * FROM users WHERE user_name = ?";
+	public static final String USER_LOGIN = "SELECT * FROM users WHERE user_name = ? AND password = ?";
 	public static final String CREATE_USER = "INSERT INTO users (first_name, last_name, user_name, password, gender, address, phone_number, email) values(?, ?, ?, ?, ?, ?, ?, ?)";
 	public static final String GET_USERS = "SELECT * FROM users";
 	public static final String UPDATE_USER = "UPDATE users SET first_name = ?, last_name = ?, user_name = ?, password = ?, gender = ?, address = ?, phone_number = ?, email = ? WHERE user_id = ?";
-	public static final String REMOVE_USER = "DELETE FROM users WHERE user_id = ?";
+	public static final String DELETE_USER = "DELETE FROM users WHERE user_id = ?";
 	public static final String CREATE_ITEM = "INSERT INTO items (item_name, item_price, item_description, image, active, category) values(?, ?, ?, ?, ?, ?)";
 	public static final String GET_ITEMS = "SELECT * FROM items";
 	public static final String UPDATE_ITEM = "UPDATE items SET item_name = ?, item_price = ?, item_description = ?, image = ?, active = ?, category = ? WHERE item_id = ?";
@@ -27,6 +28,7 @@ public class OracleSqlQueries {
 	public static final String UPDATE_STORE = "UPDATE stores SET store_name = ?, address= ?, city= ?, zipcode = ?, staff_number = ?, image = ? WHERE store_id = ?";
 	public static final String DELETE_PAYMENT = "DELETE FROM payments WHERE payment_id = ?";
 	public static final String REMOVE_ITEM = "DELETE FROM items WHERE item_id = ?";
+
 
 
 }

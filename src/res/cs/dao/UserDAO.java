@@ -55,7 +55,8 @@ public class UserDAO {
 		
 		return userId;
 	}
-	
+
+	//Close resultSet, stmt and conn if they are open
 	private void close(ResultSet resultSet, PreparedStatement stmt, Connection conn) throws SQLException {
 		if(resultSet != null) {
 			resultSet.close();
@@ -107,6 +108,44 @@ public class UserDAO {
 		return user;
 	}
 	
+	//Get the user object by user_name and password
+	public User loginUser(String userName, String password) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet resultSet = null;
+		User theUser = null;
+		OracleConnection oracle = new OracleConnection();
+		try {
+			conn = oracle.getConnection();
+			System.out.println("Connection Established!");
+			stmt = conn.prepareStatement(OracleSqlQueries.USER_LOGIN);
+			//Assign the userName and password to the sql query prepared statement
+			stmt.setString(1, userName);
+			stmt.setString(2, password);
+			//Execute the prepared statement query and store it to resultSet
+			resultSet = stmt.executeQuery();
+			
+			if(resultSet.next()) {
+				theUser = new User();
+				theUser.setUserId(resultSet.getInt(1));
+				theUser.setFirstName(resultSet.getString(2));
+				theUser.setLastName(resultSet.getString(3));
+				theUser.setUserName(resultSet.getString(4));
+				theUser.setPassword(resultSet.getString(5));
+				theUser.setGender(resultSet.getString(6));
+				theUser.setAddress(resultSet.getString(7));
+				theUser.setPhoneNumber(resultSet.getLong(8));
+				theUser.setEmail(resultSet.getString(9));
+				theUser.setAdminRole(resultSet.getInt(10));
+			}	
+			
+		}catch(SQLException e){
+			throw new RegistrationException(e.getMessage());
+		}finally {
+			close(resultSet, stmt, conn);
+		}
+		return theUser;
+	}
 	//Get all the users
 	public List<User> getAllUsers() throws RegistrationException, SQLException, ClassNotFoundException, IOException{
 		Connection conn = null;
@@ -177,7 +216,7 @@ public class UserDAO {
 		return result;
 	}
 	
-	public int removeUser(int userId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	public int deleteUser(int userId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		OracleConnection oracle = new OracleConnection();
@@ -185,7 +224,7 @@ public class UserDAO {
 		try {
 			conn = oracle.getConnection();
 			System.out.println("Connection Established!");
-			stmt = conn.prepareStatement(OracleSqlQueries.REMOVE_USER);
+			stmt = conn.prepareStatement(OracleSqlQueries.DELETE_USER);
 			stmt.setInt(1, userId);
 			// execute the update statement
 			result = stmt.executeUpdate();
