@@ -1,8 +1,8 @@
 body {
 	padding-top: 70px;
-	background:url('https://images.unsplash.com/photo-1504718855392-c0f33b372e72?auto=format&fit=crop&w=634&q=80');
-	background-size: cover;
-	background-position: center;
+	background: #2BC0E4;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .jumbotron {
