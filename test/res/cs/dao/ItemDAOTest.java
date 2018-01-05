@@ -83,6 +83,8 @@ public class ItemDAOTest {
 		List<Item> itemsList = itemDAO.getAllItems();
 		boolean actual = false;
 		for(Item theItem : itemsList) {
+			//instead of using if statements 
+			//use logical methods coming from hamcrest
 			if((itemName.equals(theItem.getItemName())) && (itemPrice == theItem.getItemPrice())) {
 				actual = true;
 				break;
@@ -128,7 +130,7 @@ public class ItemDAOTest {
 	
 	@Test(dataProvider="deleteItem")
 	public void deleteItemTest(int itemId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
-		int actual = itemDAO.deleteItem(itemId);;
+		int actual = itemDAO.deleteItem(itemId);
 		assertThat(actual, equalTo(expected));	
 	}
 	

@@ -75,7 +75,7 @@ public class OrderDAO {
 			stmt.setInt(1, orderId);
 			stmt.setInt(2, itemId);
 			stmt.executeUpdate();
-			//Retrieve any auto generated keys created as a result of executing this statement
+			//Retrieve any auto generated keys created as a result of executing the above statement
 			resultSet = stmt.getGeneratedKeys();
 			if(resultSet.next()) {
 				orderItemId = resultSet.getInt(1);
@@ -89,7 +89,7 @@ public class OrderDAO {
 		
 		return orderItemId;
 	}
-	
+	//Close all the opened connections
 	private void close(ResultSet resultSet, PreparedStatement stmt, Connection conn) throws SQLException {
 		if(resultSet != null) {
 			resultSet.close();

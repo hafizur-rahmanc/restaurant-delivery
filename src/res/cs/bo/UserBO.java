@@ -22,17 +22,24 @@ public class UserBO {
 		}
 		return userId;
 	}
+	// Get the user object by the user name and password using UserDAO
+	public User loginUser(String userName, String password) throws ClassNotFoundException, RegistrationException, SQLException, IOException {
+		final UserDAO userDAO = new UserDAO();
+		User theUser = new User();
+		theUser = userDAO.loginUser(userName, password);
+		return theUser;
+	}
 	
 	//Get the user object by the user name using the UserDAO
 	public User getUser(String userName) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
 		final UserDAO userDAO = new UserDAO();
-		User user = null;
+		User theUser = null;
 		try {
-			user = userDAO.getUser(userName);
+			theUser = userDAO.getUser(userName);
 		}catch(RegistrationException e) {
 			throw new RegistrationException(e.getMessage());
 		}
-		return user;
+		return theUser;
 	}
 	
 	//Get all the users list using UserDAO
