@@ -12,16 +12,24 @@
 <body>
 	<jsp:include page="header.jsp" />
 	<div class="container">
-		<form action="LoginServlet" method="post">
+		<form action="LoginServlet" method="post" class="form-horizontal">
 		  <div class="form-group">
-		   	<label for="userName">User Name</label>
-		    <input type="text" class="form-control" name="userName" id="userName" placeholder="User Name">
+		   	<label for="userName" class="col-sm-3 control-label">User Name</label>
+		   	<div class="col-sm-9">
+		    	<input type="text" class="form-control" name="userName" id="userName" placeholder="User Name" required>
+		    </div>
 		  </div>
 		  <div class="form-group">
-		    <label for="Password">Password</label>
-		    <input type="password" class="form-control" name="password" id="Password" placeholder="Password">
+		    <label for="Password" class="col-sm-3 control-label">Password</label>
+		    <div class="col-sm-9">
+		    	<input type="password" class="form-control" name="password" id="Password" placeholder="Password">
+		    </div>
 		  </div>
-		  <button type="submit" class="btn btn-default">Submit</button>
+		  <div class="form-group">
+			 <div class="col-sm-offset-3 col-sm-9">
+			 	<button type="submit" class="btn btn-primary btn-block">Login</button>
+			 </div>
+		  </div>
 		</form>
 	</div>
 	

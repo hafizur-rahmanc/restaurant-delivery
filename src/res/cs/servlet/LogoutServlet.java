@@ -30,7 +30,7 @@ public class LogoutServlet extends HttpServlet {
 		session.invalidate();
 		
 		// Send back to the home page
-		response.sendRedirect("menu-item.jsp");
+		response.sendRedirect(request.getContextPath());
 	}
 
 	/**
