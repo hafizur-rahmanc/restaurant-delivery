@@ -13,48 +13,65 @@
 <body>
 	<jsp:include page="header.jsp" />
 	<div class="container">
-		<form action="UserControllerServlet" method="post">
+		<form action="UserControllerServlet" method="post" class="form-horizontal">
 			<div class="form-group">
-		   		<label for="firstName">First Name</label>
-		    	<input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
+		   		<label for="firstName" class="col-sm-3 control-label">First Name</label>
+		   		<div class="col-sm-9">
+		    		<input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
+		    	</div>
 		  	</div>
 		  	<div class="form-group">
-		   		<label for="lastName">Last Name</label>
-		    	<input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required>
+		   		<label for="lastName" class="col-sm-3 control-label">Last Name</label>
+		   		<div class="col-sm-9">
+		    		<input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required>
+		    	</div>
 		  	</div>
 			<div class="form-group">
-			   	<label for="userName">User Name</label>
-			    <input type="text" class="form-control" name="userName" id="userName" placeholder="User Name" required>
+			   	<label for="userName" class="col-sm-3 control-label">User Name</label>
+			    <div class="col-sm-9">
+			    	<input type="text" class="form-control" name="userName" id="userName" placeholder="User Name" required>
+			    </div>
 			 </div>
 			 <div class="form-group">
-			    <label for="Password">Password</label>
-			    <input type="password" class="form-control" name="password" id="Password" placeholder="Password" required>
+			    <label for="Password" class="col-sm-3 control-label">Password</label>
+			    <div class="col-sm-9">
+			    	<input type="password" class="form-control" name="password" id="Password" placeholder="Password" required>
+			    </div>
 			 </div>
-			 
-			 <div class="radio">
-  				<label>
-    				<input type="radio" name="gender" id="Male" value="M" required>Male
-  				</label>
+			 <div class="form-group">
+			 	<label class="col-sm-3 control-label">Gender</label>
+    			<div class="col-sm-9">
+			 		<label class="radio-inline">
+    					<input type="radio" name="gender" id="Male" value="M" required>Male
+					</label>
+  					<label class="radio-inline">
+						<input type="radio" name="gender" id="Female" value="F" required>Female
+  					</label>
+				</div>
 			</div>
-			<div class="radio">
-  				<label>
-    				<input type="radio" name="gender" id="Female" value="F" required>Female
-  				</label>
-			</div>
 			 <div class="form-group">
-			    <label for="Address">Address</label>
-			    <input type="text" class="form-control" name="address" id="Address" placeholder="Address" required>
+			    <label for="Address" class="col-sm-3 control-label">Address</label>
+			    <div class="col-sm-9">
+			    	<input type="text" class="form-control" name="address" id="Address" placeholder="Address" required>
+			    </div>
 			 </div>
 			 <div class="form-group">
-			    <label for="PhoneNumber">Phone Number</label>
-			    <input type="number" class="form-control" name="phoneNumber" id="PhoneNumber" maxlength="10" placeholder="Phone Number" required>
+			    <label for="PhoneNumber" class="col-sm-3 control-label">Phone Number</label>
+			    <div class="col-sm-9">
+			    	<input type="number" class="form-control" name="phoneNumber" id="PhoneNumber" maxlength="10" placeholder="Phone Number" required>
+			    </div>
 			 </div>
 			 <div class="form-group">
-			    <label for="Email">Email</label>
-			    <input type="email" class="form-control" name="email" id="Email" placeholder="Email" required>
+			    <label for="Email" class="col-sm-3 control-label">Email</label>
+			    <div class="col-sm-9">
+			    	<input type="email" class="form-control" name="email" id="Email" placeholder="Email" required>
+			    </div>
 			 </div>
-			 
-		  	<button type="submit" class="btn btn-default">Sign Up</button>
+			 <div class="form-group">
+			 	<div class="col-sm-offset-3 col-sm-9">
+			 		<button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+			 	</div>
+			 </div>
 		</form>
 		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
