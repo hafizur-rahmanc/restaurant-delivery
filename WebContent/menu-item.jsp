@@ -17,18 +17,84 @@
 			<p>All the available menu items</p>
 		</div>
 
-		<div class="row">
+		<div class="row text-center">
 			<div class="col-lg-4 col-sm-6">
 				<div class="img-thumbnail">
-					<img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=140&q=140">
+					<img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=623&q=80" width="300" height="300">
+				</div>
+				<div class="item-action">
+					<p><strong>Launch Special</strong></p>
+					<p>
+						<span class="input-addon">$</span><strong> 12</strong>
+						<sup>.99</sup>
+					</p>
+				</div>
+				<div class="item-operate">
+					<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal">Add To Cart</button>
 				</div>
 			</div>
 			<div class="col-lg-4 col-sm-6">
 				<div class="img-thumbnail">
-					<img src="https://images.unsplash.com/photo-1504185945330-7a3ca1380535?auto=format&fit=crop&w=140&q=140">
+					<img src="https://images.unsplash.com/photo-1504185945330-7a3ca1380535?auto=format&fit=crop&w=623&q=80" width="300" height="300">
+				</div>
+				<div class="item-action">
+					<p><strong>Burger</strong></p>
+					<p>
+						<span class="input-addon">$</span><strong> 10</strong>
+						<sup>.99</sup>
+					</p>
+				</div>
+				<div class="item-operate">
+					<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal">Add To Cart</button>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="img-thumbnail">
+					<img src="https://images.unsplash.com/photo-1504185945330-7a3ca1380535?auto=format&fit=crop&w=623&q=80" width="300" height="300">
+				</div>
+				<div class="item-action">
+					<p><strong>Burger</strong></p>
+					<p>
+						<span class="input-addon">$</span><strong> 10</strong>
+						<sup>.99</sup>
+					</p>
+				</div>
+				<div class="item-operate">
+					<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal">Add To Cart</button>
 				</div>
 			</div>
 		</div>
+		
+		<!-- Modal -->
+		  <div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">
+		    
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">×</button>
+		          <h4><span class="glyphicon glyphicon-lock"></span> Item</h4>
+		        </div>
+		        <div class="modal-body">
+		          <form role="form">
+		            <div class="form-group">
+		              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> $10.99 Each</label>
+		              <input type="number" class="form-control" id="psw" placeholder="How many?">
+		            </div>
+		              <button type="submit" class="btn btn-block">Add 
+		                <span class="glyphicon glyphicon-ok"></span>
+		              </button>
+		          </form>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+		            <span class="glyphicon glyphicon-remove"></span> Cancel
+		          </button>
+		          <p>Need <a href="#">help?</a></p>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>

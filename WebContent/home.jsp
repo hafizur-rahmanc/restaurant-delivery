@@ -17,7 +17,7 @@
 			<h1><i class="fa fa-cutlery" aria-hidden="true"></i> Welcome to the Restaurant Delivery</h1>
 		</div>
 		<div class="img-thumbnail">
-			<img src="https://images.unsplash.com/photo-1504718855392-c0f33b372e72?auto=format&fit=crop&w=634&q=80">
+			<img src="https://images.unsplash.com/photo-1504718855392-c0f33b372e72?auto=format&fit=crop&w=634&q=80" width="1024" height="768">
 		</div>
 	</div>
 

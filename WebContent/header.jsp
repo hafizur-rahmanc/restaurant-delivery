@@ -17,7 +17,6 @@
 					<li><a href="#">Contact</a></li>
 				</ul>
 				<c:set var="currentUser" value="${sessionScope.currentUser}" />
-				<c:out value="${sessionScope.userId}" />
 				<ul class="nav navbar-nav navbar-right">
 				<c:choose>
 					<c:when test="${currentUser != null}">
