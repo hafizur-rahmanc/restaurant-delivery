@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet {
 				session.setAttribute("userId", theUser.getUserId());
 				System.out.println("Login Authenticated");
 				//Send to the menu page
-				dispatcher = request.getRequestDispatcher("menu-item.jsp");
+				dispatcher = request.getRequestDispatcher("home.jsp");
 				dispatcher.forward(request, response);
 			} else {
 				dispatcher = request.getRequestDispatcher("login.jsp");
