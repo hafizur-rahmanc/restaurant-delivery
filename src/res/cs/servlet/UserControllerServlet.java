@@ -75,8 +75,8 @@ public class UserControllerServlet extends HttpServlet {
 				// Assign the session attribute
 				session.setAttribute("currentUser", theUser);
 				session.setAttribute("userId", userId);
-				// Send to the menu page
-				dispatcher = request.getRequestDispatcher("menu-item.jsp");
+				// Send to the home page
+				dispatcher = request.getRequestDispatcher("home.jsp");
 				dispatcher.forward(request, response);
 			
 			}else {

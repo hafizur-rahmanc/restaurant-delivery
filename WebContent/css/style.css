@@ -32,3 +32,7 @@ body {
 	margin: 0 auto;
 	padding: 50px 50px;
 }
+
+.btn-primary {
+	margin-bottom: 30px;
+}

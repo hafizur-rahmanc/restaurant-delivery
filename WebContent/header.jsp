@@ -12,7 +12,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="bs-nav-demo">
 				<ul class="nav navbar-nav">
-					<li><a href="menu-item.jsp">Menu</a></li>
+					<li><a href="MenuItemServlet">Menu</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
