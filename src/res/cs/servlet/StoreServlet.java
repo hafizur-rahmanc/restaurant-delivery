@@ -45,7 +45,7 @@ public class StoreServlet extends HttpServlet {
 				// Get all the available stores from database
 				storesList = storeBO.getAllStores();
 				// Assign the storesList as an attribute to the context object
-				context.setAttribute("itemsList", storesList);
+				context.setAttribute("storesList", storesList);
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

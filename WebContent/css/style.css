@@ -40,10 +40,11 @@ body {
 .item-action, .item-operate{
 	text-align: center;
 }
-#process{
+#process, #cancel{
 	float: right;
 	margin-bottom: 20px;
 }
+
 .img-thumbnail{
 	margin: 0 auto;
 }
