@@ -1,6 +1,7 @@
 package res.cs.servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,12 +27,14 @@ public class LogoutServlet extends HttpServlet {
 		session.removeAttribute("userId");
 		session.removeAttribute("currentUser");
 		session.removeAttribute("itemsList");
+		session.removeAttribute("cartIds");
 		
 		// Clear out the session object
 		session.invalidate();
 		
 		// Send back to the home page
-		response.sendRedirect(request.getContextPath());
+		// response.sendRedirect(request.getContextPath());
+		response.sendRedirect("logout.jsp");
 	}
 
 	/**

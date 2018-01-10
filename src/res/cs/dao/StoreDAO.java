@@ -13,7 +13,7 @@ import res.cs.model.Store;
 import res.cs.util.OracleSqlQueries;
 
 public class StoreDAO {
-	//Create a new store
+	// Create a new store
 	public int createStore(Store store) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		int storeId = 0;
 		Connection conn = null;
@@ -65,7 +65,7 @@ public class StoreDAO {
 			}
 		}
 		
-		// get the store by store id
+		// Get the store by store id
 		public Store getStore(int storeId) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
 			Connection conn = null;
 			PreparedStatement stmt = null;
@@ -142,7 +142,7 @@ public class StoreDAO {
 			return storesList;
 		}
 		
-		//Update the store
+		// Update the store
 		public int updateStore(Store theStore) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 			Connection conn = null;
 			PreparedStatement stmt = null;

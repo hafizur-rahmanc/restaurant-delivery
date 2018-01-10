@@ -10,9 +10,11 @@ import res.cs.exception.RegistrationException;
 import res.cs.model.Item;
 
 public class ItemBO {
+	//Instantiate the itemDAO for this instance of this BO
+	final ItemDAO itemDAO = new ItemDAO();
+	
 	//Create a new item and save it to the database using ItemDAO
 	public int createItem(Item item) throws RegistrationException, ClassNotFoundException, IOException, SQLException {
-		final ItemDAO itemDAO = new ItemDAO();
 		Integer itemId = null;
 		try {
 			itemId = itemDAO.createItem(item);
@@ -24,7 +26,6 @@ public class ItemBO {
 	
 	//Get the item object by item id using the ItemDAO
 	public Item getItem(int ID) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
-		final ItemDAO itemDAO = new ItemDAO();
 		Item item = null;
 		try {
 			item = itemDAO.getItem(ID);
@@ -36,7 +37,6 @@ public class ItemBO {
 	
 	//Get all the items list using ItemDAO
 	public List<Item> getAllItems() throws RegistrationException, SQLException, ClassNotFoundException, IOException{
-		final ItemDAO itemDAO = new ItemDAO();
 		List<Item> itemsList = null;
 		try {
 			itemsList = itemDAO.getAllItems();
@@ -48,7 +48,6 @@ public class ItemBO {
 	
 	//Update the item using the ItemDAO
 	public void updateItem(Item item) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
-		final ItemDAO itemDAO = new ItemDAO();
 		try {
 			itemDAO.updateItem(item);
 		}catch(RegistrationException e) {
@@ -56,12 +55,17 @@ public class ItemBO {
 		}
 	}
 	
+	// Admin can delete an item by using the item_id
+	public int deleteItem(int itemId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		int result = itemDAO.deleteItem(itemId);
+		return result;
+	}
+	
 	//Calculate the total price from the cart item Ids
 	public List<Double> getTotals(List<Integer> itemIds){
-		ItemDAO itemDAO = new ItemDAO();
 		List<Double> totals = new ArrayList<Double>();
 		
-		//Pre tax amount as subtotal
+		// Pre-tax amount as sub-total
 		double subtotal = 0.00;
 		double taxAmount = 0.00;
 		double totalPrice = 0.00;
@@ -82,7 +86,7 @@ public class ItemBO {
 			totals.add(taxAmount);
 			totals.add(totalPrice);
 			
-			//Return the totals Array List
+			//Return the totals ArrayList
 			return totals;
 			
 		}catch(Exception e) {

@@ -3,7 +3,6 @@ package res.cs.servlet;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,8 +39,6 @@ public class UserControllerServlet extends HttpServlet {
 		UserBO userBO;
 		// Declare an user model variable
 		User theUser;
-		// Declare the RequestDispatcher object variable
-		RequestDispatcher dispatcher;
 		
 		//Read user info from the form data
 		String firstName = request.getParameter("firstName");
@@ -54,7 +51,7 @@ public class UserControllerServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		int userId = 0;
 
-		//Create a new user object
+		//Create a new User object
 		theUser = new User();
 		theUser.setFirstName(firstName);
 		theUser.setLastName(lastName);
@@ -75,9 +72,10 @@ public class UserControllerServlet extends HttpServlet {
 				// Assign the session attribute
 				session.setAttribute("currentUser", theUser);
 				session.setAttribute("userId", userId);
-				// Send to the home page
-				dispatcher = request.getRequestDispatcher("home.jsp");
-				dispatcher.forward(request, response);
+				// Send to the menu item page
+				response.sendRedirect("MenuItemServlet");
+//				dispatcher = request.getRequestDispatcher("home.jsp");
+//				dispatcher.forward(request, response);
 			
 			}else {
 				// Send back to the error page (registration page)

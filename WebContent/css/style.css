@@ -36,3 +36,31 @@ body {
 .btn-primary {
 	margin-bottom: 30px;
 }
+
+.item-action, .item-operate{
+	text-align: center;
+}
+#process{
+	float: right;
+	margin-bottom: 20px;
+}
+.img-thumbnail{
+	margin: 0 auto;
+}
+
+.logout-content{
+        background: #2c3e50;
+        color: white;
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+}
+
+.logout-page-button{
+	padding-top: 30px;
+	text-align: center;
+}

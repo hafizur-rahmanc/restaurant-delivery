@@ -13,62 +13,70 @@
 </head>
 <body>
 <jsp:include page="header.jsp" />
+	<c:if test="${cartIds != null }">
+		<div class="container">
+			<a href="StoreServlet">
+				<button class="btn btn-lg btn-success" type="submit" name="process" id="process">Process Order</button>
+			</a>
+		</div>
+	</c:if>
 	<div class="container">
 		<div class="jumbotron">
 			<h1><i class="fa fa-cutlery" aria-hidden="true"></i> Menu Items</h1>
 			<p>All the available menu items</p>
 		</div>
 		
-		<!-- Get All the Available items from sessionScope and display it as individual div -->
-		<div class="row text-center">
+		<!-- Get All the Available items from contextScope and display it as individual div's -->
+		<div class="row">
 			<c:forEach items="${itemsList}" var="item">
-				<div class="col-lg-4 col-sm-6">
+				<div class="col-lg-4 col-sm-6 text-center">
 					<div class="img-thumbnail">
-						<img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=623&q=80" width="300" height="300">
+						<div class="text-center">
+							<img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=623&q=80" width="300" height="300">
+						</div>
 					</div>
 					<div class="item-action">
 						<p><strong>${item.itemName}</strong></p>
-						<p>
-							<span class="input-addon"><strong>Price:</strong> $</span><strong> ${item.itemPrice}</strong>
-						</p>
+						<p><strong>Price: $${item.itemPrice}</strong></p>
 					</div>
 					<div class="item-operate">
-						<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" name="itemId" value="${item.itemId}">Add To Cart</button>
+						<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal-${item.itemId}" name="itemId" value="${item.itemId}">Add To Cart</button>
 					</div>
+				</div>
+				<!-- Modal -->
+				<div class="modal fade" id="myModal-${item.itemId}" role="dialog">
+				    <div class="modal-dialog">
+				    
+				      <!-- Modal content-->
+				      <div class="modal-content">
+				        <div class="modal-header">
+				          <button type="button" class="close" data-dismiss="modal">×</button>
+				          <h4><span class="glyphicon glyphicon-lock"></span> Item</h4>
+				        </div>
+				        <div class="modal-body">
+				          <form role="form" action="CartServlet" method="post">
+				            <div class="form-group">
+				              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span>$${item.itemPrice} Each</label>
+				              <input type="number" class="form-control" id="psw" placeholder="How many?">
+				            </div>
+				              <button type="submit" class="btn btn-primary btn-block" name="itemId" value="${item.itemId}">Add 
+				                <span class="glyphicon glyphicon-ok"></span>
+				              </button>
+				          </form>
+				        </div>
+				        <div class="modal-footer">
+				          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+				            <span class="glyphicon glyphicon-remove"></span> Cancel
+				          </button>
+				          <p>Need <a href="#">help?</a></p>
+				        </div>
+				      </div>
+				    </div>
 				</div>
 			</c:forEach>
 		</div>
 
-		<!-- Modal -->
-		  <div class="modal fade" id="myModal" role="dialog">
-		    <div class="modal-dialog">
-		    
-		      <!-- Modal content-->
-		      <div class="modal-content">
-		        <div class="modal-header">
-		          <button type="button" class="close" data-dismiss="modal">×</button>
-		          <h4><span class="glyphicon glyphicon-lock"></span> Item</h4>
-		        </div>
-		        <div class="modal-body">
-		          <form role="form" action="CartServlet" method="post">
-		            <div class="form-group">
-		              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> $10.99 Each</label>
-		              <input type="number" class="form-control" id="psw" placeholder="How many?">
-		            </div>
-		              <button type="submit" class="btn btn-primary btn-block" name="itemId" value="${1}">Add 
-		                <span class="glyphicon glyphicon-ok"></span>
-		              </button>
-		          </form>
-		        </div>
-		        <div class="modal-footer">
-		          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-		            <span class="glyphicon glyphicon-remove"></span> Cancel
-		          </button>
-		          <p>Need <a href="#">help?</a></p>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
+
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
