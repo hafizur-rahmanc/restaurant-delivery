@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import res.cs.bo.StoreBO;
 import res.cs.exception.RegistrationException;
@@ -70,7 +71,7 @@ public class StoreServlet extends HttpServlet {
 		// Declare a ServletContext object
 		ServletContext context = request.getServletContext();
 		//Declare the RequestDispater object
-		RequestDispatcher dispatcher = null;;
+		RequestDispatcher dispatcher = null;
 		
 		// If the context object doesn't have the storesList, then get the storesList from database
 		// Then assign it as a context attribute otherwise get it from the context object
@@ -89,7 +90,27 @@ public class StoreServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 
+		// Read the action from the URL
+		String action = request.getParameter("action");
+		int storeId = Integer.parseInt(request.getParameter("storeId"));
+		// Get the session from the request object
+		HttpSession session = request.getSession();
+		
+		if(action.equals("cancel")) {
+			// Remove the session attribute and send back to the menu page
+			session.removeAttribute("cartIds");
+			response.sendRedirect("MenuItemServlet");
+		} else if(action.equals("reviewOrder")) {
+			// Read the store id and assign it to the session object
+			if (storeId != 0) {
+				// Store the session id as a session attribute
+				session.setAttribute("storeId", storeId);
+				// Send back to the review order page
+				response.sendRedirect("review-order.jsp");
+			}
+		
+		}
+
 	}
 
 }

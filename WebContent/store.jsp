@@ -15,7 +15,7 @@
 <jsp:include page="header.jsp" />
 	<c:if test="${cartIds != null }">
 		<div class="container">
-			<form action="StoreServlet" method="post">
+			<form action="StoreServlet?action=cancel" method="post">
 				<button class="btn btn-lg btn-danger" type="submit" name="cancel" id="cancel">Cancel Order</button>
 			</form>
 		</div>
@@ -23,7 +23,7 @@
 	
 	<div class="container">
 		<div class="jumbotron">
-			<h1><i class="fa fa-location-arrow" aria-hidden="true"></i> Locations</h1>
+			<h1><i class="fa fa-location-arrow"></i> Locations</h1>
 			<p>All the available store locations</p>
 		</div>
 	
@@ -40,9 +40,11 @@
 						<p><strong>${store.storeName}</strong></p>
 						<p><strong>Address: ${store.address}</strong></p>
 					</div>
-					<div class="store-operate">
-						<button class="btn btn-sm btn-primary" name="storeId" value="${store.storeId}">Select Location</button>
-					</div>
+					<form action="StoreServlet?action=reviewOrder" method="post">
+						<div class="store-operate">
+							<button class="btn btn-sm btn-primary" name="storeId" type="submit" value="${store.storeId}">Select Location</button>
+						</div>
+					</form>
 				</div>
 			</c:forEach>
 		</div>
