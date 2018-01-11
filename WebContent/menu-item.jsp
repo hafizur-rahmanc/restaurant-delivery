@@ -13,6 +13,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp" />
+	<!--If item was successfully added to the cart -->
 	<c:if test="${cartIds != null }">
 		<div class="container">
 			<a href="StoreServlet">
@@ -26,9 +27,17 @@
 			<p>All the available menu items</p>
 		</div>
 		
-		<!-- Get All the Available items from contextScope and display it as individual div's -->
+		<!-- Set variable for ArrayList<Item> -->
+		<c:set var="items" value="#{applicationScope.itemsList}"/>
+		
+		<!-- Test whether the items is empty or not. If items has nothing redirect to the MenuItemServlet -->
+		<c:if test="${items.isEmpty()}">
+			<c:redirect url="MenuItemServlet" />
+		</c:if>
+		
+		<!-- Loop through the items list and display it as individual div's -->
 		<div class="row">
-			<c:forEach items="${itemsList}" var="item">
+			<c:forEach items="${items}" var="item">
 				<div class="col-lg-4 col-sm-6 text-center">
 					<div class="img-thumbnail">
 						<div class="text-center">
@@ -40,7 +49,10 @@
 						<p><strong>Price: $${item.itemPrice}</strong></p>
 					</div>
 					<div class="item-operate">
-						<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal-${item.itemId}" name="itemId" value="${item.itemId}">Add To Cart</button>
+						<!-- Only display if the user is logged in -->
+						<c:if test="${sessionScope.userId != null}">
+							<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal-${item.itemId}" name="itemId" value="${item.itemId}">Add To Cart</button>
+						</c:if>
 					</div>
 				</div>
 				<!-- Modal -->
@@ -75,8 +87,6 @@
 				</div>
 			</c:forEach>
 		</div>
-
-
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>

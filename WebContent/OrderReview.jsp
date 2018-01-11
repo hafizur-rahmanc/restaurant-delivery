@@ -13,11 +13,13 @@
 </head>
 <body>
 <jsp:include page="header.jsp" />
-	<c:if test="${cartIds != null }">
+	<!-- Only display process or cancel if the user is logged in and added item to the cart -->
+	<c:if test="${sessionScope.cartIds != null && sessionScope.userId != null }">
 		<div class="container">
 			<form action="ReviewOrderServlet" method="post">
-				<div class="orderOperation">
+				<div class="group-btn">
 					<button class="btn btn-lg btn-success" type="submit" name="process" >Process Order</button>
+					 <span class="btn-separator"></span>
 					<button class="btn btn-lg btn-danger" type="submit" name="cancel" >Cancel Order</button>
 				</div>
 			</form>

@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,25 +22,25 @@ import res.cs.model.Store;
 @WebServlet("/StoreServlet")
 public class StoreServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	// Declare a ServletContext object
+	ServletContext context;
 	
 	/**
-	 * @see Servlet#init(ServletConfig)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	public void init(ServletConfig config) throws ServletException {
-		// Declare a ServletContext object
-		ServletContext context = config.getServletContext();
-		// Declare a storeBO variable
-		StoreBO storeBO;
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// Get the ServletContext object from the request object
+		context = request.getServletContext();
+		// Create a new instance of StoreBO and assign it to storeBO
+		StoreBO storeBO = new StoreBO();
 		// Declare a storesList variable to hold store information
 		List<Store> storesList = null;
 		
-		// If the context object doesn't have the storesList, then get the stores list from database
-		// Then assign storesList as a context attribute otherwise get it from it from context object
-		if(context.getAttribute("storesList") == null) {
-		
+		// If the context object doesn't have the storesList, then get the storesList from database
+		// Then assign it as a context attribute
+		if(context.getAttribute("storesList") == null){
+
 			try {
-				// Create a new instance of StoreBO and assign it to storeBO
-				storeBO = new StoreBO();
 				// Get all the available stores from database
 				storesList = storeBO.getAllStores();
 				// Assign the storesList as an attribute to the context object
@@ -56,34 +54,10 @@ public class StoreServlet extends HttpServlet {
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
-			
 		}
-
-	}
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// Declare a ServletContext object
-		ServletContext context = request.getServletContext();
-		//Declare the RequestDispater object
-		RequestDispatcher dispatcher = null;
-		
-		// If the context object doesn't have the storesList, then get the storesList from database
-		// Then assign it as a context attribute otherwise get it from the context object
-		if(context.getAttribute("storesList") != null){
 			// Send to the store selection page
-			dispatcher = request.getRequestDispatcher("store.jsp");
-			dispatcher.forward(request, response);
-			
-		} else {
-			// We are not getting information either from context or database
-			// Display the error message since the store location is empty
-		}
+			response.sendRedirect("Stores.jsp");
 	}
 
 	/**
@@ -103,10 +77,10 @@ public class StoreServlet extends HttpServlet {
 		} else if(action.equals("reviewOrder")) {
 			// Read the store id and assign it to the session object
 			if (storeId != 0) {
-				// Store the session id as a session attribute
+				// Store the store id as a session attribute
 				session.setAttribute("storeId", storeId);
 				// Send back to the review order page
-				response.sendRedirect("review-order.jsp");
+				response.sendRedirect("OrderReview.jsp");
 			}
 		
 		}
