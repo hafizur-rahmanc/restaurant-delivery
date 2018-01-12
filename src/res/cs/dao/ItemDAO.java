@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import res.cs.exception.RegistrationException;
 import res.cs.model.Item;
@@ -97,6 +98,17 @@ public class ItemDAO {
 			close(resultSet, stmt, conn);
 		}
 		return item;
+	}
+	
+	public List<Item> getCartItems(Set<Integer> cartIds) throws ClassNotFoundException, RegistrationException, SQLException, IOException {
+		List<Item> itemsList = new ArrayList<Item>();
+		// Loop through the cartIds to find each item
+		for(Integer id: cartIds) {
+			// Get the item by id and add to the list 
+			itemsList.add(getItem(id));
+		}
+		// Return the populated list
+		return itemsList;
 	}
 	
 	//Retrieve all the items
@@ -220,4 +232,5 @@ public class ItemDAO {
 		List<Item> items = DAO.getAllItems();
 		System.out.println(items);
 	}
+
 }

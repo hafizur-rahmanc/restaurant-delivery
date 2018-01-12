@@ -2,8 +2,9 @@ package res.cs.bo;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import res.cs.dao.OrderDAO;
 import res.cs.exception.RegistrationException;
@@ -14,7 +15,7 @@ public class OrderBO {
 	OrderDAO orderDAO = new OrderDAO();
 
 	//Corresponds with OrderDAO.createOrder(); all the parameters are coming from the session; assume payment is created
-	public int createOrder(List<Integer> itemIds, int userId, int storeId, int paymentId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	public int createOrder(Set<Integer> itemIds, int userId, int storeId, int paymentId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		Order theOrder = new Order();
 		ItemBO itemBO = new ItemBO();
 		
@@ -68,7 +69,7 @@ public class OrderBO {
 	
 	public static void main(String[] args) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		OrderBO orderBO = new OrderBO();
-		List<Integer> itemIds = new ArrayList<Integer>();
+		Set<Integer> itemIds = new HashSet<Integer>();
 		itemIds.add(41);
 		itemIds.add(42);
 		itemIds.add(43);

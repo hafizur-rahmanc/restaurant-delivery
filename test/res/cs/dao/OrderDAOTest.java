@@ -5,9 +5,10 @@ import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -36,15 +37,15 @@ public class OrderDAOTest {
 	public Object[][] inputData(){
 		Object[][] data = {
 				// itemIds, userId, storeId, paymentId, expected
-				{new ArrayList<Integer>(Arrays.asList(41, 42, 43)), 90, 1, 1, true},
-				{new ArrayList<Integer>(Arrays.asList(1, 41, 42, 43)), 91, 21, 2, true},
-				{new ArrayList<Integer>(Arrays.asList(21, 43)), 92, 22, 3, true}
+				{new HashSet<Integer>(Arrays.asList(41, 42, 43)), 90, 1, 1, true},
+				{new HashSet<Integer>(Arrays.asList(1, 41, 42, 43)), 91, 21, 2, true},
+				{new HashSet<Integer>(Arrays.asList(21, 43)), 92, 22, 3, true}
 		};
 		return data;	
 	}
 	
 	@Test(dataProvider="newOrder")
-	public void createOrderTest(List<Integer> itemIds, int userId, int storeId, int paymentId, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	public void createOrderTest(Set<Integer> itemIds, int userId, int storeId, int paymentId, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		theOrder = new Order();
 		ItemBO itemBO = new ItemBO();
 		

@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import res.cs.exception.RegistrationException;
 import res.cs.model.Order;
@@ -14,7 +15,7 @@ import res.cs.util.OracleSqlQueries;
 
 public class OrderDAO {
 	//Before creating an order make sure Order object has all the necessary attributes
-	public int createOrder(Order order, List<Integer> itemIds) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	public int createOrder(Order order, Set<Integer> itemIds) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		int orderId = 0;
 		Connection conn = null;
 		PreparedStatement stmt = null;

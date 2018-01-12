@@ -3,7 +3,6 @@ package res.cs.servlet;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -41,9 +40,6 @@ public class LoginServlet extends HttpServlet {
 		// Get the session from the request object
 		HttpSession session = request.getSession();
 		
-		// Declare the RequestDispatcher object variable
-		RequestDispatcher dispatcher;
-		
 		// Get the parameter from the form data
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
@@ -53,16 +49,14 @@ public class LoginServlet extends HttpServlet {
 			theUser = userBO.loginUser(userName, password);
 			if(theUser != null) {
 				// Assign the session attribute
-
 				session.setAttribute("currentUser", theUser);
 				session.setAttribute("userId", theUser.getUserId());
 				System.out.println("Login Authenticated");
-				//Send to the menu item page
-				dispatcher = request.getRequestDispatcher("MenuItemServlet");
-				dispatcher.forward(request, response);
+				// Send to the menu item page
+				response.sendRedirect("MenuItemServlet");
 			} else {
-				dispatcher = request.getRequestDispatcher("login.jsp");
-				dispatcher.forward(request, response);
+				// Navigate to the login page
+				response.sendRedirect("login.jsp");
 			}
 
 		} catch (ClassNotFoundException e) {

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import res.cs.dao.ItemDAO;
 import res.cs.exception.RegistrationException;
@@ -35,6 +36,17 @@ public class ItemBO {
 		return item;
 	}
 	
+	// Get items list by cartIds set using ItemDAO
+	public List<Item> getCartItems(Set<Integer> cartIds) throws RegistrationException, ClassNotFoundException, SQLException, IOException {
+		List<Item> itemsList = null;
+		try {
+			itemsList = itemDAO.getCartItems(cartIds);
+		}catch(RegistrationException e) {
+			throw new RegistrationException(e.getMessage());
+		}
+		return itemsList;
+	}
+	
 	//Get all the items list using ItemDAO
 	public List<Item> getAllItems() throws RegistrationException, SQLException, ClassNotFoundException, IOException{
 		List<Item> itemsList = null;
@@ -62,7 +74,7 @@ public class ItemBO {
 	}
 	
 	//Calculate the total price from the cart item Ids
-	public List<Double> getTotals(List<Integer> itemIds){
+	public List<Double> getTotals(Set<Integer> itemIds){
 		List<Double> totals = new ArrayList<Double>();
 		
 		// Pre-tax amount as sub-total
@@ -96,4 +108,5 @@ public class ItemBO {
 		return totals;
 		
 	}
+
 }

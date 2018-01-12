@@ -2,16 +2,18 @@ package res.cs.servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import res.cs.bo.ItemBO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.Item;
@@ -22,29 +24,32 @@ import res.cs.model.Item;
 @WebServlet("/MenuItemServlet")
 public class MenuItemServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+	// Declare a ServletContext object
+	ServletContext context;
+
+
 	/**
-	 * @see Servlet#init(ServletConfig)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	public void init(ServletConfig config) throws ServletException {
-		// Declare a ServletContext object
-		ServletContext context = config.getServletContext();
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// Get the ServletContext object from the request object
+		context = request.getServletContext();
 		// Declare an itemBO variable
 		ItemBO itemBO;
-		// Declare an itemsList variable to hold Item information
-		List<Item> itemsList = null;
+		// Declare an menuItems variable to hold Item information
+		List<Item> menuItems = null;
 		
 		// If the context object doesn't have the itemsList, then get the itemsList from database
 		// and assign as a context attribute otherwise get it from it from context object
-		if(context.getAttribute("itemsList") == null) {
-		
+		if(context.getAttribute("menuItems") == null) {
+			
 			try {
 				// Create a new instance of ItemBO and assign it to itemBO
 				itemBO = new ItemBO();
 				// Get all the available items from database
-				itemsList = itemBO.getAllItems();
+				menuItems = itemBO.getAllItems();
 				// Assign the itemsList as an attribute to the context object
-				context.setAttribute("itemsList", itemsList);
+				context.setAttribute("menuItems", menuItems);
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -58,46 +63,49 @@ public class MenuItemServlet extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
 		}
-
-	}
-
-	/**
-	 * @see Servlet#destroy()
-	 */
-	public void destroy() {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// Declare a ServletContext object
-		ServletContext context = request.getServletContext();
-		//Declare the RequestDispater object
-		RequestDispatcher dispatcher = null;;
 		
-		// If the context object doesn't have the itemsList, then get the itemsList from database
-		// Then assign it as a context attribute otherwise get it from the context object
-		if(context.getAttribute("itemsList") != null){
-			// Send to the menu page
-			dispatcher = request.getRequestDispatcher("menu-item.jsp");
-			dispatcher.forward(request, response);
-			
-		} else {
-			// We are not getting information either from context or database
-			// Display the error message since the menu item is empty
-		}		
+		// Send to the Menu Item Page
+		response.sendRedirect("menu-item.jsp");
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@SuppressWarnings("unchecked")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		// Get the session from the request object
+		HttpSession session = request.getSession();
+		// Declare an itemIds set of type Integer for unique item id's in the cart
+		Set<Integer> cartIds = null;
+		// Declare an empty message string
+		String message = "";
+		// Grab the itemId from the form data
+		Integer itemId = Integer.parseInt(request.getParameter("itemId"));
+		
+		if (itemId != 0) {
+			// Check whether session object has cartIds as an attribute or not
+			if(session.getAttribute("cartIds") != null) {
+				// Get the cartIds from the session and assign it to local cartIds list
+				cartIds = (Set<Integer>) session.getAttribute("cartIds");
+			} else {
+				// Create a new HashSet of Integer type and assign it to local cartIds set
+				cartIds = new HashSet<Integer>();
+			}
+			// Add the new item id to the set
+			cartIds.add(itemId);
+			// Assign the updated set into the session object
+			session.setAttribute("cartIds", cartIds);
+			// Generate the added to the cart message
+			message = "Item added to the cart successfully!";
+			// Assign the updated message to the request object
+			request.setAttribute("message", message);
+		}
+		
+		if (!message.isEmpty()) {
+			// Send to the menu item page
+			response.sendRedirect("menu-item.jsp");
+			// doGet(request, response);
+		}
 	}
-
 }

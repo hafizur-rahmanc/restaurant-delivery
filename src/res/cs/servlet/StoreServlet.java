@@ -79,8 +79,8 @@ public class StoreServlet extends HttpServlet {
 			if (storeId != 0) {
 				// Store the store id as a session attribute
 				session.setAttribute("storeId", storeId);
-				// Send back to the review order page
-				response.sendRedirect("OrderReview.jsp");
+				// Navigate to ReviewOrder Servlet
+				response.sendRedirect("ReviewOrderServlet");
 			}
 		
 		}

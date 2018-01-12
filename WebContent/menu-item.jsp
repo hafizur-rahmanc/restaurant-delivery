@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<script type="text/javascript" src="js/index.js"></script>
 	<script src="https://use.fontawesome.com/71c97a3df8.js"></script>
 </head>
 <body>
@@ -26,9 +27,9 @@
 			<h1><i class="fa fa-cutlery" aria-hidden="true"></i> Menu Items</h1>
 			<p>All the available menu items</p>
 		</div>
-		
+		<!-- Display added to teh cart message -->
 		<!-- Set variable for ArrayList<Item> -->
-		<c:set var="items" value="#{applicationScope.itemsList}"/>
+		<c:set var="items" value="#{applicationScope.menuItems}"/>
 		
 		<!-- Test whether the items is empty or not. If items has nothing redirect to the MenuItemServlet -->
 		<c:if test="${items.isEmpty()}">
@@ -66,7 +67,7 @@
 				          <h4><span class="glyphicon glyphicon-lock"></span> Item</h4>
 				        </div>
 				        <div class="modal-body">
-				          <form role="form" action="CartServlet" method="post">
+				          <form role="form" action="MenuItemServlet" method="post">
 				            <div class="form-group">
 				              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span>$${item.itemPrice} Each</label>
 				              <input type="number" class="form-control" id="psw" placeholder="How many?">
