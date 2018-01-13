@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -15,7 +16,7 @@
 <body>
 <jsp:include page="header.jsp" />
 	<!--If item was successfully added to the cart -->
-	<c:if test="${cartIds != null }">
+	<c:if test="${sessionScope.cartIds != null && fn: length(sessionScope.cartIds) > 0}">
 		<div class="container">
 			<a href="StoreServlet">
 				<button class="btn btn-lg btn-success" type="submit" name="process" id="process">Process Order</button>
@@ -27,7 +28,7 @@
 			<h1><i class="fa fa-cutlery" aria-hidden="true"></i> Menu Items</h1>
 			<p>All the available menu items</p>
 		</div>
-		<!-- Display added to teh cart message -->
+		<!-- Display added to the cart message -->
 		<!-- Set variable for ArrayList<Item> -->
 		<c:set var="items" value="#{applicationScope.menuItems}"/>
 		

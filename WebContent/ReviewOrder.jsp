@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE>
@@ -13,42 +14,110 @@
 </head>
 <body>
 <jsp:include page="header.jsp" />
-	<!-- Only display process order or cancel order button if the user is logged in and added item to the cart -->
-	<c:if test="${sessionScope.cartIds != null && sessionScope.userId != null }">
+	<!-- Only display process order or cancel order button if the user is logged in and added item to the cart otherwise send back to the menu items page-->
+	<c:if test="${sessionScope.userId == null || fn: length(sessionScope.cartIds) == 0}">
+		<c:redirect url="MenuItemServlet" />
+	</c:if>
+	
+	<c:if test="${sessionScope.cartIds != null && sessionScope.userId != null}">
 		<div class="container">
 			<form action="ReviewOrderServlet" method="post">
 				<div class="group-btn">
 					<button class="btn btn-lg btn-success" type="submit" name="process" >Process Order</button>
-					 <span class="btn-separator"></span>
 					<button class="btn btn-lg btn-danger" type="submit" name="cancel" >Cancel Order</button>
 				</div>
 			</form>
 		</div>
-	</c:if>
-	<!-- Go through each item in the cart and display the order summary -->
-	<c:forEach items="${sessionScope.cartItems}" var="item">
-		<div class="container" id="cartItems">
-			<div class="row">
-				<div class="col-sm-6 text-center">
-					<div class="img-thumbnail">
-						<img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=623&q=80" width="250" height="250">
-					</div>
-				</div>
-				<div class="col-sm-6 text-left">
-					<p><strong>${item.itemName}</strong></p>
-					<p><strong>Price: $${item.itemPrice}</strong></p>
-				</div>
-				<div class="delete-item">
-					<form action="ReviewOrder" method="post">
-						<!-- Only display if the user is logged in -->
-						<c:if test="${sessionScope.userId != null}">
-							<button class="btn btn-sm btn-danger" type="submit" name="remove" value="${item.itemId}">Remove</button>
-						</c:if>
-					</form>
-				</div>
-			</div>
+	</c:if>	
+	<div class="container" id="cartItems">
+		<div class="jumbotron">
+			<h2>Order Review</h2>
 		</div>
-	</c:forEach>
+		<div id="order-details" class="table_block table-responsive">
+			<table id="cart_summary" class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Product</th>
+						<th>Description</th>
+						<th>Unit Price</th>
+						<th>Quantity</th>
+						<th>Total</th>
+						<th>&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Go through each item in the cart and display the order summary -->
+					<c:forEach items="${sessionScope.cartItems}" var="item">
+						<tr>
+							<td class="cart_product text-center">
+								<a href="#">
+									<img alt="item-${item.itemId}" src="https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=623&q=80" width="80" height="80">
+								</a>
+							</td>
+							<td class="cart_description">
+								<p class="product-name">${item.itemName}</p>
+								<p class="product-description">${item.itemDescription}</p>
+								
+							</td>
+							<td class="cart_unit" data-title="Unit Price">
+								<span class="price">$${item.itemPrice}</span>
+							</td>
+							<td class="cart_quantity text-center">1</td>
+							<td class="cart_total" data-title="Total">
+								<span class="price" id="total_product_price">$${item.itemPrice}</span>
+							</td>
+							<td class="cart_delete text-center" data-title="Remove">
+								<form action="ReviewOrderServlet" method="post">
+									<!-- Only display if the user is logged in -->
+									<c:if test="${sessionScope.userId != null}">
+										<button class="btn btn-sm btn-danger" type="submit" name="remove" value="${item.itemId}">Remove</button>
+									</c:if>
+								</form>
+							</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+				<tfoot>
+					<tr class="cart_subtotal_price">
+						<td rowspan="3" colspan="2" id="cart_voucher" class="cart_voucher"></td>
+						<td colspan="3" class="text-right">Sub Total</td>
+						<td colspan="1" class="price" id="subtotal">$${sessionScope.subtotal}</td>
+					</tr>
+					<tr class="cart_total_tax">
+						<td colspan="3" class="text-right">Tax</td>
+						<td colspan="1" class="price" id="total_tax">$${sessionScope.taxAmount}</td>
+					</tr>
+					<tr class="cart_total_price">
+						<td colspan="3" class="text-right">Total</td>
+						<td colspan="1" class="price" id="total_tax">$${sessionScope.totalPrice}</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

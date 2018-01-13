@@ -76,12 +76,33 @@ public class ReviewOrderServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@SuppressWarnings("unchecked")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Get the session object from the request object
-		@SuppressWarnings("unused")
 		HttpSession session = request.getSession();
 		
-		if(request.getParameter("process") != null) {
+		// In the case of canceling an order, remove the cartIds from the session and send back to the menu items page
+		if(request.getParameter("cancel") != null) {
+			// Remove the cartIds and cartItems from the session object 
+			session.removeAttribute("cartIds");
+			session.removeAttribute("cartItems");
+			// Send back to the menu items page
+			response.sendRedirect("menu-item.jsp");
+		}
+		
+		// Remove an item from the cart then send back to the ReviewOrderServlet
+		if(request.getParameter("remove") != null) {
+			// Read the itemId from the request objects parameter
+			Integer itemId = Integer.parseInt(request.getParameter("remove"));
+			// Retrieve the cartIds from the session object
+			Set<Integer> cartIds = (Set<Integer>) session.getAttribute("cartIds");
+			// Remove the item from the cartIds
+			cartIds.remove(itemId);
+			// Go back to the ReviewOrderServlets get method to see the change in the cartItems
+			doGet(request, response);
+		}
+		if(request.getParameter("process") != null && session.getAttribute("cartItems") != null) {
+			
 			
 		}
 	}
