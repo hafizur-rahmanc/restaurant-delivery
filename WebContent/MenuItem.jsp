@@ -25,7 +25,7 @@
 	</c:if>
 	<div class="container">
 		<div class="jumbotron">
-			<h1><i class="fa fa-cutlery" aria-hidden="true"></i> Menu Items</h1>
+			<h2><i class="fa fa-cutlery" aria-hidden="true"></i> Menu Items</h2>
 		</div>
 		<!-- Display added to the cart message -->
 		<!-- Set variable for ArrayList<Item> -->

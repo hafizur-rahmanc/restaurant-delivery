@@ -11,6 +11,7 @@ body {
 	color: #2c3e50;
 	background-color: #ecf0f1;
 	position: relative;
+	margin-top: 10px;
   	z-index: 2;
 }
 
@@ -29,16 +30,22 @@ body {
 .form-horizontal{
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	text-align: left;
 	width: 50%;
 	margin: 0 auto;
 	padding: 50px 50px;
 }
 
-.btn-primary {
-	margin-bottom: 30px;
+.col-sm-3 .col-sm-9{
+	padding-left: 0px;
 }
 
+.form-group>.col-sm-3{
+    padding-left: 0px;
+}
+
+.btn-primary{
+	margin-bottom: 30px;
+}
 .item-action, .item-operate{
 	text-align: center;
 }

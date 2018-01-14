@@ -23,8 +23,7 @@
 	
 	<div class="container">
 		<div class="jumbotron">
-			<h1><i class="fa fa-location-arrow"></i> Locations</h1>
-			<p>All the available store locations</p>
+			<h2><i class="fa fa-location-arrow"></i> Locations</h2>
 		</div>
 	
 	<!-- Get All the Available items from contextScope and display it as individual div's -->

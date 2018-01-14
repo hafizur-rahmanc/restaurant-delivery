@@ -13,6 +13,9 @@
 <body>
 	<jsp:include page="header.jsp" />
 	<div class="container">
+		<div class="jumbotron">
+			<h2>Registration</h2>
+		</div>
 		<form action="UserControllerServlet" method="post" class="form-horizontal">
 			<div class="form-group">
 		   		<label for="firstName" class="col-sm-3 control-label">First Name</label>
@@ -36,6 +39,12 @@
 			    <label for="Password" class="col-sm-3 control-label">Password</label>
 			    <div class="col-sm-9">
 			    	<input type="password" class="form-control" name="password" id="Password" placeholder="Password" required>
+			    </div>
+			 </div>
+			 <div class="form-group">
+			    <label for="RePassword" class="col-sm-3 control-label">Password</label>
+			    <div class="col-sm-9">
+			    	<input type="password" class="form-control" name="rePassword" id="RePassword" placeholder="Password" required>
 			    </div>
 			 </div>
 			 <div class="form-group">

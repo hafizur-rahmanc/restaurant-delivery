@@ -13,6 +13,9 @@
 <body>
 	<jsp:include page="header.jsp" />
 	<div class="container">
+		<div class="jumbotron">
+			<h2>Login</h2>
+		</div>
 		<form action="LoginServlet" method="post" class="form-horizontal">
 		  <div class="form-group">
 		   	<label for="userName" class="col-sm-3 control-label">User Name</label>

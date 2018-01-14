@@ -23,8 +23,8 @@
 						<li><a href="LogoutServlet">Log Out <i class="fa fa-user" aria-hidden="true"></i></a></li>
 					</c:when>
 					<c:otherwise>
-						<li><a href="registration.jsp">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
-						<li><a href="login.jsp">Login <i class="fa fa-user" aria-hidden="true"></i></a></li>
+						<li><a href="Registration.jsp">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+						<li><a href="Login.jsp">Login <i class="fa fa-user" aria-hidden="true"></i></a></li>
 					</c:otherwise>
 				</c:choose>
 				</ul>
