@@ -69,7 +69,7 @@ public class ReviewOrderServlet extends HttpServlet {
 			}
 		}else {
 			// Send back to the menu item page
-			response.sendRedirect("menu-item.jsp");
+			response.sendRedirect("MenuItem.jsp");
 		}
 	}
 
@@ -87,7 +87,7 @@ public class ReviewOrderServlet extends HttpServlet {
 			session.removeAttribute("cartIds");
 			session.removeAttribute("cartItems");
 			// Send back to the menu items page
-			response.sendRedirect("menu-item.jsp");
+			response.sendRedirect("MenuItem.jsp");
 		}
 		
 		// Remove an item from the cart then send back to the ReviewOrderServlet
@@ -98,12 +98,18 @@ public class ReviewOrderServlet extends HttpServlet {
 			Set<Integer> cartIds = (Set<Integer>) session.getAttribute("cartIds");
 			// Remove the item from the cartIds
 			cartIds.remove(itemId);
-			// Go back to the ReviewOrderServlets get method to see the change in the cartItems
-			doGet(request, response);
+			// When cartIds is empty, send back to the menu page
+			if(cartIds.isEmpty()) {
+				response.sendRedirect("MenuItem.jsp");
+			}else {
+				// Go back to the ReviewOrderServlets get method to see the updated cartItems
+				doGet(request, response);	
+			}
+
 		}
 		if(request.getParameter("process") != null && session.getAttribute("cartItems") != null) {
-			
-			
+			// Send back to the Payment Information Page to get payment information
+			response.sendRedirect("PaymentInfo.jsp");
 		}
 	}
 

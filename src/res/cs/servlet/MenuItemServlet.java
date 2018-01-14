@@ -66,7 +66,7 @@ public class MenuItemServlet extends HttpServlet {
 		}
 		
 		// Send to the Menu Item Page
-		response.sendRedirect("menu-item.jsp");
+		response.sendRedirect("MenuItem.jsp");
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class MenuItemServlet extends HttpServlet {
 		
 		if (!message.isEmpty()) {
 			// Send to the menu item page
-			response.sendRedirect("menu-item.jsp");
+			response.sendRedirect("MenuItem.jsp");
 			// doGet(request, response);
 		}
 	}

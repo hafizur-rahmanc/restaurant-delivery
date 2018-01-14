@@ -48,7 +48,7 @@ public class LoginServlet extends HttpServlet {
 		try {
 			theUser = userBO.loginUser(userName, password);
 			if(theUser != null) {
-				// Assign the session attribute
+				// Assign the user as session attribute
 				session.setAttribute("currentUser", theUser);
 				session.setAttribute("userId", theUser.getUserId());
 				System.out.println("Login Authenticated");

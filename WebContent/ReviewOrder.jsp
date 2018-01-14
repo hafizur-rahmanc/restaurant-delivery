@@ -18,17 +18,15 @@
 	<c:if test="${sessionScope.userId == null || fn: length(sessionScope.cartIds) == 0}">
 		<c:redirect url="MenuItemServlet" />
 	</c:if>
-	
-	<c:if test="${sessionScope.cartIds != null && sessionScope.userId != null}">
-		<div class="container">
-			<form action="ReviewOrderServlet" method="post">
-				<div class="group-btn">
-					<button class="btn btn-lg btn-success" type="submit" name="process" >Process Order</button>
-					<button class="btn btn-lg btn-danger" type="submit" name="cancel" >Cancel Order</button>
-				</div>
-			</form>
-		</div>
-	</c:if>	
+
+	<div class="container">
+		<form action="ReviewOrderServlet" method="post">
+			<div class="group-btn">
+				<button class="btn btn-lg btn-success" type="submit" name="process" >Process Order</button>
+				<button class="btn btn-lg btn-danger" type="submit" name="cancel" >Cancel Order</button>
+			</div>
+		</form>
+	</div>
 	<div class="container" id="cartItems">
 		<div class="jumbotron">
 			<h2>Order Review</h2>
@@ -51,7 +49,7 @@
 						<tr>
 							<td class="cart_product text-center">
 								<a href="#">
-									<img alt="item-${item.itemId}" src="https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=623&q=80" width="80" height="80">
+									<img alt="item-${item.itemId}" src="${pageContext.request.contextPath}/images/${item.image}" width="80" height="80">
 								</a>
 							</td>
 							<td class="cart_description">

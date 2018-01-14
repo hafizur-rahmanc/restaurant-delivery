@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Menu Page</title>
+	<title>Menu Item</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
@@ -26,7 +26,6 @@
 	<div class="container">
 		<div class="jumbotron">
 			<h1><i class="fa fa-cutlery" aria-hidden="true"></i> Menu Items</h1>
-			<p>All the available menu items</p>
 		</div>
 		<!-- Display added to the cart message -->
 		<!-- Set variable for ArrayList<Item> -->
@@ -43,7 +42,7 @@
 				<div class="col-lg-4 col-sm-6 text-center">
 					<div class="img-thumbnail">
 						<div class="text-center">
-							<img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=623&q=80" width="300" height="300">
+							<img src="${pageContext.request.contextPath}/images/${item.image}" width="300" height="300">
 						</div>
 					</div>
 					<div class="item-action">
