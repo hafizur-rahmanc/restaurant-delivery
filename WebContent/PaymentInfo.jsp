@@ -25,19 +25,19 @@
 		  <div class="form-group">
 		   	<label for="credit-card" class="col-sm-3 control-label">Credit Card</label>
 		   	<div class="col-sm-9 nopadding">
-		    	<input type="number" class="form-control" name="creditCard" id="creditCard" placeholder="Credit Card Number" required>
+		    	<input type="number" class="form-control" name="creditCard" id="creditCard" maxlength="20" placeholder="Credit Card Number" required>
 		    </div>
 		  </div>
 		  <div class="form-group">
 		    <label for="secure-code" class="col-sm-3 control-label">Secure Number</label>
 		    <div class="col-sm-9 no padding">
-		    	<input type="number" class="form-control" name="secureCode" id="secure-code" placeholder="Secure Number" required>
+		    	<input type="number" class="form-control" name="secureCode" id="secure-code" pattern=".{3,}" placeholder="Secure Number" required title="3 digits minimum">
 		    </div>
 		  </div>
 		  <div class="form-group">
-		    <label for="zip-code" class="col-sm-3 control-label">Zip Code</label>
+		    <label for="zipcode" class="col-sm-3 control-label">Zip Code</label>
 		    <div class="col-sm-9 no padding">
-		    	<input type="number" class="form-control" name="zipCode" id="zip-code" placeholder="Zip Code" required>
+		    	<input type="number" class="form-control" name="zipcode" id="zipcode" pattern=".{5,}" placeholder="Zipcode" required title="5 digits minimum">
 		    </div>
 		  </div>
 		  <div class="form-group">
