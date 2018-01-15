@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="CSRestaurantDelivery">
+    <wb-module deploy-name="RestaurantDelivery">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
-        <property name="context-root" value="CSRestaurantDelivery"/>
-        <property name="java-output-path" value="/CSRestaurantDelivery/build/classes"/>
+        <property name="java-output-path" value="/RestaurantDelivery/build/classes"/>
+        <property name="context-root" value="RestaurantDelivery"/>
     </wb-module>
 </project-modules>
