@@ -66,7 +66,6 @@ public class StoreServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Read the action from the URL
 		String action = request.getParameter("action");
-		int storeId = Integer.parseInt(request.getParameter("storeId"));
 		// Get the session from the request object
 		HttpSession session = request.getSession();
 		
@@ -76,6 +75,7 @@ public class StoreServlet extends HttpServlet {
 			response.sendRedirect("MenuItemServlet");
 		} else if(action.equals("reviewOrder")) {
 			// Read the store id and assign it to the session object
+			int storeId = Integer.parseInt(request.getParameter("storeId"));
 			if (storeId != 0) {
 				// Store the store id as a session attribute
 				session.setAttribute("storeId", storeId);

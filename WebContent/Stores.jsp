@@ -32,7 +32,7 @@
 				<div class="col-lg-4 col-sm-6 text-center">
 					<div class="img-thumbnail">
 						<div class="text-center">
-							<img src="	https://images.unsplash.com/photo-1508424757105-b6d5ad9329d0?auto=format&fit=crop&w=375&q=80" width="300" height="300">
+							<img alt="store-${store.storeId}" src="${pageContext.request.contextPath}/images/${store.image}" width="300" height="300">
 						</div>
 					</div>
 					<div class="store-action">
