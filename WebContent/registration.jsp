@@ -16,7 +16,7 @@
 		<div class="jumbotron">
 			<h2>Registration</h2>
 		</div>
-		<form action="UserControllerServlet" method="post" class="form-horizontal">
+		<form action="UserServlet" method="post" class="form-horizontal">
 			<div class="form-group">
 		   		<label for="firstName" class="col-sm-3 control-label">First Name</label>
 		   		<div class="col-sm-9">
@@ -82,9 +82,9 @@
 			 	</div>
 			 </div>
 		</form>
-		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
-	
+	<!-- Footer -->
+	<jsp:include page="Footer.html" />
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

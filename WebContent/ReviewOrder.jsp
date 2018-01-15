@@ -94,28 +94,7 @@
 		</div>
 	</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<!-- Footer -->
+	<jsp:include page="Footer.html" />
 </body>
 </html>

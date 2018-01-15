@@ -17,8 +17,8 @@ import res.cs.model.User;
 /**
  * Servlet implementation class UserControllerServlet
  */
-@WebServlet("/UserControllerServlet")
-public class UserControllerServlet extends HttpServlet {
+@WebServlet("/UserServlet")
+public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 		
 	/**

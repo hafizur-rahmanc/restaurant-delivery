@@ -43,7 +43,7 @@
 						<p><strong>Tax: $${receiptSummary.taxAmount}</strong></p>
 						<p><strong>Items: ${orderItems.size()}</strong></p>
 					</div>
-					<br/>
+					 &nbsp;
 					<div class="store-info">
 						<p><strong>${receiptSummary.store.storeName}</strong></p>
 						<p><strong>${receiptSummary.store.address}</strong></p>
@@ -53,5 +53,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- Footer -->
+	<jsp:include page="Footer.html" />
 </body>
 </html>

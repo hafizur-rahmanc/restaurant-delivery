@@ -10,13 +10,16 @@ body {
 	text-align: center;
 	color: #2c3e50;
 	background-color: #ecf0f1;
+	/*background-color: transparent !important;*/
 	position: relative;
 	margin-top: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
   	z-index: 2;
 }
 
 .navbar-inverse {
-	background: #2c3e50;
+	background-color: #2d2d30;
 }
 
 .navbar-inverse .navbar-nav>li>a{
@@ -26,6 +29,24 @@ body {
 .navbar-inverse .navbar-brand {
     color: white;
 }
+
+footer {
+	bottom: 0;
+	width: 100%;
+	margin-top: 30px;
+	position: fixed;
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 2px;
+}
+
+footer a {
+    color: #f5f5f5;
+}
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+} 
 
 .form-horizontal{
 	border: 1px solid #ccc;
@@ -52,7 +73,7 @@ body {
 .orderOperation{
 	float: right;
 	text-align: right;
-	display:inline-block;
+	display: inline-block;
 }
 .group-btn{
 	float: right;
@@ -60,6 +81,14 @@ body {
 }
 .group-btn>.btn:nth-of-type(1){
 	margin: 0 10px;
+}
+
+#text-left{
+	padding-top: 50px;
+}
+
+.quote-text{
+	margin: 20px 0px;
 }
 
 #process, #cancel{
@@ -72,15 +101,15 @@ body {
 }
 
 .logout-content{
-        background: #2c3e50;
-        color: white;
-        border-radius: 1em;
-        padding: 1em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
+    background: #2c3e50;
+    color: white;
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 .logout-page-button{
