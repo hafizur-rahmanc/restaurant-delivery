@@ -45,6 +45,8 @@ public class PaymentInfoServlet extends HttpServlet {
 		Integer secureCode = Integer.parseInt(request.getParameter("secureCode"));
 		Integer zipcode = Integer.parseInt(request.getParameter("zipcode"));
 		
+		// Need to validate the payment information especially creditCardNumber since Long can not accept more than 19 digits
+		
 		// If the payment information is valid we can move forward to make an order
 		if(creditCardNumber != null && secureCode != null && zipcode != null) {
 			int paymentId = 0;
@@ -70,9 +72,6 @@ public class PaymentInfoServlet extends HttpServlet {
 			// Upon successful creation of a payment
 			if (paymentId != 0) {
 				// Retrieve the necessary information from the session object for setting up the theOrder Order instance
-				System.out.println(session.getAttribute("userId").getClass().getName());
-				System.out.println(session.getAttribute("storeId").getClass().getName());
-				
 				Integer userId = (Integer) (session.getAttribute("userId"));
 				Integer storeId = (Integer) (session.getAttribute("storeId"));
 				int orderId = 0;
@@ -113,9 +112,10 @@ public class PaymentInfoServlet extends HttpServlet {
 				session.removeAttribute("subtotal");
 				session.removeAttribute("taxAmount");
 				session.removeAttribute("totalPrice");
-				
+				session.removeAttribute("cartItems");
+
 				// Send back to the order receipt page with the newly created order id as a parameter
-				response.sendRedirect("OrderReceiptServlet?orderId=" + orderId);
+				response.sendRedirect("OrderReceiptServlet?orderId="+ orderId);
 			}
 			
 		}

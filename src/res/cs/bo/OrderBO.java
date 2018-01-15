@@ -8,6 +8,7 @@ import java.util.Set;
 
 import res.cs.dao.OrderDAO;
 import res.cs.exception.RegistrationException;
+import res.cs.model.Item;
 import res.cs.model.Order;
 
 public class OrderBO {
@@ -36,6 +37,17 @@ public class OrderBO {
 		return ordersList;
 	}
 	
+	// Get all the order items by using the order id
+	public List<Item> getOrderItemsByOrderId(int orderId) throws RegistrationException, SQLException{
+		List<Item> orderItems = orderDAO.getOrderItemsByOrderId(orderId);
+		return orderItems;
+	}
+	
+	// Get the ReceiptSummary by using the order id
+	public Order getReceiptSummary(int orderId) throws SQLException, ClassNotFoundException, IOException{
+		Order receiptSummary = orderDAO.getReceiptSummary(orderId);
+		return receiptSummary;
+	}
 	//Corresponds with Order.getAllOrders()
 	public List<Order> getAllOrders() throws RegistrationException, SQLException{
 		//Method returns all orders in user's history

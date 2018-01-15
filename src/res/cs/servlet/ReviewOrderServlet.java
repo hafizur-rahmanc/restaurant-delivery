@@ -36,7 +36,7 @@ public class ReviewOrderServlet extends HttpServlet {
 		Set<Integer> cartIds = (Set<Integer>) session.getAttribute("cartIds");
 		// Declare cartItems list to hold items in the cart
 		List<Item> cartItems = null;
-		// Declare a total price summary list based on the cartIds
+		// Declare a total price summary list
 		List<Double> priceSummary = null;
 		
 		// If cartIds are not empty then find them from the database and store them in the session

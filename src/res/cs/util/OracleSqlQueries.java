@@ -28,7 +28,8 @@ public class OracleSqlQueries {
 	public static final String UPDATE_STORE = "UPDATE stores SET store_name = ?, address= ?, city= ?, zipcode = ?, staff_number = ?, image = ? WHERE store_id = ?";
 	public static final String DELETE_PAYMENT = "DELETE FROM payments WHERE payment_id = ?";
 	public static final String REMOVE_ITEM = "DELETE FROM items WHERE item_id = ?";
-
-
-
+	public static final String GET_ORDER_ITEMS_BY_ORDERID = "SELECT ITEMS.ITEM_ID, ITEMS.ITEM_NAME, ITEMS.ITEM_PRICE, ITEMS.ITEM_DESCRIPTION, ITEMS.IMAGE FROM ITEMS "
+															+ "INNER JOIN ORDER_ITEMS ON ITEMS.ITEM_ID = ORDER_ITEMS.ITEM_ID WHERE ORDER_ITEMS.ORDER_ID = ?";
+	public static final String GET_RECEIPT_SUMMARY_BY_ORDERID = "SELECT ORDERS.SUBTOTAL, ORDERS.TAX_AMOUNT, ORDERS.TOTAL_PRICE, STORES.STORE_NAME, STORES.ADDRESS, STORES.CITY, STORES.ZIPCODE FROM STORES "
+															+ "INNER JOIN ORDERS ON STORES.STORE_ID = ORDERS.STORE_ID WHERE ORDERS.ORDER_ID = ?";
 }

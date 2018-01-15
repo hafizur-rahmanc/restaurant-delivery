@@ -14,10 +14,10 @@
 	<jsp:include page="header.jsp" />
 	<div class="container">
 		<div class="logout-content">
-			<h3>Thanks for Visiting US!! You have been logged out</h3>
-			<h3>Want to Log back in? Click below</h3>
+			<h4>Thanks for Visiting US!! You have been logged out</h4>
+			<h4>Want to Log back in? Click below</h4>
 			<div class="logout-page-button">
-				<a href="login.jsp"><button class="btn btn-lg btn-primary">Login</button></a>
+				<a href="Login.jsp"><button class="btn btn-md btn-primary">Login</button></a>
 			</div>
 		</div>
 	</div>

@@ -10,6 +10,9 @@ public class Order {
 	private double taxAmount;
 	private double totalPrice;
 	
+	// Store information
+	private Store store;
+	
 	//Constructor
 	public Order() {
 		
@@ -79,6 +82,14 @@ public class Order {
 	}
 	public void setPaymentId(int paymentId) {
 		this.paymentId = paymentId;
+	}
+
+	public Store getStore() {
+		return store;
+	}
+
+	public void setStore(Store store) {
+		this.store = store;
 	}
 	
 }

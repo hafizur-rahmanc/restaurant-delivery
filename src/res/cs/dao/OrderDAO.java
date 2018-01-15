@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.Set;
 
 import res.cs.exception.RegistrationException;
+import res.cs.model.Item;
 import res.cs.model.Order;
+import res.cs.model.Store;
 import res.cs.util.OracleSqlQueries;
 
 public class OrderDAO {
@@ -102,7 +104,8 @@ public class OrderDAO {
 			conn.close();
 		}
 	}
-
+	
+	// Get list of orders by user id
 	public List<Order> getOrdersByUserId(int userId) throws RegistrationException, SQLException{
 		Connection conn = null;
 		PreparedStatement stmt = null;
@@ -141,6 +144,87 @@ public class OrderDAO {
 		return ordersList;
 	}
 	
+	// Get the order items by orderId
+	public List<Item> getOrderItemsByOrderId(int orderId) throws RegistrationException, SQLException{
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet resultSet = null;
+		List<Item> itemsList = null;
+		Item singleItem = null;
+		OracleConnection oracle = new OracleConnection();
+		
+		try {
+			conn = oracle.getConnection();
+			stmt = conn.prepareStatement(OracleSqlQueries.GET_ORDER_ITEMS_BY_ORDERID);
+			stmt.setInt(1, orderId);
+			resultSet = stmt.executeQuery();
+			itemsList = new ArrayList<Item>();
+			// Loop through the resultSet and add items to the itemsList
+			while(resultSet.next()) {
+				singleItem = new Item();
+				singleItem.setItemId(resultSet.getInt(1));
+				singleItem.setItemName(resultSet.getString(2));
+				singleItem.setItemPrice(resultSet.getDouble(3));
+				singleItem.setItemDescription(resultSet.getString(4));
+				singleItem.setImage(resultSet.getString(5));
+				
+				// Add to the items list
+				itemsList.add(singleItem);
+			}
+			
+		}catch(SQLException e) {
+			throw new RegistrationException(e.getMessage());
+		}catch(Exception e) {
+			throw new RegistrationException(e.getMessage());
+		}finally {
+			close(resultSet, stmt, conn);
+		}
+		return itemsList;
+	}
+	
+	// Get the order receipt summary by using order id
+	public Order getReceiptSummary(int orderId) throws SQLException, ClassNotFoundException, IOException{
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet resultSet = null;
+		Order theOrder = null;
+		Store theStore = null;
+		OracleConnection oracle = new OracleConnection();
+		
+		try {
+			conn = oracle.getConnection();
+			stmt = conn.prepareStatement(OracleSqlQueries.GET_RECEIPT_SUMMARY_BY_ORDERID);
+			stmt.setInt(1, orderId);
+			resultSet = stmt.executeQuery();
+			// Loop through the resultSet and populate the order receipt summary
+			// subtotal, taxtAmount, totalPrice, storeName, address, city, zipcode 
+			while(resultSet.next()) {
+				theOrder = new Order();
+				theStore = new Store();
+				theOrder.setOrderId(orderId);
+				theOrder.setSubtotal(resultSet.getDouble(1));
+				theOrder.setTaxAmount(resultSet.getDouble(2));
+				theOrder.setTotalPrice(resultSet.getDouble(3));
+				
+				// Store information
+				theStore.setStoreName(resultSet.getString(4));
+				theStore.setAddress(resultSet.getString(5));
+				theStore.setCity(resultSet.getString(6));
+				theStore.setZipcode(resultSet.getInt(7));
+				
+				// Assign the store object to the current order object
+				theOrder.setStore(theStore);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(resultSet, stmt, conn);
+		}
+		return theOrder;
+	}
+	
+	
+	// Retrieve all the orders
 	public List<Order> getAllOrders() throws RegistrationException, SQLException{
 		Connection conn = null;
 		PreparedStatement stmt = null;
@@ -179,6 +263,7 @@ public class OrderDAO {
 		return ordersList;
 	}
 	
+	// Admin can delete an order by its order id
 	public int deleteOrder(int orderId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
@@ -199,5 +284,12 @@ public class OrderDAO {
 		}
 		
 		return result;
+	}
+	
+	public static void main(String[] args) throws ClassNotFoundException, SQLException, IOException {
+		OrderDAO orderDAO = new OrderDAO();
+		Order theOrder = orderDAO.getReceiptSummary(57);
+		System.out.println("Order Id: " + theOrder.getOrderId() + " Subtotal: " + theOrder.getSubtotal() + " Tax Amount: "
+				+ "" + theOrder.getTaxAmount() + " Grand Total: " + theOrder.getTotalPrice());
 	}
 }
