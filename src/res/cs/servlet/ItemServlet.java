@@ -9,11 +9,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import res.cs.bo.ItemBO;
 import res.cs.bo.ReviewBO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.Item;
+import res.cs.model.Review;
 
 /**
  * Servlet implementation class ItemServlet
@@ -61,8 +63,41 @@ public class ItemServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		// Read the review text form data
+		String reviewText = request.getParameter("itemReview");
+		// Declare a ReviewBO variable
+		ReviewBO reviewBO = new ReviewBO();
+		// Declare a Review variable
+		Review theReview = new Review();
+		// Declare the session object
+		HttpSession session = request.getSession();
+		
+		// Get the itemId from the request parameter
+		int itemId = Integer.parseInt(request.getParameter("itemId"));
+		// Get the userId from the session object
+		int userId = (int) session.getAttribute("userId");
+		
+		// When reviewText have some text, create the review by using itemId and userId
+		if (reviewText != null) {
+			theReview.setUserId(userId);
+			theReview.setItemId(itemId);
+			theReview.setDescription(reviewText);
+			try {
+				// Create the Review now
+				int reviewId = reviewBO.createReview(theReview);
+				System.out.println("Newly created review id is: " + reviewId);
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			} catch (RegistrationException e) {
+				e.printStackTrace();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		} else {
+			// Send back to the error page or same page with itemId as request parameter
+		}
+		// Send back to the ItemReview page
+		response.sendRedirect("ItemServlet?itemId=" + itemId);
 	}
 
 }

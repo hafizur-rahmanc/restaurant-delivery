@@ -78,7 +78,7 @@
 			<div class="col-sm-offset-2 col-sm-6 text-center" id="review-form">
 				<c:if test="${sessionScope.userId != null}">
 					<h3>Write a Review</h3>
-					<form action="LoginServlet" method="post">
+					<form action="ItemServlet?itemId=${item.itemId}" method="post">
 					  <div class="form-group">
 					  	<textarea rows="3" class="form-control" name="itemReview" required maxlength="500" ></textarea>
 					  	</div>
