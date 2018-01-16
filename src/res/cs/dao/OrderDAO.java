@@ -130,6 +130,12 @@ public class OrderDAO {
 				singleOrder.setTaxAmount(resultSet.getDouble(6));
 				singleOrder.setTotalPrice(resultSet.getDouble(7));
 				
+				// Get the order items using the getOrderItemsByOrderId method
+				singleOrder.setOrderItems(this.getOrderItemsByOrderId(resultSet.getInt(1)));
+				
+				// Get the store information for this order
+				singleOrder.setStore(this.getReceiptSummary(resultSet.getInt(1)).getStore());
+			
 				//Add to the orders list
 				ordersList.add(singleOrder);
 			}
@@ -286,10 +292,12 @@ public class OrderDAO {
 		return result;
 	}
 	
-	public static void main(String[] args) throws ClassNotFoundException, SQLException, IOException {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException, IOException, RegistrationException {
 		OrderDAO orderDAO = new OrderDAO();
-		Order theOrder = orderDAO.getReceiptSummary(57);
-		System.out.println("Order Id: " + theOrder.getOrderId() + " Subtotal: " + theOrder.getSubtotal() + " Tax Amount: "
-				+ "" + theOrder.getTaxAmount() + " Grand Total: " + theOrder.getTotalPrice());
+//		Order theOrder = orderDAO.getReceiptSummary(57);
+//		System.out.println("Order Id: " + theOrder.getOrderId() + " Subtotal: " + theOrder.getSubtotal() + " Tax Amount: "
+//				+ "" + theOrder.getTaxAmount() + " Grand Total: " + theOrder.getTotalPrice());
+		List<Order> ordersList = orderDAO.getOrdersByUserId(2);
+		System.out.println(ordersList.size());
 	}
 }

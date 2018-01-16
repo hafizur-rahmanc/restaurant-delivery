@@ -42,7 +42,7 @@
 				<div class="col-lg-4 col-sm-6 text-center">
 					<div class="img-thumbnail">
 						<div class="text-center">
-							<img src="${pageContext.request.contextPath}/images/${item.image}" width="300" height="300">
+							<a href="ItemServlet?itemId=${item.itemId}"><img src="${pageContext.request.contextPath}/images/${item.image}" width="300" height="300"></a>
 						</div>
 					</div>
 					<div class="item-action">
@@ -52,6 +52,9 @@
 					<div class="item-operate">
 						<!-- Only display if the user is logged in -->
 						<c:if test="${sessionScope.userId != null}">
+							<a href="ItemServlet?itemId=${item.itemId}">
+								<button class="btn btn-sm btn-success" name="itemId" value="${item.itemId}" id="review-button">Reviews</button>
+							</a>
 							<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal-${item.itemId}" name="itemId" value="${item.itemId}">Add To Cart</button>
 						</c:if>
 					</div>

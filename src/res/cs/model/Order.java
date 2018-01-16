@@ -1,5 +1,7 @@
 package res.cs.model;
 
+import java.util.List;
+
 public class Order {
 	//Instance variables
 	private int orderId;
@@ -12,6 +14,9 @@ public class Order {
 	
 	// Store information
 	private Store store;
+	
+	// Item information
+	private List<Item> orderItems;
 	
 	//Constructor
 	public Order() {
@@ -90,6 +95,14 @@ public class Order {
 
 	public void setStore(Store store) {
 		this.store = store;
+	}
+
+	public List<Item> getOrderItems() {
+		return orderItems;
+	}
+
+	public void setOrderItems(List<Item> orderItems) {
+		this.orderItems = orderItems;
 	}
 	
 }

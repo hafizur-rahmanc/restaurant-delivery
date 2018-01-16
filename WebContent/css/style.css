@@ -43,10 +43,6 @@ footer {
 footer a {
     color: #f5f5f5;
 }
-footer a:hover {
-    color: #777;
-    text-decoration: none;
-} 
 
 .form-horizontal{
 	border: 1px solid #ccc;
@@ -83,6 +79,10 @@ footer a:hover {
 	margin: 0 10px;
 }
 
+#review-button{
+	margin-right: 15px;
+	margin-bottom: 30px;
+}
 #text-left{
 	padding-top: 50px;
 }

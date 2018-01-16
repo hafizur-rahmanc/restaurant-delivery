@@ -20,7 +20,6 @@ public class ItemDAO {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet resultSet = null;
-		
 		String[] columns = {"item_id"};
 		OracleConnection oracle = new OracleConnection();
 		
@@ -47,7 +46,6 @@ public class ItemDAO {
 		}finally {
 			close(resultSet, stmt, conn);
 		}
-		
 		return itemId;
 	}
 	
@@ -181,7 +179,6 @@ public class ItemDAO {
 		return result;
 	}
 	
-	
 	// Admin can delete an item by using the item_id
 	public int deleteItem(int itemId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		Connection conn = null;
@@ -218,7 +215,6 @@ public class ItemDAO {
 		newItem.setImage("pie.jpg");
 		newItem.setActive(1);
 		newItem.setCategory("Pie");
-		newItem.setInventory(15);
 		
 //		DAO.updateItem(newItem);
 //		

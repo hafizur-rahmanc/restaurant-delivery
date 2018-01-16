@@ -1,7 +1,9 @@
 package res.cs.model;
 
+import java.util.List;
+
 public class Item {
-	// instance variables
+	// Instance variables
 	private int itemId;
 	private String itemName;
 	private double itemPrice;
@@ -9,7 +11,9 @@ public class Item {
 	private String image;
 	private int active;
 	private String category;
-	private int inventory;
+	
+	// Item reviews
+	private List<Review> itemReviews;
 	
 	//Constructor
 	public Item() {
@@ -79,11 +83,13 @@ public class Item {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public int getInventory() {
-		return inventory;
+
+	public List<Review> getItemReviews() {
+		return itemReviews;
 	}
-	public void setInventory(int inventory) {
-		this.inventory = inventory;
+
+	public void setItemReviews(List<Review> itemReviews) {
+		this.itemReviews = itemReviews;
 	}
 
 
