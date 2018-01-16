@@ -7,6 +7,9 @@ public class Review {
 	private int itemId;
 	private String description;
 	
+	// Review UserName
+	private String userName;
+	
 	//Constructor
 	public Review() {
 		
@@ -48,6 +51,12 @@ public class Review {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	
 }

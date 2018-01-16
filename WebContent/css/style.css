@@ -142,3 +142,21 @@ footer a {
 	margin: 10px 0px;
 	text-align: center;
 }
+
+#product-description{
+	float: left;
+	text-align: left;
+}
+
+#review-form{
+	margin-top: 50px;
+	width: 40%;
+}
+#past-review{
+	margin-top: 50px;
+	text-align: left;
+	float: right;
+}
+#hidden{
+	background-color: transparent !important;
+}

@@ -53,6 +53,8 @@
 			</div>
 		</div>
 	</div>
+	<div class="jumbotron" id="hidden">
+	</div>
 	<!-- Footer -->
 	<jsp:include page="Footer.html" />
 </body>

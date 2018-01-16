@@ -76,7 +76,7 @@ public class ReviewDAO {
 		try {
 			conn = oracle.getConnection();
 			stmt = conn.prepareStatement(OracleSqlQueries.GET_REVIEWS);
-			//Fill out the Query string by providing the user id
+			//Fill out the Query string by providing the item id
 			stmt.setInt(1, item_id);
 			//Execute the Query 
 			resultSet = stmt.executeQuery();
@@ -88,6 +88,7 @@ public class ReviewDAO {
 				singleReview.setUserId(resultSet.getInt(2));
 				singleReview.setItemId(resultSet.getInt(3));
 				singleReview.setDescription(resultSet.getString(4));
+				singleReview.setUserName(resultSet.getString(5));
 				
 				//Add to the reviews list
 				reviewsList.add(singleReview);
