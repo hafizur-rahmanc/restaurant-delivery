@@ -108,6 +108,45 @@ public class UserDAO {
 		return user;
 	}
 	
+	//Get the user object by user_id
+	public User getUserById(int userId) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet resultSet = null;
+		User user = null;
+		OracleConnection oracle = new OracleConnection();
+		try {
+			conn = oracle.getConnection();
+			System.out.println("Connection Established!");
+			stmt = conn.prepareStatement(OracleSqlQueries.GET_USER_BY_ID);
+			//Assign the userId to the sql query prepared statement
+			stmt.setInt(1, userId);
+			//Execute the prepared statement query and store it to resultSet
+			resultSet = stmt.executeQuery();
+			
+			if(resultSet.next()) {
+				user = new User();
+				user.setUserId(resultSet.getInt(1));
+				user.setFirstName(resultSet.getString(2));
+				user.setLastName(resultSet.getString(3));
+				user.setUserName(resultSet.getString(4));
+				user.setPassword(resultSet.getString(5));
+				user.setGender(resultSet.getString(6));
+				user.setAddress(resultSet.getString(7));
+				user.setPhoneNumber(resultSet.getLong(8));
+				user.setEmail(resultSet.getString(9));
+				user.setAdminRole(resultSet.getInt(10));
+			}
+			
+			
+		}catch(SQLException e){
+			throw new RegistrationException(e.getMessage());
+		}finally {
+			close(resultSet, stmt, conn);
+		}
+		return user;
+	}
+	
 	//Get the user object by user_name and password
 	public User loginUser(String userName, String password) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
 		Connection conn = null;

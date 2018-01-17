@@ -9,10 +9,11 @@ import res.cs.exception.RegistrationException;
 import res.cs.model.User;
 
 public class UserBO {
+	// Declare a UserDAO ariable
+	final UserDAO userDAO = new UserDAO();
 
 	//Create user by calling the UserDAO
 	public int createUser(User user) throws IOException, RegistrationException, SQLException, ClassNotFoundException {
-		final UserDAO userDAO = new UserDAO();
 		Integer userId = null;
 		try {
 			userId = userDAO.createUser(user);
@@ -24,7 +25,6 @@ public class UserBO {
 	}
 	// Get the user object by the user name and password using UserDAO
 	public User loginUser(String userName, String password) throws ClassNotFoundException, RegistrationException, SQLException, IOException {
-		final UserDAO userDAO = new UserDAO();
 		User theUser = new User();
 		theUser = userDAO.loginUser(userName, password);
 		return theUser;
@@ -32,13 +32,19 @@ public class UserBO {
 	
 	//Get the user object by the user name using the UserDAO
 	public User getUser(String userName) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
-		final UserDAO userDAO = new UserDAO();
 		User theUser = null;
 		try {
 			theUser = userDAO.getUser(userName);
 		}catch(RegistrationException e) {
 			throw new RegistrationException(e.getMessage());
 		}
+		return theUser;
+	}
+	
+	//Get the user object by user_id
+	public User getUserById(int userId) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
+		User theUser = new User();
+		theUser = userDAO.getUserById(userId);
 		return theUser;
 	}
 	
