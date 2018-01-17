@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class PastOrdersServlet
+ * Servlet implementation class OrdersHistoryServlet
  */
-@WebServlet("/PastOrdersServlet")
-public class PastOrdersServlet extends HttpServlet {
+@WebServlet("/OrdersHistoryServlet")
+public class OrdersHistoryServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
