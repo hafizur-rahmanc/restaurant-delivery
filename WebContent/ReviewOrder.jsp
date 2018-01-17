@@ -48,12 +48,12 @@
 					<c:forEach items="${sessionScope.cartItems}" var="item">
 						<tr>
 							<td class="cart_product text-center">
-								<a href="#">
-									<img alt="item-${item.itemId}" src="${pageContext.request.contextPath}/images/${item.image}" width="80" height="80">
+								<a href="ItemServlet?itemId=${item.itemId}">
+									<img alt="item-${item.itemId}" src="${pageContext.request.contextPath}/images/${item.image}" class="img-rounded" width="100" height="100">
 								</a>
 							</td>
 							<td class="cart_description">
-								<p class="product-name">${item.itemName}</p>
+								<p class="product-name"><strong>${item.itemName}</strong></p>
 								<p class="product-description">${item.itemDescription}</p>
 								
 							</td>
@@ -78,15 +78,15 @@
 				<tfoot>
 					<tr class="cart_subtotal_price">
 						<td rowspan="3" colspan="2" id="cart_voucher" class="cart_voucher"></td>
-						<td colspan="3" class="text-right">Sub Total</td>
+						<td colspan="3" class="text-right"><strong>Sub Total</strong></td>
 						<td colspan="1" class="price" id="subtotal">$${sessionScope.subtotal}</td>
 					</tr>
 					<tr class="cart_total_tax">
-						<td colspan="3" class="text-right">Tax</td>
+						<td colspan="3" class="text-right"><strong>Tax</strong></td>
 						<td colspan="1" class="price" id="total_tax">$${sessionScope.taxAmount}</td>
 					</tr>
 					<tr class="cart_total_price">
-						<td colspan="3" class="text-right">Total</td>
+						<td colspan="3" class="text-right"><strong>Total</strong></td>
 						<td colspan="1" class="price" id="total_tax">$${sessionScope.totalPrice}</td>
 					</tr>
 				</tfoot>
