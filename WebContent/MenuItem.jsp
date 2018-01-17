@@ -14,7 +14,7 @@
 	<script src="https://use.fontawesome.com/71c97a3df8.js"></script>
 </head>
 <body>
-<jsp:include page="header.jsp" />
+<jsp:include page="Header.jsp" />
 	<!--If item was successfully added to the cart -->
 	<c:if test="${sessionScope.cartIds != null && fn: length(sessionScope.cartIds) > 0}">
 		<div class="container">

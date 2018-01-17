@@ -8,27 +8,27 @@
        	 			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>
      			 </button>
-				<a href="home.jsp" class="navbar-brand"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Restaurant Delivery</a>
+				<a href="Home.jsp" class="navbar-brand"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Restaurant Delivery</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-nav-demo">
-				<ul class="nav navbar-nav">
-					<li><a href="MenuItemServlet">Menu</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-				<c:set var="currentUser" value="${sessionScope.currentUser}" />
+				<c:set var="userId" value="${sessionScope.userId}" />
 				<ul class="nav navbar-nav navbar-right">
 				<c:choose>
-					<c:when test="${currentUser != null}">
+					<c:when test="${userId != null}">
+						<li><a href="Home.jsp"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+						<li><a href="MenuItemServlet">Menu</a></li>
+						<li><a href="PastOrdersServlet">View Orders</a></li>
+						<li><a href="AccountInfoServlet">Account Information</a></li>
 						<li><a href="LogoutServlet">Log Out <i class="fa fa-user" aria-hidden="true"></i></a></li>
 					</c:when>
 					<c:otherwise>
-						<li><a href="Registration.jsp">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+						<li><a href="Home.jsp"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+						<li><a href="MenuItemServlet">Menu</a></li>
+						<li><a href="Registration.jsp">Register <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
 						<li><a href="Login.jsp">Login <i class="fa fa-user" aria-hidden="true"></i></a></li>
 					</c:otherwise>
 				</c:choose>
 				</ul>
-
 			</div>
 		</div>
 	</nav>

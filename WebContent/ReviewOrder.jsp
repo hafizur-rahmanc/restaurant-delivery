@@ -13,7 +13,7 @@
 	<script src="https://use.fontawesome.com/71c97a3df8.js"></script>
 </head>
 <body>
-<jsp:include page="header.jsp" />
+<jsp:include page="Header.jsp" />
 	<!-- Only display process order or cancel order button if the user is logged in and added item to the cart otherwise send back to the menu items page-->
 	<c:if test="${sessionScope.userId == null || fn: length(sessionScope.cartIds) == 0}">
 		<c:redirect url="MenuItemServlet" />

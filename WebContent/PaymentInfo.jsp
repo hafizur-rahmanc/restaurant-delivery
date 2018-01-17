@@ -12,7 +12,7 @@
 	<script src="https://use.fontawesome.com/71c97a3df8.js"></script>
 </head>
 <body>
-	<jsp:include page="header.jsp" />
+	<jsp:include page="Header.jsp" />
 	<!-- Only display payment information form if the user is logged in-->
 	<c:if test="${sessionScope.userId == null}">
 		<c:redirect url="MenuItemServlet" />

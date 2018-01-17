@@ -12,7 +12,7 @@
 	<script src="https://use.fontawesome.com/71c97a3df8.js"></script>
 </head>
 <body>
-<jsp:include page="header.jsp" />
+<jsp:include page="Header.jsp" />
 	<c:if test="${cartIds != null }">
 		<div class="container">
 			<form action="StoreServlet?action=cancel" method="post">

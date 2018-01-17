@@ -34,7 +34,7 @@ public class LogoutServlet extends HttpServlet {
 		
 		// Send back to the home page
 		// response.sendRedirect(request.getContextPath());
-		response.sendRedirect("logout.jsp");
+		response.sendRedirect("Logout.jsp");
 	}
 
 	/**

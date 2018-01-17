@@ -13,7 +13,7 @@
 	<script src="https://use.fontawesome.com/71c97a3df8.js"></script>
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="Header.jsp" />
 	<div class="container">
 		<div class="jumbotron">
 			<h2>Item Review</h2>

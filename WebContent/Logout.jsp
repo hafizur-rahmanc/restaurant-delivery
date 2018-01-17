@@ -11,7 +11,7 @@
 	<script src="https://use.fontawesome.com/71c97a3df8.js"></script>
 </head>
 <body>
-	<jsp:include page="header.jsp" />
+	<jsp:include page="Header.jsp" />
 	<div class="container">
 		<div class="logout-content">
 			<h4>Thanks for Visiting US!! You have been logged out</h4>
