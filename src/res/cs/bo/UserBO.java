@@ -61,13 +61,15 @@ public class UserBO {
 	}
 	
 	//Update the user using the UserDAO
-	public void updateUser(User user) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	public int updateUser(User user) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		final UserDAO userDAO = new UserDAO();
+		int result = 0;
 		try {
-			userDAO.updateUser(user);
+			result = userDAO.updateUser(user);
 		}catch(RegistrationException e) {
 			throw new RegistrationException(e.getMessage());
 		}
+		return result;
 	}
 	
 }

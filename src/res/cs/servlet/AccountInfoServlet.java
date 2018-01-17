@@ -62,8 +62,63 @@ public class AccountInfoServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		// Get the session object from the request object
+		HttpSession session = request.getSession();
+		// Get the userId from the session object
+		Integer userId = (Integer) session.getAttribute("userId");
+		// Declare an userBO variable
+		UserBO userBO;
+		// Declare an user model variable
+		User theUser;
+		
+		//Read user info from the form data
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String userName = request.getParameter("userName");
+		String password = request.getParameter("password");
+		String gender = request.getParameter("gender");
+		String address = request.getParameter("address");
+		Long phoneNumber = Long.parseLong(request.getParameter("phoneNumber"));
+		String email = request.getParameter("email");
+		int result = 0;
+
+		//Create a new User object
+		theUser = new User();
+		theUser.setUserId(userId);
+		theUser.setFirstName(firstName);
+		theUser.setLastName(lastName);
+		theUser.setUserName(userName);
+		theUser.setPassword(password);
+		theUser.setGender(gender);
+		theUser.setAddress(address);
+		theUser.setPhoneNumber(phoneNumber);
+		theUser.setEmail(email);
+		
+		// Need to check the user information validity
+		//Update the user to the database
+		try {
+			userBO = new UserBO();
+			result = userBO.updateUser(theUser);
+			System.out.println("User is updated");
+			if(result != 0) {
+				// Send to the Account Information page
+				 response.sendRedirect("AccountInfoServlet");
+			}else {
+				// Send back to the account information page with error message
+				response.sendRedirect("AccountInfo.jsp?message=false");
+				// doGet(request, response);
+				// send to JSP page (view)
+				//RequestDispatcher dispatcher = request.getRequestDispatcher("/index.html");
+				//dispatcher.forward(request, response);
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (RegistrationException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 }
