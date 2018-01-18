@@ -54,9 +54,9 @@ public class ItemDAOTest {
 	@DataProvider(name="getItem")
 	public Object[][] sampleData(){
 		Object[][] data = {
-				{41, "Salads"},
-				{42, "Simple Pie"},
-				{43, "Egg Dishes"}
+				{41, "Greek Salad"},
+				{42, "Pepperoni Pie"},
+				{43, "Classical Salad"}
 		};
 		return data;	
 	}
@@ -70,9 +70,9 @@ public class ItemDAOTest {
 	@DataProvider(name="getAllItems")
 	public Object[][] Data(){
 		Object[][] data = {
-				{"Salads", 12.99, true},
-				{"Simple Pie", 10.99, true},
-				{"Egg Dishes", 7.99, true},
+				{"Greek Salad", 12.99, true},
+				{"Plain Pizza Pie", 10.99, true},
+				{"Ham Burger", 9.99, true},
 				{"Dominos", 12.99, false}
 		};
 		return data;	
