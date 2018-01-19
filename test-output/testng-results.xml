@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="74" passed="74">
   <reporter-output>
   </reporter-output>
-  <suite name="AllSuite" duration-ms="4843" started-at="2018-01-18T05:04:36Z" finished-at="2018-01-18T05:04:40Z">
+  <suite name="AllSuite" duration-ms="5366" started-at="2018-01-19T02:54:32Z" finished-at="2018-01-19T02:54:38Z">
     <groups>
     </groups>
-    <test name="DAO Unit Test" duration-ms="4843" started-at="2018-01-18T05:04:36Z" finished-at="2018-01-18T05:04:40Z">
+    <test name="DAO Unit Test" duration-ms="5366" started-at="2018-01-19T02:54:32Z" finished-at="2018-01-19T02:54:38Z">
       <class name="res.cs.dao.StoreDAOTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="14" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="createUserTest" duration-ms="25" started-at="2018-01-18T00:04:38Z" data-provider="newStore" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="createUserTest" duration-ms="36" started-at="2018-01-18T21:54:35Z" data-provider="newStore" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -52,11 +52,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="31" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="26" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="createUserTest" duration-ms="26" started-at="2018-01-18T00:04:38Z" data-provider="newStore" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="createUserTest" duration-ms="23" started-at="2018-01-18T21:54:35Z" data-provider="newStore" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -97,19 +97,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="createUserTest" duration-ms="23" started-at="2018-01-18T00:04:38Z" data-provider="newStore" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="createUserTest" duration-ms="24" started-at="2018-01-18T21:54:35Z" data-provider="newStore" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -150,11 +150,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="deleteStoreTest(int, int)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="deleteStoreTest" duration-ms="20" started-at="2018-01-18T00:04:38Z" data-provider="deleteStore" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="deleteStoreTest(int, int)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="deleteStoreTest" duration-ms="21" started-at="2018-01-18T21:54:35Z" data-provider="deleteStore" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -170,19 +170,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteStoreTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="deleteStoreTest(int, int)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="deleteStoreTest" duration-ms="20" started-at="2018-01-18T00:04:38Z" data-provider="deleteStore" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="deleteStoreTest(int, int)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="deleteStoreTest" duration-ms="21" started-at="2018-01-18T21:54:35Z" data-provider="deleteStore" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -198,11 +198,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteStoreTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getAllStoresTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getAllStoresTest" duration-ms="24" started-at="2018-01-18T00:04:38Z" data-provider="getAllStores" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="getAllStoresTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getAllStoresTest" duration-ms="25" started-at="2018-01-18T21:54:35Z" data-provider="getAllStores" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -218,19 +214,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllStoresTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getAllStoresTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getAllStoresTest" duration-ms="25" started-at="2018-01-18T00:04:38Z" data-provider="getAllStores" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getAllStoresTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getAllStoresTest" duration-ms="24" started-at="2018-01-18T21:54:35Z" data-provider="getAllStores" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -246,11 +246,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllStoresTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getAllStoresTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getAllStoresTest" duration-ms="25" started-at="2018-01-18T00:04:38Z" data-provider="getAllStores" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="getAllStoresTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getAllStoresTest" duration-ms="27" started-at="2018-01-18T21:54:35Z" data-provider="getAllStores" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -266,19 +266,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllStoresTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getAllStoresTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getAllStoresTest" duration-ms="24" started-at="2018-01-18T00:04:38Z" data-provider="getAllStores" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="getAllStoresTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getAllStoresTest" duration-ms="25" started-at="2018-01-18T21:54:35Z" data-provider="getAllStores" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -294,11 +294,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllStoresTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getStoreTest(int, java.lang.String)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getStoreTest" duration-ms="24" started-at="2018-01-18T00:04:38Z" data-provider="getStore" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="getStoreTest(int, java.lang.String)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getStoreTest" duration-ms="23" started-at="2018-01-18T21:54:35Z" data-provider="getStore" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -314,15 +318,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getStoreTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getStoreTest(int, java.lang.String)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getStoreTest" duration-ms="23" started-at="2018-01-18T00:04:38Z" data-provider="getStore" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="getStoreTest(int, java.lang.String)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getStoreTest" duration-ms="23" started-at="2018-01-18T21:54:35Z" data-provider="getStore" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -338,15 +338,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getStoreTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getStoreTest(int, java.lang.String)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getStoreTest" duration-ms="25" started-at="2018-01-18T00:04:38Z" data-provider="getStore" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="getStoreTest(int, java.lang.String)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="getStoreTest" duration-ms="23" started-at="2018-01-18T21:54:35Z" data-provider="getStore" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -362,19 +362,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getStoreTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="updateStoreTest(int, java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, int)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="updateStoreTest" duration-ms="44" started-at="2018-01-18T00:04:38Z" data-provider="updateStore" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="updateStoreTest(int, java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, int)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="updateStoreTest" duration-ms="45" started-at="2018-01-18T21:54:35Z" data-provider="updateStore" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -420,11 +416,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateStoreTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="updateStoreTest(int, java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, int)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="updateStoreTest" duration-ms="43" started-at="2018-01-18T00:04:38Z" data-provider="updateStore" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="updateStoreTest(int, java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, int)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="updateStoreTest" duration-ms="46" started-at="2018-01-18T21:54:35Z" data-provider="updateStore" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -470,15 +470,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateStoreTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="29" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="26" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="updateStoreTest(int, java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, int)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="updateStoreTest" duration-ms="46" started-at="2018-01-18T00:04:38Z" data-provider="updateStore" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="updateStoreTest(int, java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, int)[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="updateStoreTest" duration-ms="51" started-at="2018-01-18T21:54:35Z" data-provider="updateStore" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -524,21 +524,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateStoreTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.StoreDAOTest@1bce4f0a]" name="finalize" is-config="true" duration-ms="24" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
       </class> <!-- res.cs.dao.StoreDAOTest -->
       <class name="res.cs.dao.ItemDAOTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="20" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="createItemTest" duration-ms="24" started-at="2018-01-18T00:04:37Z" data-provider="newItem" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="createItemTest" duration-ms="39" started-at="2018-01-18T21:54:34Z" data-provider="newItem" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -579,15 +579,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createItemTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="25" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="createItemTest" duration-ms="23" started-at="2018-01-18T00:04:37Z" data-provider="newItem" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="createItemTest" duration-ms="21" started-at="2018-01-18T21:54:34Z" data-provider="newItem" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -628,11 +628,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createItemTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="createItemTest" duration-ms="22" started-at="2018-01-18T00:04:37Z" data-provider="newItem" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="createItemTest(java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="createItemTest" duration-ms="26" started-at="2018-01-18T21:54:34Z" data-provider="newItem" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -673,19 +673,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createItemTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="deleteItemTest(int, int)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="deleteItemTest" duration-ms="21" started-at="2018-01-18T00:04:37Z" data-provider="deleteItem" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="deleteItemTest(int, int)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="deleteItemTest" duration-ms="22" started-at="2018-01-18T21:54:34Z" data-provider="deleteItem" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -701,11 +701,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteItemTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="deleteItemTest(int, int)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="deleteItemTest" duration-ms="21" started-at="2018-01-18T00:04:37Z" data-provider="deleteItem" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="deleteItemTest(int, int)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="deleteItemTest" duration-ms="22" started-at="2018-01-18T21:54:34Z" data-provider="deleteItem" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -721,19 +717,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteItemTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getAllItemsTest" duration-ms="23" started-at="2018-01-18T00:04:37Z" data-provider="getAllItems" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getAllItemsTest" duration-ms="24" started-at="2018-01-18T21:54:34Z" data-provider="getAllItems" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -754,15 +750,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllItemsTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getAllItemsTest" duration-ms="23" started-at="2018-01-18T00:04:37Z" data-provider="getAllItems" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getAllItemsTest" duration-ms="26" started-at="2018-01-18T21:54:34Z" data-provider="getAllItems" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -783,15 +783,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllItemsTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getAllItemsTest" duration-ms="25" started-at="2018-01-18T00:04:37Z" data-provider="getAllItems" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getAllItemsTest" duration-ms="25" started-at="2018-01-18T21:54:34Z" data-provider="getAllItems" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -812,15 +812,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllItemsTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getAllItemsTest" duration-ms="25" started-at="2018-01-18T00:04:37Z" data-provider="getAllItems" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getAllItemsTest" duration-ms="22" started-at="2018-01-18T21:54:34Z" data-provider="getAllItems" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -841,11 +841,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllItemsTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getItemTest" duration-ms="28" started-at="2018-01-18T00:04:37Z" data-provider="getItem" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getItemTest" duration-ms="24" started-at="2018-01-18T21:54:34Z" data-provider="getItem" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -861,15 +857,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getItemTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getItemTest" duration-ms="25" started-at="2018-01-18T00:04:37Z" data-provider="getItem" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getItemTest" duration-ms="25" started-at="2018-01-18T21:54:34Z" data-provider="getItem" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -885,11 +881,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getItemTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getItemTest" duration-ms="22" started-at="2018-01-18T00:04:37Z" data-provider="getItem" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="getItemTest(int, java.lang.String)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="getItemTest" duration-ms="24" started-at="2018-01-18T21:54:34Z" data-provider="getItem" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -905,15 +905,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getItemTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="updateItemTest(int, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, int)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="updateItemTest" duration-ms="45" started-at="2018-01-18T00:04:37Z" data-provider="updateItem" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="updateItemTest(int, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, int)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="updateItemTest" duration-ms="50" started-at="2018-01-18T21:54:34Z" data-provider="updateItem" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -959,23 +963,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateItemTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="38" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="27" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="updateItemTest(int, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, int)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="updateItemTest" duration-ms="49" started-at="2018-01-18T00:04:37Z" data-provider="updateItem" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="updateItemTest(int, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, int)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="updateItemTest" duration-ms="48" started-at="2018-01-18T21:54:34Z" data-provider="updateItem" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -1021,11 +1021,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateItemTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="24" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="24" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="updateItemTest(int, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, int)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="updateItemTest" duration-ms="44" started-at="2018-01-18T00:04:37Z" data-provider="updateItem" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="updateItemTest(int, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, int, java.lang.String, int)[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="updateItemTest" duration-ms="45" started-at="2018-01-18T21:54:34Z" data-provider="updateItem" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -1071,21 +1071,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateItemTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="21" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ItemDAOTest@42d80b78]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
       </class> <!-- res.cs.dao.ItemDAOTest -->
       <class name="res.cs.dao.UserDAOTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="3" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="38" started-at="2018-01-18T21:54:32Z" finished-at="2018-01-18T21:54:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="createUserTest" duration-ms="557" started-at="2018-01-18T00:04:36Z" data-provider="registration" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="createUserTest" duration-ms="669" started-at="2018-01-18T21:54:32Z" data-provider="registration" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1136,11 +1136,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="29" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="31" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="createUserTest" duration-ms="33" started-at="2018-01-18T00:04:36Z" data-provider="registration" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="createUserTest" duration-ms="31" started-at="2018-01-18T21:54:33Z" data-provider="registration" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1191,19 +1191,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="29" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="31" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="createUserTest" duration-ms="25" started-at="2018-01-18T00:04:36Z" data-provider="registration" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="createUserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="createUserTest" duration-ms="25" started-at="2018-01-18T21:54:33Z" data-provider="registration" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1254,11 +1250,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="30" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="31" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getAllUsersTest" duration-ms="34" started-at="2018-01-18T00:04:36Z" data-provider="getAllUsers" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getAllUsersTest" duration-ms="33" started-at="2018-01-18T21:54:33Z" data-provider="getAllUsers" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1274,19 +1274,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllUsersTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getAllUsersTest" duration-ms="24" started-at="2018-01-18T00:04:36Z" data-provider="getAllUsers" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getAllUsersTest" duration-ms="26" started-at="2018-01-18T21:54:33Z" data-provider="getAllUsers" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1302,11 +1302,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllUsersTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getAllUsersTest" duration-ms="26" started-at="2018-01-18T00:04:36Z" data-provider="getAllUsers" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getAllUsersTest" duration-ms="25" started-at="2018-01-18T21:54:33Z" data-provider="getAllUsers" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1322,15 +1322,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllUsersTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getAllUsersTest" duration-ms="36" started-at="2018-01-18T00:04:36Z" data-provider="getAllUsers" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getAllUsersTest" duration-ms="37" started-at="2018-01-18T21:54:33Z" data-provider="getAllUsers" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1346,15 +1346,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllUsersTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="3" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getUserTest" duration-ms="27" started-at="2018-01-18T00:04:36Z" data-provider="getUser" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getUserTest" duration-ms="28" started-at="2018-01-18T21:54:33Z" data-provider="getUser" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1370,19 +1370,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:36Z" finished-at="2018-01-18T00:04:36Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getUserTest" duration-ms="26" started-at="2018-01-18T00:04:36Z" data-provider="getUser" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getUserTest" duration-ms="27" started-at="2018-01-18T21:54:33Z" data-provider="getUser" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1398,15 +1398,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getUserTest" duration-ms="25" started-at="2018-01-18T00:04:37Z" data-provider="getUser" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="getUserTest(java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="getUserTest" duration-ms="28" started-at="2018-01-18T21:54:33Z" data-provider="getUser" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1422,15 +1422,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="loginUserTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="loginUserTest" duration-ms="26" started-at="2018-01-18T00:04:37Z" data-provider="loginUser" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="loginUserTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="loginUserTest" duration-ms="27" started-at="2018-01-18T21:54:33Z" data-provider="loginUser" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1451,15 +1451,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginUserTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="loginUserTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="loginUserTest" duration-ms="24" started-at="2018-01-18T00:04:37Z" data-provider="loginUser" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="loginUserTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="loginUserTest" duration-ms="25" started-at="2018-01-18T21:54:33Z" data-provider="loginUser" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1480,7 +1480,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginUserTest -->
-        <test-method status="PASS" signature="loginUserTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="loginUserTest" duration-ms="24" started-at="2018-01-18T00:04:37Z" data-provider="loginUser" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="loginUserTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="loginUserTest" duration-ms="27" started-at="2018-01-18T21:54:33Z" data-provider="loginUser" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1499,15 +1503,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginUserTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="updateUserTest" duration-ms="48" started-at="2018-01-18T00:04:37Z" data-provider="updateUser" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="updateUserTest" duration-ms="52" started-at="2018-01-18T21:54:33Z" data-provider="updateUser" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1563,23 +1563,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateUserTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="25" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="updateUserTest" duration-ms="45" started-at="2018-01-18T00:04:37Z" data-provider="updateUser" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="updateUserTest(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Long, java.lang.String, int)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="updateUserTest" duration-ms="44" started-at="2018-01-18T21:54:33Z" data-provider="updateUser" finished-at="2018-01-18T21:54:33Z">
           <params>
             <param index="0">
               <value>
@@ -1635,15 +1635,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T21:54:33Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="voidUserTest(int, int)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="voidUserTest" duration-ms="20" started-at="2018-01-18T00:04:37Z" data-provider="deleteUser" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="voidUserTest(int, int)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="voidUserTest" duration-ms="33" started-at="2018-01-18T21:54:34Z" data-provider="deleteUser" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -1659,15 +1659,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- voidUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="2" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="9" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="voidUserTest(int, int)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="voidUserTest" duration-ms="23" started-at="2018-01-18T00:04:37Z" data-provider="deleteUser" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="voidUserTest(int, int)[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="voidUserTest" duration-ms="37" started-at="2018-01-18T21:54:34Z" data-provider="deleteUser" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -1683,13 +1683,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- voidUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@1e88b3c]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
       </class> <!-- res.cs.dao.UserDAOTest -->
       <class name="res.cs.dao.ReviewDAOTest">
-        <test-method status="PASS" signature="createReviewTest(int, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="createReviewTest" duration-ms="22" started-at="2018-01-18T00:04:37Z" data-provider="newReview" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="27" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="createReviewTest(int, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="createReviewTest" duration-ms="33" started-at="2018-01-18T21:54:34Z" data-provider="newReview" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -1715,19 +1719,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createReviewTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="21" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createReviewTest(int, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="createReviewTest" duration-ms="21" started-at="2018-01-18T00:04:37Z" data-provider="newReview" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="createReviewTest(int, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="createReviewTest" duration-ms="22" started-at="2018-01-18T21:54:34Z" data-provider="newReview" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -1753,11 +1753,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createReviewTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="createReviewTest(int, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="createReviewTest" duration-ms="23" started-at="2018-01-18T00:04:37Z" data-provider="newReview" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="createReviewTest(int, int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="createReviewTest" duration-ms="22" started-at="2018-01-18T21:54:34Z" data-provider="newReview" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -1783,15 +1783,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createReviewTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T00:04:37Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="deletReviewTest(int, int)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="deletReviewTest" duration-ms="20" started-at="2018-01-18T00:04:38Z" data-provider="deleteReview" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="deletReviewTest(int, int)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="deletReviewTest" duration-ms="21" started-at="2018-01-18T21:54:34Z" data-provider="deleteReview" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -1807,15 +1807,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deletReviewTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="deletReviewTest(int, int)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="deletReviewTest" duration-ms="23" started-at="2018-01-18T00:04:38Z" data-provider="deleteReview" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="deletReviewTest(int, int)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="deletReviewTest" duration-ms="21" started-at="2018-01-18T21:54:34Z" data-provider="deleteReview" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -1831,19 +1831,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deletReviewTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getReviewsByUserTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="getReviewsByUserTest" duration-ms="23" started-at="2018-01-18T00:04:38Z" data-provider="getReviewsByUser" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="getReviewsByUserTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="getReviewsByUserTest" duration-ms="21" started-at="2018-01-18T21:54:34Z" data-provider="getReviewsByUser" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -1864,11 +1864,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getReviewsByUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getReviewsByUserTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="getReviewsByUserTest" duration-ms="21" started-at="2018-01-18T00:04:38Z" data-provider="getReviewsByUser" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="getReviewsByUserTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="getReviewsByUserTest" duration-ms="23" started-at="2018-01-18T21:54:34Z" data-provider="getReviewsByUser" finished-at="2018-01-18T21:54:34Z">
           <params>
             <param index="0">
               <value>
@@ -1889,11 +1889,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getReviewsByUserTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getReviewsByUserTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="getReviewsByUserTest" duration-ms="21" started-at="2018-01-18T00:04:38Z" data-provider="getReviewsByUser" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getReviewsByUserTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="getReviewsByUserTest" duration-ms="21" started-at="2018-01-18T21:54:34Z" data-provider="getReviewsByUser" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -1914,23 +1918,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getReviewsByUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:34Z" finished-at="2018-01-18T21:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getStoreTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="getStoreTest" duration-ms="24" started-at="2018-01-18T00:04:38Z" data-provider="getReviewsByItem" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="getStoreTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="getStoreTest" duration-ms="25" started-at="2018-01-18T21:54:35Z" data-provider="getReviewsByItem" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -1951,15 +1951,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getStoreTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getStoreTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="getStoreTest" duration-ms="22" started-at="2018-01-18T00:04:38Z" data-provider="getReviewsByItem" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="getStoreTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="getStoreTest" duration-ms="23" started-at="2018-01-18T21:54:35Z" data-provider="getReviewsByItem" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -1980,15 +1980,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getStoreTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getStoreTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="getStoreTest" duration-ms="25" started-at="2018-01-18T00:04:38Z" data-provider="getReviewsByItem" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="getStoreTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="getStoreTest" duration-ms="25" started-at="2018-01-18T21:54:35Z" data-provider="getReviewsByItem" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -2009,13 +2009,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getStoreTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.ReviewDAOTest@3bfdc050]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
       </class> <!-- res.cs.dao.ReviewDAOTest -->
       <class name="res.cs.dao.OrderDAOTest">
-        <test-method status="PASS" signature="createOrderTest(java.util.Set, int, int, int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="createOrderTest" duration-ms="88" started-at="2018-01-18T00:04:38Z" data-provider="newOrder" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="30" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="createOrderTest(java.util.Set, int, int, int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="createOrderTest" duration-ms="130" started-at="2018-01-18T21:54:36Z" data-provider="newOrder" finished-at="2018-01-18T21:54:36Z">
           <params>
             <param index="0">
               <value>
@@ -2046,15 +2050,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createOrderTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="22" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="24" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="createOrderTest(java.util.Set, int, int, int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="createOrderTest" duration-ms="131" started-at="2018-01-18T00:04:39Z" data-provider="newOrder" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="createOrderTest(java.util.Set, int, int, int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="createOrderTest" duration-ms="140" started-at="2018-01-18T21:54:36Z" data-provider="newOrder" finished-at="2018-01-18T21:54:36Z">
           <params>
             <param index="0">
               <value>
@@ -2085,15 +2089,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createOrderTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="70" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="createOrderTest(java.util.Set, int, int, int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="createOrderTest" duration-ms="93" started-at="2018-01-18T00:04:39Z" data-provider="newOrder" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="createOrderTest(java.util.Set, int, int, int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="createOrderTest" duration-ms="64" started-at="2018-01-18T21:54:36Z" data-provider="newOrder" finished-at="2018-01-18T21:54:36Z">
           <params>
             <param index="0">
               <value>
@@ -2124,19 +2124,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createOrderTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="deletOrderTest(int, int)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="deletOrderTest" duration-ms="23" started-at="2018-01-18T00:04:39Z" data-provider="deleteOrder" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="deletOrderTest(int, int)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="deletOrderTest" duration-ms="21" started-at="2018-01-18T21:54:36Z" data-provider="deleteOrder" finished-at="2018-01-18T21:54:36Z">
           <params>
             <param index="0">
               <value>
@@ -2152,15 +2152,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deletOrderTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="deletOrderTest(int, int)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="deletOrderTest" duration-ms="22" started-at="2018-01-18T00:04:39Z" data-provider="deleteOrder" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="deletOrderTest(int, int)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="deletOrderTest" duration-ms="21" started-at="2018-01-18T21:54:36Z" data-provider="deleteOrder" finished-at="2018-01-18T21:54:36Z">
           <params>
             <param index="0">
               <value>
@@ -2176,11 +2168,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deletOrderTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getAllOrdersTest(int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="getAllOrdersTest" duration-ms="23" started-at="2018-01-18T00:04:39Z" data-provider="getAllOrders" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getAllOrdersTest(int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="getAllOrdersTest" duration-ms="23" started-at="2018-01-18T21:54:36Z" data-provider="getAllOrders" finished-at="2018-01-18T21:54:36Z">
           <params>
             <param index="0">
               <value>
@@ -2196,19 +2200,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllOrdersTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getAllOrdersTest(int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="getAllOrdersTest" duration-ms="22" started-at="2018-01-18T00:04:39Z" data-provider="getAllOrders" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="getAllOrdersTest(int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="getAllOrdersTest" duration-ms="24" started-at="2018-01-18T21:54:36Z" data-provider="getAllOrders" finished-at="2018-01-18T21:54:36Z">
           <params>
             <param index="0">
               <value>
@@ -2224,11 +2224,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllOrdersTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getAllOrdersTest(int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="getAllOrdersTest" duration-ms="23" started-at="2018-01-18T00:04:39Z" data-provider="getAllOrders" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="getAllOrdersTest(int, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="getAllOrdersTest" duration-ms="24" started-at="2018-01-18T21:54:36Z" data-provider="getAllOrders" finished-at="2018-01-18T21:54:36Z">
           <params>
             <param index="0">
               <value>
@@ -2244,11 +2244,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllOrdersTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getOrdersByUserTest(int, double, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="getOrdersByUserTest" duration-ms="642" started-at="2018-01-18T00:04:39Z" data-provider="getOrdersByUser" finished-at="2018-01-18T00:04:40Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getOrdersByUserTest(int, double, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="getOrdersByUserTest" duration-ms="644" started-at="2018-01-18T21:54:36Z" data-provider="getOrdersByUser" finished-at="2018-01-18T21:54:37Z">
           <params>
             <param index="0">
               <value>
@@ -2269,19 +2273,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getOrdersByUserTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:39Z" finished-at="2018-01-18T00:04:39Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:37Z" finished-at="2018-01-18T21:54:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:40Z" finished-at="2018-01-18T00:04:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getOrdersByUserTest(int, double, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="getOrdersByUserTest" duration-ms="127" started-at="2018-01-18T00:04:40Z" data-provider="getOrdersByUser" finished-at="2018-01-18T00:04:40Z">
+        <test-method status="PASS" signature="getOrdersByUserTest(int, double, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="getOrdersByUserTest" duration-ms="173" started-at="2018-01-18T21:54:37Z" data-provider="getOrdersByUser" finished-at="2018-01-18T21:54:37Z">
           <params>
             <param index="0">
               <value>
@@ -2302,19 +2302,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getOrdersByUserTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:40Z" finished-at="2018-01-18T00:04:40Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:37Z" finished-at="2018-01-18T21:54:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:40Z" finished-at="2018-01-18T00:04:40Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="1" started-at="2018-01-18T21:54:37Z" finished-at="2018-01-18T21:54:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:40Z" finished-at="2018-01-18T00:04:40Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:37Z" finished-at="2018-01-18T21:54:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getOrdersByUserTest(int, double, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="getOrdersByUserTest" duration-ms="639" started-at="2018-01-18T00:04:40Z" data-provider="getOrdersByUser" finished-at="2018-01-18T00:04:40Z">
+        <test-method status="PASS" signature="getOrdersByUserTest(int, double, boolean)[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="getOrdersByUserTest" duration-ms="636" started-at="2018-01-18T21:54:37Z" data-provider="getOrdersByUser" finished-at="2018-01-18T21:54:38Z">
           <params>
             <param index="0">
               <value>
@@ -2335,17 +2335,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getOrdersByUserTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:40Z" finished-at="2018-01-18T00:04:40Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.OrderDAOTest@5c3bd550]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:38Z" finished-at="2018-01-18T21:54:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
       </class> <!-- res.cs.dao.OrderDAOTest -->
       <class name="res.cs.dao.PaymentDAOTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="initialize" is-config="true" duration-ms="36" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createPaymentTest(java.lang.Long, int, int, boolean)[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="createPaymentTest" duration-ms="23" started-at="2018-01-18T00:04:38Z" data-provider="newPayment" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="createPaymentTest(java.lang.Long, int, int, boolean)[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="createPaymentTest" duration-ms="103" started-at="2018-01-18T21:54:35Z" data-provider="newPayment" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -2371,15 +2371,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPaymentTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="finalize" is-config="true" duration-ms="21" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="finalize" is-config="true" duration-ms="37" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createPaymentTest(java.lang.Long, int, int, boolean)[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="createPaymentTest" duration-ms="21" started-at="2018-01-18T00:04:38Z" data-provider="newPayment" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="createPaymentTest(java.lang.Long, int, int, boolean)[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="createPaymentTest" duration-ms="24" started-at="2018-01-18T21:54:35Z" data-provider="newPayment" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -2405,15 +2405,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPaymentTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="finalize" is-config="true" duration-ms="24" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="initialize" is-config="true" duration-ms="1" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="createPaymentTest(java.lang.Long, int, int, boolean)[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="createPaymentTest" duration-ms="22" started-at="2018-01-18T00:04:38Z" data-provider="newPayment" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="createPaymentTest(java.lang.Long, int, int, boolean)[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="createPaymentTest" duration-ms="24" started-at="2018-01-18T21:54:35Z" data-provider="newPayment" finished-at="2018-01-18T21:54:35Z">
           <params>
             <param index="0">
               <value>
@@ -2439,15 +2435,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPaymentTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="finalize" is-config="true" duration-ms="21" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="deletePaymentTest(int, int)[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="deletePaymentTest" duration-ms="21" started-at="2018-01-18T00:04:38Z" data-provider="deletePayment" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="finalize" is-config="true" duration-ms="23" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:35Z" finished-at="2018-01-18T21:54:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="deletePaymentTest(int, int)[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="deletePaymentTest" duration-ms="22" started-at="2018-01-18T21:54:35Z" data-provider="deletePayment" finished-at="2018-01-18T21:54:36Z">
           <params>
             <param index="0">
               <value>
@@ -2463,7 +2463,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deletePaymentTest -->
-        <test-method status="PASS" signature="deletePaymentTest(int, int)[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="deletePaymentTest" duration-ms="22" started-at="2018-01-18T00:04:38Z" data-provider="deletePayment" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="deletePaymentTest(int, int)[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="deletePaymentTest" duration-ms="25" started-at="2018-01-18T21:54:36Z" data-provider="deletePayment" finished-at="2018-01-18T21:54:36Z">
           <params>
             <param index="0">
               <value>
@@ -2479,15 +2479,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deletePaymentTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T00:04:38Z" finished-at="2018-01-18T00:04:38Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.PaymentDAOTest@5e3a8624]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-18T21:54:36Z" finished-at="2018-01-18T21:54:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
