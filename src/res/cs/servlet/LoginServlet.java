@@ -48,12 +48,18 @@ public class LoginServlet extends HttpServlet {
 		try {
 			theUser = userBO.loginUser(userName, password);
 			if(theUser != null) {
+				// check whether the user is admin or regular user and redirect to the page accordingly
 				// Assign the user as session attribute
 				session.setAttribute("currentUser", theUser);
 				session.setAttribute("userId", theUser.getUserId());
 				System.out.println("Login Authenticated");
-				// Send to the menu item page
-				response.sendRedirect("MenuItemServlet");
+				if(userBO.isAdmin(theUser)) {
+					response.sendRedirect("Admin/Account");
+				} else {
+					// Send to the menu item page
+					response.sendRedirect("MenuItemServlet");
+				}
+
 			} else {
 				// Navigate to the login page
 				response.sendRedirect("login.jsp");

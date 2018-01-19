@@ -71,5 +71,9 @@ public class UserBO {
 		}
 		return result;
 	}
+	public boolean isAdmin(User theUser) {
+		// TODO Auto-generated method stub
+		return theUser.getAdminRole() == 1 ? true : false;
+	}
 	
 }
