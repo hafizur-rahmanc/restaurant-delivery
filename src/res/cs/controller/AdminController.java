@@ -72,6 +72,7 @@ public class AdminController {
 				userBO = new UserBO();
 				result = userBO.updateUser(currentUser);
 				if (result != 0) {
+					model.addObject("message", "User has been updated successfully");
 					session.setAttribute("currentUser", currentUser);
 					System.out.println("User is updated");
 				}

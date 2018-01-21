@@ -18,10 +18,21 @@
 	<c:if test="${sessionScope.userId == null}">
 		<c:redirect url="Error.jsp" />
 	</c:if>
+	
+	<!-- When the account information updated successfully -->
+	<c:if test="${message != null}">
+		<div class="container">
+			<div class="alert alert-info alert-dismissible" role="alert">
+	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  			<p class="text-center"><strong>${message}</strong></p>
+			</div>
+		</div>
+	</c:if>
 	<div class="container">
 		<div class="jumbotron">
 			<h2>Account Information</h2>
 		</div>
+		
 		<form action="${context}/admin/AdminAccountInfo" method="post" class="form-horizontal">
 			<div class="form-group">
 		   		<label for="firstName" class="col-sm-3 control-label">First Name</label>
