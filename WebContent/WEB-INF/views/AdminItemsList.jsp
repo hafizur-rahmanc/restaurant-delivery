@@ -77,6 +77,57 @@
 			</div>
 			<!-- Create a new item form -->
 			<div class="col-sm-6">
+			<div class="row">
+				<form action="${context}/admin/CreateItem" method="post" class="form-horizontal" id="items-list">
+					<div class="form-group">
+	   					<label for="itemName" class="col-sm-3 control-label">Item Name</label>
+	   					<div class="col-sm-9">
+	    					<input type="text" class="form-control" name="name" id="itemName" placeholder="Item Name"  maxlength="20" required title="Please enter upto 20 characters">
+	    				</div>
+	  				</div>
+				  	<div class="form-group">
+				   		<label for="itemPrice" class="col-sm-3 control-label">Price</label>
+				   		<div class="col-sm-9">
+				    		<input type="text" class="form-control" name="price" id="itemPrice" placeholder="Item Price" maxlength="20" required title="Please enter upto 20 numbers">
+				    	</div>
+				  	</div>
+					<div class="form-group">
+					   	<label for="itemDescription" class="col-sm-3 control-label">Item Description</label>
+					    <div class="col-sm-9">
+					    	<textarea rows="3" class="form-control" name="description" id="itemDescription" placeholder="Item Description" maxlength="500" required title="Please enter upto 500 characters"></textarea>
+					    </div>
+					 </div>
+					 <div class="form-group">
+					    <label for="itemImage" class="col-sm-3 control-label">Item Image</label>
+					    <div class="col-sm-9">
+					    	<input type="text" class="form-control" name="image" id="itemImage" placeholder="Item Image" maxlength="20" required title="Please enter upto 20 characters">
+					    </div>
+					 </div>
+					 <div class="form-group">
+					 	<label class="col-sm-3 control-label">Active</label>
+		    			<div class="col-sm-9">
+					 		<label class="radio-inline">
+		    					<input type="radio" name="active" id="active" value="1"  required>Active
+							</label>
+		  					<label class="radio-inline">
+								<input type="radio" name="active" id="not active" value="0" required>Not Active
+		  					</label>
+						</div>
+					</div>
+					 <div class="form-group">
+					    <label for="Category" class="col-sm-3 control-label">Category</label>
+					    <div class="col-sm-9">
+					    	<input type="text" class="form-control" name="category" id="Category" placeholder="Category" maxlength="20" required title="Please enter upto 20 charcaters">
+					    </div>
+					 </div>
+
+					 <div class="form-group">
+					 	<div class="col-sm-offset-3 col-sm-9">
+					 		<button type="submit" class="btn btn-primary btn-block" name="update">Create</button>
+					 	</div>
+					 </div>
+				</form>
+			</div>
 			</div>
 			
 		</div>
