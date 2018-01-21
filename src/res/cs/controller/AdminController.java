@@ -2,6 +2,7 @@ package res.cs.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -11,8 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import res.cs.bo.ItemBO;
 import res.cs.bo.UserBO;
 import res.cs.exception.RegistrationException;
+import res.cs.model.Item;
 import res.cs.model.User;
 
 @Controller
@@ -92,6 +95,22 @@ public class AdminController {
 	@RequestMapping(value="/AdminNavigate", method=RequestMethod.GET)
 	public ModelAndView adminNavigate() {
 		ModelAndView model = new ModelAndView("AdminNavigate");
+		return model;
+	}
+	
+	// Get the list of items
+	@RequestMapping(value="/AdminItemsList", method=RequestMethod.GET)
+	public ModelAndView adminItemsList() throws ClassNotFoundException, RegistrationException, SQLException, IOException {
+		// Declare an ItemBO variable
+		ItemBO itemBO = new ItemBO();
+		ModelAndView model = new ModelAndView("AdminItemsList");
+		
+		// Get all the items from the database
+		List<Item> itemsList = itemBO.getAllItems();
+		// Add all the items list to the model
+		model.addObject("itemsList", itemsList);
+		
+		// Return the view
 		return model;
 	}
 }

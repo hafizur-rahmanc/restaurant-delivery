@@ -63,6 +63,9 @@ footer a {
     color: #f5f5f5;
 }
 
+#items-list{
+	width: 100%;
+}
 .form-horizontal{
 	border: 1px solid #ccc;
 	border-radius: 4px;
