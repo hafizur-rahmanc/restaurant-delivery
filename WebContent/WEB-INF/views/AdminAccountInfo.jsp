@@ -1,15 +1,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<c:set var="context" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Account Information</title>
+<title>Admin Account Details</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
+	<link rel="stylesheet" type="text/css" href="${context}/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-	<script type="text/javascript" src="js/index.js"></script>
 	<script src="https://use.fontawesome.com/71c97a3df8.js"></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
 		<div class="jumbotron">
 			<h2>Account Information</h2>
 		</div>
-		<form action="AccountInfoServlet" method="post" class="form-horizontal">
+		<form action="${context}/admin/AdminAccountInfo" method="post" class="form-horizontal">
 			<div class="form-group">
 		   		<label for="firstName" class="col-sm-3 control-label">First Name</label>
 		   		<div class="col-sm-9">
@@ -88,9 +88,6 @@
 			 	</div>
 			 </div>
 		</form>
-	</div>
-	
-	<div class="jumbotron" id="hidden">
 	</div>
 	<!-- Footer -->
 	<jsp:include page="AdminFooter.html" />

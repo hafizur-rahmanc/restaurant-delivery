@@ -5,7 +5,7 @@ public class OracleSqlQueries {
 	public static final String USER_LOGIN = "SELECT * FROM users WHERE user_name = ? AND password = ?";
 	public static final String GET_USER_BY_ID = "SELECT * FROM users WHERE user_id = ?";
 	public static final String CREATE_USER = "INSERT INTO users (first_name, last_name, user_name, password, gender, address, phone_number, email) values(?, ?, ?, ?, ?, ?, ?, ?)";
-	public static final String GET_USERS = "SELECT * FROM users";
+	public static final String GET_REGULAR_USERS = "SELECT * FROM users WHERE admin_role = 0";
 	public static final String UPDATE_USER = "UPDATE users SET first_name = ?, last_name = ?, user_name = ?, password = ?, gender = ?, address = ?, phone_number = ?, email = ? WHERE user_id = ?";
 	public static final String DELETE_USER = "DELETE FROM users WHERE user_id = ?";
 	public static final String CREATE_ITEM = "INSERT INTO items (item_name, item_price, item_description, image, active, category) values(?, ?, ?, ?, ?, ?)";

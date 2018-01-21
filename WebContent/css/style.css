@@ -18,6 +18,12 @@ body {
   	z-index: 2;
 }
 
+h1, h2, h3{
+	margin-top: 10px;
+}
+ol, ul{
+	margin-top: 10px;
+}
 .navbar-inverse {
 	background-color: #2d2d30;
 }
@@ -29,7 +35,20 @@ body {
 .navbar-inverse .navbar-brand {
     color: white;
 }
+#navigation-panel ul{
+    text-align: center;
+    padding: 0px;
+    zoom:1;
+    border:1px solid red;
+    overflow: hidden;
+}
 
+#navigation-panel li{
+    padding: 2px;
+    width: 150px;
+    display:inline-block;
+    font-size: 2rem;
+}
 footer {
 	bottom: 0;
 	width: 100%;

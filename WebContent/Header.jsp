@@ -15,7 +15,7 @@
 				<ul class="nav navbar-nav navbar-right">
 				<c:choose>
 					<c:when test="${userId != null}">
-						<li><a href="Home.jsp"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+						<li><a href="Home.jsp"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
 						<li><a href="MenuItemServlet">Menu</a></li>
 						<li><a href="OrdersHistoryServlet">View Orders</a></li>
 						<li><a href="AccountInfoServlet">Account Information</a></li>

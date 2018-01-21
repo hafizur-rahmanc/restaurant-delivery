@@ -48,13 +48,19 @@ public class LoginServlet extends HttpServlet {
 		try {
 			theUser = userBO.loginUser(userName, password);
 			if(theUser != null) {
-				// check whether the user is admin or regular user and redirect to the page accordingly
+				// Check whether the user is an admin or regular user and redirect to the page accordingly
 				// Assign the user as session attribute
 				session.setAttribute("currentUser", theUser);
 				session.setAttribute("userId", theUser.getUserId());
 				System.out.println("Login Authenticated");
+				
+				// If the user is an admin redirect to the admin controller's AdminAccountInfo request
 				if(userBO.isAdmin(theUser)) {
-					response.sendRedirect("Admin/Account");
+					System.out.println("User is Admin");
+					// Assign isAdmin to true to the session object
+					session.setAttribute("isAdmin", true);
+					// Send back to the admin home page
+					response.sendRedirect("admin/");
 				} else {
 					// Send to the menu item page
 					response.sendRedirect("MenuItemServlet");

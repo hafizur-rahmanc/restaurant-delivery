@@ -185,7 +185,7 @@ public class UserDAO {
 		}
 		return theUser;
 	}
-	//Get all the users
+	// Admin wants to get all regular users
 	public List<User> getAllUsers() throws RegistrationException, SQLException, ClassNotFoundException, IOException{
 		Connection conn = null;
 		PreparedStatement stmt = null;
@@ -196,7 +196,7 @@ public class UserDAO {
 		try {
 			conn = oracle.getConnection();
 			System.out.println("Connection Established!");
-			stmt = conn.prepareStatement(OracleSqlQueries.GET_USERS);
+			stmt = conn.prepareStatement(OracleSqlQueries.GET_REGULAR_USERS);
 			resultSet = stmt.executeQuery();
 			usersList = new ArrayList<User>();
 			

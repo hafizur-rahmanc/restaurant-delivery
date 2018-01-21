@@ -107,9 +107,6 @@ public class AccountInfoServlet extends HttpServlet {
 				// Send back to the account information page with error message
 				response.sendRedirect("AccountInfo.jsp?message=false");
 				// doGet(request, response);
-				// send to JSP page (view)
-				//RequestDispatcher dispatcher = request.getRequestDispatcher("/index.html");
-				//dispatcher.forward(request, response);
 			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
