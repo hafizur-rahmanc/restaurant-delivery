@@ -30,6 +30,7 @@
 		<div class="row">
 			<!-- Display all the items to the left as an update form -->
 			<div class="col-sm-6">
+				<h3 class="text-center">Items List</h3>
 				<!-- Loop through the items list and display them one by one -->
 				<c:forEach items="${itemsList}" var="item">
 					<div class="row">
@@ -91,6 +92,7 @@
 			<!-- Create a new item form -->
 			<div class="col-sm-6">
 			<div class="row">
+				<h3 class="text-center">Add New Item</h3>
 				<form:form action="${context}/admin/CreateItem" method="post" class="form-horizontal" id="items-list" modelAttribute="item">
 					<div class="form-group">
 	   					<label for="itemName" class="col-sm-3 control-label">Item Name</label>
