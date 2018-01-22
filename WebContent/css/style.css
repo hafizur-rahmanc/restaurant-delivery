@@ -100,6 +100,9 @@ footer a {
 .group-btn>.btn:nth-of-type(1){
 	margin: 0 10px;
 }
+.admin-items-list{
+	margin-top: 20px;
+}
 
 #review-button{
 	margin-right: 15px;

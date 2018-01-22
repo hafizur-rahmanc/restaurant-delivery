@@ -148,7 +148,7 @@ public class ItemDAO {
 		return itemsList;
 	}
 	
-	//Update an item
+	// Update an item
 	public int updateItem(Item item) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
 		Connection conn = null;
 		PreparedStatement stmt = null;

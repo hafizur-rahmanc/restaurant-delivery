@@ -59,12 +59,14 @@ public class ItemBO {
 	}
 	
 	//Update the item using the ItemDAO
-	public void updateItem(Item item) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	public int updateItem(Item item) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		int result = 0;
 		try {
-			itemDAO.updateItem(item);
+			result = itemDAO.updateItem(item);
 		}catch(RegistrationException e) {
 			throw new RegistrationException(e.getMessage());
 		}
+		return result;
 	}
 	
 	// Admin can delete an item by using the item_id

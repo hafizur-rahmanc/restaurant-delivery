@@ -14,6 +14,9 @@
 </head>
 <body>
 <jsp:include page="AdminHeader.jsp" />
+	<c:if test="${sessionScope.userId == null}">
+		<c:redirect url="AdminError.jsp" />
+	</c:if>
 	<div class="container">
 		<div class="jumbotron">
 			<h2>Welcome to the Admin Home Page</h2>

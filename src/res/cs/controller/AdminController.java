@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import res.cs.bo.ItemBO;
@@ -58,7 +60,8 @@ public class AdminController {
 			Long phoneNumber = Long.parseLong(request.getParameter("phoneNumber"));
 			String email = request.getParameter("email");
 			int result = 0;
-
+			
+			// Populate the current user with updated data
 			currentUser.setUserId(userId);
 			currentUser.setFirstName(firstName);
 			currentUser.setLastName(lastName);
@@ -98,12 +101,15 @@ public class AdminController {
 		return model;
 	}
 	
+	// Here "command" is a reserved request attribute which is used to display object data into form
 	// Get the list of items
 	@RequestMapping(value="/AdminItemsList", method=RequestMethod.GET)
 	public ModelAndView adminItemsList() throws ClassNotFoundException, RegistrationException, SQLException, IOException {
 		// Declare an ItemBO variable
 		ItemBO itemBO = new ItemBO();
 		ModelAndView model = new ModelAndView("AdminItemsList");
+		Item theItem = new Item();
+		model.addObject("item", theItem);
 		
 		// Get all the items from the database
 		List<Item> itemsList = itemBO.getAllItems();
@@ -113,4 +119,81 @@ public class AdminController {
 		// Return the view
 		return model;
 	}
+	
+	// Update an item based on the request parameter
+	@RequestMapping(value="/UpdateItem", method=RequestMethod.POST)
+	public ModelAndView adminUpdateItem(
+			@RequestParam(value="name", required=true) String itemName,
+			@RequestParam(value="price", required=true) Double itemPrice,
+			@RequestParam(value="description", required=true) String itemDescription,
+			@RequestParam(value="image", required=true) String itemImage,
+			@RequestParam(value="active", required=true) Integer itemActive,
+			@RequestParam(value="category", required=true) String itemCategory,
+			@RequestParam(value="update", required=false) Integer itemUpdateId,
+			@RequestParam(value="delete", required=false) Integer itemDeleteId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		
+		// Declare a model and view variable
+		ModelAndView model = null;
+		// Declare an ItemBO variable
+		ItemBO itemBO = new ItemBO();
+		// For item update/delete operation
+		if (itemUpdateId != null) {
+			// Declare an Item variable
+			Item theItem = new Item();
+			theItem.setItemId(itemUpdateId);
+			theItem.setItemName(itemName);
+			theItem.setItemPrice(itemPrice);
+			theItem.setItemDescription(itemDescription);
+			theItem.setImage(itemImage);
+			theItem.setActive(itemActive);
+			theItem.setCategory(itemCategory);
+			
+			// Now update the item in the database
+			int result = itemBO.updateItem(theItem);
+			
+			// Call the adminItemsList() to get the updated model
+			model = adminItemsList();
+			if (result != 0) {
+				// Add the updated message to the model
+				model.addObject("message", "Item Updated Successfully");
+			}
+			
+		} else if (itemDeleteId != null) {
+			// Now delete the item
+			int result = itemBO.deleteItem(itemDeleteId);
+			// Call the adminItemsList() to get the updated model
+			model = adminItemsList();
+			if(result != 0) {
+				// Add the deleted message to the model
+				model.addObject("message", "Item Deleted Successfully");
+			}
+		} else {
+			// Display the error
+			model = new ModelAndView("/AdminError");
+		}
+		
+		// Return the view
+		return model;
+	}
+	
+    //The @ModelAttribute puts request data into model object.  
+    @RequestMapping(value="/CreateItem",method = RequestMethod.POST)  
+    public ModelAndView adminCreateItem(@ModelAttribute("item") Item item) throws ClassNotFoundException, RegistrationException, IOException, SQLException{  
+        // Declare an ItemBO variable
+    	ItemBO itemBO = new ItemBO();
+    	ModelAndView model = null;
+    	// Create the new item
+    	int result = itemBO.createItem(item);
+    	if (result != 0) {
+			// Call the adminItemsList() to get the updated model
+    		model = adminItemsList();
+    		// Add the created message to the model
+    		model.addObject("message", "Item Craeted Successfully");
+    	} else{
+    		// Display the error
+    		model =  new ModelAndView("AdminError");	
+    	}
+    	// Return the view
+    	return model;
+    } 
 }
