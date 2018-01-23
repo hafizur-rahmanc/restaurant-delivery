@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import res.cs.bo.ItemBO;
+import res.cs.bo.OrderBO;
 import res.cs.bo.ReviewBO;
 import res.cs.bo.UserBO;
 import res.cs.exception.RegistrationException;
@@ -307,4 +308,14 @@ public class AdminController {
     	// Return the view
     	return model;
     } 
+    
+    // Get the list of orders
+    @RequestMapping(value="/AdminOrdersList" method=RequestMethod.GET)
+    public ModelAndView adminOrdersList() {
+    	// Declare a ModelAndView variable
+    	ModelAndView model = new ModelAndView("AdminOrdersList");
+    	// Declare an OrederBO variable
+    	OrderBO orderBO = new OrderBO();
+    	
+    }
 }

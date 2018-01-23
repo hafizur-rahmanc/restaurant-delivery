@@ -230,7 +230,7 @@ public class OrderDAO {
 	}
 	
 	
-	// Retrieve all the orders
+	// Retrieve all the orders with corresponding order items
 	public List<Order> getAllOrders() throws RegistrationException, SQLException{
 		Connection conn = null;
 		PreparedStatement stmt = null;
@@ -254,6 +254,9 @@ public class OrderDAO {
 				singleOrder.setSubtotal(resultSet.getDouble(5));
 				singleOrder.setTaxAmount(resultSet.getDouble(6));
 				singleOrder.setTotalPrice(resultSet.getDouble(7));
+				
+				// Get the order items using the getOrderItemsByOrderId method
+				singleOrder.setOrderItems(this.getOrderItemsByOrderId(resultSet.getInt(1)));
 				
 				//Add to the orders list
 				ordersList.add(singleOrder);
