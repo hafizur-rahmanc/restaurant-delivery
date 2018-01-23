@@ -86,7 +86,10 @@ form#command{
     padding-left: 0px;
 }
 
-#primary-button{
+#user-update{
+	margin-bottom: 0px;
+}
+.btn-primary{
 	margin-bottom: 30px;
 }
 .item-action, .item-operate{

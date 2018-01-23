@@ -36,7 +36,7 @@
 						     <td>
 						     	<div class="user-action">
 						     		<a href="${context}/admin/AdminGetUser?userId=${user.userId}">
-							     		<button class="btn btn-sm btn-primary">Update</button>
+							     		<button class="btn btn-sm btn-primary" id="user-update">Update</button>
 							     	</a>
 							     <button class="btn btn-sm btn-danger">Delete</button>
 							     </div>
