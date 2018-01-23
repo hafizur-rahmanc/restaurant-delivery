@@ -31,7 +31,7 @@
 				<!-- Loop through the items list and display them one by one -->
 				<c:forEach items="${storesList}" var="store">
 					<div class="row">
-						<form action="${context}/admin/UpdateStore" method="post" class="form-horizontal" id="items-list">
+						<form action="${context}/admin/AdminUpdateLocation" method="post" class="form-horizontal" id="items-list">
 							<div class="form-group">
 			   					<label for="storeName" class="col-sm-3 control-label">Location Name</label>
 			   					<div class="col-sm-9">
@@ -85,7 +85,7 @@
 			<div class="col-sm-6">
 			<div class="row">
 				<h3 class="text-center">Add New Location</h3>
-				<form:form action="${context}/admin/AddLocation" method="post" class="form-horizontal" id="items-list" modelAttribute="store">
+				<form:form action="${context}/admin/AdminAddLocation" method="post" class="form-horizontal" id="items-list" modelAttribute="store">
 					<div class="form-group">
 	   					<label for="storeName" class="col-sm-3 control-label">Location Name</label>
 	   					<div class="col-sm-9">

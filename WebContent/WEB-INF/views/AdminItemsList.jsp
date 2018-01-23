@@ -90,7 +90,7 @@
 			<div class="col-sm-6">
 			<div class="row">
 				<h3 class="text-center">Add New Item</h3>
-				<form:form action="${context}/admin/AddItem" method="post" class="form-horizontal" id="items-list" modelAttribute="item">
+				<form:form action="${context}/admin/AdminAddItem" method="post" class="form-horizontal" id="items-list" modelAttribute="item">
 					<div class="form-group">
 	   					<label for="itemName" class="col-sm-3 control-label">Item Name</label>
 	   					<div class="col-sm-9">

@@ -86,7 +86,7 @@ public class AdminController {
 				userBO = new UserBO();
 				result = userBO.updateUser(currentUser);
 				if (result != 0) {
-					model.addObject("message", "User has been updated successfully");
+					model.addObject("message", "The User Updated Successfully!");
 					session.setAttribute("currentUser", currentUser);
 					System.out.println("User is updated");
 				}
@@ -269,7 +269,7 @@ public class AdminController {
 			model = adminItemsList();
 			if (result != 0) {
 				// Add the updated message to the model
-				model.addObject("message", "Item Updated Successfully");
+				model.addObject("message", "The Item Updated Successfully!");
 			}
 			
 		} else if (itemDeleteId != null) {
@@ -279,7 +279,7 @@ public class AdminController {
 			model = adminItemsList();
 			if(result != 0) {
 				// Add the deleted message to the model
-				model.addObject("message", "Item Deleted Successfully");
+				model.addObject("message", "The Item Deleted Successfully!");
 			}
 		} else {
 			// Display the error
@@ -291,7 +291,7 @@ public class AdminController {
 	}
 	
     //The @ModelAttribute puts request data into model object.  
-    @RequestMapping(value="/AddItem",method = RequestMethod.POST)  
+    @RequestMapping(value="/AdminAddItem",method = RequestMethod.POST)  
     public ModelAndView adminCreateItem(@ModelAttribute("item") Item item) throws ClassNotFoundException, RegistrationException, IOException, SQLException{  
         // Declare an ItemBO variable
     	ItemBO itemBO = new ItemBO();
@@ -371,5 +371,91 @@ public class AdminController {
 		
 		// Return the view
 		return model;
+    }
+    
+    // Update any specific location
+    @RequestMapping(value="/AdminUpdateLocation", method=RequestMethod.POST)
+    public ModelAndView adminUpdateLocation(
+			@RequestParam(value="storeName", required=true) String storeName,
+			@RequestParam(value="address", required=true) String address,
+			@RequestParam(value="city", required=true) String city,
+			@RequestParam(value="staffNumber", required=true) Integer staffNumber,
+			@RequestParam(value="zipcode", required=true) Integer zipcode,
+			@RequestParam(value="image", required=true) String image,
+			@RequestParam(value="update", required=false) Integer storeUpdateId,
+			@RequestParam(value="delete", required=false) Integer storeDeleteId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+    	
+    	// Declare a ModelAndView variable
+    	ModelAndView model;
+    	// Declare a StoreBO variable
+    	StoreBO storeBO = new StoreBO();
+    	// Declare a Store variable
+    	Store theStore = new Store();
+    	
+    	// Populate the store instance
+    	theStore.setStoreName(storeName);
+    	theStore.setAddress(address);
+    	theStore.setCity(city);
+    	theStore.setStaffNumber(staffNumber);
+    	theStore.setZipcode(zipcode);
+    	theStore.setImage(image);
+    	
+    	// Update operation for any specific store
+    	if(storeUpdateId != null) {
+    		theStore.setStoreId(storeUpdateId);
+    		// Update the Store in the database
+    		int result = storeBO.updateStore(theStore);
+    		// Upon successful store update
+    		if(result != 0) {
+    			// Call the adminLocationsList to get the updated model and view
+    			model = adminLocationsList();
+    			// Add success message to the model
+    			model.addObject("message", "The Location Updated Successfully!");
+    		} else {
+    			// Display error message
+    			model = new ModelAndView("AdminError");
+    		}
+    	// Delete operation for any specific store
+    	} else if(storeDeleteId != null) {
+    		int result = storeBO.deleteStore(storeDeleteId);
+    		// Upon successful store delete
+    		if (result != 0) {
+    			// Call the adminLocationsList to get the Updated model and view
+    			model = adminLocationsList();
+    			// Add success message to the model
+    			model.addObject("message", "The Location Deleted Successfully!");
+    		} else {
+    			// Display error message
+    			model = new ModelAndView("AdminError");
+    		}
+    	}
+    	else {
+			// Display error message
+			model = new ModelAndView("AdminError");
+    	}
+    	// Return the view
+    	return model;
+    }
+    
+    // Add a new Location to the location list
+    // The @ModelAttribute puts request data into model object.  
+    @RequestMapping(value="/AdminAddLocation",method = RequestMethod.POST)  
+    public ModelAndView adminAddLocation(@ModelAttribute("store") Store store) throws ClassNotFoundException, RegistrationException, IOException, SQLException{  
+        // Declare an StoreBO variable
+    	StoreBO storeBO = new StoreBO();
+    	ModelAndView model;
+    	// Add the new location to the location list
+    	int result = storeBO.createStore(store);
+    	if (result != 0) {
+			// Call the adminLocationsList() to get the updated model
+    		model = adminLocationsList();
+    		// Add the success message to the model
+    		model.addObject("message", "Location Craeted Successfully");
+    	} else{
+    		// Display the error
+    		model =  new ModelAndView("AdminError");	
+    	}
+    	// Return the view
+    	return model;
     }
 }
