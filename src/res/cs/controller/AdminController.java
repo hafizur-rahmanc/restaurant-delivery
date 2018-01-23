@@ -20,6 +20,7 @@ import res.cs.bo.ReviewBO;
 import res.cs.bo.UserBO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.Item;
+import res.cs.model.Order;
 import res.cs.model.Review;
 import res.cs.model.User;
 
@@ -310,12 +311,47 @@ public class AdminController {
     } 
     
     // Get the list of orders
-    @RequestMapping(value="/AdminOrdersList" method=RequestMethod.GET)
-    public ModelAndView adminOrdersList() {
+    @RequestMapping(value="/AdminOrdersList", method=RequestMethod.GET)
+    public ModelAndView adminOrdersList() throws RegistrationException, SQLException {
     	// Declare a ModelAndView variable
     	ModelAndView model = new ModelAndView("AdminOrdersList");
     	// Declare an OrederBO variable
     	OrderBO orderBO = new OrderBO();
+    	// Get all the orders from database
+    	List<Order> ordersList = orderBO.getAllOrders();
+    	// Add ordersList to the model view object
+    	model.addObject("ordersList", ordersList);
     	
+    	// Return the view
+    	return model;
+    }
+    
+    // Delete an order the display the orders list
+    @RequestMapping(value="/AdminDeleteOrder", method=RequestMethod.POST)
+    public ModelAndView adminOrderDelete(
+    		@RequestParam(value="orderId", required=true) Integer orderId) throws RegistrationException, SQLException, ClassNotFoundException, IOException {
+    	// Declare a ModelAndView variable
+    	ModelAndView model;
+    	// Declare an OrederBO variable
+    	OrderBO orderBO = new OrderBO();
+    	if (orderId != null) {
+    		// Delete the order from the database
+    		int result = orderBO.deleteOrder(orderId);
+    		if(result != 0) {
+    	    	// Call the adminOrdersList to get the updated order's list
+    			 model = adminOrdersList();
+    			// Add the success message to the model
+    			model.addObject("message", "Order deleted Successfully!");
+    		} else {
+    			// Display error message
+    			model = new ModelAndView("AdminError");
+    		}
+    	}else {
+    		// Display error message
+			model = new ModelAndView("AdminError");
+    	}
+    	
+    	// Return the view
+    	return model;
     }
 }
