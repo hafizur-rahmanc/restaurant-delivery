@@ -17,11 +17,13 @@ import org.springframework.web.servlet.ModelAndView;
 import res.cs.bo.ItemBO;
 import res.cs.bo.OrderBO;
 import res.cs.bo.ReviewBO;
+import res.cs.bo.StoreBO;
 import res.cs.bo.UserBO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.Item;
 import res.cs.model.Order;
 import res.cs.model.Review;
+import res.cs.model.Store;
 import res.cs.model.User;
 
 @Controller
@@ -184,7 +186,6 @@ public class AdminController {
 		}
 		// Return the view
 		return model;
-
 	}
 	
 	// Delete a review and call the adminGetUser
@@ -350,8 +351,25 @@ public class AdminController {
     		// Display error message
 			model = new ModelAndView("AdminError");
     	}
-    	
     	// Return the view
     	return model;
+    }
+    
+    // Get all the locations list
+    @RequestMapping(value="/AdminLocationsList", method=RequestMethod.GET)
+    public ModelAndView adminLocationsList() throws ClassNotFoundException, RegistrationException, SQLException, IOException {
+		// Declare a StoreBO variable
+		StoreBO storeBO = new StoreBO();
+		ModelAndView model = new ModelAndView("AdminLocationsList");
+		Store theStore = new Store();
+		model.addObject("store", theStore);
+		
+		// Get all the stores from the database
+		List<Store> storesList = storeBO.getAllStores();
+		// Add all the stores list to the model
+		model.addObject("storesList", storesList);
+		
+		// Return the view
+		return model;
     }
 }
