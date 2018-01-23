@@ -13,7 +13,17 @@
 	<jsp:include page="AdminHeader.jsp" />
 	<jsp:include page="NavigationPanel.jsp" />
 	<h3 class="text-center" id="regular-user">Regular User's List</h3>
+	<!-- When the location updated successfully -->
+	<c:if test="${message != null}">
+		<div class="container">
+			<div class="alert alert-info alert-dismissible" role="alert">
+	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  			<p class="text-center"><strong>${message}</strong></p>
+			</div>
+		</div>
+	</c:if>
 	<div class="container">
+
 		<div class="table-responsive">
 			<table class="table table-bordered">
 				  <thead>
@@ -38,7 +48,9 @@
 						     		<a href="${context}/admin/AdminGetUser?userId=${user.userId}">
 							     		<button class="btn btn-sm btn-primary" id="user-update">Update</button>
 							     	</a>
-							     <button class="btn btn-sm btn-danger">Delete</button>
+							    	<a href="${context}/admin/AdminDeleteUser?userId=${user.userId}" >
+							    		<button class="btn btn-sm btn-danger" name="delete">Delete</button>
+							    	</a>
 							     </div>
 						     </td>
 						 </tr>
@@ -48,5 +60,8 @@
 		</div>
 	</div>
 	<jsp:include page="AdminFooter.html" />
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

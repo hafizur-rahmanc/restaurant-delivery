@@ -188,6 +188,37 @@ public class AdminController {
 		return model;
 	}
 	
+	// Delete an individual user information
+	@RequestMapping(value="/AdminDeleteUser", method=RequestMethod.GET)
+	public ModelAndView adminDeleteUser(
+			@RequestParam(value="userId", required=true) Integer userId) throws ClassNotFoundException, RegistrationException, SQLException, IOException {
+		// Declare a ModelAndView variable
+		ModelAndView model;
+		// Declare a UserBO variable
+		UserBO userBO = new UserBO();
+		
+		if(userId != null) {
+			int result = userBO.deleteUser(userId);
+			// Upon successful user deletion
+			if (result != 0) {
+				// Call the adminUsersList to get the updated model and view
+				model = adminUsersList();
+				model.addObject("message", "The User Deleted Successfully!");
+				
+			} else {
+				// Display error message
+				model = new ModelAndView("AdminError");
+			}
+			// Add the user information to the model
+
+		} else {
+			model = new ModelAndView("AdminError");
+		}
+		
+		// Return the view
+		return model;
+	}
+	
 	// Delete a review and call the adminGetUser
 	@RequestMapping(value="/AdminDeleteReview", method=RequestMethod.POST)
 	public ModelAndView adminDeleteReview(
@@ -205,7 +236,7 @@ public class AdminController {
 				// Add the updated message to the model
 				model.addObject("message", "The review deleted successfully!");
 			} else {
-				// Display error messgae
+				// Display error message
 				model = new ModelAndView("AdminError");
 			}
 		} else {

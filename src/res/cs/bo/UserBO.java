@@ -71,6 +71,18 @@ public class UserBO {
 		}
 		return result;
 	}
+	
+	// Delete a user by user_id
+	public int deleteUser(int userId) throws ClassNotFoundException, IOException, RegistrationException, SQLException{
+		final UserDAO userDAO = new UserDAO();
+		int result = 0;
+		try {
+			result = userDAO.deleteUser(userId);
+		}catch(RegistrationException e) {
+			throw new RegistrationException(e.getMessage());
+		}
+		return result;
+	}
 	public boolean isAdmin(User theUser) {
 		// TODO Auto-generated method stub
 		return theUser.getAdminRole() == 1 ? true : false;
