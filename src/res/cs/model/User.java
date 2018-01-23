@@ -7,6 +7,7 @@ public class User {
 	private String lastName;
 	private String userName;
 	private String password;
+	private String repassword;
 	private String gender;
 	private String address;
 	private Long phoneNumber;
@@ -74,6 +75,12 @@ public class User {
 	}
 	public void setAdminRole(int adminRole) {
 		this.adminRole = adminRole;
+	}
+	public String getRepassword() {
+		return repassword;
+	}
+	public void setRepassword(String repassword) {
+		this.repassword = repassword;
 	}
 
 }

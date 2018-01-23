@@ -75,7 +75,7 @@
 				              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span>$${item.itemPrice} Each</label>
 				              <input type="number" class="form-control" id="psw" placeholder="How many?">
 				            </div>
-				              <button type="submit" class="btn btn-primary btn-block" name="itemId" value="${item.itemId}">Add 
+				              <button type="submit" class="btn btn-primary btn-block" id="primary-button" name="itemId" value="${item.itemId}">Add 
 				                <span class="glyphicon glyphicon-ok"></span>
 				              </button>
 				          </form>

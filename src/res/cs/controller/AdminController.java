@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import res.cs.bo.ItemBO;
+import res.cs.bo.ReviewBO;
 import res.cs.bo.UserBO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.Item;
+import res.cs.model.Review;
 import res.cs.model.User;
 
 @Controller
@@ -55,6 +57,7 @@ public class AdminController {
 			String lastName = request.getParameter("lastName");
 			String userName = request.getParameter("userName");
 			String password = request.getParameter("password");
+			String repassword = request.getParameter("repassword");
 			String gender = request.getParameter("gender");
 			String address = request.getParameter("address");
 			Long phoneNumber = Long.parseLong(request.getParameter("phoneNumber"));
@@ -67,6 +70,7 @@ public class AdminController {
 			currentUser.setLastName(lastName);
 			currentUser.setUserName(userName);
 			currentUser.setPassword(password);
+			currentUser.setRepassword(repassword);
 			currentUser.setGender(gender);
 			currentUser.setAddress(address);
 			currentUser.setPhoneNumber(phoneNumber);
@@ -101,7 +105,114 @@ public class AdminController {
 		return model;
 	}
 	
-	// Here "command" is a reserved request attribute which is used to display object data into form
+	// Get the list of users
+	@RequestMapping(value="/AdminUsersList", method=RequestMethod.GET)
+	public ModelAndView adminUsersList() throws ClassNotFoundException, RegistrationException, SQLException, IOException {
+		// Declare UserBO variable
+		UserBO userBO = new UserBO();
+		ModelAndView model = new ModelAndView("AdminUsersList");
+		// Get all the regular users from the database
+		List<User> usersList = userBO.getAllUsers();
+		// Add all the regular users list to the model
+		model.addObject("usersList", usersList);
+		// Return the view
+		return model;
+	}
+	
+	// Get an individual user information
+	@RequestMapping(value="/AdminGetUser", method=RequestMethod.GET)
+	public ModelAndView adminGetUser(
+			@RequestParam(value="userId", required=true) Integer userId) throws ClassNotFoundException, RegistrationException, SQLException, IOException {
+		// Declare a ModelAndView variable
+		ModelAndView model;
+		// Declare a UserBO variable
+		UserBO userBO = new UserBO();
+		// Declare a ReviewBO variable
+		ReviewBO reviewBO = new ReviewBO();
+		if(userId != null) {
+			User theUser = userBO.getUserById(userId);
+			theUser.setRepassword(theUser.getPassword());
+			// Add the user information to the model
+			// Here "command" is a reserved request attribute which is used to display object data into form
+			model = new ModelAndView("AdminGetUser", "command", theUser);
+			// Get all the reviews by this user
+			List<Review> reviewsList = reviewBO.getReviewsByUser(userId);
+			// Add the reviews list to the model
+			model.addObject("reviewsList", reviewsList);
+		} else {
+			model = new ModelAndView("AdminError");
+		}
+		
+		// Return the view
+		return model;
+	}
+	
+	// Update an individual user information
+	@RequestMapping(value="/AdminUpdateUser", method=RequestMethod.POST)
+	public ModelAndView adminUpdateUser(@ModelAttribute("user") User user) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		// Declare ModelAndView variable
+		ModelAndView model;
+		// Declare a UserBO variable
+		UserBO userBO = new UserBO();
+		
+		// Read the updated user information for validation check
+		String firstName = user.getFirstName();
+		String lastName = user.getLastName();
+		String userName = user.getUserName();
+		String password = user.getPassword();
+		String repassword = user.getRepassword();
+		String gender = user.getGender();
+		String address = user.getAddress();
+		String email = user.getEmail();
+		Long phoneNumber = user.getPhoneNumber();
+		// Check the validation for the new user information
+		
+		// Render the view with updated user information
+		model = new ModelAndView("AdminGetUser", "command", user);
+		// when password and re-password matches
+		if (password.equals(repassword)) {
+			int result = userBO.updateUser(user);
+			// User updated successfully
+			if(result != 0) {
+				// Display the form with the user data
+				model.addObject("message", "User Updated Successfully!");
+			}
+		} else {
+			model.addObject("message", "password mismatch!");
+		}
+		// Return the view
+		return model;
+
+	}
+	
+	// Delete a review and call the adminGetUser
+	@RequestMapping(value="/AdminDeleteReview", method=RequestMethod.POST)
+	public ModelAndView adminDeleteReview(
+			@RequestParam(value="reviewId", required=true) Integer reviewId,
+			@RequestParam(value="delete", required=true) Integer userId) throws ClassNotFoundException, RegistrationException, SQLException, IOException{
+		ModelAndView model;
+		// Declare a ReviewBO
+		ReviewBO reviewBO = new ReviewBO();
+		if (reviewId != null) {
+			int result = reviewBO.deleteReview(reviewId);
+			// When review deleted successfully
+			if (result != 0) {
+				// Call the adminItemsList() to get the updated model
+				model = adminGetUser(userId);
+				// Add the updated message to the model
+				model.addObject("message", "The review deleted successfully!");
+			} else {
+				// Display error messgae
+				model = new ModelAndView("AdminError");
+			}
+		} else {
+			model = new ModelAndView("AdminError");
+		}
+		// Return the view
+		return model;
+	}
+	
+	
 	// Get the list of items
 	@RequestMapping(value="/AdminItemsList", method=RequestMethod.GET)
 	public ModelAndView adminItemsList() throws ClassNotFoundException, RegistrationException, SQLException, IOException {
@@ -177,7 +288,7 @@ public class AdminController {
 	}
 	
     //The @ModelAttribute puts request data into model object.  
-    @RequestMapping(value="/CreateItem",method = RequestMethod.POST)  
+    @RequestMapping(value="/AddItem",method = RequestMethod.POST)  
     public ModelAndView adminCreateItem(@ModelAttribute("item") Item item) throws ClassNotFoundException, RegistrationException, IOException, SQLException{  
         // Declare an ItemBO variable
     	ItemBO itemBO = new ItemBO();

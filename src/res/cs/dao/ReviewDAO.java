@@ -128,6 +128,7 @@ public class ReviewDAO {
 				singleReview.setUserId(resultSet.getInt(2));
 				singleReview.setItemId(resultSet.getInt(3));
 				singleReview.setDescription(resultSet.getString(4));
+				singleReview.setUserName(resultSet.getString(5));
 				
 				//Add to the reviews list
 				reviewsList.add(singleReview);

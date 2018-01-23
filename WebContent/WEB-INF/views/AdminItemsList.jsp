@@ -93,7 +93,7 @@
 			<div class="col-sm-6">
 			<div class="row">
 				<h3 class="text-center">Add New Item</h3>
-				<form:form action="${context}/admin/CreateItem" method="post" class="form-horizontal" id="items-list" modelAttribute="item">
+				<form:form action="${context}/admin/AddItem" method="post" class="form-horizontal" id="items-list" modelAttribute="item">
 					<div class="form-group">
 	   					<label for="itemName" class="col-sm-3 control-label">Item Name</label>
 	   					<div class="col-sm-9">
@@ -139,7 +139,7 @@
 					 <div class="form-group">
 					 	<div class="col-sm-offset-3 col-sm-9">
 					 		<div class="admin-items-list">
-					 			<button type="submit" class="btn btn-primary btn-block" name="create">Create</button>
+					 			<button type="submit" class="btn btn-primary btn-block" name="create">Add</button>
 					 		</div>
 					 	</div>
 					 </div>
