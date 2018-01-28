@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Login Page</title>
+<title>Restaurant Delivery</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
@@ -30,7 +30,8 @@
 		    </div>
 		  </div>
 		  <div class="form-group">
-			 <div class="col-sm-offset-3 col-sm-9">
+			 <label class="col-sm-3 control-label"><a href="Registration.jsp">Register?</a></label>
+			 <div class="col-sm-9">
 			 	<button type="submit" class="btn btn-primary btn-block">Login</button>
 			 </div>
 		  </div>

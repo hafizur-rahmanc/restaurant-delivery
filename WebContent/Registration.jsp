@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Registration Page</title>
+<title>User Details</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
@@ -16,7 +16,7 @@
 		<div class="jumbotron">
 			<h2>Registration</h2>
 		</div>
-		<form action="UserServlet" method="post" class="form-horizontal">
+		<form action="RegisterServlet" method="post" class="form-horizontal">
 			<div class="form-group">
 		   		<label for="firstName" class="col-sm-3 control-label">First Name</label>
 		   		<div class="col-sm-9">
@@ -44,7 +44,7 @@
 			 <div class="form-group">
 			    <label for="RePassword" class="col-sm-3 control-label">Password</label>
 			    <div class="col-sm-9">
-			    	<input type="password" class="form-control" name="rePassword" id="RePassword" placeholder="Password" required>
+			    	<input type="password" class="form-control" name="repassword" id="RePassword" placeholder="Re-enter Password" required>
 			    </div>
 			 </div>
 			 <div class="form-group">
@@ -77,8 +77,8 @@
 			    </div>
 			 </div>
 			 <div class="form-group">
-			 	<div class="col-sm-offset-3 col-sm-9">
-			 		<button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+			 	<div class="col-offset-3 col-sm-9">
+			 		<button type="submit" class="btn btn-primary btn-block">Register</button>
 			 	</div>
 			 </div>
 		</form>
