@@ -20,14 +20,6 @@ import res.cs.model.User;
 @WebServlet("/UserServlet")
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-		
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -50,8 +42,9 @@ public class RegisterServlet extends HttpServlet {
 		Long phoneNumber = Long.parseLong(request.getParameter("phoneNumber"));
 		String email = request.getParameter("email");
 		int userId = 0;
-
-		//Create a new User object
+		
+		// Validate the user info
+		// Create a new User object
 		theUser = new User();
 		theUser.setFirstName(firstName);
 		theUser.setLastName(lastName);
@@ -62,7 +55,7 @@ public class RegisterServlet extends HttpServlet {
 		theUser.setPhoneNumber(phoneNumber);
 		theUser.setEmail(email);
 			
-		//Add the user to the database
+		// Add the user to the database
 		try {
 			userBO = new UserBO();
 			userId = userBO.createUser(theUser);
@@ -72,18 +65,13 @@ public class RegisterServlet extends HttpServlet {
 				// Assign the session attribute
 				session.setAttribute("currentUser", theUser);
 				session.setAttribute("userId", userId);
-				// Send to the menu item page
-				response.sendRedirect("MenuItemServlet");
-//				dispatcher = request.getRequestDispatcher("home.jsp");
-//				dispatcher.forward(request, response);
+				// Send to the login page
+				response.sendRedirect("Login.jsp");
 			
 			}else {
 				// Send back to the error page (registration page)
-				response.sendRedirect("registraion.jsp");
-				// doGet(request, response);
-				// send to JSP page (view)
-				//RequestDispatcher dispatcher = request.getRequestDispatcher("/index.html");
-				//dispatcher.forward(request, response);
+				response.sendRedirect("Registraion.jsp");
+
 			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
