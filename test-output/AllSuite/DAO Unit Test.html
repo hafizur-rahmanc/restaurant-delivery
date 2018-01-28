@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>DAO Unit Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>74/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>72/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jan 19 23:49:01 EST 2018</td>
+<td>Started on:</td><td>Sun Jan 28 01:09:37 EST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>6 seconds (6731 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7016 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,104 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='res.cs.dao.UserDAOTest.getUserTest()'><b>getUserTest</b><br>Test class: res.cs.dao.UserDAOTest<br>Parameters: hafizur123, true</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: &lt;true&gt;
+     but: was &lt;false&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at res.cs.dao.UserDAOTest.getUserTest(UserDAOTest.java:93)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1106681476", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1106681476'><pre>java.lang.AssertionError: 
+Expected: &lt;true&gt;
+     but: was &lt;false&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at res.cs.dao.UserDAOTest.getUserTest(UserDAOTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>res.cs.dao.UserDAOTest@31a5c39e</td></tr>
+<tr>
+<td title='res.cs.dao.UserDAOTest.getUserTest()'><b>getUserTest</b><br>Test class: res.cs.dao.UserDAOTest<br>Parameters: admin, false</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: &lt;false&gt;
+     but: was &lt;true&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at res.cs.dao.UserDAOTest.getUserTest(UserDAOTest.java:93)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1042306518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1042306518'><pre>java.lang.AssertionError: 
+Expected: &lt;false&gt;
+     but: was &lt;true&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at res.cs.dao.UserDAOTest.getUserTest(UserDAOTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>res.cs.dao.UserDAOTest@31a5c39e</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -137,7 +235,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='res.cs.dao.UserDAOTest.createUserTest()'><b>createUserTest</b><br>Test class: res.cs.dao.UserDAOTest<br>Parameters: Md, Rahman, hafizrahman, hafiz_Rahman, M, 6107 Wooside Ave, 3475278509, hafiz@restaurant.org, true</td>
 <td></td>
-<td>1</td>
+<td>0</td>
 <td>res.cs.dao.UserDAOTest@31a5c39e</td></tr>
 <tr>
 <td title='res.cs.dao.UserDAOTest.createUserTest()'><b>createUserTest</b><br>Test class: res.cs.dao.UserDAOTest<br>Parameters: Abdu, Rahman, hafizur12345, hafizur567, M, 6117 Wooside Ave, 6465278509, rahman@restaurant.org, true</td>
@@ -325,27 +423,12 @@ function toggleAllBoxes() {
 <td>0</td>
 <td>res.cs.dao.ReviewDAOTest@1e397ed7</td></tr>
 <tr>
-<td title='res.cs.dao.ReviewDAOTest.getReviewsByUserTest()'><b>getReviewsByUserTest</b><br>Test class: res.cs.dao.ReviewDAOTest<br>Parameters: 2, Really Tasty., true</td>
+<td title='res.cs.dao.ReviewDAOTest.getReviewsByUserTest()'><b>getReviewsByUserTest</b><br>Test class: res.cs.dao.ReviewDAOTest<br>Parameters: 2, Really Tasty., false</td>
 <td></td>
 <td>0</td>
 <td>res.cs.dao.ReviewDAOTest@1e397ed7</td></tr>
 <tr>
 <td title='res.cs.dao.ReviewDAOTest.getReviewsByUserTest()'><b>getReviewsByUserTest</b><br>Test class: res.cs.dao.ReviewDAOTest<br>Parameters: 92, Really Tasty, false</td>
-<td></td>
-<td>0</td>
-<td>res.cs.dao.ReviewDAOTest@1e397ed7</td></tr>
-<tr>
-<td title='res.cs.dao.ReviewDAOTest.getStoreTest()'><b>getStoreTest</b><br>Test class: res.cs.dao.ReviewDAOTest<br>Parameters: 1, What a great food it was, true</td>
-<td></td>
-<td>0</td>
-<td>res.cs.dao.ReviewDAOTest@1e397ed7</td></tr>
-<tr>
-<td title='res.cs.dao.ReviewDAOTest.getStoreTest()'><b>getStoreTest</b><br>Test class: res.cs.dao.ReviewDAOTest<br>Parameters: 1, Really Tasty., true</td>
-<td></td>
-<td>0</td>
-<td>res.cs.dao.ReviewDAOTest@1e397ed7</td></tr>
-<tr>
-<td title='res.cs.dao.ReviewDAOTest.getStoreTest()'><b>getStoreTest</b><br>Test class: res.cs.dao.ReviewDAOTest<br>Parameters: 1, Awesome, definitely you will enjoy it, false</td>
 <td></td>
 <td>0</td>
 <td>res.cs.dao.ReviewDAOTest@1e397ed7</td></tr>
@@ -365,20 +448,25 @@ function toggleAllBoxes() {
 <td>0</td>
 <td>res.cs.dao.StoreDAOTest@490ab905</td></tr>
 <tr>
-<td title='res.cs.dao.UserDAOTest.getUserTest()'><b>getUserTest</b><br>Test class: res.cs.dao.UserDAOTest<br>Parameters: hafizur12, rahman@restaurant.org</td>
+<td title='res.cs.dao.UserDAOTest.getUserTest()'><b>getUserTest</b><br>Test class: res.cs.dao.UserDAOTest<br>Parameters: user, true</td>
 <td></td>
 <td>0</td>
 <td>res.cs.dao.UserDAOTest@31a5c39e</td></tr>
 <tr>
-<td title='res.cs.dao.UserDAOTest.getUserTest()'><b>getUserTest</b><br>Test class: res.cs.dao.UserDAOTest<br>Parameters: admin, admin@retaurant.org</td>
+<td title='res.cs.dao.ReviewDAOTest.itemReviewTest()'><b>itemReviewTest</b><br>Test class: res.cs.dao.ReviewDAOTest<br>Parameters: 1, What a great food it was, true</td>
 <td></td>
 <td>0</td>
-<td>res.cs.dao.UserDAOTest@31a5c39e</td></tr>
+<td>res.cs.dao.ReviewDAOTest@1e397ed7</td></tr>
 <tr>
-<td title='res.cs.dao.UserDAOTest.getUserTest()'><b>getUserTest</b><br>Test class: res.cs.dao.UserDAOTest<br>Parameters: user, user@restaurant.org</td>
+<td title='res.cs.dao.ReviewDAOTest.itemReviewTest()'><b>itemReviewTest</b><br>Test class: res.cs.dao.ReviewDAOTest<br>Parameters: 1, Really Tasty., false</td>
 <td></td>
 <td>0</td>
-<td>res.cs.dao.UserDAOTest@31a5c39e</td></tr>
+<td>res.cs.dao.ReviewDAOTest@1e397ed7</td></tr>
+<tr>
+<td title='res.cs.dao.ReviewDAOTest.itemReviewTest()'><b>itemReviewTest</b><br>Test class: res.cs.dao.ReviewDAOTest<br>Parameters: 1, Awesome, definitely you will enjoy it, false</td>
+<td></td>
+<td>0</td>
+<td>res.cs.dao.ReviewDAOTest@1e397ed7</td></tr>
 <tr>
 <td title='res.cs.dao.UserDAOTest.loginUserTest()'><b>loginUserTest</b><br>Test class: res.cs.dao.UserDAOTest<br>Parameters: user, user, user@restaurant.org</td>
 <td></td>

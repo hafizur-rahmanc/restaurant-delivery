@@ -77,20 +77,20 @@ public class UserDAOTest {
 		assertThat(actual, equalTo(expected));
 	}
 	
-	@DataProvider(name="getUser")
+	@DataProvider(name="getUserTest")
 	public Object[][] sampleData(){
 		Object[][] data = {
-				{"hafizur12", "rahman@restaurant.org"},
-				{"admin", "admin@retaurant.org"},
-				{"user", "user@restaurant.org"}
+				{"hafizur123", true},
+				{"admin", false},
+				{"user", false}
 		};
 		return data;	
 	}
 	
-	@Test(dataProvider="getUser")
-	public void getUserTest(String userName, String expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
-		User actual = userDAO.getUser(userName);
-		assertThat(actual.getEmail(), equalTo(expected));
+	@Test(dataProvider="getUserTest")
+	public void isUserNameAvailable(String userName, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+		boolean actual = userDAO.isUserNameAvailable(userName);
+		assertThat(actual, equalTo(expected));
 		
 	}
 	
@@ -129,9 +129,9 @@ public class UserDAOTest {
 	}
 	
 	@Test(dataProvider="updateUser")
-	public void updateUserTest(int userId, String firstName, String lastName, String userName, String password, String gender, String address, Long phoneNumber, String email, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	public void updateUserTest(int userID, String firstName, String lastName, String userName, String password, String gender, String address, Long phoneNumber, String email, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		// preserve the original user
-		theUser = userDAO.getUser(userName);
+		theUser = userDAO.getUserById(userID);
 		// create a new user
 		User newUser = new User();
 		newUser.setFirstName(firstName);
@@ -142,9 +142,10 @@ public class UserDAOTest {
 		newUser.setAddress(address);
 		newUser.setPhoneNumber(phoneNumber);
 		newUser.setEmail(email);
-		newUser.setUserId(userId);
+		newUser.setUserId(userID);
 		
 		int actual = userDAO.updateUser(newUser);
+		System.out.println(actual);
 		isUpdated = (actual != 0);
 		assertThat(actual, equalTo(expected));
 		

@@ -37,6 +37,7 @@ public class RegisterServlet extends HttpServlet {
 		String lastName = request.getParameter("lastName");
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
+		String repassword = request.getParameter("repassword");
 		String gender = request.getParameter("gender");
 		String address = request.getParameter("address");
 		Long phoneNumber = Long.parseLong(request.getParameter("phoneNumber"));
@@ -44,6 +45,7 @@ public class RegisterServlet extends HttpServlet {
 		int userId = 0;
 		
 		// Validate the user info
+		// Validate the password and repassword
 		// Create a new User object
 		theUser = new User();
 		theUser.setFirstName(firstName);

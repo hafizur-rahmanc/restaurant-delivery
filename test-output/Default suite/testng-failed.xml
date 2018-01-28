@@ -6,8 +6,8 @@
       <class name="res.cs.dao.UserDAOTest">
         <methods>
           <include name="initialize"/>
+          <include name="isUserNameAvailable" invocation-numbers="2"/>
           <include name="finalize"/>
-          <include name="loginUserTest" invocation-numbers="2"/>
         </methods>
       </class> <!-- res.cs.dao.UserDAOTest -->
     </classes>

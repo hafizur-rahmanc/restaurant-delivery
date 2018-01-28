@@ -31,14 +31,14 @@ public class UserBO {
 	}
 	
 	//Get the user object by the user name using the UserDAO
-	public User getUser(String userName) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
-		User theUser = null;
+	public boolean isUserNameAvailable(String userName) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
+		boolean result = false;
 		try {
-			theUser = userDAO.getUser(userName);
+			result = userDAO.isUserNameAvailable(userName);
 		}catch(RegistrationException e) {
 			throw new RegistrationException(e.getMessage());
 		}
-		return theUser;
+		return result;
 	}
 	
 	//Get the user object by user_id

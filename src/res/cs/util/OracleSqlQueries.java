@@ -1,7 +1,7 @@
 package res.cs.util;
 
 public class OracleSqlQueries {
-	public static final String GET_USER = "SELECT * FROM users WHERE user_name = ?";
+	public static final String CHECK_USER_NAME = "SELECT user_name FROM users WHERE user_name = ?";
 	public static final String USER_LOGIN = "SELECT * FROM users WHERE user_name = ? AND password = ?";
 	public static final String GET_USER_BY_ID = "SELECT * FROM users WHERE user_id = ?";
 	public static final String CREATE_USER = "INSERT INTO users (first_name, last_name, user_name, password, gender, address, phone_number, email) values(?, ?, ?, ?, ?, ?, ?, ?)";

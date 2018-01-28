@@ -13,7 +13,7 @@ import res.cs.model.User;
 import res.cs.util.OracleSqlQueries;
 
 public class UserDAO {
-	//Create new user and save it to the database
+	// Create new user and save it to the database
 	public int createUser(User user) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		int userId = 0;
 		Connection conn = null;
@@ -26,9 +26,9 @@ public class UserDAO {
 		try {
 			conn = oracle.getConnection();
 			System.out.println("Connection Established!");
-			//What's the purpose of idColumn?
+			// Grab the auto generated idColumn
 			stmt = conn.prepareStatement(OracleSqlQueries.CREATE_USER, idColumn);
-			//Fill out the ? in the SQL query string
+			// Fill out the ? in the SQL query string
 			stmt.setString(1, user.getFirstName());
 			stmt.setString(2, user.getLastName());
 			stmt.setString(3, user.getUserName());
@@ -38,10 +38,10 @@ public class UserDAO {
 			stmt.setLong(7, user.getPhoneNumber());
 			stmt.setString(8, user.getEmail());
 			
-			//For new user registration
+			// For new user registration
 			userId = stmt.executeUpdate();
 			
-			//Retrieve any auto generated keys created as a result of executing this statement object
+			// Retrieve any auto generated keys created as a result of executing this statement object
 			resultSet = stmt.getGeneratedKeys();
 			if(resultSet.next()) {
 				userId = resultSet.getInt(1);
@@ -56,7 +56,7 @@ public class UserDAO {
 		return userId;
 	}
 
-	//Close resultSet, stmt and conn if they are open
+	// Close resultSet, stmt and conn if they are open
 	private void close(ResultSet resultSet, PreparedStatement stmt, Connection conn) throws SQLException {
 		if(resultSet != null) {
 			resultSet.close();
@@ -69,43 +69,30 @@ public class UserDAO {
 		}
 	}
 
-	//Get the user object by user_name
-	public User getUser(String userName) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
+	// Check the userName is available or used already  
+	public boolean isUserNameAvailable(String userName) throws RegistrationException, SQLException, ClassNotFoundException, IOException{
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet resultSet = null;
-		User user = null;
 		OracleConnection oracle = new OracleConnection();
 		try {
 			conn = oracle.getConnection();
-			System.out.println("Connection Established!");
-			stmt = conn.prepareStatement(OracleSqlQueries.GET_USER);
-			//Assign the userName to the sql query prepared statement
+			stmt = conn.prepareStatement(OracleSqlQueries.CHECK_USER_NAME);
+			// Assign the userName to the sql query prepared statement
 			stmt.setString(1, userName);
-			//Execute the prepared statement query and store it to resultSet
+			// Execute the prepared statement query and store it to resultSet
 			resultSet = stmt.executeQuery();
 			
 			if(resultSet.next()) {
-				user = new User();
-				user.setUserId(resultSet.getInt(1));
-				user.setFirstName(resultSet.getString(2));
-				user.setLastName(resultSet.getString(3));
-				user.setUserName(resultSet.getString(4));
-				user.setPassword(resultSet.getString(5));
-				user.setGender(resultSet.getString(6));
-				user.setAddress(resultSet.getString(7));
-				user.setPhoneNumber(resultSet.getLong(8));
-				user.setEmail(resultSet.getString(9));
-				user.setAdminRole(resultSet.getInt(10));
-			}
-			
+				return false;
+			}			
 			
 		}catch(SQLException e){
 			throw new RegistrationException(e.getMessage());
 		}finally {
 			close(resultSet, stmt, conn);
 		}
-		return user;
+		return true;
 	}
 	
 	//Get the user object by user_id
@@ -277,9 +264,6 @@ public class UserDAO {
 	}
 	public static void main(String[] args) throws ClassNotFoundException, RegistrationException, SQLException, IOException {
 		UserDAO DAO = new UserDAO();
-		User user = DAO.getUser("user");
-		System.out.println(user.getFirstName() + "|" + user.getLastName() + "|" + user.getGender() + "|" + user.getUserName() + "|" + user.getPassword() + "|" + user.getEmail());
-		
 		User theUser = DAO.loginUser("user", "user1");
 		System.out.println(theUser);
 		

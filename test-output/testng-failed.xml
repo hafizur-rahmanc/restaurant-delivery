@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [AllSuite]">
-  <test name="DAO Unit Test(failed)">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="res.cs.dao.ItemDAOTest">
+      <class name="res.cs.dao.UserDAOTest">
         <methods>
-          <include name="getItemTest" invocation-numbers="0 1 2"/>
-          <include name="getAllItemsTest" invocation-numbers="0 1 2"/>
-          <include name="finalize"/>
           <include name="initialize"/>
+          <include name="isUserNameAvailable" invocation-numbers="2"/>
+          <include name="finalize"/>
         </methods>
-      </class> <!-- res.cs.dao.ItemDAOTest -->
+      </class> <!-- res.cs.dao.UserDAOTest -->
     </classes>
-  </test> <!-- DAO Unit Test(failed) -->
-</suite> <!-- Failed suite [AllSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
