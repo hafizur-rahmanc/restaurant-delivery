@@ -1,4 +1,4 @@
-package res.cs.dao;
+package res.cs.testng;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -9,6 +9,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 import static org.junit.Assert.assertThat;
 
+import res.cs.dao.UserDAO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.User;
 
@@ -77,7 +78,7 @@ public class UserDAOTest {
 		assertThat(actual, equalTo(expected));
 	}
 	
-	@DataProvider(name="getUserTest")
+	@DataProvider(name="getUserNameTest")
 	public Object[][] sampleData(){
 		Object[][] data = {
 				{"hafizur123", true},
@@ -87,7 +88,7 @@ public class UserDAOTest {
 		return data;	
 	}
 	
-	@Test(dataProvider="getUserTest")
+	@Test(dataProvider="getUserNameTest")
 	public void isUserNameAvailable(String userName, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		boolean actual = userDAO.isUserNameAvailable(userName);
 		assertThat(actual, equalTo(expected));

@@ -1,65 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="5" total="8" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="641" started-at="2018-01-28T06:12:59Z" finished-at="2018-01-28T06:12:59Z">
+  <suite name="Default suite" duration-ms="25894" started-at="2018-01-29T02:55:47Z" finished-at="2018-01-29T02:56:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="641" started-at="2018-01-28T06:12:59Z" finished-at="2018-01-28T06:12:59Z">
-      <class name="res.cs.dao.UserDAOTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="4" started-at="2018-01-28T01:12:59Z" finished-at="2018-01-28T01:12:59Z">
+    <test name="Default test" duration-ms="25894" started-at="2018-01-29T02:55:47Z" finished-at="2018-01-29T02:56:13Z">
+      <class name="res.cs.selenium.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="setUp" is-config="true" duration-ms="9" started-at="2018-01-28T21:55:47Z" finished-at="2018-01-28T21:55:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="initialize" is-config="true" duration-ms="5549" started-at="2018-01-28T21:55:47Z" finished-at="2018-01-28T21:55:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="isUserNameAvailable(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@5bcab519]" name="isUserNameAvailable" duration-ms="555" started-at="2018-01-28T01:12:59Z" data-provider="getUserTest" finished-at="2018-01-28T01:12:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[hafizur123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isUserNameAvailable -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-28T01:12:59Z" finished-at="2018-01-28T01:12:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-28T01:12:59Z" finished-at="2018-01-28T01:12:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="isUserNameAvailable(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@5bcab519]" name="isUserNameAvailable" duration-ms="29" started-at="2018-01-28T01:12:59Z" data-provider="getUserTest" finished-at="2018-01-28T01:12:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isUserNameAvailable -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-28T01:12:59Z" finished-at="2018-01-28T01:12:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.dao.UserDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="0" started-at="2018-01-28T01:12:59Z" finished-at="2018-01-28T01:12:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="isUserNameAvailable(java.lang.String, boolean)[pri:0, instance:res.cs.dao.UserDAOTest@5bcab519]" name="isUserNameAvailable" duration-ms="28" started-at="2018-01-28T01:12:59Z" data-provider="getUserTest" finished-at="2018-01-28T01:12:59Z">
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, boolean)[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="loginTest" duration-ms="1372" started-at="2018-01-28T21:55:52Z" data-provider="loginData" finished-at="2018-01-28T21:55:54Z">
           <params>
             <param index="0">
               <value>
@@ -68,18 +24,81 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[false]]>
+                <![CDATA[user]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- isUserNameAvailable -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.dao.UserDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="0" started-at="2018-01-28T01:12:59Z" finished-at="2018-01-28T01:12:59Z">
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="finalize" is-config="true" duration-ms="1759" started-at="2018-01-28T21:55:54Z" finished-at="2018-01-28T21:55:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-      </class> <!-- res.cs.dao.UserDAOTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="initialize" is-config="true" duration-ms="5412" started-at="2018-01-28T21:55:55Z" finished-at="2018-01-28T21:56:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, boolean)[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="loginTest" duration-ms="1459" started-at="2018-01-28T21:56:01Z" data-provider="loginData" finished-at="2018-01-28T21:56:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hafiz_ny]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="finalize" is-config="true" duration-ms="1867" started-at="2018-01-28T21:56:02Z" finished-at="2018-01-28T21:56:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="initialize" is-config="true" duration-ms="5334" started-at="2018-01-28T21:56:04Z" finished-at="2018-01-28T21:56:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, boolean)[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="loginTest" duration-ms="1328" started-at="2018-01-28T21:56:09Z" data-provider="loginData" finished-at="2018-01-28T21:56:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ruhul]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dipu]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="finalize" is-config="true" duration-ms="1782" started-at="2018-01-28T21:56:11Z" finished-at="2018-01-28T21:56:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+      </class> <!-- res.cs.selenium.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

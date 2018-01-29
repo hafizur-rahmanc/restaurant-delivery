@@ -30,9 +30,9 @@
 		    </div>
 		  </div>
 		  <div class="form-group">
-			 <label class="col-sm-3 control-label"><a href="Registration.jsp">Register?</a></label>
-			 <div class="col-sm-9">
-			 	<button type="submit" class="btn btn-primary btn-block">Login</button>
+			 <div class="col-sm-offset-3 col-sm-9">
+			 	<button type="submit" class="btn btn-primary btn-block"  name="login" id="login">Login</button>
+			 	<button type="submit" class="btn btn-success btn-block"  name="register" id="register" formnovalidate>Register?</button>
 			 </div>
 		  </div>
 		</form>

@@ -1,4 +1,4 @@
-package res.cs.dao;
+package res.cs.testng;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import res.cs.dao.PaymentDAO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.Payment;
 

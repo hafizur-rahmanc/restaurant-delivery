@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="res.cs.dao.UserDAOTest">
+      <class name="res.cs.selenium.LoginPageTest">
         <methods>
           <include name="initialize"/>
-          <include name="isUserNameAvailable" invocation-numbers="2"/>
-          <include name="finalize"/>
+          <include name="loginTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- res.cs.dao.UserDAOTest -->
+      </class> <!-- res.cs.selenium.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

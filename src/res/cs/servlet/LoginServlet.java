@@ -43,46 +43,51 @@ public class LoginServlet extends HttpServlet {
 		// Get the parameter from the form data
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
-		
-		// Authenticate the login Process
-		try {
-			theUser = userBO.loginUser(userName, password);
-			if(theUser != null) {
-				// Check whether the user is an admin or regular user and redirect to the page accordingly
-				// Assign the user as session attribute
-				session.setAttribute("currentUser", theUser);
-				session.setAttribute("userId", theUser.getUserId());
-				System.out.println("Login Authenticated");
-				
-				// If the user is an admin redirect to the admin controller's AdminAccountInfo request
-				if(userBO.isAdmin(theUser)) {
-					System.out.println("User is Admin");
-					// Assign isAdmin to true to the session object
-					session.setAttribute("isAdmin", true);
-					// Send back to the admin home page
-					response.sendRedirect("admin/");
+		if(request.getParameter("login") != null) {
+			// Authenticate the login Process
+			try {
+				theUser = userBO.loginUser(userName, password);
+				if(theUser != null) {
+					// Check whether the user is an admin or regular user and redirect to the page accordingly
+					// Assign the user as session attribute
+					session.setAttribute("currentUser", theUser);
+					session.setAttribute("userId", theUser.getUserId());
+					System.out.println("Login Authenticated");
+					
+					// If the user is an admin redirect to the admin controller's AdminAccountInfo request
+					if(userBO.isAdmin(theUser)) {
+						System.out.println("User is Admin");
+						// Assign isAdmin to true to the session object
+						session.setAttribute("isAdmin", true);
+						// Send back to the admin home page
+						response.sendRedirect("admin/");
+					} else {
+						// Send to the menu item page
+						response.sendRedirect("MenuItemServlet");
+					}
+	
 				} else {
-					// Send to the menu item page
-					response.sendRedirect("MenuItemServlet");
+					// Navigate to the login page
+					response.sendRedirect("login.jsp");
 				}
-
-			} else {
-				// Navigate to the login page
-				response.sendRedirect("login.jsp");
+	
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (RegistrationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (RegistrationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		}else {
+			// Send to the login page with error message
 		}
-
-		//doGet(request, response);
+		if(request.getParameter("register") != null) {
+			// Send to the registration page
+			response.sendRedirect("Registration.jsp");
+		}
 	}
 
 }

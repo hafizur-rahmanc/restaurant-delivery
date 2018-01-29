@@ -3,13 +3,12 @@
 <suite name="AllSuite" verbose="1" >
   <test name="DAO Unit Test" >
     <classes>
-       <class name="res.cs.dao.UserDAOTest" />
-       <class name="res.cs.dao.ItemDAOTest" />
-       <class name="res.cs.dao.ReviewDAOTest" />
-       <class name="res.cs.dao.StoreDAOTest" />
-       <class name="res.cs.dao.PaymentDAOTest" />
-       <class name="res.cs.dao.OrderDAOTest" />
-       
+       <class name="res.cs.testng.UserDAOTest" />
+       <class name="res.cs.testng.ItemDAOTest" />
+       <class name="res.cs.testng.ReviewDAOTest" />
+       <class name="res.cs.testng.StoreDAOTest" />
+       <class name="res.cs.testng.PaymentDAOTest" />
+       <class name="res.cs.testng.OrderDAOTest" /> 
     </classes>
   </test>
 </suite>

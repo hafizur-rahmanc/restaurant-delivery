@@ -77,8 +77,9 @@
 			    </div>
 			 </div>
 			 <div class="form-group">
-			 	<div class="col-offset-3 col-sm-9">
-			 		<button type="submit" class="btn btn-primary btn-block">Register</button>
+			 	<div class="col-sm-offset-3 col-sm-9">
+			 		<button type="submit" class="btn btn-primary btn-block" id="register" name="register">Register</button>
+			 		<button type="submit" class="btn btn-success btn-block"  name="login" id="login" formnovalidate>Login?</button>
 			 	</div>
 			 </div>
 		</form>
