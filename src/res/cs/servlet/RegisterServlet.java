@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import res.cs.bo.UserBO;
 import res.cs.exception.RegistrationException;
@@ -25,8 +24,6 @@ public class RegisterServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// Get the session object from the request
-		HttpSession session = request.getSession();
 		// Declare an userBO variable
 		UserBO userBO;
 		// Declare an user model variable
@@ -48,7 +45,7 @@ public class RegisterServlet extends HttpServlet {
 			String address = request.getParameter("address");
 			Long phoneNumber = Long.parseLong(request.getParameter("phoneNumber"));
 			String email = request.getParameter("email");
-			int userId = 0;
+			String message="";
 			
 			// Validate the user info
 			// Validate the password and repassword
@@ -67,20 +64,14 @@ public class RegisterServlet extends HttpServlet {
 				// Add the user to the database
 				try {
 					userBO = new UserBO();
-					userId = userBO.createUser(theUser);
-					System.out.println("Newly created userId is: " + userId);
-					if(userId != 0) {
-						theUser.setUserId(userId);
-						// Assign the session attribute
-						session.setAttribute("currentUser", theUser);
-						session.setAttribute("userId", userId);
+					// Check user name is available or not 
+					if(userBO.isUserNameAvailable(userName)) {
+						// Create the user
+						userBO.createUser(theUser);
 						// Send to the login page
 						response.sendRedirect("Login.jsp");
-					
 					}else {
-						// Send back to the error page (registration page)
-						response.sendRedirect("Registraion.jsp");
-		
+						message = "User name is already exists!";
 					}
 				} catch (ClassNotFoundException e) {
 					e.printStackTrace();
@@ -88,9 +79,14 @@ public class RegisterServlet extends HttpServlet {
 					e.printStackTrace();
 				} catch (SQLException e) {
 					e.printStackTrace();
+					response.sendRedirect("Error.jsp");
 				}
-		
+			  } else {
+				  message = "Password does not match!";
 			  }
+			// Send back to the Registration page with appropriate alert message
+			request.setAttribute("message", message);
+			request.getRequestDispatcher("Registration.jsp").forward(request, response);
 			}
 		}
 	}
