@@ -5,8 +5,9 @@
     <classes>
       <class name="res.cs.selenium.LoginPageTest">
         <methods>
+          <include name="registerPageFromLogin"/>
           <include name="initialize"/>
-          <include name="loginTest"/>
+          <include name="finalize"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- res.cs.selenium.LoginPageTest -->

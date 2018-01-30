@@ -27,7 +27,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.sendRedirect("Login.jsp");
 	}
 
 	/**
@@ -41,49 +41,62 @@ public class LoginServlet extends HttpServlet {
 		// Get the session from the request object
 		HttpSession session = request.getSession();
 		InputValidator v = new InputValidator();
-		
-		// Get the parameter from the form data
-		String userName = request.getParameter("userName");
-		String password = request.getParameter("password");
+		String message = "";
+
 		if(request.getParameter("login") != null) {
-			// Authenticate the login Process
-			try {
-				theUser = userBO.loginUser(userName, password);
-				if(theUser != null) {
-					// Check whether the user is an admin or regular user and redirect to the page accordingly
-					// Assign the user as a session attribute
-					session.setAttribute("currentUser", theUser);
-					session.setAttribute("userId", theUser.getUserId());
-					
-					// If the user is an admin redirect to the admin controller's AdminAccountInfo request
-					if(userBO.isAdmin(theUser)) {
-						System.out.println("User is Admin");
-						// Assign isAdmin to true to the session object
-						session.setAttribute("isAdmin", true);
-						// Send back to the admin home page
-						response.sendRedirect("admin/");
+			// Get the parameter from the form data
+			String userName = request.getParameter("userName");
+			String password = request.getParameter("password");
+			if(v.isValidLogin(userName, password)) {
+				// Authenticate the login Process
+				try {
+					theUser = userBO.loginUser(userName, password);
+					if(theUser != null) {
+						// Check whether the user is an admin or regular user and redirect to the page accordingly
+						// Assign the user as a session attribute
+						session.setAttribute("currentUser", theUser);
+						session.setAttribute("userId", theUser.getUserId());
+						
+						// If the user is an admin redirect to the admin controller's AdminAccountInfo request
+						if(userBO.isAdmin(theUser)) {
+							System.out.println("User is Admin");
+							// Assign isAdmin to true to the session object
+							session.setAttribute("isAdmin", true);
+							// Send back to the admin home page
+							response.sendRedirect("admin/");
+						} else {
+							// Send to the menu item page
+							response.sendRedirect("MenuItemServlet");
+						}
+		
 					} else {
-						// Send to the menu item page
-						response.sendRedirect("MenuItemServlet");
+						// Navigate to the login page with error message
+						message = "Invalid username or password!";
+						// Assign the message as a request attribute
+						request.setAttribute("message", message);
+						// Send forward to the login page with status message
+						request.getRequestDispatcher("Login.jsp").forward(request, response);
 					}
-	
-				} else {
-					// Navigate to the login page
-					response.sendRedirect("login.jsp");
+		
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (RegistrationException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
-	
-			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (RegistrationException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			} else {
+				// Wrong userName or password format 
+				message = "Invalid username or password format!";
+				// Assign the message as a request attribute
+				request.setAttribute("message", message);
+				// Send forward to the login page with status message
+				request.getRequestDispatcher("Login.jsp").forward(request, response);
 			}
-		}else {
-			// Send to the login page with error message
+
 		}
 		if(request.getParameter("register") != null) {
 			// Send to the registration page

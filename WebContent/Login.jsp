@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +17,13 @@
 		<div class="jumbotron">
 			<h2>Login</h2>
 		</div>
+		<!-- Show the appropriate alert messgae -->
+		<c:if test="${message != null}">
+			<div class="alert alert-info alert-dismissible" role="alert">
+	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  			<p class="text-center"><strong id="message">${message}</strong></p>
+			</div>
+		</c:if>
 		<form action="LoginServlet" method="post" class="form-horizontal">
 		  <div class="form-group">
 		   	<label for="userName" class="col-sm-3 control-label">User Name</label>
@@ -26,7 +34,7 @@
 		  <div class="form-group">
 		    <label for="Password" class="col-sm-3 control-label">Password</label>
 		    <div class="col-sm-9">
-		    	<input type="password" class="form-control" name="password" id="Password" placeholder="Password">
+		    	<input type="password" class="form-control" name="password" id="Password" placeholder="Password" required>
 		    </div>
 		  </div>
 		  <div class="form-group">

@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class InputValidator {
 	public boolean isValidInput(String input) {
-		String regex = "[a-zA-Z0-9]{1,20}";
+		String regex = "[a-zA-Z0-9_]{1,20}";
 		return Pattern.matches(regex, input);
 	}
 	

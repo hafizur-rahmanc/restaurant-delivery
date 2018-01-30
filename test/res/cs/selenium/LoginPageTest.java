@@ -54,11 +54,12 @@ public class LoginPageTest {
 		Object[][] data = {
 				{"user", "user", true},
 				{"hafiz_ny","password123", true},
-				{"ruhul","dipu", true}
+				{"ruhul","dipu12", false}
 		};
 		return data;	
 	}
 	
+	// Login as regular user
 	@Test(dataProvider="loginData")
 	public void loginTest(String userName, String password, boolean expected) throws InterruptedException {
 		userNameEl.sendKeys(userName);
@@ -68,8 +69,54 @@ public class LoginPageTest {
 		if(expected) {
 			loggedIn = true;
 			assertThat(driver.getCurrentUrl(), equalTo(StringUrlPath.MenuItemPage));
+		} else {
+			String message = driver.findElement(By.id("message")).getText();
+			assertThat(message, equalTo("Invalid username or password!"));
 		}
 	}
+	
+	
+	// Invalid username and password format
+	@Test
+	public void invalidFormat() throws InterruptedException {
+		userNameEl.sendKeys("xxxxxxxxxxxxxxxxx11111111111111");
+		passwordEl.sendKeys("password");
+		loginBtn.click();
+		String message = driver.findElement(By.id("message")).getText();
+		assertThat(message, equalTo("Invalid username or password format!"));
+	}
+	@DataProvider
+	public Object[][] adminLoginData(){
+		Object[][] data = {
+				{"admin", "admin", true},
+				{"admin","admin1", false}
+		};
+		return data;	
+	}
+	
+	// Login as Admin
+	@Test(dataProvider="adminLoginData")
+	public void loginAsAdmin(String userName, String password, boolean expected) throws InterruptedException {
+		userNameEl.sendKeys(userName);
+		passwordEl.sendKeys(password);
+		loginBtn.click();
+		if(expected) {
+			loggedIn = true;
+			assertThat(driver.getCurrentUrl(), equalTo(StringUrlPath.htmlAdminRoot));
+		} else {
+			String message = driver.findElement(By.id("message")).getText();
+			assertThat(message, equalTo("Invalid username or password!"));
+		}
+	}
+	
+	// Click Register button to go to the register page
+	@Test
+	public void registerPageFromLogin() {
+		registerLink = driver.findElement(By.id("register"));
+		registerLink.click();
+		assertThat(driver.getCurrentUrl(), equalTo(StringUrlPath.RegistrationPage));
+	}
+	
 	
 	@AfterMethod
 	public void finalize() throws InterruptedException {

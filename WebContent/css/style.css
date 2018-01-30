@@ -211,6 +211,9 @@ form#command{
 	text-align: left;
 	float: right;
 }
+p#message{
+	color: red;
+}
 #hidden{
 	background-color: transparent !important;
 }
