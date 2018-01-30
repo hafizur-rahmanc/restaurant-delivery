@@ -172,12 +172,14 @@ public class AdminController {
 		// Check the validation for the new user information
 		
 		// Render the view with updated user information
-		model = new ModelAndView("AdminGetUser", "command", user);
+		model = adminGetUser(user.getUserId());
 		// when password and re-password matches
 		if (password.equals(repassword)) {
 			int result = userBO.updateUser(user);
 			// User updated successfully
 			if(result != 0) {
+				// Render the view with updated user information
+				model = adminGetUser(user.getUserId());
 				// Display the form with the user data
 				model.addObject("message", "User Updated Successfully!");
 			}

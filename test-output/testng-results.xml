@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25894" started-at="2018-01-29T02:55:47Z" finished-at="2018-01-29T02:56:13Z">
+  <suite name="Default suite" duration-ms="26197" started-at="2018-01-29T18:22:34Z" finished-at="2018-01-29T18:23:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25894" started-at="2018-01-29T02:55:47Z" finished-at="2018-01-29T02:56:13Z">
+    <test name="Default test" duration-ms="26197" started-at="2018-01-29T18:22:34Z" finished-at="2018-01-29T18:23:00Z">
       <class name="res.cs.selenium.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="setUp" is-config="true" duration-ms="9" started-at="2018-01-28T21:55:47Z" finished-at="2018-01-28T21:55:47Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="setUp" is-config="true" duration-ms="16" started-at="2018-01-29T13:22:34Z" finished-at="2018-01-29T13:22:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="initialize" is-config="true" duration-ms="5549" started-at="2018-01-28T21:55:47Z" finished-at="2018-01-28T21:55:52Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="initialize" is-config="true" duration-ms="6180" started-at="2018-01-29T13:22:34Z" finished-at="2018-01-29T13:22:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, boolean)[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="loginTest" duration-ms="1372" started-at="2018-01-28T21:55:52Z" data-provider="loginData" finished-at="2018-01-28T21:55:54Z">
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, boolean)[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="loginTest" duration-ms="1511" started-at="2018-01-29T13:22:40Z" data-provider="loginData" finished-at="2018-01-29T13:22:41Z">
           <params>
             <param index="0">
               <value>
@@ -36,15 +36,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="finalize" is-config="true" duration-ms="1759" started-at="2018-01-28T21:55:54Z" finished-at="2018-01-28T21:55:55Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="finalize" is-config="true" duration-ms="1817" started-at="2018-01-29T13:22:41Z" finished-at="2018-01-29T13:22:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="initialize" is-config="true" duration-ms="5412" started-at="2018-01-28T21:55:55Z" finished-at="2018-01-28T21:56:01Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="initialize" is-config="true" duration-ms="5533" started-at="2018-01-29T13:22:43Z" finished-at="2018-01-29T13:22:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, boolean)[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="loginTest" duration-ms="1459" started-at="2018-01-28T21:56:01Z" data-provider="loginData" finished-at="2018-01-28T21:56:02Z">
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, boolean)[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="loginTest" duration-ms="1368" started-at="2018-01-29T13:22:49Z" data-provider="loginData" finished-at="2018-01-29T13:22:50Z">
           <params>
             <param index="0">
               <value>
@@ -65,15 +65,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="finalize" is-config="true" duration-ms="1867" started-at="2018-01-28T21:56:02Z" finished-at="2018-01-28T21:56:04Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="finalize" is-config="true" duration-ms="1814" started-at="2018-01-29T13:22:50Z" finished-at="2018-01-29T13:22:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="initialize" is-config="true" duration-ms="5334" started-at="2018-01-28T21:56:04Z" finished-at="2018-01-28T21:56:09Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="initialize" is-config="true" duration-ms="4832" started-at="2018-01-29T13:22:52Z" finished-at="2018-01-29T13:22:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, boolean)[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="loginTest" duration-ms="1328" started-at="2018-01-28T21:56:09Z" data-provider="loginData" finished-at="2018-01-28T21:56:11Z">
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, boolean)[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="loginTest" duration-ms="1322" started-at="2018-01-29T13:22:57Z" data-provider="loginData" finished-at="2018-01-29T13:22:58Z">
           <params>
             <param index="0">
               <value>
@@ -94,7 +94,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="finalize" is-config="true" duration-ms="1782" started-at="2018-01-28T21:56:11Z" finished-at="2018-01-28T21:56:13Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.LoginPageTest@1e397ed7]" name="finalize" is-config="true" duration-ms="1772" started-at="2018-01-29T13:22:58Z" finished-at="2018-01-29T13:23:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
