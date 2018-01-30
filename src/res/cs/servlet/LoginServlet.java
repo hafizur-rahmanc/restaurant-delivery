@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import res.cs.bo.UserBO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.User;
+import res.cs.util.InputValidator;
 
 /**
  * Servlet implementation class LoginServlet
@@ -39,6 +40,7 @@ public class LoginServlet extends HttpServlet {
 		User theUser = new User();
 		// Get the session from the request object
 		HttpSession session = request.getSession();
+		InputValidator v = new InputValidator();
 		
 		// Get the parameter from the form data
 		String userName = request.getParameter("userName");
@@ -49,10 +51,9 @@ public class LoginServlet extends HttpServlet {
 				theUser = userBO.loginUser(userName, password);
 				if(theUser != null) {
 					// Check whether the user is an admin or regular user and redirect to the page accordingly
-					// Assign the user as session attribute
+					// Assign the user as a session attribute
 					session.setAttribute("currentUser", theUser);
 					session.setAttribute("userId", theUser.getUserId());
-					System.out.println("Login Authenticated");
 					
 					// If the user is an admin redirect to the admin controller's AdminAccountInfo request
 					if(userBO.isAdmin(theUser)) {
