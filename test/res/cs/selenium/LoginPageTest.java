@@ -22,7 +22,7 @@ public class LoginPageTest {
 	WebElement userNameEl;
 	WebElement passwordEl;
 	WebElement loginBtn;
-	WebElement registerLink;
+	WebElement registerBtn;
 	
 	boolean loggedIn;
 	
@@ -30,6 +30,7 @@ public class LoginPageTest {
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver", StringUrlPath.DriverPath);
 	}
+	
 	@BeforeMethod
 	public void initialize() {
 		// Create a new instance of the Google Chrome driver
@@ -112,11 +113,17 @@ public class LoginPageTest {
 	// Click Register button to go to the register page
 	@Test
 	public void registerPageFromLogin() {
-		registerLink = driver.findElement(By.id("register"));
-		registerLink.click();
+		registerBtn = driver.findElement(By.id("register"));
+		registerBtn.click();
 		assertThat(driver.getCurrentUrl(), equalTo(StringUrlPath.RegistrationPage));
 	}
 	
+	// Page title should be Restaurant Delivery
+	@Test
+	public void loginPageTitle() {
+		String pageTitle = driver.getTitle();
+		assertThat(pageTitle, equalTo("Restaurant Delivery"));
+	}
 	
 	@AfterMethod
 	public void finalize() throws InterruptedException {

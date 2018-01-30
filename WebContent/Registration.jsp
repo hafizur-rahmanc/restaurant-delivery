@@ -21,7 +21,7 @@
 		<c:if test="${message != null}">
 			<div class="alert alert-info alert-dismissible" role="alert">
 	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	  			<p class="text-center"><strong>${message}</strong></p>
+	  			<p class="text-center"><strong id="message">${message}</strong></p>
 			</div>
 		</c:if>
 		<form action="RegisterServlet" method="post" class="form-horizontal">
@@ -50,7 +50,7 @@
 			    </div>
 			 </div>
 			 <div class="form-group">
-			    <label for="RePassword" class="col-sm-3 control-label">Password</label>
+			    <label for="RePassword" class="col-sm-3 control-label">Re-Password</label>
 			    <div class="col-sm-9">
 			    	<input type="password" class="form-control" name="repassword" id="RePassword" placeholder="Re-enter Password" required>
 			    </div>
@@ -87,7 +87,7 @@
 			 <div class="form-group">
 			 	<div class="col-sm-offset-3 col-sm-9">
 			 		<button type="submit" class="btn btn-primary btn-block" id="register" name="register">Register</button>
-			 		<button type="submit" class="btn btn-success btn-block"  name="login" id="login" formnovalidate>Login?</button>
+			 		<button type="submit" class="btn btn-success btn-block"  name="login" id="login" formnovalidate>Login</button>
 			 	</div>
 			 </div>
 		</form>

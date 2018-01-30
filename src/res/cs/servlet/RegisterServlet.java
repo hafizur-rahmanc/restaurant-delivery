@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import res.cs.bo.UserBO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.User;
+import res.cs.util.InputValidator;
 
 /**
  * Servlet implementation class UserControllerServlet
@@ -48,45 +49,56 @@ public class RegisterServlet extends HttpServlet {
 			String message="";
 			
 			// Validate the user info
-			// Validate the password and repassword
-			if(password.equals(repassword)) {
-				// Create a new User object
-				theUser = new User();
-				theUser.setFirstName(firstName);
-				theUser.setLastName(lastName);
-				theUser.setUserName(userName);
-				theUser.setPassword(password);
-				theUser.setGender(gender);
-				theUser.setAddress(address);
-				theUser.setPhoneNumber(phoneNumber);
-				theUser.setEmail(email);
-					
-				// Add the user to the database
-				try {
-					userBO = new UserBO();
-					// Check user name is available or not 
-					if(userBO.isUserNameAvailable(userName)) {
-						// Create the user
-						userBO.createUser(theUser);
-						// Send to the login page
-						response.sendRedirect("Login.jsp");
-					}else {
-						message = "User name is already exists!";
+			InputValidator v = new InputValidator();
+			if (v.isValidRegistartion(firstName, lastName, userName, password, repassword, address, gender, request.getParameter("phoneNumber"), email)) {
+				// Validate the password and re-password
+				if(password.equals(repassword)) {
+					// Create a new User object
+					theUser = new User();
+					theUser.setFirstName(firstName);
+					theUser.setLastName(lastName);
+					theUser.setUserName(userName);
+					theUser.setPassword(password);
+					theUser.setGender(gender);
+					theUser.setAddress(address);
+					theUser.setPhoneNumber(phoneNumber);
+					theUser.setEmail(email);
+						
+					// Add the user to the database
+					try {
+						userBO = new UserBO();
+						// Check user name is available or not 
+						if(userBO.isUserNameAvailable(userName)) {
+							// Create the user
+							userBO.createUser(theUser);
+							// Send to the login page
+							response.sendRedirect("Login.jsp");
+						}else {
+							message = "User name already exists!";
+							// Send back to the Registration page with appropriate alert message
+							request.setAttribute("message", message);
+							request.getRequestDispatcher("Registration.jsp").forward(request, response);
+						}
+					} catch (ClassNotFoundException e) {
+						e.printStackTrace();
+					} catch (RegistrationException e) {
+						e.printStackTrace();
+					} catch (SQLException e) {
+						e.printStackTrace();
+						response.sendRedirect("Error.jsp");
 					}
-				} catch (ClassNotFoundException e) {
-					e.printStackTrace();
-				} catch (RegistrationException e) {
-					e.printStackTrace();
-				} catch (SQLException e) {
-					e.printStackTrace();
-					response.sendRedirect("Error.jsp");
+				  } else {
+					  message = "Password does not match!";
+						// Send back to the Registration page with appropriate alert message
+						request.setAttribute("message", message);
+						request.getRequestDispatcher("Registration.jsp").forward(request, response);
+				  }
+			} else {
+					message = "One of the fields is not formatted correctly!";
+					// Send back to the Registration page with appropriate alert message
+					request.setAttribute("message", message);
+					request.getRequestDispatcher("Registration.jsp").forward(request, response);
 				}
-			  } else {
-				  message = "Password does not match!";
-			  }
-			// Send back to the Registration page with appropriate alert message
-			request.setAttribute("message", message);
-			request.getRequestDispatcher("Registration.jsp").forward(request, response);
 			}
 		}
 	}

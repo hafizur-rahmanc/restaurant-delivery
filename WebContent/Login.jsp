@@ -40,7 +40,7 @@
 		  <div class="form-group">
 			 <div class="col-sm-offset-3 col-sm-9">
 			 	<button type="submit" class="btn btn-primary btn-block"  name="login" id="login">Login</button>
-			 	<button type="submit" class="btn btn-success btn-block"  name="register" id="register" formnovalidate>Register?</button>
+			 	<button type="submit" class="btn btn-success btn-block"  name="register" id="register" formnovalidate>Register</button>
 			 </div>
 		  </div>
 		</form>

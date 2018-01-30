@@ -9,7 +9,7 @@ public class InputValidator {
 	}
 	
 	public boolean isValidGender(String gender) {
-		String regex = "[mf]{1}";
+		String regex = "[MF]{1}";
 		return Pattern.matches(regex, gender);
 	}
 	
@@ -74,5 +74,13 @@ public class InputValidator {
 		} else {
 			return false;
 		}
+	}
+	
+	public static void main(String[] args) {
+		InputValidator input = new InputValidator();
+		System.out.println(input.isValidGender("M"));
+		System.out.println(input.isValidInput("NewUser"));
+		System.out.println(input.isValidAddress("7119 35th Ave"));
+		System.out.println(input.isValidRegistartion("Hafizur", "Rahman", "hafiz_ny", "h123", "h123", "138 Grand Concourse", "M", "1111111111", "hafizur@restaurant.org"));
 	}
 }
