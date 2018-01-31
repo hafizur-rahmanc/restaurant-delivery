@@ -22,6 +22,13 @@
 		<div class="jumbotron">
 			<h2>Account Information</h2>
 		</div>
+		<!-- Show the appropriate alert message -->
+		<c:if test="${message != null}">
+			<div class="alert alert-info alert-dismissible" role="alert">
+	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  			<p class="text-center"><strong id="message">${message}</strong></p>
+			</div>
+		</c:if>
 		<form action="AccountInfoServlet" method="post" class="form-horizontal">
 			<div class="form-group">
 		   		<label for="firstName" class="col-sm-3 control-label">First Name</label>
@@ -50,7 +57,7 @@
 			 <div class="form-group">
 			    <label for="RePassword" class="col-sm-3 control-label">Re-Password</label>
 			    <div class="col-sm-9">
-			    	<input type="password" class="form-control" name="rePassword" id="RePassword" placeholder="Re-enter Password" value="${currentUser.password}" maxlength="20" required title="Please enter upto 20 characters">
+			    	<input type="password" class="form-control" name="repassword" id="RePassword" placeholder="Re-enter Password" value="${currentUser.password}" maxlength="20" required title="Please enter upto 20 characters">
 			    </div>
 			 </div>
 			 <div class="form-group">
@@ -84,7 +91,7 @@
 			 </div>
 			 <div class="form-group">
 			 	<div class="col-sm-offset-3 col-sm-9">
-			 		<button type="submit" class="btn btn-primary btn-block">Update</button>
+			 		<button type="submit" class="btn btn-primary btn-block" id="update">Update</button>
 			 	</div>
 			 </div>
 		</form>

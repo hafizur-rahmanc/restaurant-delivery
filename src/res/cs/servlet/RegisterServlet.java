@@ -89,9 +89,9 @@ public class RegisterServlet extends HttpServlet {
 					}
 				  } else {
 					  message = "Password does not match!";
-						// Send back to the Registration page with appropriate alert message
-						request.setAttribute("message", message);
-						request.getRequestDispatcher("Registration.jsp").forward(request, response);
+					  // Send back to the Registration page with appropriate alert message
+					  request.setAttribute("message", message);
+					  request.getRequestDispatcher("Registration.jsp").forward(request, response);
 				  }
 			} else {
 					message = "One of the fields is not formatted correctly!";

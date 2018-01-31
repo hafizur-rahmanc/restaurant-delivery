@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 import res.cs.bo.UserBO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.User;
+import res.cs.util.InputValidator;
 
 /**
  * Servlet implementation class AccountInfoServlet
@@ -52,6 +53,7 @@ public class AccountInfoServlet extends HttpServlet {
 				e.printStackTrace();
 			} catch (SQLException e) {
 				e.printStackTrace();
+				response.sendRedirect("Error.jsp");
 			}
 		} else {
 			response.sendRedirect("Error.jsp");
@@ -70,52 +72,66 @@ public class AccountInfoServlet extends HttpServlet {
 		UserBO userBO;
 		// Declare an user model variable
 		User theUser;
+		String message="";
 		
 		//Read user info from the form data
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
+		String repassword = request.getParameter("repassword");
 		String gender = request.getParameter("gender");
 		String address = request.getParameter("address");
 		Long phoneNumber = Long.parseLong(request.getParameter("phoneNumber"));
 		String email = request.getParameter("email");
-		int result = 0;
 
-		//Create a new User object
-		theUser = new User();
-		theUser.setUserId(userId);
-		theUser.setFirstName(firstName);
-		theUser.setLastName(lastName);
-		theUser.setUserName(userName);
-		theUser.setPassword(password);
-		theUser.setGender(gender);
-		theUser.setAddress(address);
-		theUser.setPhoneNumber(phoneNumber);
-		theUser.setEmail(email);
-		
-		// Need to check the user information validity
-		//Update the user to the database
-		try {
-			userBO = new UserBO();
-			result = userBO.updateUser(theUser);
-			System.out.println("User is updated");
-			if(result != 0) {
-				// Send to the Account Information page
-				 response.sendRedirect("AccountInfoServlet");
-			}else {
-				// Send back to the account information page with error message
-				response.sendRedirect("AccountInfo.jsp?message=false");
-				// doGet(request, response);
+		// Validate the user info
+		InputValidator v = new InputValidator();
+		if (v.isValidRegistartion(firstName, lastName, userName, password, repassword, address, gender, request.getParameter("phoneNumber"), email)) {
+			// Validate the password and re-password
+			if(password.equals(repassword)) {
+				// Create a new User object
+				theUser = new User();
+				theUser.setUserId(userId);
+				theUser.setFirstName(firstName);
+				theUser.setLastName(lastName);
+				theUser.setUserName(userName);
+				theUser.setPassword(password);
+				theUser.setGender(gender);
+				theUser.setAddress(address);
+				theUser.setPhoneNumber(phoneNumber);
+				theUser.setEmail(email);
+				
+				// Update the user to the database
+				try {
+					userBO = new UserBO();
+					// Update the user now
+					userBO.updateUser(theUser);
+					// Send to the Account Information page
+					message = "User information updated successfully!";
+					// Go back to the doGet() method with appropriate alert message
+					request.setAttribute("message", message);
+					doGet(request, response);
+					
+				} catch (ClassNotFoundException e) {
+					e.printStackTrace();
+				} catch (RegistrationException e) {
+					e.printStackTrace();
+				} catch (SQLException e) {
+					e.printStackTrace();
+					response.sendRedirect("Error.jsp");
+				}
+			} else {
+				message = "Password does not match!";
+				// Go back to the doGet() method with appropriate alert message
+				request.setAttribute("message", message);
+				doGet(request, response);
 			}
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (RegistrationException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		} else {
+			message = "One of the fields is not formatted correctly!";
+			// Go back to the doGet() method with appropriate alert message
+			request.setAttribute("message", message);
+			doGet(request, response);
 		}
-
 	}
-
 }

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9791" started-at="2018-01-31T13:39:40Z" finished-at="2018-01-31T13:39:50Z">
+  <suite name="Default suite" duration-ms="8548" started-at="2018-01-31T23:42:26Z" finished-at="2018-01-31T23:42:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9791" started-at="2018-01-31T13:39:40Z" finished-at="2018-01-31T13:39:50Z">
-      <class name="res.cs.selenium.SingleItemPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.SingleItemPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="10" started-at="2018-01-31T08:39:40Z" finished-at="2018-01-31T08:39:40Z">
+    <test name="Default test" duration-ms="8548" started-at="2018-01-31T23:42:26Z" finished-at="2018-01-31T23:42:34Z">
+      <class name="res.cs.selenium.AccountInfoPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.AccountInfoPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="10" started-at="2018-01-31T18:42:26Z" finished-at="2018-01-31T18:42:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.SingleItemPageTest@56ac3a89]" name="initialize" is-config="true" duration-ms="6714" started-at="2018-01-31T08:39:40Z" finished-at="2018-01-31T08:39:47Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.AccountInfoPageTest@56ac3a89]" name="initialize" is-config="true" duration-ms="6078" started-at="2018-01-31T18:42:26Z" finished-at="2018-01-31T18:42:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="submitValidReview()[pri:0, instance:res.cs.selenium.SingleItemPageTest@56ac3a89]" name="submitValidReview" duration-ms="552" started-at="2018-01-31T08:39:47Z" finished-at="2018-01-31T08:39:47Z">
+        <test-method status="PASS" signature="validAccountUpdate()[pri:0, instance:res.cs.selenium.AccountInfoPageTest@56ac3a89]" name="validAccountUpdate" duration-ms="421" started-at="2018-01-31T18:42:32Z" finished-at="2018-01-31T18:42:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitValidReview -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.SingleItemPageTest@56ac3a89]" name="finalize" is-config="true" duration-ms="2497" started-at="2018-01-31T08:39:47Z" finished-at="2018-01-31T08:39:50Z">
+        </test-method> <!-- validAccountUpdate -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.AccountInfoPageTest@56ac3a89]" name="finalize" is-config="true" duration-ms="2022" started-at="2018-01-31T18:42:32Z" finished-at="2018-01-31T18:42:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-      </class> <!-- res.cs.selenium.SingleItemPageTest -->
+      </class> <!-- res.cs.selenium.AccountInfoPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -50,7 +50,6 @@ public class MenuItemPageTest {
 		// Get the userName and password element and fill out those fields with correct data
 		driver.findElement(By.id("userName")).sendKeys("user");
 		driver.findElement(By.id("Password")).sendKeys("user");
-		// Click the login button
 		// Get the login link and click it
 		driver.findElement(By.id("login")).click();
 		loggedIn = true;

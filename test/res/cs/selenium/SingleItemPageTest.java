@@ -17,7 +17,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import res.cs.bo.ReviewBO;
-import res.cs.exception.RegistrationException;
 import res.cs.util.StringUrlPath;
 
 public class SingleItemPageTest {
@@ -53,7 +52,7 @@ public class SingleItemPageTest {
 		isReviewCreated = false;
 	}
 	
-	// ItemReviiew page should be displayed correctly
+	// ItemReview page should be displayed correctly
 	@Test
 	public void singleItemReviewTitle() {
 		String expected = "Item Review";

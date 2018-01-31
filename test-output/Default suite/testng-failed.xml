@@ -3,14 +3,14 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="res.cs.selenium.SingleItemPageTest">
+      <class name="res.cs.selenium.AccountInfoPageTest">
         <methods>
+          <include name="validAccountUpdate"/>
+          <include name="finalize"/>
           <include name="setUp"/>
           <include name="initialize"/>
-          <include name="finalize"/>
-          <include name="itemAndReviewElements"/>
         </methods>
-      </class> <!-- res.cs.selenium.SingleItemPageTest -->
+      </class> <!-- res.cs.selenium.AccountInfoPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
