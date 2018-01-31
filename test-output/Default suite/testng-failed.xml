@@ -3,14 +3,14 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="res.cs.selenium.LocationPageTest">
+      <class name="res.cs.selenium.ReviewOrderPageTest">
         <methods>
-          <include name="locationPage"/>
-          <include name="initialize"/>
-          <include name="finalize"/>
           <include name="setUp"/>
+          <include name="finalize"/>
+          <include name="displayOrderSummary"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- res.cs.selenium.LocationPageTest -->
+      </class> <!-- res.cs.selenium.ReviewOrderPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

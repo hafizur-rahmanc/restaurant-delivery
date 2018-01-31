@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
+<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11043" started-at="2018-01-31T07:22:15Z" finished-at="2018-01-31T07:22:26Z">
+  <suite name="Default suite" duration-ms="18895" started-at="2018-01-31T09:38:22Z" finished-at="2018-01-31T09:38:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11043" started-at="2018-01-31T07:22:15Z" finished-at="2018-01-31T07:22:26Z">
-      <class name="res.cs.selenium.LocationPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.LocationPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="9" started-at="2018-01-31T02:22:15Z" finished-at="2018-01-31T02:22:15Z">
+    <test name="Default test" duration-ms="18895" started-at="2018-01-31T09:38:22Z" finished-at="2018-01-31T09:38:41Z">
+      <class name="res.cs.selenium.ReviewOrderPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.ReviewOrderPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="9" started-at="2018-01-31T04:38:22Z" finished-at="2018-01-31T04:38:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.LocationPageTest@56ac3a89]" name="initialize" is-config="true" duration-ms="9154" started-at="2018-01-31T02:22:15Z" finished-at="2018-01-31T02:22:24Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.ReviewOrderPageTest@56ac3a89]" name="initialize" is-config="true" duration-ms="16997" started-at="2018-01-31T04:38:22Z" finished-at="2018-01-31T04:38:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="selectLocationButton()[pri:0, instance:res.cs.selenium.LocationPageTest@56ac3a89]" name="selectLocationButton" duration-ms="35" started-at="2018-01-31T02:22:24Z" finished-at="2018-01-31T02:22:24Z">
+        <test-method status="PASS" signature="displayOrderSummary()[pri:0, instance:res.cs.selenium.ReviewOrderPageTest@56ac3a89]" name="displayOrderSummary" duration-ms="136" started-at="2018-01-31T04:38:39Z" finished-at="2018-01-31T04:38:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectLocationButton -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.LocationPageTest@56ac3a89]" name="finalize" is-config="true" duration-ms="1827" started-at="2018-01-31T02:22:24Z" finished-at="2018-01-31T02:22:26Z">
+        </test-method> <!-- displayOrderSummary -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.ReviewOrderPageTest@56ac3a89]" name="finalize" is-config="true" duration-ms="1735" started-at="2018-01-31T04:38:40Z" finished-at="2018-01-31T04:38:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-      </class> <!-- res.cs.selenium.LocationPageTest -->
+      </class> <!-- res.cs.selenium.ReviewOrderPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

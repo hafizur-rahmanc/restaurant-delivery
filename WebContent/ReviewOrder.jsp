@@ -22,8 +22,8 @@
 	<div class="container">
 		<form action="ReviewOrderServlet" method="post">
 			<div class="group-btn">
-				<button class="btn btn-lg btn-success" type="submit" name="process" >Process Order</button>
-				<button class="btn btn-lg btn-danger" type="submit" name="cancel" >Cancel Order</button>
+				<button class="btn btn-lg btn-success" type="submit" name="process" id="process">Process Order</button>
+				<button class="btn btn-lg btn-danger" type="submit" name="cancel" id="cancel">Cancel Order</button>
 			</div>
 		</form>
 	</div>
@@ -31,6 +31,13 @@
 		<div class="jumbotron">
 			<h2>Order Review</h2>
 		</div>
+		<!-- Show the appropriate alert messgae -->
+		<c:if test="${message != null}">
+			<div class="alert alert-info alert-dismissible" role="alert">
+	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  			<p class="text-center"><strong id="message">${message}</strong></p>
+			</div>
+		</c:if>
 		<div id="order-details" class="table_block table-responsive">
 			<table id="cart_summary" class="table table-bordered">
 				<thead>
@@ -53,12 +60,12 @@
 								</a>
 							</td>
 							<td class="cart_description">
-								<p class="product-name"><strong>${item.itemName}</strong></p>
-								<p class="product-description">${item.itemDescription}</p>
+								<p class="product-name" id="item-name"><strong>${item.itemName}</strong></p>
+								<p class="product-description" id="item-desc">${item.itemDescription}</p>
 								
 							</td>
 							<td class="cart_unit" data-title="Unit Price">
-								<span class="price">$${item.itemPrice}</span>
+								<span class="price" id="item-price">$${item.itemPrice}</span>
 							</td>
 							<td class="cart_quantity text-center">1</td>
 							<td class="cart_total" data-title="Total">
@@ -93,8 +100,10 @@
 			</table>
 		</div>
 	</div>
-
 	<!-- Footer -->
 	<jsp:include page="Footer.html" />
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

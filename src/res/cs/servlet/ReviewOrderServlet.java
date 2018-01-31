@@ -55,8 +55,13 @@ public class ReviewOrderServlet extends HttpServlet {
 				session.setAttribute("taxAmount", priceSummary.get(1));
 				session.setAttribute("totalPrice", priceSummary.get(2));
 				
-				// Navigate to the Review Order page
-				response.sendRedirect("ReviewOrder.jsp");
+				// When the request object has deletion message
+				if(request.getAttribute("message") != null) {
+					request.getRequestDispatcher("ReviewOrder.jsp").forward(request, response);
+				} else {
+					// Navigate to the Review Order page
+					response.sendRedirect("ReviewOrder.jsp");
+				}
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -102,6 +107,8 @@ public class ReviewOrderServlet extends HttpServlet {
 			if(cartIds.isEmpty()) {
 				response.sendRedirect("MenuItem.jsp");
 			}else {
+				// Add deletion status to the request object
+				request.setAttribute("message", "Item removed from the cart!");
 				// Go back to the ReviewOrderServlets get method to see the updated cartItems
 				doGet(request, response);	
 			}

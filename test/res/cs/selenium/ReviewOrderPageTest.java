@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 
 import res.cs.util.StringUrlPath;
 
-public class LocationPageTest {
+public class ReviewOrderPageTest {
 	WebDriver driver;
 	boolean loggedIn;
 	
@@ -53,41 +53,82 @@ public class LocationPageTest {
 		Actions action = new Actions(driver);
 		// Move to the element then click the add button to perform the action
 		action.moveToElement(addItemBtn).click().perform();
+		Thread.sleep(2000);
+		// Add the second item to the cart
+		driver.findElements(By.name("item")).get(2).click();
+		Thread.sleep(3000);
+		
+		// Switch to the active element in this case modal dialog
+		driver.switchTo().activeElement();
+		addItemBtn = driver.findElements(By.name("add-item")).get(2);
+		// Move to the element then click the add button to perform the action
+		action.moveToElement(addItemBtn).click().perform();
+		Thread.sleep(3000);
 
 		// Find the process order button and click it
 		driver.findElement(By.id("process")).click();
 		Thread.sleep(1000);
+		driver.findElement(By.name("store")).click();
 	}
 	
-	// Location page should be displayed correctly
+	// Review Order page should be displayed correctly
 	@Test
-	public void locationPage() {
-		String expected = StringUrlPath.LocationPage;
+	public void reviewOrderPage() {
+		String expected = StringUrlPath.ReviewOrderPage;
 		assertThat(driver.getCurrentUrl(), equalTo(expected));
 	}
 	
-	// Location page should display cancel order button
+	// Process order and cancel order should be displayed
 	@Test
-	public void displayCancelOrderButton() {
+	public void processOrderCancelOrderDisplay() {
+		WebElement processOrder = driver.findElement(By.id("process"));
 		WebElement cancelOrder = driver.findElement(By.id("cancel"));
+		assertThat(processOrder.isDisplayed(), equalTo(true));
 		assertThat(cancelOrder.isDisplayed(), equalTo(true));
 	}
 	
-	// Select a location button should be displayed
+	// Item name, description, image, price and a delete button should display
 	@Test
-	public void selectLocationButton() {
-		WebElement storeEl = driver.findElement(By.name("store"));
-		assertThat(storeEl.isDisplayed(), equalTo(true));
+	public void displayOrderSummary() {
+		WebElement itemName = driver.findElement(By.id("item-name"));
+		WebElement itemDescription = driver.findElement(By.id("item-desc"));
+		WebElement itemImage = driver.findElement(By.className("img-rounded"));
+		WebElement itemPrice = driver.findElement(By.id("item-price"));
+		WebElement deleteBtn = driver.findElement(By.name("remove"));
+		
+		assertThat(itemName.isDisplayed(), equalTo(true));
+		assertThat(itemDescription.isDisplayed(), equalTo(true));
+		assertThat(itemImage.isDisplayed(), equalTo(true));
+		assertThat(itemPrice.isDisplayed(), equalTo(true));
+		assertThat(deleteBtn.isDisplayed(), equalTo(true));
 	}
 	
-	// After selecting a location, review order page should be displayed
+	// Remove an item from the cart
 	@Test
-	public void reviewOrderPage() {
-		driver.findElement(By.name("store")).click();
-		String actual = driver.getCurrentUrl();
-		assertThat(actual, equalTo(StringUrlPath.ReviewOrderPage));
+	public void removeItemFromCart() {
+		// Removed the second item from the cart
+		driver.findElements(By.name("remove")).get(1).click();
+		String message = driver.findElement(By.id("message")).getText();
+		assertThat(message, equalTo("Item removed from the cart!"));
 	}
 	
+	// Payment Information page
+	@Test
+	public void paymentInformation() {
+		// Click the process order button
+		driver.findElement(By.id("process")).click();
+		String expected = StringUrlPath.PaymentPage;
+		assertThat(driver.getCurrentUrl(), equalTo(expected));
+	}
+	
+	// Cancel order should move to the menu item page
+	@Test
+	public void cancelOrderReturnToMenuItem() {
+		// Click the cancel order button
+		driver.findElement(By.id("cancel")).click();
+		String expected = StringUrlPath.MenuItemPage;
+		assertThat(driver.getCurrentUrl(), equalTo(expected));
+	}
 	@AfterMethod
 	public void finalize() throws InterruptedException {
 		if (loggedIn) {

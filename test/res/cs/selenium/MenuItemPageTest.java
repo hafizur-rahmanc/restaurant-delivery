@@ -101,7 +101,7 @@ public class MenuItemPageTest {
 		
 		// Switch to the active element in this case modal dialog
 		driver.switchTo().activeElement();
-		addItemBtn = driver.findElement(By.name("add-item"));
+		addItemBtn = driver.findElements(By.name("add-item")).get(2);;
 		// Move to the element then click the add button to perform the action
 		action.moveToElement(addItemBtn).click().perform();
 		Thread.sleep(1000);
