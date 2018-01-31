@@ -1,85 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="66384" started-at="2018-01-31T06:17:14Z" finished-at="2018-01-31T06:18:20Z">
+  <suite name="Default suite" duration-ms="17812" started-at="2018-01-31T06:24:22Z" finished-at="2018-01-31T06:24:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="66384" started-at="2018-01-31T06:17:14Z" finished-at="2018-01-31T06:18:20Z">
+    <test name="Default test" duration-ms="17812" started-at="2018-01-31T06:24:22Z" finished-at="2018-01-31T06:24:40Z">
       <class name="res.cs.selenium.MenuItemPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="setUp" is-config="true" duration-ms="10" started-at="2018-01-31T01:17:14Z" finished-at="2018-01-31T01:17:14Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.MenuItemPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="10" started-at="2018-01-31T01:24:22Z" finished-at="2018-01-31T01:24:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="initialize" is-config="true" duration-ms="7126" started-at="2018-01-31T01:17:14Z" finished-at="2018-01-31T01:17:21Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@56ac3a89]" name="initialize" is-config="true" duration-ms="6775" started-at="2018-01-31T01:24:22Z" finished-at="2018-01-31T01:24:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="addItemsToCart()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="addItemsToCart" duration-ms="2332" started-at="2018-01-31T01:17:21Z" finished-at="2018-01-31T01:17:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addItemsToCart -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="finalize" is-config="true" duration-ms="1783" started-at="2018-01-31T01:17:23Z" finished-at="2018-01-31T01:17:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="initialize" is-config="true" duration-ms="5386" started-at="2018-01-31T01:17:25Z" finished-at="2018-01-31T01:17:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="addMoreItemsToCart()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="addMoreItemsToCart" duration-ms="4501" started-at="2018-01-31T01:17:31Z" finished-at="2018-01-31T01:17:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addMoreItemsToCart -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="finalize" is-config="true" duration-ms="1805" started-at="2018-01-31T01:17:35Z" finished-at="2018-01-31T01:17:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="initialize" is-config="true" duration-ms="5061" started-at="2018-01-31T01:17:37Z" finished-at="2018-01-31T01:17:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="locationSelectionPage()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="locationSelectionPage" duration-ms="2405" started-at="2018-01-31T01:17:42Z" finished-at="2018-01-31T01:17:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- locationSelectionPage -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="finalize" is-config="true" duration-ms="1794" started-at="2018-01-31T01:17:44Z" finished-at="2018-01-31T01:17:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="initialize" is-config="true" duration-ms="6306" started-at="2018-01-31T01:17:46Z" finished-at="2018-01-31T01:17:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="menuItemPage()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="menuItemPage" duration-ms="19" started-at="2018-01-31T01:17:52Z" finished-at="2018-01-31T01:17:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- menuItemPage -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="finalize" is-config="true" duration-ms="1899" started-at="2018-01-31T01:17:52Z" finished-at="2018-01-31T01:17:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="initialize" is-config="true" duration-ms="6766" started-at="2018-01-31T01:17:54Z" finished-at="2018-01-31T01:18:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="notLoggedInUsers()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="notLoggedInUsers" duration-ms="10269" started-at="2018-01-31T01:18:01Z" finished-at="2018-01-31T01:18:11Z">
+        <test-method status="PASS" signature="notLoggedInUsers()[pri:0, instance:res.cs.selenium.MenuItemPageTest@56ac3a89]" name="notLoggedInUsers" duration-ms="10329" started-at="2018-01-31T01:24:29Z" finished-at="2018-01-31T01:24:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- notLoggedInUsers -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="finalize" is-config="true" duration-ms="642" started-at="2018-01-31T01:18:11Z" finished-at="2018-01-31T01:18:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="initialize" is-config="true" duration-ms="6348" started-at="2018-01-31T01:18:12Z" finished-at="2018-01-31T01:18:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="reviewButton()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="reviewButton" duration-ms="49" started-at="2018-01-31T01:18:18Z" finished-at="2018-01-31T01:18:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reviewButton -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@31a5c39e]" name="finalize" is-config="true" duration-ms="1853" started-at="2018-01-31T01:18:18Z" finished-at="2018-01-31T01:18:20Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.MenuItemPageTest@56ac3a89]" name="finalize" is-config="true" duration-ms="682" started-at="2018-01-31T01:24:39Z" finished-at="2018-01-31T01:24:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->

@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.junit.Assert.assertThat;
 
 import res.cs.util.StringUrlPath;
@@ -62,9 +63,9 @@ public class MenuItemPageTest {
 		assertThat(driver.getCurrentUrl(), equalTo(expected));
 	}
 	
-	// User should be able to add items to the cart and then see the process order button
+	// User should be able to add item to the cart and then see the process order button
 	@Test
-	public void addItemsToCart() throws InterruptedException {
+	public void addItemToCart() throws InterruptedException {
 		// Click the add to cart button
 		driver.findElement(By.name("item")).click();
 		Thread.sleep(1000);
@@ -142,7 +143,7 @@ public class MenuItemPageTest {
 		driver.findElement(By.id("menu-link")).click();
 		// Add to cart should not display
 		List<WebElement> elements = driver.findElements(By.name("item")); 
-		assertThat(elements.size(), equalTo(0));
+		assertThat(elements, hasSize(0));
 	}
 	
 	// Menu Item page has item review button
