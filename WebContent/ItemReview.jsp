@@ -18,6 +18,13 @@
 		<div class="jumbotron">
 			<h2>Item Review</h2>
 		</div>
+		<!-- Show the appropriate alert message -->
+		<c:if test="${message != null}">
+			<div class="alert alert-info alert-dismissible" role="alert">
+	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  			<p class="text-center"><strong id="message">${message}</strong></p>
+			</div>
+		</c:if>
 		<div class="row align-items-center">
 			<div class="col sm-4 col-sm-6 item-image">
 				<div class="text-center">
@@ -27,17 +34,17 @@
 			
 			<div class="col sm-4 col-sm-6" id="product-description">
 				<div>
-					<p><strong>${item.itemName}</strong></p>
-					<p><strong>Price: $${item.itemPrice}</strong></p>
+					<p><strong id="item-name">${item.itemName}</strong></p>
+					<p><strong id="item-price">Price: $${item.itemPrice}</strong></p>
 				</div>
 				<div>
 					<!-- Only display if the user is logged in -->
 					<c:if test="${sessionScope.userId != null}">
-						<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal-${item.itemId}" name="itemId" value="${item.itemId}">Add To Cart</button>
+						<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal-${item.itemId}" name="item" value="${item.itemId}">Add To Cart</button>
 					</c:if>
 				</div>
 				<div class="item-description">
-					<p>${item.itemDescription}</p>
+					<p id="item-desc">${item.itemDescription}</p>
 				</div>
 			</div>
 		</div>
@@ -57,7 +64,7 @@
 		              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span>$${item.itemPrice} Each</label>
 		              <input type="number" class="form-control" id="psw" placeholder="How many?">
 		            </div>
-		              <button type="submit" class="btn btn-primary btn-block" name="itemId" value="${item.itemId}">Add 
+		              <button type="submit" class="btn btn-primary btn-block" name="add-item" value="${item.itemId}">Add 
 		                <span class="glyphicon glyphicon-ok"></span>
 		              </button>
 		          </form>
@@ -95,7 +102,7 @@
 				<c:forEach items="${item.itemReviews}" var="review">
 					<div class="item-review">
 						<h4><strong>${review.userName}:</strong></h4>
-						<p id="review-description">${review.description}</p>
+						<p class="review-description">${review.description}</p>
 					</div>
 				</c:forEach>
 			</div> 

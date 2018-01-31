@@ -16,6 +16,7 @@ import res.cs.bo.ReviewBO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.Item;
 import res.cs.model.Review;
+import res.cs.util.InputValidator;
 
 /**
  * Servlet implementation class ItemServlet
@@ -71,33 +72,45 @@ public class ItemServlet extends HttpServlet {
 		Review theReview = new Review();
 		// Declare the session object
 		HttpSession session = request.getSession();
+		String message = "";
 		
 		// Get the itemId from the request parameter
 		int itemId = Integer.parseInt(request.getParameter("itemId"));
 		// Get the userId from the session object
 		int userId = (int) session.getAttribute("userId");
 		
+		InputValidator v = new InputValidator();
 		// When reviewText have some text, create the review by using itemId and userId
-		if (reviewText != null) {
+		if (v.isValidReview(reviewText)) {
 			theReview.setUserId(userId);
 			theReview.setItemId(itemId);
 			theReview.setDescription(reviewText);
 			try {
 				// Create the Review now
-				int reviewId = reviewBO.createReview(theReview);
-				System.out.println("Newly created review id is: " + reviewId);
+				reviewBO.createReview(theReview);
+				// Assign the success message to the request object
+				message="Review created successfully!";
+				request.setAttribute("message", message);
+				request.setAttribute("itemId", itemId);
+				// Call the doGet() to render the same page with alert message
+				doGet(request, response);
+				
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			} catch (RegistrationException e) {
 				e.printStackTrace();
 			} catch (SQLException e) {
 				e.printStackTrace();
+				response.sendRedirect("error.jsp");
 			}
 		} else {
-			// Send back to the error page or same page with itemId as request parameter
+			// Send back to the same page with itemId as request parameter and proper message
+			message="Review text field is not formatted correctly!";
+			request.setAttribute("message", message);
+			request.setAttribute("itemId", itemId);
+			// Call the doGet() to render the same page with alert message
+			doGet(request, response);
 		}
-		// Send back to the ItemReview page
-		response.sendRedirect("ItemServlet?itemId=" + itemId);
 	}
 
 }

@@ -11,6 +11,7 @@ public class StringUrlPath {
 	public static final String PaymentPage = htmlRoot + "PaymentInfo.jsp";
 	public static final String ReviewOrderPage = htmlRoot + "ReviewOrder.jsp";
 	public static final String ErrorPage = htmlRoot + "Error.jsp";
+	public static final String OrderReceiptPage = htmlRoot + "OrderReceiptServlet?orderId=4";
 	
 	public static final String LoginPageHeader = "Restaurant Delivery";
 	public static final String RegistrationPageHeader = "User Details";
