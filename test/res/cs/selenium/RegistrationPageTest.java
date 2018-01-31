@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import res.cs.util.StringUrlPath;
 
-public class RegisterPageTest {
+public class RegistrationPageTest {
 	WebDriver driver;
 	WebElement firstNameEl;
 	WebElement lastNameEl;

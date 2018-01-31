@@ -75,7 +75,7 @@ public class StoreServlet extends HttpServlet {
 			response.sendRedirect("MenuItemServlet");
 		} else if(action.equals("reviewOrder")) {
 			// Read the store id and assign it to the session object
-			int storeId = Integer.parseInt(request.getParameter("storeId"));
+			int storeId = Integer.parseInt(request.getParameter("store"));
 			if (storeId != 0) {
 				// Store the store id as a session attribute
 				session.setAttribute("storeId", storeId);
