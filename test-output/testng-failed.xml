@@ -3,15 +3,14 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="res.cs.selenium.RegisterPageTest">
+      <class name="res.cs.selenium.MenuItemPageTest">
         <methods>
-          <include name="validRegistration"/>
-          <include name="setUp"/>
-          <include name="initialize"/>
           <include name="finalize"/>
-          <include name="invalidRegistration"/>
+          <include name="setUp"/>
+          <include name="notLoggedInUsers"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- res.cs.selenium.RegisterPageTest -->
+      </class> <!-- res.cs.selenium.MenuItemPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

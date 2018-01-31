@@ -81,7 +81,7 @@ public class MenuItemServlet extends HttpServlet {
 		// Declare an empty message string
 		String message = "";
 		// Grab the itemId from the form data
-		Integer itemId = Integer.parseInt(request.getParameter("itemId"));
+		Integer itemId = Integer.parseInt(request.getParameter("add-item"));
 		
 		if (itemId != 0) {
 			// Check whether session object has cartIds as an attribute or not

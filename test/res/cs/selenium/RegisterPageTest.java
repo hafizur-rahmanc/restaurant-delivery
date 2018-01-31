@@ -52,6 +52,7 @@ public class RegisterPageTest {
 		userNameEl = driver.findElement(By.id("userName"));
 		passwordEl = driver.findElement(By.id("Password"));
 		rePasswordEl = driver.findElement(By.name("repassword"));
+		// Get the rest of the user input elements
 		genderEl = driver.findElement(By.id("Male"));
 		addressEl = driver.findElement(By.name("address"));
 		phoneNumberEl = driver.findElement(By.name("phoneNumber"));

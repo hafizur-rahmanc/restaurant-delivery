@@ -53,9 +53,9 @@
 						<!-- Only display if the user is logged in -->
 						<c:if test="${sessionScope.userId != null}">
 							<a href="ItemServlet?itemId=${item.itemId}">
-								<button class="btn btn-sm btn-success" name="itemId" value="${item.itemId}" id="review-button">Reviews</button>
+								<button class="btn btn-sm btn-success" name="reviews" value="${item.itemId}" id="review-button">Reviews</button>
 							</a>
-							<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal-${item.itemId}" name="itemId" value="${item.itemId}">Add To Cart</button>
+							<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal-${item.itemId}" name="item" value="${item.itemId}">Add To Cart</button>
 						</c:if>
 					</div>
 				</div>
@@ -75,7 +75,7 @@
 				              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span>$${item.itemPrice} Each</label>
 				              <input type="number" class="form-control" id="psw" placeholder="How many?">
 				            </div>
-				              <button type="submit" class="btn btn-primary btn-block" id="primary-button" name="itemId" value="${item.itemId}">Add 
+				              <button type="submit" class="btn btn-primary btn-block" id="primary-button" name="add-item" value="${item.itemId}">Add 
 				                <span class="glyphicon glyphicon-ok"></span>
 				              </button>
 				          </form>
