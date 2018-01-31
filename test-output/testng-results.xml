@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18895" started-at="2018-01-31T09:38:22Z" finished-at="2018-01-31T09:38:41Z">
+  <suite name="Default suite" duration-ms="12851" started-at="2018-01-31T11:02:50Z" finished-at="2018-01-31T11:03:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18895" started-at="2018-01-31T09:38:22Z" finished-at="2018-01-31T09:38:41Z">
-      <class name="res.cs.selenium.ReviewOrderPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.ReviewOrderPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="9" started-at="2018-01-31T04:38:22Z" finished-at="2018-01-31T04:38:22Z">
+    <test name="Default test" duration-ms="12851" started-at="2018-01-31T11:02:50Z" finished-at="2018-01-31T11:03:03Z">
+      <class name="res.cs.selenium.PaymentInfoPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.PaymentInfoPageTest@72d818d1]" name="setUp" is-config="true" duration-ms="9" started-at="2018-01-31T06:02:50Z" finished-at="2018-01-31T06:02:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.ReviewOrderPageTest@56ac3a89]" name="initialize" is-config="true" duration-ms="16997" started-at="2018-01-31T04:38:22Z" finished-at="2018-01-31T04:38:39Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.PaymentInfoPageTest@72d818d1]" name="initialize" is-config="true" duration-ms="10437" started-at="2018-01-31T06:02:50Z" finished-at="2018-01-31T06:03:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="displayOrderSummary()[pri:0, instance:res.cs.selenium.ReviewOrderPageTest@56ac3a89]" name="displayOrderSummary" duration-ms="136" started-at="2018-01-31T04:38:39Z" finished-at="2018-01-31T04:38:40Z">
+        <test-method status="PASS" signature="validPaymentInformation()[pri:0, instance:res.cs.selenium.PaymentInfoPageTest@72d818d1]" name="validPaymentInformation" duration-ms="583" started-at="2018-01-31T06:03:01Z" finished-at="2018-01-31T06:03:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- displayOrderSummary -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.ReviewOrderPageTest@56ac3a89]" name="finalize" is-config="true" duration-ms="1735" started-at="2018-01-31T04:38:40Z" finished-at="2018-01-31T04:38:41Z">
+        </test-method> <!-- validPaymentInformation -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.PaymentInfoPageTest@72d818d1]" name="finalize" is-config="true" duration-ms="1800" started-at="2018-01-31T06:03:01Z" finished-at="2018-01-31T06:03:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-      </class> <!-- res.cs.selenium.ReviewOrderPageTest -->
+      </class> <!-- res.cs.selenium.PaymentInfoPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\pfadmin\AppData\Local\Temp\testng-eclipse-647209464\testng-customsuite.xml</span>
+                    <span>C:\Users\pfadmin\AppData\Local\Temp\testng-eclipse-1906744306\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="res.cs.selenium.ReviewOrderPageTest" hash-for-method="displayOrderSummary">displayOrderSummary</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="res.cs.selenium.PaymentInfoPageTest" hash-for-method="validPaymentInformation">validPaymentInformation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,14 +120,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">res.cs.selenium.ReviewOrderPageTest</span>
+              <span class="class-name">res.cs.selenium.PaymentInfoPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="displayOrderSummary">
-                  </a> <!-- displayOrderSummary -->
-                  <span class="method-name">displayOrderSummary</span>
+                  <a name="validPaymentInformation">
+                  </a> <!-- validPaymentInformation -->
+                  <span class="method-name">validPaymentInformation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\pfadmin\AppData\Local\Temp\testng-eclipse-647209464\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\pfadmin\AppData\Local\Temp\testng-eclipse-1906744306\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,11 +144,11 @@
 &lt;suite thread-count=&quot;-1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;res.cs.selenium.ReviewOrderPageTest&quot;&gt;
+      &lt;class name=&quot;res.cs.selenium.PaymentInfoPageTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;displayOrderSummary&quot;/&gt;
+          &lt;include name=&quot;validPaymentInformation&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- res.cs.selenium.ReviewOrderPageTest --&gt;
+      &lt;/class&gt; &lt;!-- res.cs.selenium.PaymentInfoPageTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -190,14 +190,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'displayOrderSummary')
-data.setCell(0, 2, 'res.cs.selenium.ReviewOrderPageTest')
-data.setCell(0, 3, 136);
+data.setCell(0, 1, 'validPaymentInformation')
+data.setCell(0, 2, 'res.cs.selenium.PaymentInfoPageTest')
+data.setCell(0, 3, 583);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 136 ms</span>
+              <span class="suite-total-time">Total running time: 583 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -212,21 +212,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">5 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">res.cs.selenium.ReviewOrderPageTest</span>
+              <span class="ignored-class-name">res.cs.selenium.PaymentInfoPageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">reviewOrderPage</span>
+                <span class="ignored-method-name">invalidPaymentInformation</span>
                 <br/>
-                <span class="ignored-method-name">cancelOrderReturnToMenuItem</span>
-                <br/>
-                <span class="ignored-method-name">removeItemFromCart</span>
-                <br/>
-                <span class="ignored-method-name">paymentInformation</span>
-                <br/>
-                <span class="ignored-method-name">processOrderCancelOrderDisplay</span>
+                <span class="ignored-method-name">paymentInformationPage</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -238,22 +232,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">res.cs.selenium.ReviewOrderPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">res.cs.selenium.PaymentInfoPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">initialize</span>
-                <span class="method-start">21 ms</span>
+                <span class="method-start">24 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">displayOrderSummary</span>
-                <span class="method-start">17018 ms</span>
+                <span class="method-name">validPaymentInformation</span>
+                <span class="method-start">10461 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finalize</span>
-                <span class="method-start">17156 ms</span>
+                <span class="method-start">11046 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
