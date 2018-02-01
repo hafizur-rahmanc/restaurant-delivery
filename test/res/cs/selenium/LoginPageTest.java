@@ -95,7 +95,7 @@ public class LoginPageTest {
 		return data;	
 	}
 	
-	// Login as Admin
+	// Login as an Admin
 	@Test(dataProvider="adminLoginData")
 	public void loginAsAdmin(String userName, String password, boolean expected) throws InterruptedException {
 		userNameEl.sendKeys(userName);

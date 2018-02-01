@@ -3,14 +3,14 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="res.cs.selenium.AccountInfoPageTest">
+      <class name="res.cs.selenium.OrderHistoryPageTest">
         <methods>
-          <include name="validAccountUpdate"/>
-          <include name="finalize"/>
-          <include name="setUp"/>
+          <include name="orderHistoryPageElements"/>
           <include name="initialize"/>
+          <include name="setUp"/>
+          <include name="finalize"/>
         </methods>
-      </class> <!-- res.cs.selenium.AccountInfoPageTest -->
+      </class> <!-- res.cs.selenium.OrderHistoryPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

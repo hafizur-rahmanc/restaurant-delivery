@@ -35,8 +35,8 @@
 								<img alt="item-${item.itemId}" src="${pageContext.request.contextPath}/images/${item.image}" class="img-rounded" width="140" height="140">
 							</div>
 							<div class="col-sm-4 product-description">
-								<p><strong>$${item.itemPrice}</strong>
-								<p><strong>${item.itemName}</strong></p>
+								<p><strong class="item-price">$${item.itemPrice}</strong>
+								<p><strong class="item-name">${item.itemName}</strong></p>
 							</div>
 						</div>
 					</c:forEach>
