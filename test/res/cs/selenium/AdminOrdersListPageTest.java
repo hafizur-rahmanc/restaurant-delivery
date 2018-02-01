@@ -68,11 +68,11 @@ public class AdminOrdersListPageTest {
 		List<WebElement> ordersList = driver.findElements(By.id("delete-order"));
 		int size = ordersList.size();
 		
+		// Scroll down to the bottom of the page
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		Actions action = new Actions(driver);
 		
-		Thread.sleep(1000);
+		Actions action = new Actions(driver);
 		// Move to the element then click the delete button to perform the action
 		action.moveToElement(ordersList.get(size - 1)).click().perform();
 		ordersList = driver.findElements(By.id("delete-order"));

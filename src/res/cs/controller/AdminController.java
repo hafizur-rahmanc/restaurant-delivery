@@ -461,7 +461,7 @@ public class AdminController {
     			// Call the adminLocationsList to get the updated model and view
     			model = adminLocationsList();
     			// Add success message to the model
-    			model.addObject("message", "The Location Updated Successfully!");
+    			model.addObject("message", "Location updated successfully!");
     		} else {
     			// Display error message
     			model = new ModelAndView("AdminError");
@@ -474,7 +474,7 @@ public class AdminController {
     			// Call the adminLocationsList to get the Updated model and view
     			model = adminLocationsList();
     			// Add success message to the model
-    			model.addObject("message", "The Location Deleted Successfully!");
+    			model.addObject("message", "Location deleted successfully!");
     		} else {
     			// Display error message
     			model = new ModelAndView("AdminError");
@@ -501,7 +501,7 @@ public class AdminController {
 			// Call the adminLocationsList() to get the updated model
     		model = adminLocationsList();
     		// Add the success message to the model
-    		model.addObject("message", "Location Craeted Successfully");
+    		model.addObject("message", "Location created successfully!");
     	} else{
     		// Display the error
     		model =  new ModelAndView("AdminError");	

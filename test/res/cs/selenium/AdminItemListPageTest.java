@@ -59,7 +59,7 @@ public class AdminItemListPageTest {
 		
 		// Find the navigate application link and click it
 		driver.findElement(By.id("nav-app")).click();
-		// Click the users list link
+		// Click the item list link
 		driver.findElement(By.id("item-list")).click();
 	}
 	
@@ -103,30 +103,30 @@ public class AdminItemListPageTest {
 	public void adminAddItem() {
 		List<WebElement> itemList = driver.findElements(By.name("update"));
 		int size = itemList.size();
-		
+		System.out.println(size);
 		itemNameEl = driver.findElements(By.id("itemName")).get(size);
 		itemNameEl.clear();
 		itemNameEl.sendKeys("New item");
 		
-		itemPriceEl = driver.findElements(By.id("itemPrice")).get(driver.findElements(By.id("itemPrice")).size() - 1);
+		itemPriceEl = driver.findElements(By.id("itemPrice")).get(size);
 		itemPriceEl.clear();
 		itemPriceEl.sendKeys("13.99");
 		
-		itemDescEl = driver.findElements(By.id("itemDescription")).get(driver.findElements(By.id("itemDescription")).size() - 1);
+		itemDescEl = driver.findElements(By.id("itemDescription")).get(size);
 		itemDescEl.clear();
 		itemDescEl.sendKeys("This is our newest item of this new year!");
 		
-		itemImageEl = driver.findElements(By.id("itemImage")).get( driver.findElements(By.id("itemImage")).size() - 1);
+		itemImageEl = driver.findElements(By.id("itemImage")).get(size);
 		itemImageEl.clear();
 		itemImageEl.sendKeys("shrimp.jpg");
 		
-		driver.findElements(By.id("active")).get(driver.findElements(By.id("active")).size() - 1).click();
+		driver.findElements(By.id("active")).get(size).click();
 		
-		categoryEl = driver.findElements(By.name("category")).get(driver.findElements(By.name("category")).size() - 1);
+		categoryEl = driver.findElements(By.name("category")).get(size);
 		categoryEl.clear();
 		categoryEl.sendKeys("Brand New Category");
 		
-		driver.findElements(By.name("create")).get(driver.findElements(By.name("create")).size() - 1).click();
+		driver.findElement(By.name("create")).click();
 		isCreated = true;
 		
 		itemList = driver.findElements(By.name("update"));

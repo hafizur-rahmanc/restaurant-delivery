@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\pfadmin\AppData\Local\Temp\testng-eclipse-1906193249\testng-customsuite.xml</span>
+                    <span>C:\Users\pfadmin\AppData\Local\Temp\testng-eclipse-59868645\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="res.cs.selenium.AdminOrdersListPageTest" hash-for-method="AdminDeleteOrder">AdminDeleteOrder</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="res.cs.selenium.AdminLocationsListPageTest" hash-for-method="AdminDeleteLocation">AdminDeleteLocation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,14 +120,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">res.cs.selenium.AdminOrdersListPageTest</span>
+              <span class="class-name">res.cs.selenium.AdminLocationsListPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AdminDeleteOrder">
-                  </a> <!-- AdminDeleteOrder -->
-                  <span class="method-name">AdminDeleteOrder</span>
+                  <a name="AdminDeleteLocation">
+                  </a> <!-- AdminDeleteLocation -->
+                  <span class="method-name">AdminDeleteLocation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\pfadmin\AppData\Local\Temp\testng-eclipse-1906193249\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\pfadmin\AppData\Local\Temp\testng-eclipse-59868645\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,11 +144,11 @@
 &lt;suite thread-count=&quot;-1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;res.cs.selenium.AdminOrdersListPageTest&quot;&gt;
+      &lt;class name=&quot;res.cs.selenium.AdminLocationsListPageTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;AdminDeleteOrder&quot;/&gt;
+          &lt;include name=&quot;AdminDeleteLocation&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- res.cs.selenium.AdminOrdersListPageTest --&gt;
+      &lt;/class&gt; &lt;!-- res.cs.selenium.AdminLocationsListPageTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -190,14 +190,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'AdminDeleteOrder')
-data.setCell(0, 2, 'res.cs.selenium.AdminOrdersListPageTest')
-data.setCell(0, 3, 1760);
+data.setCell(0, 1, 'AdminDeleteLocation')
+data.setCell(0, 2, 'res.cs.selenium.AdminLocationsListPageTest')
+data.setCell(0, 3, 369);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 369 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -212,13 +212,17 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">res.cs.selenium.AdminOrdersListPageTest</span>
+              <span class="ignored-class-name">res.cs.selenium.AdminLocationsListPageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">ordersListPage</span>
+                <span class="ignored-method-name">AdminLocationUpdate</span>
+                <br/>
+                <span class="ignored-method-name">locationPageTitle</span>
+                <br/>
+                <span class="ignored-method-name">adminAddLocation</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -230,22 +234,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">res.cs.selenium.AdminOrdersListPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">res.cs.selenium.AdminLocationsListPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">initialize</span>
-                <span class="method-start">20 ms</span>
+                <span class="method-start">18 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">AdminDeleteOrder</span>
-                <span class="method-start">7937 ms</span>
+                <span class="method-name">AdminDeleteLocation</span>
+                <span class="method-start">8509 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finalize</span>
-                <span class="method-start">9698 ms</span>
+                <span class="method-start">8880 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
