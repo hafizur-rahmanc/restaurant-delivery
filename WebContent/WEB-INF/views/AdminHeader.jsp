@@ -18,8 +18,8 @@
 				</c:if>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="${context}/admin/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-					<li><a href="${context}/admin/AdminAccountInfo">Account Information</a></li>
-					<li><a href="${context}/admin/AdminNavigate">Navigate Application</a></li>
+					<li><a href="${context}/admin/AdminAccountInfo" id="account-info">Account Information</a></li>
+					<li><a href="${context}/admin/AdminNavigate" id="nav-app">Navigate Application</a></li>
 					<li><a href="${context}/LogoutServlet" id="logout">Log Out <i class="fa fa-user" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>

@@ -15,11 +15,14 @@
 	<div class="container">
 		<div class="error-content text-center" id="error-page">
 			<h3>An Error has occurred while attempting to perform the previous request!</h3>
-			<h4><a href="MenuItem.jsp">Please click here to go back to the Menu Items page</a></h4>
+			<h4>Please <a href="MenuItem.jsp">click here</a> to go back to the Menu Items page</h4>
 			<h4><a href="MenuItem.jsp">Menu</a></h4>
 		</div>
 	</div>
 	<!-- Footer -->
 	<jsp:include page="Footer.html" />
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

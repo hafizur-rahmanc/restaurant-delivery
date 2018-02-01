@@ -25,6 +25,7 @@ import res.cs.model.Order;
 import res.cs.model.Review;
 import res.cs.model.Store;
 import res.cs.model.User;
+import res.cs.util.InputValidator;
 
 @Controller
 public class AdminController {
@@ -37,7 +38,7 @@ public class AdminController {
 	
 	// Admin account information
 	@RequestMapping(value="/AdminAccountInfo", method=RequestMethod.GET)
-	public ModelAndView adminAccount(HttpServletRequest request) {
+	public ModelAndView adminAccount() {
 		ModelAndView model = new ModelAndView("AdminAccountInfo");
 		return model;
 	}
@@ -61,43 +62,51 @@ public class AdminController {
 			String lastName = request.getParameter("lastName");
 			String userName = request.getParameter("userName");
 			String password = request.getParameter("password");
-			String repassword = request.getParameter("repassword");
+			String repassword = request.getParameter("rePassword");
 			String gender = request.getParameter("gender");
 			String address = request.getParameter("address");
 			Long phoneNumber = Long.parseLong(request.getParameter("phoneNumber"));
 			String email = request.getParameter("email");
-			int result = 0;
-			
-			// Populate the current user with updated data
-			currentUser.setUserId(userId);
-			currentUser.setFirstName(firstName);
-			currentUser.setLastName(lastName);
-			currentUser.setUserName(userName);
-			currentUser.setPassword(password);
-			currentUser.setRepassword(repassword);
-			currentUser.setGender(gender);
-			currentUser.setAddress(address);
-			currentUser.setPhoneNumber(phoneNumber);
-			currentUser.setEmail(email);
-			
-			// Need to check the user information validity
-			// Update the user to the database
-			try {
-				userBO = new UserBO();
-				result = userBO.updateUser(currentUser);
-				if (result != 0) {
-					model.addObject("message", "The User Updated Successfully!");
-					session.setAttribute("currentUser", currentUser);
-					System.out.println("User is updated");
+			InputValidator v = new InputValidator();
+			// Validate the admin account information
+			if(v.isValidRegistartion(firstName, lastName, userName, password, repassword, address, gender, request.getParameter("phoneNumber"), email)) {
+					// Validate the password and re-enter password
+				if(password.equals(repassword)) {
+					// Populate the current user with updated data
+					currentUser.setUserId(userId);
+					currentUser.setFirstName(firstName);
+					currentUser.setLastName(lastName);
+					currentUser.setUserName(userName);
+					currentUser.setPassword(password);
+					currentUser.setRepassword(repassword);
+					currentUser.setGender(gender);
+					currentUser.setAddress(address);
+					currentUser.setPhoneNumber(phoneNumber);
+					currentUser.setEmail(email);
+					
+					// Update the user to the database
+					try {
+						userBO = new UserBO();
+						userBO.updateUser(currentUser);
+						model.addObject("message", "User information updated successfully!");
+						// Update the session object as well to see the updated data in the view
+						session.setAttribute("currentUser", currentUser);
+					} catch (ClassNotFoundException e) {
+						e.printStackTrace();
+					} catch (RegistrationException e) {
+						e.printStackTrace();
+					} catch (SQLException e) {
+						e.printStackTrace();
+						model = new ModelAndView("AdminError");
+					}
+				} else {
+					model.addObject("message", "Password does not match!");
 				}
-
-			} catch (ClassNotFoundException e) {
-				e.printStackTrace();
-			} catch (RegistrationException e) {
-				e.printStackTrace();
-			} catch (SQLException e) {
-				e.printStackTrace();
+			}else {
+				model.addObject("message", "One of the fields is not formatted correctly!");
 			}
+		} else {
+			model = new ModelAndView("AdminError");
 		}
 		return model;
 	}

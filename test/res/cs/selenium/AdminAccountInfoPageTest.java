@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import res.cs.util.StringUrlPath;
 
-public class AccountInfoPageTest {
+public class AdminAccountInfoPageTest {
 	WebDriver driver;
 	WebElement lastNameEl;
 	WebElement passwordEl;
@@ -31,36 +31,34 @@ public class AccountInfoPageTest {
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver", StringUrlPath.DriverPath);
 	}
-	
 	@BeforeMethod
-	public void initialize() {
+	public void initialize() throws InterruptedException {
 		// Create a new instance of the Google Chrome driver
 		driver = new ChromeDriver();
-		// Navigate to the login page
+		// Navigate to the home page
 		driver.navigate().to(StringUrlPath.htmlRoot);
 		// Implicitly Wait 10 seconds to load the page 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// Set the window width to maximum 
 		driver.manage().window().maximize();
-		
 		// Get the login link and click it
 		driver.findElement(By.id("login-link")).click();
 		// Get the userName and password element and fill out those fields with correct data
-		driver.findElement(By.id("userName")).sendKeys("user");
-		driver.findElement(By.id("Password")).sendKeys("user");
-		// Get the login link and click it
+		driver.findElement(By.id("userName")).sendKeys("admin");
+		driver.findElement(By.id("Password")).sendKeys("admin");
+		// Click the login button
 		driver.findElement(By.id("login")).click();
 		loggedIn = true;
 		isUpdated = false;
 		
 		// Find the Account Information link and click it
 		driver.findElement(By.id("account-info")).click();
-		
 	}
+	
 	// Check the correct account information page title
 	@Test
 	public void accountInfoPage() {
-		String expected = "Account Information";
+		String expected = "Admin Account Details";
 		assertThat(driver.getTitle(), equalTo(expected));
 	}
 	
@@ -70,9 +68,9 @@ public class AccountInfoPageTest {
 		passwordEl = driver.findElement(By.id("Password"));
 		passwordEl.clear();
 		passwordEl.sendKeys("user");
-		rePasswordEl = driver.findElement(By.name("repassword"));
+		rePasswordEl = driver.findElement(By.name("rePassword"));
 		rePasswordEl.clear();
-		rePasswordEl.sendKeys("user123");
+		rePasswordEl.sendKeys("admin123");
 		
 		driver.findElement(By.id("update")).click();
 		
@@ -80,13 +78,12 @@ public class AccountInfoPageTest {
 		assertThat(message, equalTo("Password does not match!"));
 	}
 	
-	
 	// Invalid account info field
 	@Test
 	public void invalidUpdateField() {
 		lastNameEl = driver.findElement(By.id("lastName"));
 		lastNameEl.clear();
-		lastNameEl.sendKeys("user123123123-rt456");
+		lastNameEl.sendKeys("admin123123-rt456");
 		driver.findElement(By.id("update")).click();
 		
 		String actual = driver.findElement(By.id("message")).getText();
@@ -131,4 +128,5 @@ public class AccountInfoPageTest {
 		}
 		driver.quit();
 	}
+
 }

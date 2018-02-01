@@ -2,37 +2,26 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="context" value="${pageContext.request.contextPath}" />
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Admin Account Details</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="${context}/css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-	<script src="https://use.fontawesome.com/71c97a3df8.js"></script>
+<jsp:include page="AdminLinks.jsp" />
 </head>
 <body>
 	<jsp:include page="AdminHeader.jsp" />
-	<!-- Redirect to the error page if user is not logged in -->
-	<c:if test="${sessionScope.userId == null}">
-		<c:redirect url="AdminError.jsp" />
-	</c:if>
-	
-	<!-- When the account information updated successfully -->
-	<c:if test="${message != null}">
-		<div class="container">
-			<div class="alert alert-info alert-dismissible" role="alert">
-	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	  			<p class="text-center"><strong>${message}</strong></p>
-			</div>
-		</div>
-	</c:if>
 	<div class="container">
 		<div class="jumbotron">
 			<h2>Account Information</h2>
-		</div>
-		
+		</div>	
+		<!-- Show the appropriate alert message -->
+		<c:if test="${message != null}">
+			<div class="alert alert-info alert-dismissible" role="alert">
+	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  			<p class="text-center"><strong id="message">${message}</strong></p>
+			</div>
+		</c:if>
 		<form action="${context}/admin/AdminAccountInfo" method="post" class="form-horizontal">
 			<div class="form-group">
 		   		<label for="firstName" class="col-sm-3 control-label">First Name</label>
@@ -95,7 +84,7 @@
 			 </div>
 			 <div class="form-group">
 			 	<div class="col-sm-offset-3 col-sm-9">
-			 		<button type="submit" class="btn btn-primary btn-block">Update</button>
+			 		<button type="submit" class="btn btn-primary btn-block" id="update">Update</button>
 			 	</div>
 			 </div>
 		</form>
