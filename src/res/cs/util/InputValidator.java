@@ -76,11 +76,13 @@ public class InputValidator {
 		}
 	}
 	
-	public static void main(String[] args) {
-		InputValidator input = new InputValidator();
-		System.out.println(input.isValidGender("M"));
-		System.out.println(input.isValidInput("NewUser"));
-		System.out.println(input.isValidAddress("7119 35th Ave"));
-		System.out.println(input.isValidRegistartion("Hafizur", "Rahman", "hafiz_ny", "h123", "h123", "138 Grand Concourse", "M", "1111111111", "hafizur@restaurant.org"));
+	public boolean isValidUpdate(String firstName, String lastName, String userName, String password, 
+			String repassword, String address, String gender, String phoneNumber, String email) {
+		if (isValidInput(firstName) && isValidInput(lastName) && isValidInput(userName) && isValidInput(password) 
+				&& isValidInput(repassword) && isValidAddress(address) && isValidGender(gender) && isValidPhoneNumber(phoneNumber) && isValidEmail(email)){
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

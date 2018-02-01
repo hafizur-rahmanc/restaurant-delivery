@@ -1,65 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31037" started-at="2018-02-01T02:41:18Z" finished-at="2018-02-01T02:41:49Z">
+  <suite name="Default suite" duration-ms="8477" started-at="2018-02-01T05:14:16Z" finished-at="2018-02-01T05:14:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31037" started-at="2018-02-01T02:41:18Z" finished-at="2018-02-01T02:41:49Z">
-      <class name="res.cs.selenium.AdminAccountInfoTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="setUp" is-config="true" duration-ms="9" started-at="2018-01-31T21:41:18Z" finished-at="2018-01-31T21:41:18Z">
+    <test name="Default test" duration-ms="8477" started-at="2018-02-01T05:14:16Z" finished-at="2018-02-01T05:14:24Z">
+      <class name="res.cs.selenium.AdminGetUserPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.AdminGetUserPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="10" started-at="2018-02-01T00:14:16Z" finished-at="2018-02-01T00:14:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="initialize" is-config="true" duration-ms="6561" started-at="2018-01-31T21:41:18Z" finished-at="2018-01-31T21:41:24Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.AdminGetUserPageTest@56ac3a89]" name="initialize" is-config="true" duration-ms="6629" started-at="2018-02-01T00:14:16Z" finished-at="2018-02-01T00:14:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="accountInfoPage()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="accountInfoPage" duration-ms="17" started-at="2018-01-31T21:41:24Z" finished-at="2018-01-31T21:41:24Z">
+        <test-method status="PASS" signature="deleteUserReview()[pri:0, instance:res.cs.selenium.AdminGetUserPageTest@56ac3a89]" name="deleteUserReview" duration-ms="30" started-at="2018-02-01T00:14:22Z" finished-at="2018-02-01T00:14:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- accountInfoPage -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="finalize" is-config="true" duration-ms="1798" started-at="2018-01-31T21:41:24Z" finished-at="2018-01-31T21:41:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="initialize" is-config="true" duration-ms="5382" started-at="2018-01-31T21:41:26Z" finished-at="2018-01-31T21:41:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="invalidUpdateField()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="invalidUpdateField" duration-ms="290" started-at="2018-01-31T21:41:31Z" finished-at="2018-01-31T21:41:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidUpdateField -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="finalize" is-config="true" duration-ms="1757" started-at="2018-01-31T21:41:32Z" finished-at="2018-01-31T21:41:34Z">
+        </test-method> <!-- deleteUserReview -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.AdminGetUserPageTest@56ac3a89]" name="finalize" is-config="true" duration-ms="1789" started-at="2018-02-01T00:14:22Z" finished-at="2018-02-01T00:14:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="initialize" is-config="true" duration-ms="5231" started-at="2018-01-31T21:41:34Z" finished-at="2018-01-31T21:41:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="passwordMismatch()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="passwordMismatch" duration-ms="322" started-at="2018-01-31T21:41:39Z" finished-at="2018-01-31T21:41:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- passwordMismatch -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="finalize" is-config="true" duration-ms="1737" started-at="2018-01-31T21:41:39Z" finished-at="2018-01-31T21:41:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="initialize" is-config="true" duration-ms="5513" started-at="2018-01-31T21:41:41Z" finished-at="2018-01-31T21:41:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="validAccountUpdate()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="validAccountUpdate" duration-ms="308" started-at="2018-01-31T21:41:46Z" finished-at="2018-01-31T21:41:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validAccountUpdate -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.AdminAccountInfoTest@31a5c39e]" name="finalize" is-config="true" duration-ms="2082" started-at="2018-01-31T21:41:47Z" finished-at="2018-01-31T21:41:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-      </class> <!-- res.cs.selenium.AdminAccountInfoTest -->
+      </class> <!-- res.cs.selenium.AdminGetUserPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

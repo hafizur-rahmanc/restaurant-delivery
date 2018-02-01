@@ -178,22 +178,27 @@ public class AdminController {
 		String address = user.getAddress();
 		String email = user.getEmail();
 		Long phoneNumber = user.getPhoneNumber();
-		// Check the validation for the new user information
 		
 		// Render the view with updated user information
 		model = adminGetUser(user.getUserId());
-		// when password and re-password matches
-		if (password.equals(repassword)) {
-			int result = userBO.updateUser(user);
-			// User updated successfully
-			if(result != 0) {
+		
+		// Check the validation for the new user information
+		InputValidator v = new InputValidator();
+		// Validate the admin account information
+		if(v.isValidUpdate(firstName, lastName, userName, password, repassword, address, gender, phoneNumber.toString(), email)) {
+			// when password and re-password matches
+			if (password.equals(repassword)) {
+				// User updated successfully
+				userBO.updateUser(user);
 				// Render the view with updated user information
 				model = adminGetUser(user.getUserId());
 				// Display the form with the user data
-				model.addObject("message", "User Updated Successfully!");
+				model.addObject("message", "User information updated successfully!");
+			} else {
+				model.addObject("message", "Password does not match!");
 			}
 		} else {
-			model.addObject("message", "password mismatch!");
+			model.addObject("message", "One of the fields is not formatted correctly!");
 		}
 		// Return the view
 		return model;

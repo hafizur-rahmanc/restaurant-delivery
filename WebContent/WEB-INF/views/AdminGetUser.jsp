@@ -13,18 +13,16 @@
 <body>
 	<jsp:include page="AdminHeader.jsp" />
 	<jsp:include page="NavigationPanel.jsp" />
-<!-- Redirect to the error page if user is not logged in -->
+	<!-- Redirect to the error page if user is not logged in -->
 	<c:if test="${sessionScope.userId == null}">
 		<c:redirect url="AdminError.jsp" />
 	</c:if>
 	
-	<!-- When the account information updated successfully or review deleted successfully -->
+	<!-- Display the appropriate alert message -->
 	<c:if test="${message != null}">
-		<div class="container">
-			<div class="alert alert-info alert-dismissible" role="alert">
-	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	  			<p class="text-center"><strong>${message}</strong></p>
-			</div>
+		<div class="alert alert-info alert-dismissible" role="alert">
+  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  			<p class="text-center"><strong id="message">${message}</strong></p>
 		</div>
 	</c:if>
 	<div class="container">
@@ -94,7 +92,7 @@
 			 </div>
 			 <div class="form-group">
 			 	<div class="col-sm-offset-3 col-sm-9">
-			 		<button type="submit" class="btn btn-primary btn-block">Update</button>
+			 		<button type="submit" class="btn btn-primary btn-block" id="update">Update</button>
 			 	</div>
 			 </div>
 		</form:form>

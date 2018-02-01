@@ -1,8 +1,10 @@
 package res.cs.selenium;
 
+import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -16,7 +18,7 @@ import org.testng.annotations.Test;
 
 import res.cs.util.StringUrlPath;
 
-public class AdminAccountInfoPageTest {
+public class AdminGetUserPageTest {
 	WebDriver driver;
 	WebElement lastNameEl;
 	WebElement passwordEl;
@@ -31,6 +33,7 @@ public class AdminAccountInfoPageTest {
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver", StringUrlPath.DriverPath);
 	}
+	
 	@BeforeMethod
 	public void initialize() throws InterruptedException {
 		// Create a new instance of the Google Chrome driver
@@ -51,14 +54,18 @@ public class AdminAccountInfoPageTest {
 		loggedIn = true;
 		isUpdated = false;
 		
-		// Find the Account Information link and click it
-		driver.findElement(By.id("account-info")).click();
+		// Find the navigate application link and click it
+		driver.findElement(By.id("nav-app")).click();
+		// Click the users list link
+		driver.findElement(By.id("user-list")).click();
+		// Click the user update button
+		driver.findElement(By.id("user-update")).click();
 	}
 	
-	// Check the correct account information page title
+	// Check the correct user account information page title
 	@Test
-	public void accountInfoPage() {
-		String expected = "Admin Account Details";
+	public void userAccountInfoPage() {
+		String expected = "User Account Info";
 		assertThat(driver.getTitle(), equalTo(expected));
 	}
 	
@@ -68,7 +75,7 @@ public class AdminAccountInfoPageTest {
 		passwordEl = driver.findElement(By.id("Password"));
 		passwordEl.clear();
 		passwordEl.sendKeys("admin1");
-		rePasswordEl = driver.findElement(By.name("rePassword"));
+		rePasswordEl = driver.findElement(By.name("repassword"));
 		rePasswordEl.clear();
 		rePasswordEl.sendKeys("admin123");
 		
@@ -113,6 +120,20 @@ public class AdminAccountInfoPageTest {
 		assertThat(actual, equalTo(expectedPhoneNumber));
 	}
 	
+	// Delete a user review
+	@Test
+	public void deleteUserReview() {
+		// Find the delete button and click to delete the last review
+		List<WebElement> userList = driver.findElements(By.name("delete"));
+		int size = userList.size();
+		assertThat(userList, hasSize(size));
+		
+		// Delete the last review
+		userList.get(0).click();
+		
+		assertThat(userList, hasSize(size - 1));
+	}
+	
 	@AfterMethod
 	public void finalize() throws InterruptedException {
 		if(isUpdated) {
@@ -128,5 +149,4 @@ public class AdminAccountInfoPageTest {
 		}
 		driver.quit();
 	}
-
 }

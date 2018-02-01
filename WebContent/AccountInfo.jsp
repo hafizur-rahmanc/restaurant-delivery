@@ -22,7 +22,7 @@
 		<div class="jumbotron">
 			<h2>Account Information</h2>
 		</div>
-		<!-- Show the appropriate alert message -->
+		<!-- Display the appropriate alert message -->
 		<c:if test="${message != null}">
 			<div class="alert alert-info alert-dismissible" role="alert">
 	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>

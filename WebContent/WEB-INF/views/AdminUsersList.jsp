@@ -6,20 +6,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Users List</title>
+<title>Regular Users List</title>
 <jsp:include page="AdminLinks.jsp" />
 </head>
 <body>
 	<jsp:include page="AdminHeader.jsp" />
 	<jsp:include page="NavigationPanel.jsp" />
 	<h3 class="text-center" id="regular-user">Regular User's List</h3>
-	<!-- When the location updated successfully -->
+	<!--  the appropriate alert message -->
 	<c:if test="${message != null}">
-		<div class="container">
-			<div class="alert alert-info alert-dismissible" role="alert">
-	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	  			<p class="text-center"><strong>${message}</strong></p>
-			</div>
+		<div class="alert alert-info alert-dismissible" role="alert">
+  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  			<p class="text-center"><strong id="message">${message}</strong></p>
 		</div>
 	</c:if>
 	<div class="container">

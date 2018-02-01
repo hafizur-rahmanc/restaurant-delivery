@@ -15,7 +15,7 @@
 <body>
 	<!-- Redirect to the error page if user is not logged in -->
 	<c:if test="${sessionScope.userId == null}">
-		<c:redirect url="Error.jsp" />
+		<c:redirect url="AdminError.jsp" />
 	</c:if>
 	<jsp:include page="AdminHeader.jsp" />
 	<jsp:include page="NavigationPanel.jsp" />
