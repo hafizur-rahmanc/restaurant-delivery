@@ -393,7 +393,7 @@ public class AdminController {
     	    	// Call the adminOrdersList to get the updated order's list
     			 model = adminOrdersList();
     			// Add the success message to the model
-    			model.addObject("message", "Order deleted Successfully!");
+    			model.addObject("message", "Order deleted successfully!");
     		} else {
     			// Display error message
     			model = new ModelAndView("AdminError");

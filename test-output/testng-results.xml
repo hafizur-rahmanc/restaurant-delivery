@@ -1,65 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32147" started-at="2018-02-01T07:14:30Z" finished-at="2018-02-01T07:15:02Z">
+  <suite name="Default suite" duration-ms="11469" started-at="2018-02-01T07:58:55Z" finished-at="2018-02-01T07:59:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="32147" started-at="2018-02-01T07:14:30Z" finished-at="2018-02-01T07:15:02Z">
-      <class name="res.cs.selenium.AdminItemListPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="setUp" is-config="true" duration-ms="8" started-at="2018-02-01T02:14:30Z" finished-at="2018-02-01T02:14:30Z">
+    <test name="Default test" duration-ms="11469" started-at="2018-02-01T07:58:55Z" finished-at="2018-02-01T07:59:07Z">
+      <class name="res.cs.selenium.AdminOrdersListPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:res.cs.selenium.AdminOrdersListPageTest@56ac3a89]" name="setUp" is-config="true" duration-ms="9" started-at="2018-02-01T02:58:55Z" finished-at="2018-02-01T02:58:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="initialize" is-config="true" duration-ms="5886" started-at="2018-02-01T02:14:30Z" finished-at="2018-02-01T02:14:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.AdminOrdersListPageTest@56ac3a89]" name="initialize" is-config="true" duration-ms="7917" started-at="2018-02-01T02:58:55Z" finished-at="2018-02-01T02:59:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="AdminDeleteItem()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="AdminDeleteItem" duration-ms="247" started-at="2018-02-01T02:14:36Z" finished-at="2018-02-01T02:14:36Z">
+        <test-method status="PASS" signature="AdminDeleteOrder()[pri:0, instance:res.cs.selenium.AdminOrdersListPageTest@56ac3a89]" name="AdminDeleteOrder" duration-ms="1760" started-at="2018-02-01T02:59:03Z" finished-at="2018-02-01T02:59:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AdminDeleteItem -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="finalize" is-config="true" duration-ms="1746" started-at="2018-02-01T02:14:36Z" finished-at="2018-02-01T02:14:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="initialize" is-config="true" duration-ms="5671" started-at="2018-02-01T02:14:38Z" finished-at="2018-02-01T02:14:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="adminAddItem()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="adminAddItem" duration-ms="964" started-at="2018-02-01T02:14:44Z" finished-at="2018-02-01T02:14:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adminAddItem -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="finalize" is-config="true" duration-ms="1955" started-at="2018-02-01T02:14:45Z" finished-at="2018-02-01T02:14:47Z">
+        </test-method> <!-- AdminDeleteOrder -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.AdminOrdersListPageTest@56ac3a89]" name="finalize" is-config="true" duration-ms="1767" started-at="2018-02-01T02:59:05Z" finished-at="2018-02-01T02:59:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="initialize" is-config="true" duration-ms="5333" started-at="2018-02-01T02:14:47Z" finished-at="2018-02-01T02:14:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="invalidUpdateField()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="invalidUpdateField" duration-ms="331" started-at="2018-02-01T02:14:52Z" finished-at="2018-02-01T02:14:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidUpdateField -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="finalize" is-config="true" duration-ms="1734" started-at="2018-02-01T02:14:52Z" finished-at="2018-02-01T02:14:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="initialize" is-config="true" duration-ms="5699" started-at="2018-02-01T02:14:54Z" finished-at="2018-02-01T02:15:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="validItemUpdate()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="validItemUpdate" duration-ms="458" started-at="2018-02-01T02:15:00Z" finished-at="2018-02-01T02:15:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validItemUpdate -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.selenium.AdminItemListPageTest@31a5c39e]" name="finalize" is-config="true" duration-ms="2089" started-at="2018-02-01T02:15:00Z" finished-at="2018-02-01T02:15:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-      </class> <!-- res.cs.selenium.AdminItemListPageTest -->
+      </class> <!-- res.cs.selenium.AdminOrdersListPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
