@@ -8,6 +8,23 @@ public class InputValidator {
 		return Pattern.matches(regex, input);
 	}
 	
+	public boolean isValidItemName(String input) {
+		String regex = "[a-zA-Z0-9 ]{1,20}";
+		return Pattern.matches(regex, input);
+	}
+	public boolean isValidActive(String input) {
+		String regex = "[01]{1}";
+		return Pattern.matches(regex, input);
+	}
+	public boolean isValidPrice(String price) {
+		String regex = "[0-9]+([,.][0-9]{1,2})?";
+		return Pattern.matches(regex, price);
+	}
+	public boolean isValidImage(String image) {
+		String regex = "[a-zA-Z0-9.-]{1,}";
+		return Pattern.matches(regex, image);
+	}
+	
 	public boolean isValidGender(String gender) {
 		String regex = "[MF]{1}";
 		return Pattern.matches(regex, gender);
@@ -76,6 +93,14 @@ public class InputValidator {
 		}
 	}
 	
+	public boolean isValidDescription(String description) {
+		if (description != null && description.length() <= 500) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public boolean isValidUpdate(String firstName, String lastName, String userName, String password, 
 			String repassword, String address, String gender, String phoneNumber, String email) {
 		if (isValidInput(firstName) && isValidInput(lastName) && isValidInput(userName) && isValidInput(password) 
@@ -84,5 +109,21 @@ public class InputValidator {
 		} else {
 			return false;
 		}
+	}
+	
+	public boolean isValidItem(String itemName, String itemPrice,String itemDescription, String image, String active, String category) {
+		if(isValidItemName(itemName) && isValidPrice(itemPrice) && isValidDescription(itemDescription) && 
+				isValidImage(image) && isValidActive(active) && isValidItemName(category)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	public static void main(String[] args) {
+		InputValidator v = new InputValidator();
+		System.out.println(v.isValidInput("1"));
+		System.out.println(v.isValidImage("item-name.jpg"));
+		System.out.println(v.isValidActive("0"));
+		
 	}
 }

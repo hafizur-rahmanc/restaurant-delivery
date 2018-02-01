@@ -294,31 +294,35 @@ public class AdminController {
 			@RequestParam(value="delete", required=false) Integer itemDeleteId) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		
 		// Declare a model and view variable
-		ModelAndView model = null;
+		ModelAndView model = adminItemsList();
 		// Declare an ItemBO variable
 		ItemBO itemBO = new ItemBO();
+		InputValidator v = new InputValidator();
 		// For item update/delete operation
 		if (itemUpdateId != null) {
-			// Declare an Item variable
-			Item theItem = new Item();
-			theItem.setItemId(itemUpdateId);
-			theItem.setItemName(itemName);
-			theItem.setItemPrice(itemPrice);
-			theItem.setItemDescription(itemDescription);
-			theItem.setImage(itemImage);
-			theItem.setActive(itemActive);
-			theItem.setCategory(itemCategory);
-			
-			// Now update the item in the database
-			int result = itemBO.updateItem(theItem);
-			
-			// Call the adminItemsList() to get the updated model
-			model = adminItemsList();
-			if (result != 0) {
-				// Add the updated message to the model
-				model.addObject("message", "The Item Updated Successfully!");
+			if(v.isValidItem(itemName, itemPrice.toString(), itemDescription, itemImage, itemActive.toString(), itemCategory)) {
+				// Declare an Item variable
+				Item theItem = new Item();
+				theItem.setItemId(itemUpdateId);
+				theItem.setItemName(itemName);
+				theItem.setItemPrice(itemPrice);
+				theItem.setItemDescription(itemDescription);
+				theItem.setImage(itemImage);
+				theItem.setActive(itemActive);
+				theItem.setCategory(itemCategory);
+				
+				// Now update the item in the database
+				int result = itemBO.updateItem(theItem);
+				
+				// Call the adminItemsList() to get the updated model
+				model = adminItemsList();
+				if (result != 0) {
+					// Add the updated message to the model
+					model.addObject("message", "Item updated successfully!");
+				}
+			} else {
+				model.addObject("message", "One of the fields is not formatted correctly!");
 			}
-			
 		} else if (itemDeleteId != null) {
 			// Now delete the item
 			int result = itemBO.deleteItem(itemDeleteId);
@@ -326,7 +330,7 @@ public class AdminController {
 			model = adminItemsList();
 			if(result != 0) {
 				// Add the deleted message to the model
-				model.addObject("message", "The Item Deleted Successfully!");
+				model.addObject("message", "Item deleted successfully!");
 			}
 		} else {
 			// Display the error
@@ -349,7 +353,7 @@ public class AdminController {
 			// Call the adminItemsList() to get the updated model
     		model = adminItemsList();
     		// Add the created message to the model
-    		model.addObject("message", "Item Craeted Successfully");
+    		model.addObject("message", "Item craeted successfully!");
     	} else{
     		// Display the error
     		model =  new ModelAndView("AdminError");	

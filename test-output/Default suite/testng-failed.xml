@@ -3,14 +3,14 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="res.cs.selenium.AdminGetUserPageTest">
+      <class name="res.cs.selenium.AdminItemListPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="finalize"/>
-          <include name="passwordMismatch"/>
           <include name="initialize"/>
+          <include name="adminAddItem"/>
+          <include name="finalize"/>
         </methods>
-      </class> <!-- res.cs.selenium.AdminGetUserPageTest -->
+      </class> <!-- res.cs.selenium.AdminItemListPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

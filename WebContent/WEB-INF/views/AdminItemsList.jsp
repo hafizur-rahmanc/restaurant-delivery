@@ -13,17 +13,14 @@
 <body>
 	<jsp:include page="AdminHeader.jsp" />
 	<jsp:include page="NavigationPanel.jsp" />
-	<!-- When the item updated successfully -->
-	<c:if test="${message != null}">
-		<div class="container">
+	<div class="container">
+		<!-- Display the appropriate alert message -->
+		<c:if test="${message != null}">
 			<div class="alert alert-info alert-dismissible" role="alert">
 	  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	  			<p class="text-center"><strong>${message}</strong></p>
+	  			<p class="text-center"><strong id="message">${message}</strong></p>
 			</div>
-		</div>
-	</c:if>
-
-	<div class="container">
+		</c:if>
 		<div class="row">
 			<!-- Display all the items to the left as an update form -->
 			<div class="col-sm-6">

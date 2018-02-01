@@ -130,7 +130,7 @@ public class AdminGetUserPageTest {
 		
 		// Delete the last review
 		userList.get(0).click();
-		
+		userList = driver.findElements(By.name("delete"));
 		assertThat(userList, hasSize(size - 1));
 	}
 	
