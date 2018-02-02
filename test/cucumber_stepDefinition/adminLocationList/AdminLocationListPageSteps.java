@@ -1,4 +1,4 @@
-package cucumber_stepDefinition.adminItemList;
+package cucumber_stepDefinition.adminLocationList;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
@@ -20,25 +20,26 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import res.cs.util.StringUrlPath;
 
-public class AdminItemListPageSteps {
+public class AdminLocationListPageSteps {
 	public static WebDriver driver;
-	WebElement itemNameEl;
-	WebElement categoryEl;
-	WebElement itemPriceEl;
-	WebElement itemDescEl;
-	WebElement itemImageEl;
+	WebElement addressEl;
+	WebElement locationNameEl;
+	WebElement zipcodeEl;
+	WebElement imageEl;
+	WebElement cityEl;
+	WebElement staffNumberEl;
 	
 	boolean loggedIn;
-	boolean isUpdated;
-	String oldCategory;
+	boolean isUpdated;;
+	String oldAddress;
 	
 	@Before
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver", StringUrlPath.DriverPath);
 	}
 	
-	@Given("^Admin is on Admin Item List page$")
-	public void admin_is_on_Admin_Item_List_page() throws Throwable {
+	@Given("^Admin is on Admin Location List page$")
+	public void admin_is_on_Admin_Location_List_page() throws Throwable {
 		// Create a new instance of the Google Chrome driver
 		driver = new ChromeDriver();
 		// Navigate to the home page
@@ -59,69 +60,50 @@ public class AdminItemListPageSteps {
 		
 		// Find the navigate application link and click it
 		driver.findElement(By.id("nav-app")).click();
-		// Click the item list link
-		driver.findElement(By.id("item-list")).click();     
+		// Click the location list link
+		driver.findElement(By.id("location-list")).click();   
 	}
 
 	@Then("^Admin sees page header \"([^\"]*)\"$")
-	public void admin_sees_page_header(String pageTitle) throws Throwable {
-	   assertThat(driver.getTitle(), equalTo(pageTitle)); 
+	public void admin_sees_page_header(String expected) throws Throwable {
+		assertThat(driver.getTitle(), equalTo(expected));    
 	}
 
 	@Then("^Admin sees update and delete button$")
 	public void admin_sees_update_and_delete_button() throws Throwable {
-	   WebElement updateBtn = driver.findElement(By.name("update"));
-	   WebElement deleteBtn = driver.findElement(By.name("delete"));
-	   
-	   assertThat(updateBtn.isDisplayed(), equalTo(true));
-	   assertThat(deleteBtn.isDisplayed(), equalTo(true));
-	}
-
-	@When("^Admin enters invalid data to a field$")
-	public void admin_enters_invalid_data_to_a_field() throws Throwable {
-		itemNameEl = driver.findElement(By.id("itemName"));
-		itemNameEl.clear();
-		itemNameEl.sendKeys("wrong-item-name@");   
-	}
-
-	@When("^Admin clicks the update button$")
-	public void admin_clicks_the_update_button() throws Throwable {
-		driver.findElement(By.name("update")).click();   
-	}
-
-	@Then("^Admin sees alert message \"([^\"]*)\"$")
-	public void admin_sees_alert_message(String expected) throws Throwable {
-		String actual = driver.findElement(By.id("message")).getText();
-		assertThat(actual, equalTo(expected));   
-	}
-
-	@When("^Admin updates item information successfully$")
-	public void admin_updates_item_information_successfully() throws Throwable {
-		categoryEl = driver.findElement(By.name("category"));
-		// Grab the old value
-		oldCategory = categoryEl.getAttribute("value");
-		categoryEl.clear();
-		categoryEl.sendKeys("BrandNewCategory");
+		WebElement updateBtn = driver.findElement(By.name("update"));
+		WebElement deleteBtn = driver.findElement(By.name("delete"));
 		
+		assertThat(updateBtn.isDisplayed(), equalTo(true));
+		assertThat(deleteBtn.isDisplayed(), equalTo(true));  
+	}
+
+	@When("^Admin updates a location successfully$")
+	public void admin_updates_a_location_successfully() throws Throwable {
+		addressEl = driver.findElement(By.id("storeAddress"));
+		// Grab the old value
+		oldAddress = addressEl.getAttribute("value");
+		addressEl.clear();
+		addressEl.sendKeys("200 Hudson St");
 		// Update the item category
 		driver.findElement(By.name("update")).click();
-		isUpdated = true;    
+		isUpdated = true;  
 	}
 
 	@Then("^Admin sees the updated information and alert message$")
 	public void admin_sees_the_updated_information_and_alert_message() throws Throwable {
 		String message = driver.findElement(By.id("message")).getText();
-		String expectedMessage = "Item updated successfully!";
-		String expectedCategory = "BrandNewCategory";
-		String actual = driver.findElement(By.name("category")).getAttribute("value");
+		String expectedMessage = "Location updated successfully!";
+		String expectedCategory = "200 Hudson St";
+		String actual = driver.findElement(By.id("storeAddress")).getAttribute("value");
 		
 		assertThat(message, equalTo(expectedMessage));
-		assertThat(actual, equalTo(expectedCategory));    
+		assertThat(actual, equalTo(expectedCategory));   
 	}
 
 	@Then("^Add button should be displayed$")
 	public void add_button_should_be_displayed() throws Throwable {
-		WebElement addBtn = driver.findElement(By.name("create"));  
+		WebElement addBtn = driver.findElement(By.name("create"));
 		assertThat(addBtn.isDisplayed(), equalTo(true));
 	}
 	
@@ -133,10 +115,10 @@ public class AdminItemListPageSteps {
 			scenario.embed(screenshot, "image/png");
 		}
 		if(isUpdated) {
-			// Go back to the original phone number
-			categoryEl = driver.findElement(By.name("category"));
-			categoryEl.clear();
-			categoryEl.sendKeys(oldCategory);
+			// Go back to the original address
+			addressEl = driver.findElement(By.id("storeAddress"));
+			addressEl.clear();
+			addressEl.sendKeys(oldAddress);
 			driver.findElement(By.name("update")).click();
 		}
 		if (loggedIn) {
