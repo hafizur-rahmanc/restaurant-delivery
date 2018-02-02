@@ -39,6 +39,7 @@ public class PaymentDAOTest {
 		return data;	
 	}
 	
+	//Verify the new payment process
 	@Test(dataProvider="newPayment")
 	public void createPaymentTest(Long creditCardNumber, int secureCode, int zipcode, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		thePayment = new Payment(creditCardNumber, secureCode, zipcode);
@@ -58,12 +59,12 @@ public class PaymentDAOTest {
 		return data;	
 	}
 	
+	// Verify that invalid data returns expected result
 	@Test(dataProvider="deletePayment")
 	public void deletePaymentTest(int paymentId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		int actual = paymentDAO.deletePayment(paymentId);;
 		assertThat(actual, equalTo(expected));	
 	}
-	
 	
 	@AfterMethod
 	public void finalize() throws ClassNotFoundException, IOException, RegistrationException, SQLException {

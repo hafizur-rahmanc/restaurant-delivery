@@ -20,7 +20,6 @@ import org.testng.annotations.Test;
 import res.cs.dao.StoreDAO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.Store;
-import res.cs.model.User;
 
 public class StoreDAOTest {
 	private StoreDAO storeDAO;
@@ -95,9 +94,9 @@ public class StoreDAOTest {
 		assertThat(storesList.size(), Matchers.greaterThan(0));
 		// Verify the correct class type
 		assertThat(storesList, Every.everyItem(IsInstanceOf.instanceOf(Store.class)));
-		// Verify that it has the firstName as a property 
+		// Verify that it has the storeName as a property 
 		assertThat(storesList, Every.everyItem(HasProperty.hasProperty("storeName")));
-		// Check the specific first name in the users list
+		// Check the specific store name in the stores list
 		if(expected) {
 			assertThat(storesList, hasItem(Matchers.hasProperty("storeName", equalTo(storeName))));
 		}	

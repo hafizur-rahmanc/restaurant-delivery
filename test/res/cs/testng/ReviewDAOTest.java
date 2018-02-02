@@ -1,12 +1,17 @@
 package res.cs.testng;
 
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.Matchers.hasItem;
 import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.hamcrest.Matchers;
+import org.hamcrest.beans.HasProperty;
+import org.hamcrest.core.Every;
+import org.hamcrest.core.IsInstanceOf;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -40,6 +45,7 @@ public class ReviewDAOTest {
 		return data;	
 	}
 	
+	// Verify that create a review is working as expected
 	@Test(dataProvider="newReview")
 	public void createReviewTest(int userId, int itemId, String description, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		theReview = new Review(userId, itemId, description);
@@ -62,14 +68,16 @@ public class ReviewDAOTest {
 	@Test(dataProvider="getReviewsByUser")
 	public void getReviewsByUserTest(int userId, String description, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		List<Review> reviewsList = reviewDAO.getReviewsByUser(userId);
-		boolean actual = false;
-		for(Review theReview : reviewsList) {
-			if(description.equals(theReview.getDescription())) {
-				actual = true;
-				break;
-			}
+		// Very the list size
+		assertThat(reviewsList.size(), Matchers.greaterThan(0));
+		// Verify the correct class type
+		assertThat(reviewsList, Every.everyItem(IsInstanceOf.instanceOf(Review.class)));
+		// Verify that it has the description as a property 
+		assertThat(reviewsList, Every.everyItem(HasProperty.hasProperty("description")));
+		// Check the specific description in the reviews list
+		if(expected) {
+			assertThat(reviewsList, hasItem(Matchers.hasProperty("description", equalTo(description))));
 		}
-		assertThat(actual, equalTo(expected));
 	}
 	
 	@DataProvider(name="getReviewsByItem")
@@ -85,14 +93,16 @@ public class ReviewDAOTest {
 	@Test(dataProvider="getReviewsByItem")
 	public void itemReviewTest(int itemId, String description, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		List<Review> reviewsList = reviewDAO.getReviewsByItem(itemId);
-		boolean actual = false;
-		for(Review theReview : reviewsList) {
-			if(description.equals(theReview.getDescription())) {
-				actual = true;
-				break;
-			}
+		// Very the list size
+		assertThat(reviewsList.size(), Matchers.greaterThan(0));
+		// Verify the correct class type
+		assertThat(reviewsList, Every.everyItem(IsInstanceOf.instanceOf(Review.class)));
+		// Verify that it has the description as a property 
+		assertThat(reviewsList, Every.everyItem(HasProperty.hasProperty("description")));
+		// Check the specific description in the reviews list
+		if(expected) {
+			assertThat(reviewsList, hasItem(Matchers.hasProperty("description", equalTo(description))));
 		}
-		assertThat(actual, equalTo(expected));
 	}
 	
 	@DataProvider(name="deleteReview")
@@ -104,6 +114,7 @@ public class ReviewDAOTest {
 		return data;	
 	}
 	
+	// Verify that invalid data returns expected result
 	@Test(dataProvider="deleteReview")
 	public void deletReviewTest(int reviewId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		int actual = reviewDAO.deleteReview(reviewId);;
