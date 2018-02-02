@@ -114,8 +114,7 @@ public class OrderDAOTest {
 	public Object[][] createData(){
 		Object[][] data = {
 				//orderId, expected
-				{13, true},
-				{14, true},
+				{23.93, true},
 				{100, false}
 		};
 		return data;	
@@ -123,7 +122,7 @@ public class OrderDAOTest {
 	
 	// Verify that Admin can retrieve all the orders correctly
 	@Test(dataProvider="getAllOrders")
-	public void getAllOrdersTest(int orderId, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
+	public void getAllOrdersTest(double totalPrice, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		List<Order> ordersList = orderDAO.getAllOrders();
 		// Very the list size
 		assertThat(ordersList.size(), Matchers.greaterThan(0));
@@ -131,6 +130,9 @@ public class OrderDAOTest {
 		assertThat(ordersList, Every.everyItem(IsInstanceOf.instanceOf(Order.class)));
 		// Verify that it has the totalPrice as a property 
 		assertThat(ordersList, Every.everyItem(HasProperty.hasProperty("totalPrice")));
+		if(expected) {
+			assertThat(ordersList, hasItem(Matchers.hasProperty("totalPrice", equalTo(totalPrice))));
+		}
 	}
 	
 	@DataProvider(name="deleteOrder")

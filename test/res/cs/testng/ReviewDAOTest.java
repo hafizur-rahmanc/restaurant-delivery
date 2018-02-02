@@ -40,7 +40,7 @@ public class ReviewDAOTest {
 		Object[][] data = {
 				{90, 21, "Awesome, definitely you will enjoy it", true},
 				{92, 1, "What a great food it was", true},
-				{2, 1, "I love this item", true}
+				{2, 1, "I really enjoyed the food", true}
 		};
 		return data;	
 	}
@@ -65,6 +65,7 @@ public class ReviewDAOTest {
 		return data;	
 	}
 	
+	// Verify that user can get their item reviews
 	@Test(dataProvider="getReviewsByUser")
 	public void getReviewsByUserTest(int userId, String description, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		List<Review> reviewsList = reviewDAO.getReviewsByUser(userId);
@@ -90,6 +91,7 @@ public class ReviewDAOTest {
 		return data;	
 	}
 	
+	// Verify that we can get item reviews correctly
 	@Test(dataProvider="getReviewsByItem")
 	public void itemReviewTest(int itemId, String description, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		List<Review> reviewsList = reviewDAO.getReviewsByItem(itemId);

@@ -68,9 +68,11 @@ public class ItemDAOTest {
 		return data;	
 	}
 	
+	// Verify that 
 	@Test(dataProvider="getItem")
 	public void getItemTest(int itemId, String expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		Item actual = itemDAO.getItem(itemId);
+		assertThat(actual, IsInstanceOf.instanceOf(Item.class));
 		assertThat(actual.getItemName(), equalTo(expected));
 	}
 	
@@ -85,6 +87,7 @@ public class ItemDAOTest {
 		return data;	
 	}
 	
+	// Verify that Admin can get all the available items 
 	@Test(dataProvider="getAllItems")
 	public void getAllItemsTest(String itemName, Double itemPrice, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		List<Item> itemsList = itemDAO.getAllItems();

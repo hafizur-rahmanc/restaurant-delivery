@@ -87,6 +87,7 @@ public class StoreDAOTest {
 		return data;	
 	}
 	
+	// Verify that we can get all the available stores
 	@Test(dataProvider="getAllStores")
 	public void getAllStoresTest(String storeName, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		List<Store> storesList = storeDAO.getAllStores();
@@ -105,7 +106,7 @@ public class StoreDAOTest {
 	@DataProvider(name="updateStore")
 	public Object[][] storeData(){
 		Object[][] data = {
-				{21, "Pizza Hutt", "9 West 57th Ave", "New York", 30, 10029, "pizzaHutt.jpg", 1},
+				{69, "Pizza Hutt", "9 West 57th Ave", "New York", 30, 10029, "pizzaHutt.jpg", 1},
 				{22, "Joanne Tratoria", "70 W 68th St", "New York", 20, 10023, "joanneTratoria.jpg", 1},
 				{23, "Wasabi Point", "7618 Woodside Ave", "Elmhurst", 20, 11373, "wasabiPoint.jpg", 1}
 		};
