@@ -1,12 +1,17 @@
 package res.cs.testng;
 
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.Matchers.hasItem;
 import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.hamcrest.Matchers;
+import org.hamcrest.beans.HasProperty;
+import org.hamcrest.core.Every;
+import org.hamcrest.core.IsInstanceOf;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -15,6 +20,7 @@ import org.testng.annotations.Test;
 import res.cs.dao.StoreDAO;
 import res.cs.exception.RegistrationException;
 import res.cs.model.Store;
+import res.cs.model.User;
 
 public class StoreDAOTest {
 	private StoreDAO storeDAO;
@@ -42,6 +48,7 @@ public class StoreDAOTest {
 		return data;	
 	}
 	
+	// Verify that Admin can create new locations
 	@Test(dataProvider="newStore")
 	public void createUserTest(String storeName, String address, String city, int staffNumber, int zipcode, String image, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		theStore = new Store(storeName, address, city, staffNumber, zipcode, image);
@@ -62,6 +69,7 @@ public class StoreDAOTest {
 		return data;	
 	}
 	
+	// Verify that retrieving a location instance by id is valid 
 	@Test(dataProvider="getStore")
 	public void getStoreTest(int storeId, String expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		Store actual = storeDAO.getStore(storeId);
@@ -83,15 +91,16 @@ public class StoreDAOTest {
 	@Test(dataProvider="getAllStores")
 	public void getAllStoresTest(String storeName, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		List<Store> storesList = storeDAO.getAllStores();
-		boolean actual = false;
-		for(Store theStore : storesList) {
-			if(storeName.equals(theStore.getStoreName())) {
-				actual = true;
-				break;
-			}
-		}
-		
-		assertThat(actual, equalTo(expected));	
+		// Very the list size
+		assertThat(storesList.size(), Matchers.greaterThan(0));
+		// Verify the correct class type
+		assertThat(storesList, Every.everyItem(IsInstanceOf.instanceOf(Store.class)));
+		// Verify that it has the firstName as a property 
+		assertThat(storesList, Every.everyItem(HasProperty.hasProperty("storeName")));
+		// Check the specific first name in the users list
+		if(expected) {
+			assertThat(storesList, hasItem(Matchers.hasProperty("storeName", equalTo(storeName))));
+		}	
 	}
 	
 	@DataProvider(name="updateStore")
@@ -104,6 +113,7 @@ public class StoreDAOTest {
 		return data;	
 	}
 	
+	// Verify the update store process 
 	@Test(dataProvider="updateStore")
 	public void updateStoreTest(int storeId, String storeName, String address, String city, int staffNumber, int zipcode, String image, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		// preserve the original store
@@ -127,6 +137,7 @@ public class StoreDAOTest {
 		return data;	
 	}
 	
+	// Verify that invalid data returns expected result
 	@Test(dataProvider="deleteStore")
 	public void deleteStoreTest(int storeId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		int actual = storeDAO.deleteStore(storeId);;
