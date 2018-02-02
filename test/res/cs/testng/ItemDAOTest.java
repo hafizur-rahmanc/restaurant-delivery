@@ -1,6 +1,11 @@
 package res.cs.testng;
 
 import static org.hamcrest.CoreMatchers.equalTo;
+import org.hamcrest.core.IsInstanceOf;
+import org.hamcrest.Matchers;
+import static org.hamcrest.Matchers.hasItem;
+import org.hamcrest.beans.HasProperty;
+import org.hamcrest.core.Every;
 import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
@@ -42,6 +47,7 @@ public class ItemDAOTest {
 		return data;	
 	}
 	
+	// Verify the createItem process
 	@Test(dataProvider="newItem")
 	public void createItemTest(String itemName, Double itemPrice, String itemDescription, String image, int active, String category, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		theItem = new Item(itemName, itemPrice, itemDescription, image, active, category );
@@ -82,17 +88,17 @@ public class ItemDAOTest {
 	@Test(dataProvider="getAllItems")
 	public void getAllItemsTest(String itemName, Double itemPrice, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		List<Item> itemsList = itemDAO.getAllItems();
-		boolean actual = false;
-		for(Item theItem : itemsList) {
-			//instead of using if statements 
-			//use logical methods coming from hamcrest
-			if((itemName.equals(theItem.getItemName())) && (itemPrice == theItem.getItemPrice())) {
-				actual = true;
-				break;
-			}
+		// Very the list size
+		assertThat(itemsList.size(), Matchers.greaterThan(0));
+		// Verify the correct class type
+		assertThat(itemsList, Every.everyItem(IsInstanceOf.instanceOf(Item.class)));
+		// Verify that it has the itemName as a property 
+		assertThat(itemsList, Every.everyItem(HasProperty.hasProperty("itemName")));
+		// Check the specific first name in the users list
+		if(expected) {
+			assertThat(itemsList, hasItem(Matchers.hasProperty("itemName", equalTo(itemName))));
+			assertThat(itemsList, hasItem(Matchers.hasProperty("itemPrice", equalTo(itemPrice))));
 		}
-		
-		assertThat(actual, equalTo(expected));	
 	}
 	
 	@DataProvider(name="updateItem")
@@ -105,6 +111,7 @@ public class ItemDAOTest {
 		return data;	
 	}
 	
+	// Verify the update an item process
 	@Test(dataProvider="updateItem")
 	public void updateItemTest(int itemId, String itemName, Double itemPrice, String itemDescription, String image, int active, String category, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		//Preserve the original item
@@ -129,6 +136,7 @@ public class ItemDAOTest {
 		return data;	
 	}
 	
+	// Verify that invalid data returns expected result 
 	@Test(dataProvider="deleteItem")
 	public void deleteItemTest(int itemId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		int actual = itemDAO.deleteItem(itemId);

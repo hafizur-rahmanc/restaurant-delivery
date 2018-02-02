@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="5" total="9" passed="4">
+<testng-results skipped="0" failed="0" ignored="4" total="8" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="702" started-at="2018-02-02T13:49:38Z" finished-at="2018-02-02T13:49:39Z">
+  <suite name="Default suite" duration-ms="761" started-at="2018-02-02T13:58:21Z" finished-at="2018-02-02T13:58:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="702" started-at="2018-02-02T13:49:38Z" finished-at="2018-02-02T13:49:39Z">
-      <class name="res.cs.testng.UserDAOTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.UserDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="4" started-at="2018-02-02T08:49:38Z" finished-at="2018-02-02T08:49:38Z">
+    <test name="Default test" duration-ms="761" started-at="2018-02-02T13:58:21Z" finished-at="2018-02-02T13:58:22Z">
+      <class name="res.cs.testng.ItemDAOTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.ItemDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="5" started-at="2018-02-02T08:58:21Z" finished-at="2018-02-02T08:58:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.testng.UserDAOTest@5bcab519]" name="getAllUsersTest" duration-ms="582" started-at="2018-02-02T08:49:38Z" data-provider="getAllUsers" finished-at="2018-02-02T08:49:39Z">
+        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.testng.ItemDAOTest@5bcab519]" name="getAllItemsTest" duration-ms="627" started-at="2018-02-02T08:58:21Z" data-provider="getAllItems" finished-at="2018-02-02T08:58:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Hafizur]]>
+                <![CDATA[Greek Salad]]>
               </value>
             </param>
             <param index="1">
+              <value>
+                <![CDATA[12.99]]>
+              </value>
+            </param>
+            <param index="2">
               <value>
                 <![CDATA[true]]>
               </value>
@@ -26,23 +31,24 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAllUsersTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.UserDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="1" started-at="2018-02-02T08:49:39Z" finished-at="2018-02-02T08:49:39Z">
+        </test-method> <!-- getAllItemsTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.ItemDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="1" started-at="2018-02-02T08:58:22Z" finished-at="2018-02-02T08:58:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.UserDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="0" started-at="2018-02-02T08:49:39Z" finished-at="2018-02-02T08:49:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.testng.UserDAOTest@5bcab519]" name="getAllUsersTest" duration-ms="27" started-at="2018-02-02T08:49:39Z" data-provider="getAllUsers" finished-at="2018-02-02T08:49:39Z">
+        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.testng.ItemDAOTest@5bcab519]" name="getAllItemsTest" duration-ms="39" started-at="2018-02-02T08:58:22Z" data-provider="getAllItems" finished-at="2018-02-02T08:58:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Abdur]]>
+                <![CDATA[Plain Pizza Pie]]>
               </value>
             </param>
             <param index="1">
+              <value>
+                <![CDATA[10.99]]>
+              </value>
+            </param>
+            <param index="2">
               <value>
                 <![CDATA[true]]>
               </value>
@@ -50,19 +56,24 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAllUsersTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.UserDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="0" started-at="2018-02-02T08:49:39Z" finished-at="2018-02-02T08:49:39Z">
+        </test-method> <!-- getAllItemsTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.ItemDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="0" started-at="2018-02-02T08:58:22Z" finished-at="2018-02-02T08:58:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.testng.UserDAOTest@5bcab519]" name="getAllUsersTest" duration-ms="28" started-at="2018-02-02T08:49:39Z" data-provider="getAllUsers" finished-at="2018-02-02T08:49:39Z">
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.testng.ItemDAOTest@5bcab519]" name="getAllItemsTest" duration-ms="29" started-at="2018-02-02T08:58:22Z" data-provider="getAllItems" finished-at="2018-02-02T08:58:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[OmarSulaiman]]>
+                <![CDATA[Ham Burger]]>
               </value>
             </param>
             <param index="1">
+              <value>
+                <![CDATA[9.99]]>
+              </value>
+            </param>
+            <param index="2">
               <value>
                 <![CDATA[true]]>
               </value>
@@ -70,27 +81,36 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAllUsersTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.UserDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="0" started-at="2018-02-02T08:49:39Z" finished-at="2018-02-02T08:49:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.UserDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="9" started-at="2018-02-02T08:49:39Z" finished-at="2018-02-02T08:49:39Z">
+        </test-method> <!-- getAllItemsTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.ItemDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="0" started-at="2018-02-02T08:58:22Z" finished-at="2018-02-02T08:58:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.UserDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="0" started-at="2018-02-02T08:49:39Z" finished-at="2018-02-02T08:49:39Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.ItemDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="0" started-at="2018-02-02T08:58:22Z" finished-at="2018-02-02T08:58:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="getAllUsersTest(java.lang.String, boolean)[pri:0, instance:res.cs.testng.UserDAOTest@5bcab519]" name="getAllUsersTest" duration-ms="25" started-at="2018-02-02T08:49:39Z" data-provider="getAllUsers" finished-at="2018-02-02T08:49:39Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.ItemDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="0" started-at="2018-02-02T08:58:22Z" finished-at="2018-02-02T08:58:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.ItemDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="2" started-at="2018-02-02T08:58:22Z" finished-at="2018-02-02T08:58:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="getAllItemsTest(java.lang.String, java.lang.Double, boolean)[pri:0, instance:res.cs.testng.ItemDAOTest@5bcab519]" name="getAllItemsTest" duration-ms="32" started-at="2018-02-02T08:58:22Z" data-provider="getAllItems" finished-at="2018-02-02T08:58:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Khait]]>
+                <![CDATA[Dominos]]>
               </value>
             </param>
             <param index="1">
+              <value>
+                <![CDATA[12.99]]>
+              </value>
+            </param>
+            <param index="2">
               <value>
                 <![CDATA[false]]>
               </value>
@@ -98,12 +118,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAllUsersTest -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.UserDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="1" started-at="2018-02-02T08:49:39Z" finished-at="2018-02-02T08:49:39Z">
+        </test-method> <!-- getAllItemsTest -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.ItemDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="1" started-at="2018-02-02T08:58:22Z" finished-at="2018-02-02T08:58:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-      </class> <!-- res.cs.testng.UserDAOTest -->
+      </class> <!-- res.cs.testng.ItemDAOTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

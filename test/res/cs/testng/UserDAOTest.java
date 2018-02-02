@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import static org.hamcrest.CoreMatchers.equalTo;
 import org.hamcrest.core.IsInstanceOf;
 import org.hamcrest.Matchers;
-import org.hamcrest.beans.HasPropertyWithValue;
 import static org.hamcrest.Matchers.hasItem;
 import org.hamcrest.beans.HasProperty;
 import org.hamcrest.core.Every;
