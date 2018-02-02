@@ -1,0 +1,185 @@
+-- Created by Hafizur Rahman - 12/11/2017
+
+BEGIN
+	EXECUTE IMMEDIATE 'DROP TABLE USERS';
+	EXCEPTION WHEN OTHERS THEN NULL;
+END;
+/
+ 
+BEGIN
+	EXECUTE IMMEDIATE 'DROP TABLE ITEMS';
+	EXCEPTION WHEN OTHERS THEN NULL;
+END;
+/ 
+
+BEGIN
+	EXECUTE IMMEDIATE 'DROP TABLE REVIEWS';
+	EXCEPTION WHEN OTHERS THEN NULL;
+END;
+/
+
+BEGIN
+	EXECUTE IMMEDIATE 'DROP TABLE STORES';
+	EXCEPTION WHEN OTHERS THEN NULL;
+END;
+/
+
+BEGIN
+	EXECUTE IMMEDIATE 'DROP TABLE PAYMENTS';
+	EXCEPTION WHEN OTHERS THEN NULL;
+END;
+/
+
+BEGIN
+	EXECUTE IMMEDIATE 'DROP TABLE ORDERS';
+	EXCEPTION WHEN OTHERS THEN NULL;
+END;
+/
+
+BEGIN
+	EXECUTE IMMEDIATE 'DROP TABLE ORDER_ITEMS';
+	EXCEPTION WHEN OTHERS THEN NULL;
+END;
+/
+
+REM *******************************************************
+REM Create the USERS table to hold user information 
+
+Prompt **** Creating USERS table ....
+
+CREATE TABLE USERS
+	(
+	 USER_ID NUMERIC GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) NOT NULL,
+	 FIRST_NAME 		VARCHAR2(40) NOT NULL,
+	 LAST_NAME 			VARCHAR2(40) NOT NULL,
+	 USER_NAME 			VARCHAR2(20) NOT NULL,
+	 PASSWORD 			VARCHAR2(20) NOT NULL,
+	 GENDER				VARCHAR2(1) CHECK(GENDER IS NOT NULL AND GENDER IN('M', 'F')),
+	 ADDRESS			VARCHAR2(100) NOT NULL,
+	 PHONE_NUMBER		NUMBER NOT NULL,
+	 EMAIL				VARCHAR2(40) NOT NULL,
+	 ADMIN_ROLE			NUMBER(1) DEFAULT 0 CHECK(ADMIN_ROLE IN(0,1)),	
+	 CONSTRAINT user_id_pk PRIMARY KEY(USER_ID),
+	 CONSTRAINT unique_user_name UNIQUE(USER_NAME)
+	 );
+	 
+	 
+REM *******************************************************
+REM Create the ITEMS table to hold item information 
+
+Prompt **** Creating ITEMS table ....
+
+CREATE TABLE ITEMS
+	(
+	 ITEM_ID NUMERIC GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) NOT NULL,
+	 ITEM_NAME 			VARCHAR2(20) NOT NULL,
+	 ITEM_PRICE 		NUMBER(20, 2) NOT NULL,
+	 ITEM_DESCRIPTION 	VARCHAR2(500) NOT NULL,
+	 IMAGE 				VARCHAR2(40) NOT NULL,
+	 ACTIVE				NUMBER(1) DEFAULT 1 CHECK(ACTIVE IN(0,1)) NOT NULL,
+	 CATEGORY			VARCHAR2(20) NOT NULL,	
+	 CONSTRAINT item_id_pk PRIMARY KEY(ITEM_ID)
+	 );
+	 
+	 
+REM *******************************************************
+REM Create the REVIEWS table to hold review information 
+
+Prompt **** Creating REVIEWS table ....
+
+CREATE TABLE REVIEWS
+	(
+	 REVIEW_ID NUMERIC GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) NOT NULL,
+	 USER_ID 			NUMBER(10) REFERENCES USERS(USER_ID) ON DELETE CASCADE NOT NULL,
+	 ITEM_ID 			NUMBER(10) REFERENCES ITEMS(ITEM_ID) ON DELETE CASCADE NOT NULL,
+	 DESCRIPTION 		VARCHAR2(500) NOT NULL,	
+	 CONSTRAINT review_id_pk PRIMARY KEY(REVIEW_ID)
+	 );
+	 
+	 
+REM *******************************************************
+REM Create the STORES table to hold store information 
+
+Prompt **** Creating STORES table ....
+
+CREATE TABLE STORES
+	(
+	 STORE_ID NUMERIC GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) NOT NULL,
+	 STORE_NAME 		VARCHAR2(20) NOT NULL,
+	 ADDRESS 			VARCHAR2(20) NOT NULL,
+	 CITY				VARCHAR2(30) NOT NULL,
+	 ZIPCODE			NUMBER(10) NOT NULL,
+	 STAFF_NUMBER		NUMBER(10),
+	 IMAGE				VARCHAR2(30) NOT NULL,
+	 CONSTRAINT store_id_pk PRIMARY KEY(STORE_ID)
+	 );
+	 
+	 
+REM *******************************************************
+REM Create the PAYMENT table to hold payment information 
+
+Prompt **** Creating PAYMENTS table ....
+
+CREATE TABLE PAYMENTS
+	(
+	 PAYMENT_ID NUMERIC GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) NOT NULL,
+	 CREDIT_CARD 		NUMBER NOT NULL,
+	 SECURE_CODE		NUMBER NOT NULL,
+	 ZIPCODE			NUMBER NOT NULL,
+	 CONSTRAINT payment_id_pk PRIMARY KEY(PAYMENT_ID)
+	 );
+	 
+
+REM *******************************************************
+REM Create the ORDERS table to hold oreder information 
+
+Prompt **** Creating ORDERS table ....
+
+CREATE TABLE ORDERS
+	(
+	 ORDER_ID NUMERIC GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) NOT NULL,
+	 USER_ID 			NUMBER(10) REFERENCES USERS(USER_ID) ON DELETE CASCADE NOT NULL,
+	 STORE_ID 			NUMBER(10) REFERENCES STORES(STORE_ID) ON DELETE CASCADE NOT NULL,
+	 PAYMENT_ID 		NUMBER(10) REFERENCES PAYMENTS(PAYMENT_ID) ON DELETE CASCADE NOT NULL,
+	 SUBTOTAL 			NUMBER(10, 2) NOT NULL,
+	 TAX_AMOUNT			NUMBER(10, 2) NOT NULL,
+	 TOTAL_PRICE		NUMBER(10, 2) NOT NULL,
+	 CONSTRAINT order_id_pk PRIMARY KEY(ORDER_ID)
+	 );
+
+	 
+REM *******************************************************
+REM Create the ORDER_ITEMS table to hold oreder_items information 
+
+Prompt **** Creating ORDER_ITEMS table ....
+
+CREATE TABLE ORDER_ITEMS
+	(
+	 ORDER_ID 			NUMBER REFERENCES ORDERS(ORDER_ID) ON DELETE CASCADE NOT NULL,
+	 ITEM_ID 			NUMBER REFERENCES ITEMS(ITEM_ID) ON DELETE CASCADE NOT NULL,
+	 CONSTRAINT order_items_pk PRIMARY KEY(ORDER_ID, ITEM_ID)
+	 );
+
+REM *******************************************************
+REM INSERTING INTO USERS
+SET DEFINE OFF;
+INSERT INTO USERS(FIRST_NAME,LAST_NAME,USER_NAME,PASSWORD,GENDER,ADDRESS, PHONE_NUMBER, EMAIL) values ('user','user','user','user','M','7119 35th Ave','1234567890','user@restaurant.org');
+INSERT INTO USERS(FIRST_NAME,LAST_NAME,USER_NAME,PASSWORD,GENDER,ADDRESS, PHONE_NUMBER, EMAIL, ADMIN_ROLE) values ('admin','admin','admin','admin','M','7114 35th Ave','1234567890','admin@restaurant.org',1);
+
+REM *******************************************************
+REM INSERTING INTO ITEMS
+SET DEFINE OFF;
+INSERT INTO ITEMS(ITEM_NAME,ITEM_PRICE,ITEM_DESCRIPTION,IMAGE,ACTIVE,CATEGORY) values ('Plain Pizza Pie',10.99,'A delicious plain pizza.','plain-pizza.jpg',1,'Pizza');
+INSERT INTO ITEMS(ITEM_NAME,ITEM_PRICE,ITEM_DESCRIPTION,IMAGE,ACTIVE,CATEGORY) values ('Shrimp Fried Rice',11.99,'A delicious shrip over rice with egg, pancetta, peppers, onions and green peas.','shrimp.jpg',1,'Fish');
+INSERT INTO ITEMS(ITEM_NAME,ITEM_PRICE,ITEM_DESCRIPTION,IMAGE,ACTIVE,CATEGORY) values ('Classical Salad',12.99,'Delicious classical salad. You gotta try this one.','classical-salad.jpg',1,'Salad');
+INSERT INTO ITEMS(ITEM_NAME,ITEM_PRICE,ITEM_DESCRIPTION,IMAGE,ACTIVE,CATEGORY) values ('Pepperoni Pie',15.99,'Most of the people do not feel like they have the time to whip up a pepperoni pie.','pepperoni-pie.jpg',1,'Pizza');
+INSERT INTO ITEMS(ITEM_NAME,ITEM_PRICE,ITEM_DESCRIPTION,IMAGE,ACTIVE,CATEGORY) values ('Greek Salad',12.99,'Salad appeals to those customers looking to eat healthier.','greek-salad.jpg',1,'Salad');
+INSERT INTO ITEMS(ITEM_NAME,ITEM_PRICE,ITEM_DESCRIPTION,IMAGE,ACTIVE,CATEGORY) values ('Ham Burger',9.99,'Hamburgers are often served with cheese, lettuce, tomato, bacon, onion, pickles, or chiles','ham-burger.jpg',1,'Burger');
+
+REM *******************************************************
+REM INSERTING INTO STORES
+SET DEFINE OFF;
+INSERT INTO STORES(STORE_NAME,ADDRESS,CITY,ZIPCODE,STAFF_NUMBER,IMAGE) values ('Best Food in Town','812 Maple St','Brooklyn',11208,50,'food-delivery.jpg');
+INSERT INTO STORES(STORE_NAME,ADDRESS,CITY,ZIPCODE,STAFF_NUMBER,IMAGE) values ('Pizza Hutt','9 West 57th Ave','New York',10029,30,'pizzaHutt.jpg');
+INSERT INTO STORES(STORE_NAME,ADDRESS,CITY,ZIPCODE,STAFF_NUMBER,IMAGE) values ('Wasabi Point','7618 Woodside Ave','Elmhurst',11373,20,'wasabipoint.jpg');
+INSERT INTO STORES(STORE_NAME,ADDRESS,CITY,ZIPCODE,STAFF_NUMBER,IMAGE) values ('Joannet Attoria','3506 73rd St','Jackson Heights',11372,20,'joannetrattoria.jpg');
