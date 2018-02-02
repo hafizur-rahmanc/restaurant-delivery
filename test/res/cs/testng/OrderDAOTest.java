@@ -1,6 +1,8 @@
 package res.cs.testng;
 
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.Matchers.hasItem;
+import org.hamcrest.collection.IsEmptyCollection;
 import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
@@ -10,6 +12,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.hamcrest.Matchers;
+import org.hamcrest.beans.HasProperty;
+import org.hamcrest.core.Every;
+import org.hamcrest.core.IsInstanceOf;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -45,6 +51,7 @@ public class OrderDAOTest {
 		return data;	
 	}
 	
+	// Verify that new order create process is working as expected
 	@Test(dataProvider="newOrder")
 	public void createOrderTest(Set<Integer> itemIds, int userId, int storeId, int paymentId, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		theOrder = new Order();
@@ -78,24 +85,29 @@ public class OrderDAOTest {
 	public Object[][] sampleData(){
 		Object[][] data = {
 				//userId, totalPrice, expected
-				{2, 34.81, true},
-				{91, 47.86, true},
-				{2, 20.66, false}
+				{2, 23.93, true},
+				{20, 20.66, false}, // user is not in the users list
+				{87, 15.66, false}
 		};
 		return data;	
 	}
 	
+	// Verify users past orders
 	@Test(dataProvider="getOrdersByUser")
 	public void getOrdersByUserTest(int userId, double totalPrice , boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		List<Order> ordersList = orderDAO.getOrdersByUserId(userId);
-		boolean actual = false;
-		for(Order theOrder : ordersList) {
-			if(totalPrice == theOrder.getTotalPrice()) {
-				actual = true;
-				break;
-			}
+		if(expected) {
+			// Very the list size
+			assertThat(ordersList.size(), Matchers.greaterThan(0));
+			// Verify the correct class type
+			assertThat(ordersList, Every.everyItem(IsInstanceOf.instanceOf(Order.class)));
+			// Verify that it has the totalPrice as a property 
+			assertThat(ordersList, Every.everyItem(HasProperty.hasProperty("totalPrice")));
+			// Check the specific totalPrice in the orders list
+			assertThat(ordersList, hasItem(Matchers.hasProperty("totalPrice", equalTo(totalPrice))));
+		} else {
+			assertThat(ordersList, IsEmptyCollection.emptyCollectionOf(Order.class));
 		}
-		assertThat(actual, equalTo(expected));
 	}
 	
 	@DataProvider(name="getAllOrders")
@@ -109,17 +121,16 @@ public class OrderDAOTest {
 		return data;	
 	}
 	
+	// Verify that Admin can retrieve all the orders correctly
 	@Test(dataProvider="getAllOrders")
 	public void getAllOrdersTest(int orderId, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		List<Order> ordersList = orderDAO.getAllOrders();
-		boolean actual = false;
-		for(Order theOrder : ordersList) {
-			if( orderId == theOrder.getOrderId()) {
-				actual = true;
-				break;
-			}
-		}
-		assertThat(actual, equalTo(expected));
+		// Very the list size
+		assertThat(ordersList.size(), Matchers.greaterThan(0));
+		// Verify the correct class type
+		assertThat(ordersList, Every.everyItem(IsInstanceOf.instanceOf(Order.class)));
+		// Verify that it has the totalPrice as a property 
+		assertThat(ordersList, Every.everyItem(HasProperty.hasProperty("totalPrice")));
 	}
 	
 	@DataProvider(name="deleteOrder")
@@ -131,6 +142,7 @@ public class OrderDAOTest {
 		return data;	
 	}
 	
+	// Verify that invalid data returns expected result
 	@Test(dataProvider="deleteOrder")
 	public void deletOrderTest(int orderId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		int actual = orderDAO.deleteOrder(orderId);;

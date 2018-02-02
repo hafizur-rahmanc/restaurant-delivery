@@ -2,28 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="3" total="6" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="667" started-at="2018-02-02T14:13:50Z" finished-at="2018-02-02T14:13:51Z">
+  <suite name="Default suite" duration-ms="1279" started-at="2018-02-02T14:32:14Z" finished-at="2018-02-02T14:32:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="667" started-at="2018-02-02T14:13:50Z" finished-at="2018-02-02T14:13:51Z">
-      <class name="res.cs.testng.ReviewDAOTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.ReviewDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="5" started-at="2018-02-02T09:13:50Z" finished-at="2018-02-02T09:13:50Z">
+    <test name="Default test" duration-ms="1279" started-at="2018-02-02T14:32:14Z" finished-at="2018-02-02T14:32:16Z">
+      <class name="res.cs.testng.OrderDAOTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.OrderDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="4" started-at="2018-02-02T09:32:14Z" finished-at="2018-02-02T09:32:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="itemReviewTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.testng.ReviewDAOTest@5bcab519]" name="itemReviewTest" duration-ms="579" started-at="2018-02-02T09:13:50Z" data-provider="getReviewsByItem" finished-at="2018-02-02T09:13:51Z">
+        <test-method status="PASS" signature="getAllOrdersTest(int, boolean)[pri:0, instance:res.cs.testng.OrderDAOTest@5bcab519]" name="getAllOrdersTest" duration-ms="796" started-at="2018-02-02T09:32:14Z" data-provider="getAllOrders" finished-at="2018-02-02T09:32:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[13]]>
               </value>
             </param>
             <param index="1">
-              <value>
-                <![CDATA[What a great food it was]]>
-              </value>
-            </param>
-            <param index="2">
               <value>
                 <![CDATA[true]]>
               </value>
@@ -31,20 +26,43 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- itemReviewTest -->
-        <test-method status="PASS" signature="itemReviewTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.testng.ReviewDAOTest@5bcab519]" name="itemReviewTest" duration-ms="28" started-at="2018-02-02T09:13:51Z" data-provider="getReviewsByItem" finished-at="2018-02-02T09:13:51Z">
+        </test-method> <!-- getAllOrdersTest -->
+        <test-method status="PASS" signature="getAllOrdersTest(int, boolean)[pri:0, instance:res.cs.testng.OrderDAOTest@5bcab519]" name="getAllOrdersTest" duration-ms="229" started-at="2018-02-02T09:32:15Z" data-provider="getAllOrders" finished-at="2018-02-02T09:32:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[14]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Really Tasty.]]>
+                <![CDATA[true]]>
               </value>
             </param>
-            <param index="2">
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllOrdersTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.OrderDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="0" started-at="2018-02-02T09:32:15Z" finished-at="2018-02-02T09:32:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.OrderDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="0" started-at="2018-02-02T09:32:15Z" finished-at="2018-02-02T09:32:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.OrderDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="1" started-at="2018-02-02T09:32:15Z" finished-at="2018-02-02T09:32:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalize -->
+        <test-method status="PASS" signature="getAllOrdersTest(int, boolean)[pri:0, instance:res.cs.testng.OrderDAOTest@5bcab519]" name="getAllOrdersTest" duration-ms="225" started-at="2018-02-02T09:32:15Z" data-provider="getAllOrders" finished-at="2018-02-02T09:32:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="1">
               <value>
                 <![CDATA[false]]>
               </value>
@@ -52,49 +70,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- itemReviewTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.ReviewDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="0" started-at="2018-02-02T09:13:51Z" finished-at="2018-02-02T09:13:51Z">
+        </test-method> <!-- getAllOrdersTest -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.OrderDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="0" started-at="2018-02-02T09:32:15Z" finished-at="2018-02-02T09:32:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.ReviewDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="0" started-at="2018-02-02T09:13:51Z" finished-at="2018-02-02T09:13:51Z">
+        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.OrderDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="1" started-at="2018-02-02T09:32:16Z" finished-at="2018-02-02T09:32:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.ReviewDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="0" started-at="2018-02-02T09:13:51Z" finished-at="2018-02-02T09:13:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-        <test-method status="PASS" signature="itemReviewTest(int, java.lang.String, boolean)[pri:0, instance:res.cs.testng.ReviewDAOTest@5bcab519]" name="itemReviewTest" duration-ms="28" started-at="2018-02-02T09:13:51Z" data-provider="getReviewsByItem" finished-at="2018-02-02T09:13:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Awesome, definitely you will enjoy it]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- itemReviewTest -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:res.cs.testng.ReviewDAOTest@5bcab519]" name="initialize" is-config="true" duration-ms="0" started-at="2018-02-02T09:13:51Z" finished-at="2018-02-02T09:13:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="finalize()[pri:0, instance:res.cs.testng.ReviewDAOTest@5bcab519]" name="finalize" is-config="true" duration-ms="1" started-at="2018-02-02T09:13:51Z" finished-at="2018-02-02T09:13:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalize -->
-      </class> <!-- res.cs.testng.ReviewDAOTest -->
+      </class> <!-- res.cs.testng.OrderDAOTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
