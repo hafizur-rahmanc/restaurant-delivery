@@ -6,7 +6,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-
+import org.hamcrest.core.IsInstanceOf;
+import org.hamcrest.Matchers;
+import org.hamcrest.beans.HasPropertyWithValue;
+import static org.hamcrest.Matchers.hasItem;
+import org.hamcrest.beans.HasProperty;
+import org.hamcrest.core.Every;
 import static org.junit.Assert.assertThat;
 
 import res.cs.dao.UserDAO;
@@ -43,7 +48,7 @@ public class UserDAOTest {
 		};
 		return data;	
 	}
-	
+	// Verify registration with valid data
 	@Test(dataProvider="registration")
 	public void createUserTest(String firstName, String lastName, String userName, String password, String gender, String address, Long phoneNumber, String email, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		theUser.setFirstName(firstName);
@@ -71,6 +76,7 @@ public class UserDAOTest {
 		return data;
 	}
 	
+	// Verify the login query
 	@Test(dataProvider="loginUser")
 	public void loginUserTest(String userName, String password, String expected) throws ClassNotFoundException, RegistrationException, SQLException, IOException {
 		User tempUser = userDAO.loginUser(userName, password);
@@ -88,6 +94,8 @@ public class UserDAOTest {
 		return data;	
 	}
 	
+	
+	// Verify that the UserName is already in the database or not
 	@Test(dataProvider="getUserNameTest")
 	public void isUserNameAvailable(String userName, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		boolean actual = userDAO.isUserNameAvailable(userName);
@@ -109,15 +117,17 @@ public class UserDAOTest {
 	@Test(dataProvider="getAllUsers")
 	public void getAllUsersTest(String firstName, boolean expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		List<User> usersList = userDAO.getAllUsers();
-		boolean actual = false;
-		for(User user : usersList) {
-			if(firstName.equals(user.getFirstName())) {
-				actual = true;
-				break;
-			}
+		// Very the list size
+		assertThat(usersList.size(), Matchers.greaterThan(0));
+		// Verify the correct class type
+		assertThat(usersList, Every.everyItem(IsInstanceOf.instanceOf(User.class)));
+		// Verify that it has the firstName as a property 
+		assertThat(usersList, Every.everyItem(HasProperty.hasProperty("firstName")));
+		// Check the specific first name in the users list
+		if(expected) {
+			assertThat(usersList, hasItem(Matchers.hasProperty("firstName", equalTo(firstName))));
 		}
 		
-		assertThat(actual, equalTo(expected));	
 	}
 	
 	@DataProvider(name="updateUser")
@@ -129,6 +139,7 @@ public class UserDAOTest {
 		return data;	
 	}
 	
+	// Verify the uodateUserTest method
 	@Test(dataProvider="updateUser")
 	public void updateUserTest(int userID, String firstName, String lastName, String userName, String password, String gender, String address, Long phoneNumber, String email, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		// preserve the original user
@@ -146,7 +157,6 @@ public class UserDAOTest {
 		newUser.setUserId(userID);
 		
 		int actual = userDAO.updateUser(newUser);
-		System.out.println(actual);
 		isUpdated = (actual != 0);
 		assertThat(actual, equalTo(expected));
 		
@@ -161,6 +171,7 @@ public class UserDAOTest {
 		return data;	
 	}
 	
+	// Verify that invalid data returns expected result
 	@Test(dataProvider="deleteUser")
 	public void voidUserTest(int userId, int expected) throws ClassNotFoundException, IOException, RegistrationException, SQLException {
 		int actual = userDAO.deleteUser(userId);

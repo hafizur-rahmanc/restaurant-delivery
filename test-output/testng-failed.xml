@@ -3,14 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="res.cs.selenium.AdminLocationsListPageTest">
+      <class name="res.cs.testng.UserDAOTest">
         <methods>
-          <include name="adminAddLocation"/>
           <include name="finalize"/>
           <include name="initialize"/>
-          <include name="setUp"/>
+          <include name="getAllUsersTest" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- res.cs.selenium.AdminLocationsListPageTest -->
+      </class> <!-- res.cs.testng.UserDAOTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
