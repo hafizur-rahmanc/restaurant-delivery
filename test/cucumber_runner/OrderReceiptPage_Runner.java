@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="test/cucumber_feature/OrderReceiptPage.feature",
 		glue="cucumber_stepDefinition.orderReceipt",
-		plugin= {"pretty", "html:target/cucumber"}
+		plugin= {"pretty", "html:target/CucumberReports/OrderReceiptPage","junit:target/CucumberReports/OrderReceiptPage/junit.xml"}
 		)
 public class OrderReceiptPage_Runner {
 

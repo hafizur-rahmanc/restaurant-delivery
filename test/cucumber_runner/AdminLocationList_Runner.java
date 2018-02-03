@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="test/cucumber_feature/AdminLocationListPage.feature",
 		glue="cucumber_stepDefinition.adminLocationList",
-		plugin= {"pretty", "html:target/cucumber"}
+		plugin= {"pretty", "html:target/CucumberReports/AccountLocationListPage","junit:target/CucumberReports/AccountLocationListPage/junit.xml"}
 		)
 public class AdminLocationList_Runner {
 

@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="test/cucumber_feature/ReviewOrderPage.feature",
 		glue="cucumber_stepDefinition.reviewOrder",
-		plugin= {"pretty", "html:target/cucumber"}
+		plugin= {"pretty", "html:target/CucumberReports/ReviewOrdePage","junit:target/CucumberReports/ReviewOrderPage/junit.xml"}
 		)
 public class ReviewOrderPage_Runner {
 

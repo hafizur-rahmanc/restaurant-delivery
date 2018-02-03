@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="test/cucumber_feature/LocationPage.feature",
 		glue="cucumber_stepDefinition.location",
-		plugin= {"pretty", "html:target/cucumber"}
+		plugin= {"pretty", "html:target/CucumberReports/LocationPage","junit:target/CucumberReports/LocationPage/junit.xml"}
 		)
 public class LocationPage_Runner {
 

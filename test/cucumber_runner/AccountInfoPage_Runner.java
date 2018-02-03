@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="test/cucumber_feature/AccountInfoPage.feature",
 		glue="cucumber_stepDefinition.accountInfo",
-		plugin= {"pretty", "html:target/cucumber"}
+		plugin= {"pretty", "html:target/CucumberReports/AccountInfoPage","junit:target/CucumberReports/AccountInfoPage/junit.xml"}
 		)
 public class AccountInfoPage_Runner {
 

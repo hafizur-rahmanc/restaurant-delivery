@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="test/cucumber_feature/AdminGetUserPage.feature",
 		glue="cucumber_stepDefinition.adminGetUser",
-		plugin= {"pretty", "html:target/cucumber"}
+		plugin= {"pretty", "html:target/CucumberReports/AccountGetUserPage","junit:target/CucumberReports/AccountGetUserPage/junit.xml"}
 		)
 public class AdminGetUser_Runner {
 

@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="test/cucumber_feature/AdminUserListPage.feature",
 		glue="cucumber_stepDefinition.adminUserList",
-		plugin= {"pretty", "html:target/cucumber"}
+		plugin= {"pretty", "html:target/CucumberReports/AccountUserListPage","junit:target/CucumberReports/AccountUserListPage/junit.xml"}
 		)
 public class AdminUserListPage_Runner {
 

@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="test/cucumber_feature/LoginPage.feature",
 		glue="cucumber_stepDefinition",
-		plugin= {"pretty", "html:target/cucumber"}
+		plugin= {"pretty", "html:target/CucumberReports/LoginPage","junit:target/CucumberReports/LoginPage/junit.xml"}
 		)
 public class LoginPage_Runner {
 

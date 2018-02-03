@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="test/cucumber_feature/PaymentPage.feature",
 		glue="cucumber_stepDefinition.payment",
-		plugin= {"pretty", "html:target/cucumber"}
+		plugin= {"pretty", "html:target/CucumberReports/PaymentPage","junit:target/CucumberReports/PaymentPage/junit.xml"}
 		)
 public class PaymentPage_Runner {
 

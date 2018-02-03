@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="test/cucumber_feature/MenuItemPage.feature",
 		glue="cucumber_stepDefinition.menuItem",
-		plugin= {"pretty", "html:target/cucumber"}
+		plugin= {"pretty", "html:target/CucumberReports/MenuItemPage","junit:target/CucumberReports/MenuItemPage/junit.xml"}
 		)
 public class MenuItemPage_Runner {
 
