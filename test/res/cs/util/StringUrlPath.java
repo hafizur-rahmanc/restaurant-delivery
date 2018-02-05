@@ -17,6 +17,6 @@ public class StringUrlPath {
 	public static final String RegistrationPageHeader = "User Details";
 	
 	// Google chrome driver path
-	public static final String DriverPath = "C:\\Users\\pfadmin\\Desktop\\seleniumExecutibles\\chromedriver_win32\\chromedriver.exe";
+	public static final String DriverPath = "C:\\Users\\mdrah\\Desktop\\Selenium Executables\\Drivers\\chromedriver_win32\\chromedriver.exe";
 	
 }

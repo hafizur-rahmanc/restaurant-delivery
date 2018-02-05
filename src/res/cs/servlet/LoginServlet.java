@@ -57,7 +57,7 @@ public class LoginServlet extends HttpServlet {
 						session.setAttribute("currentUser", theUser);
 						session.setAttribute("userId", theUser.getUserId());
 						
-						// If the user is an admin redirect to the admin controller's AdminAccountInfo request
+						// If the user is an admin redirect to the admin controller's home page
 						if(userBO.isAdmin(theUser)) {
 							System.out.println("User is Admin");
 							// Assign isAdmin to true to the session object

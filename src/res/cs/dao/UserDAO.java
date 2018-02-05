@@ -264,14 +264,14 @@ public class UserDAO {
 	}
 	public static void main(String[] args) throws ClassNotFoundException, RegistrationException, SQLException, IOException {
 		UserDAO DAO = new UserDAO();
-		User theUser = DAO.loginUser("user", "user1");
+		User theUser = DAO.loginUser("admin", "admin");
 		System.out.println(theUser);
 		
 		User newUser = new User();
-		newUser.setFirstName("Hafizur");
+		newUser.setFirstName("Mohammed");
 		newUser.setLastName("Rahman");
-		newUser.setUserName("hafizur");
-		newUser.setPassword("password");
+		newUser.setUserName("hafiz_ny");
+		newUser.setPassword("password123");
 		newUser.setGender("M");
 		newUser.setAddress("3506 73rd St Jackson Heights");
 		newUser.setPhoneNumber(3475278509L);

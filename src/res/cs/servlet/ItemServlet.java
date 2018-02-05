@@ -101,7 +101,7 @@ public class ItemServlet extends HttpServlet {
 				e.printStackTrace();
 			} catch (SQLException e) {
 				e.printStackTrace();
-				response.sendRedirect("error.jsp");
+				response.sendRedirect("Error.jsp");
 			}
 		} else {
 			// Send back to the same page with itemId as request parameter and proper message

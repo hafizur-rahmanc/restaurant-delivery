@@ -206,20 +206,20 @@ public class ItemDAO {
 	
 	public static void main(String[] args) throws ClassNotFoundException, RegistrationException, SQLException, IOException {
 		ItemDAO DAO = new ItemDAO();
-		
-		Item newItem = new Item();
-//		newItem.setItemId(1);
-		newItem.setItemName("Ham burger");
-		newItem.setItemPrice(10.99);
-		newItem.setItemDescription("Tasty 11 Pie!!");
-		newItem.setImage("pie.jpg");
-		newItem.setActive(1);
-		newItem.setCategory("Pie");
-		
-//		DAO.updateItem(newItem);
 //		
-		int itemId = DAO.createItem(newItem);
-		System.out.println("Last created item id is: " + itemId);
+//		Item newItem = new Item();
+////		newItem.setItemId(1);
+//		newItem.setItemName("Ham burger");
+//		newItem.setItemPrice(10.99);
+//		newItem.setItemDescription("Tasty 11 Pie!!");
+//		newItem.setImage("pie.jpg");
+//		newItem.setActive(1);
+//		newItem.setCategory("Pie");
+//		
+////		DAO.updateItem(newItem);
+////		
+//		int itemId = DAO.createItem(newItem);
+//		System.out.println("Last created item id is: " + itemId);
 		
 //		User user = DAO.getUser("user");
 //		System.out.println(user.getFirstName() + "|" + user.getLastName() + "|" + user.getGender() + "|" + user.getUserName() + "|" + user.getPassword() + "|" + user.getEmail());
